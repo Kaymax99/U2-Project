@@ -117,7 +117,7 @@ hr {
 }
 
 #slider-round {
-  height: 10px;
+  height: 6px;
 }
 
 #slider-round .noUi-handle {
@@ -129,6 +129,22 @@ hr {
 }
 
 #slider-round .noUi-connect {
+  background: #1DB954;
+}
+
+#slider-round2 {
+  height: 6px;
+}
+
+#slider-round2 .noUi-handle {
+  height: 18px;
+  width: 18px;
+  top: -5px;
+  right: -9px;
+  border-radius: 9px;
+}
+
+#slider-round2 .noUi-connect {
   background: #1DB954;
 }
 
