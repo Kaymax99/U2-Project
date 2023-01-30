@@ -109,4 +109,27 @@ hr {
 #mainNav #userWrapper .bi-caret-down-fill {
   font-size: 1.1em;
   align-self: flex-end;
-}/*# sourceMappingURL=app.css.map */
+}
+
+.container-fluid {
+  background-color: #181818;
+  color: white;
+}
+
+#slider-round {
+  height: 10px;
+}
+
+#slider-round .noUi-handle {
+  height: 18px;
+  width: 18px;
+  top: -5px;
+  right: -9px;
+  border-radius: 9px;
+}
+
+#slider-round .noUi-connect {
+  background: #1DB954;
+}
+
+/*# sourceMappingURL=app.css.map */
