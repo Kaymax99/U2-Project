@@ -10,6 +10,7 @@ body {
   overflow-x: hidden;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  font-family: "Roboto", sans-serif;
 }
 
 :root::-webkit-scrollbar {
@@ -28,7 +29,7 @@ li {
 }
 
 hr {
-  background-color: white;
+  background-color: $c-text-primary;
   border: none;
   min-height: 1px;
 }

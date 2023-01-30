@@ -1,10 +1,11 @@
 #mainNav {
   padding: 16px 32px;
-  @include dFlexAlignCenter;
+  @include row;
+  align-items: center;
   justify-content: space-between;
   .bi {
     font-size: 1.5em;
-    color: white;
+    color: $c-text-primary;
   }
   > div {
     display: flex;
@@ -16,7 +17,8 @@
     background-color: $bg-buttons-subdued;
   }
   #userWrapper {
-    @include dFlexAlignCenter;
+    @include row;
+    align-items: center;
     gap: 8px;
     background-color: $bg-buttons-default;
     border-radius: 25px;
@@ -25,7 +27,7 @@
       border-radius: 25px;
     }
     span {
-      color: white;
+      color: $c-text-primary;
       font-weight: 700;
     }
     .bi-caret-down-fill {
