@@ -37,7 +37,7 @@ hr {
 #left-Nav {
   background-color: black;
   min-height: 100vh;
-  padding: 0 0 0 24px;
+  padding: 0 24px;
   overflow-y: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -130,14 +130,21 @@ main #mainNav #userWrapper .bi-caret-down-fill {
   font-size: 1.5em;
 }
 
+#annuncio {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
 #wrapperAnnuncio {
   position: relative;
+  width: 100%;
 }
 #wrapperAnnuncio h5 {
   font-size: 0.9em;
 }
 #wrapperAnnuncio h1 {
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 700;
   margin-bottom: 0;
 }
@@ -148,10 +155,11 @@ main #mainNav #userWrapper .bi-caret-down-fill {
 #headingConsigliati {
   display: flex;
   justify-content: space-between;
+  margin: 0 0.5em;
 }
 
 h2 {
-  margin: 0.75em 0;
+  margin: 0.75em 0.5em;
   font-size: 1.25em;
 }
 
@@ -189,7 +197,6 @@ h2 {
 }
 
 #slider-round2 .noUi-connect {
-<<<<<<< HEAD
   background: white;
 }
 
@@ -199,11 +206,6 @@ h2 {
 
 .noUi-base {
   background-color: #5E5E5E;
-}
-
-/*# sourceMappingURL=app.css.map */
-=======
-  background: #1DB954;
 }
 
 .btnContainer {
@@ -244,6 +246,49 @@ h2 {
   right: 0;
   top: 0;
   height: 30px;
+  opacity: 50%;
+}
+
+.showMore {
+  background-color: inherit;
+  border: none;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  color: #a7a7a7;
+}
+
+.custCardLG {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #2a2a2a;
+  font-size: 0.6em;
+}
+.custCardLG img {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.custCardLG div {
+  padding-left: 10px;
+}
+
+.custCard {
+  display: flex;
+  flex-direction: column;
+  background-color: #242424;
+  padding: 20px;
+  border-radius: 7px;
+}
+.custCard img {
+  border-radius: 7px;
+  margin-bottom: 1em;
+  height: 70%;
+}
+.custCard h5 {
+  font-size: 0.9em;
+  color: #a7a7a7;
 }
 
 aside {
@@ -450,4 +495,3 @@ aside #main-right-nav .profile > p {
   text-decoration: underline;
   color: #a7a7a7;
 }/*# sourceMappingURL=app.css.map */
->>>>>>> origin/develop
