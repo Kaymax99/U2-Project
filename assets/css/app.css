@@ -126,6 +126,21 @@ main #mainNav #userWrapper .bi-caret-down-fill {
   align-self: flex-end;
 }
 
+#wrapperAnnuncio {
+  position: relative;
+}
+#wrapperAnnuncio h5 {
+  font-size: 0.9em;
+}
+#wrapperAnnuncio h1 {
+  font-size: 4em;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+#wrapperAnnuncio .songAuthor {
+  margin-bottom: 1.25em;
+}
+
 .container-fluid {
   background-color: #181818;
   color: white;
@@ -161,4 +176,63 @@ main #mainNav #userWrapper .bi-caret-down-fill {
 
 #slider-round2 .noUi-connect {
   background: #1DB954;
+}
+
+.btnContainer {
+  display: flex;
+  gap: 15px;
+}
+
+.btnAnnuncio, #hideAnnuncio {
+  padding: 0 2em;
+  border-radius: 25px;
+  height: 40px;
+  font-size: 0.9em;
+}
+
+.playBtn {
+  background-color: #1ed760;
+  font-weight: 700;
+}
+
+.saveBtn {
+  border: 1px solid gray;
+  color: white;
+}
+
+.moreBtn i {
+  font-size: 1.5em;
+  color: #a7a7a7;
+}
+
+#hideAnnuncio {
+  text-transform: uppercase;
+  background-color: inherit;
+  border: transparent;
+  box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.1);
+  color: #a7a7a7;
+  font-size: 0.75em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 30px;
+}
+
+#ultimiAscolti #ultimiAscoltiWrapper {
+  margin: 0.25em, 0.5em;
+}
+
+.customCardLg {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  background-color: #2a2a2a;
+  border-radius: 5px;
+}
+.customCardLg img {
+  height: 80px;
+  aspect-ratio: 1/1;
+}
+.customCardLg div p {
+  padding-left: 16px;
 }/*# sourceMappingURL=app.css.map */

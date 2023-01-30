@@ -1,0 +1,38 @@
+.btnContainer {
+  display: flex;
+  gap: 15px;
+}
+.btnAnnuncio {
+  padding: 0 2em;
+  border-radius: 25px;
+  height: 40px;
+  font-size: 0.9em;
+}
+.playBtn {
+  background-color: $theme-primary;
+  font-weight: 700;
+}
+.saveBtn {
+  border: 1px solid gray;
+  color: $c-text-primary;
+}
+.moreBtn {
+  i {
+    font-size: 1.5em;
+    color: $c-text-subdued;
+  }
+}
+#hideAnnuncio {
+  @extend .btnAnnuncio;
+  text-transform: uppercase;
+  background-color: inherit;
+  border: transparent;
+  -webkit-box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.1);
+  color: $c-text-subdued;
+  font-size: 0.75em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 30px;
+}
