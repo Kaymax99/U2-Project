@@ -39,6 +39,10 @@ main {
   }
 }
 
+#ultimiAscolti {
+  font-size: 1.5em;
+}
+
 #wrapperAnnuncio {
   position: relative;
   h5 {
@@ -52,4 +56,14 @@ main {
   .songAuthor {
     margin-bottom: 1.25em;
   }
+}
+
+#headingConsigliati {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  margin: 0.75em 0;
+  font-size: 1.25em;
 }
