@@ -36,7 +36,7 @@ hr {
 
 #left-Nav {
   background-color: black;
-  min-height: 100vh;
+  height: 100vh;
   padding: 0 24px;
   overflow-y: scroll;
   -ms-overflow-style: none; /* IE and Edge */
@@ -169,7 +169,7 @@ h2 {
 }
 
 #slider-round {
-  height: 6px;
+  height: 7px;
 }
 
 #slider-round .noUi-handle {
@@ -181,11 +181,11 @@ h2 {
 }
 
 #slider-round .noUi-connect {
-  background: #1DB954;
+  background: white;
 }
 
 #slider-round2 {
-  height: 6px;
+  height: 7px;
 }
 
 #slider-round2 .noUi-handle {
@@ -197,7 +197,15 @@ h2 {
 }
 
 #slider-round2 .noUi-connect {
-  background: #1DB954;
+  background: white;
+}
+
+.noUi-handle {
+  display: none;
+}
+
+.noUi-base {
+  background-color: #5E5E5E;
 }
 
 .btnContainer {
@@ -280,5 +288,210 @@ h2 {
 }
 .custCard h5 {
   font-size: 0.9em;
+  color: #a7a7a7;
+}
+
+aside {
+  background-color: black;
+  height: 100vh;
+}
+aside #upper-right-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  font-size: 1.3em;
+}
+aside #upper-right-nav #friendsActivity {
+  color: white;
+  font-weight: 700;
+  font-size: 0.9em;
+}
+@media screen and (max-width: 1450px) {
+  aside #upper-right-nav #friendsActivity {
+    font-size: 0.7em;
+  }
+}
+@media screen and (max-width: 1200px) {
+  aside #upper-right-nav #friendsActivity {
+    font-size: 0.6em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  aside #upper-right-nav #friendsActivity {
+    font-size: 0.5em;
+  }
+}
+@media screen and (max-width: 800px) {
+  aside #upper-right-nav #friendsActivity {
+    font-size: 0.4em;
+  }
+}
+aside #upper-right-nav #activityIcon {
+  display: flex;
+  align-items: center;
+}
+aside #upper-right-nav i {
+  padding-left: 10px;
+}
+@media screen and (max-width: 1450px) {
+  aside #upper-right-nav i {
+    font-size: 0.7em;
+  }
+}
+@media screen and (max-width: 1200px) {
+  aside #upper-right-nav i {
+    font-size: 0.6em;
+  }
+}
+@media screen and (max-width: 800px) {
+  aside #upper-right-nav i {
+    padding-left: 5px;
+  }
+}
+aside #main-right-nav {
+  width: 100%;
+}
+aside #main-right-nav .profile {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 30px;
+  color: #a7a7a7;
+}
+aside #main-right-nav .profile img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  border-radius: 50px;
+}
+@media screen and (max-width: 1450px) {
+  aside #main-right-nav .profile img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+}
+@media screen and (max-width: 1100px) {
+  aside #main-right-nav .profile img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+  }
+}
+aside #main-right-nav .profile h4 {
+  font-size: 1em;
+  margin: 0;
+  padding-bottom: 3px;
+}
+@media screen and (max-width: 1600px) {
+  aside #main-right-nav .profile h4 {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 1300px) {
+  aside #main-right-nav .profile h4 {
+    font-size: 0.7em;
+  }
+}
+@media screen and (max-width: 1100px) {
+  aside #main-right-nav .profile h4 {
+    font-size: 0.6em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  aside #main-right-nav .profile h4 {
+    font-size: 0.5em;
+  }
+}
+@media screen and (max-width: 900px) {
+  aside #main-right-nav .profile h4 {
+    font-size: 0.4em;
+  }
+}
+aside #main-right-nav .profile div > p {
+  font-size: 0.7em;
+  margin: 0;
+}
+@media screen and (max-width: 1600px) {
+  aside #main-right-nav .profile div > p {
+    font-size: 0.6em;
+  }
+}
+@media screen and (max-width: 1300px) {
+  aside #main-right-nav .profile div > p {
+    font-size: 0.5em;
+    margin-bottom: 3px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  aside #main-right-nav .profile div > p {
+    font-size: 0.4em;
+  }
+}
+@media screen and (max-width: 900px) {
+  aside #main-right-nav .profile div > p {
+    font-size: 0.3em;
+  }
+}
+aside #main-right-nav .profile span {
+  color: white;
+}
+aside #main-right-nav .profile .profile-description {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+aside #main-right-nav .profile .profile-description i {
+  padding-right: 5px;
+}
+@media screen and (max-width: 1600px) {
+  aside #main-right-nav .profile .profile-description i {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 1300px) {
+  aside #main-right-nav .profile .profile-description i {
+    font-size: 0.6em;
+  }
+}
+@media screen and (max-width: 900px) {
+  aside #main-right-nav .profile .profile-description i {
+    font-size: 0.4em;
+  }
+}
+aside #main-right-nav .profile > p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.7em;
+}
+@media screen and (max-width: 1600px) {
+  aside #main-right-nav .profile > p {
+    font-size: 0.6em;
+  }
+}
+@media screen and (max-width: 1300px) {
+  aside #main-right-nav .profile > p {
+    font-size: 0.5em;
+  }
+}
+@media screen and (max-width: 1000px) {
+  aside #main-right-nav .profile > p {
+    font-size: 0.4em;
+  }
+}
+
+#main-right-nav h4:hover {
+  text-decoration: underline;
+  color: white;
+}
+#main-right-nav div > p:hover {
+  text-decoration: underline;
+  color: white;
+}
+#main-right-nav #album:hover {
+  text-decoration: underline;
   color: #a7a7a7;
 }/*# sourceMappingURL=app.css.map */

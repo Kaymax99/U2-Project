@@ -4,7 +4,8 @@
 }
 
 #slider-round {
-    height: 6px;
+    height: 7px;
+
 }
 
 #slider-round .noUi-handle {
@@ -15,12 +16,12 @@
     border-radius: 9px;
 }
 
-#slider-round .noUi-connect {
-    background: #1DB954;
-}
+// #slider-round .noUi-connect {
+//     background: white;
+// }
 
 #slider-round2 {
-    height: 6px;
+    height: 7px;
 }
 
 #slider-round2 .noUi-handle {
@@ -31,6 +32,20 @@
     border-radius: 9px;
 }
 
-#slider-round2 .noUi-connect {
-    background: #1DB954;
+// #slider-round2 .noUi-connect {
+//     background: white;
+// }
+
+.noUi-handle {
+    display: none;
 }
+
+.noUi-base {
+    background-color: #5E5E5E;
+}
+
+// .noUi-handle:hover {
+//     #slider-round {
+//         display: block;
+//     }
+// }
