@@ -1,0 +1,10 @@
+@mixin leftNavLi {
+  height: 32px;
+  display: flex;
+  align-items: center;
+}
+
+@mixin dFlexAlignCenter {
+  display: flex;
+  align-items: center;
+} ;
