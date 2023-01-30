@@ -1,3 +1,14 @@
+body>footer {
+    padding: 0px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+
+}
+
 .container-fluid {
     background-color: #181818;
     color: white;
