@@ -1,8 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   min-height: 100vh;
   min-width: 100vw;
-  box-sizing: border-box;
   color: $c-text-subdued;
   overflow-x: hidden;
   -ms-overflow-style: none; /* IE and Edge */

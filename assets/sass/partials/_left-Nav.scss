@@ -1,6 +1,5 @@
 #left-Nav {
-  background-color: black;
-  width: 20vw;
+  background-color: $c-bg-primary;
   min-height: 100vh;
   padding: 0 24px;
   overflow-y: scroll;
@@ -11,7 +10,7 @@
     @include leftNavLi;
     margin: 0.5em 0;
     &:hover {
-      color: white;
+      color: $c-text-primary;
     }
   }
   i {
@@ -25,7 +24,7 @@
     font-weight: 700;
   }
   .bi-three-dots {
-    color: white;
+    color: $c-text-primary;
   }
 }
 
@@ -34,5 +33,5 @@
 }
 
 #left-Nav .hovered {
-  color: white !important;
+  color: $c-text-primary;
 }

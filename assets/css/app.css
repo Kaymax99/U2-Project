@@ -1,8 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   min-height: 100vh;
   min-width: 100vw;
-  box-sizing: border-box;
   color: #a7a7a7;
   overflow-x: hidden;
   -ms-overflow-style: none; /* IE and Edge */
@@ -32,7 +35,6 @@ hr {
 
 #left-Nav {
   background-color: black;
-  width: 20vw;
   min-height: 100vh;
   padding: 0 24px;
   overflow-y: scroll;
@@ -67,5 +69,5 @@ hr {
 }
 
 #left-Nav .hovered {
-  color: white !important;
+  color: white;
 }/*# sourceMappingURL=app.css.map */
