@@ -1,0 +1,31 @@
+html,
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  box-sizing: border-box;
+  color: $c-text-subdued;
+  overflow-x: hidden;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+:root::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+hr {
+  background-color: white;
+  border: none;
+  min-height: 1px;
+}

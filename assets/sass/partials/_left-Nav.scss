@@ -1,0 +1,38 @@
+#left-Nav {
+  background-color: black;
+  width: 20vw;
+  min-height: 100vh;
+  padding: 0 24px;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  li {
+    @include leftNavLi;
+    margin: 0.5em 0;
+    &:hover {
+      color: white;
+    }
+  }
+  i {
+    padding-right: 16px;
+    font-size: 1.5em;
+  }
+  #newAndLiked {
+    margin-top: 2em;
+  }
+  #left-Nav-Upper-Wrapper {
+    font-weight: 700;
+  }
+  .bi-three-dots {
+    color: white;
+  }
+}
+
+#left-Nav::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+#left-Nav .hovered {
+  color: white !important;
+}
