@@ -43,13 +43,20 @@ main {
   font-size: 1.5em;
 }
 
+#annuncio {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
 #wrapperAnnuncio {
   position: relative;
+  width: 100%;
   h5 {
     font-size: 0.9em;
   }
   h1 {
-    font-size: 4em;
+    font-size: 3em;
     font-weight: 700;
     margin-bottom: 0;
   }
@@ -61,9 +68,10 @@ main {
 #headingConsigliati {
   display: flex;
   justify-content: space-between;
+  margin: 0 0.5em;
 }
 
 h2 {
-  margin: 0.75em 0;
+  margin: 0.75em 0.5em;
   font-size: 1.25em;
 }

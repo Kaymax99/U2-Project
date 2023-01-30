@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <head>
+  <head>
     <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Home Page</title>
-      <link
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-      <link
+    <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
     />
-      <link href="./assets/css/app.css" rel="stylesheet" />
-      <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
-      <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-        rel="stylesheet"
+    <link href="./assets/css/app.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
     />
-      <link
+    <link
       rel="stylesheet"
       href="./assets/resources/noUiSlider-15.6.1/dist/nouislider.css"
     />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -99,7 +100,8 @@
             </ul>
           </div>
         </nav>
-        <main class="col-7">
+
+        <main class="col-7 p-0">
           <nav id="mainNav">
             <div>
               <button class="navigation">
@@ -117,8 +119,8 @@
           </nav>
 
           <article id="annuncio">
-            <div>
-              <img />
+            <div class="p-3">
+              <img src="./assets/img/user.png" height="200px" />
             </div>
             <div id="wrapperAnnuncio">
               <h5 class="albumAnnuncio">ALBUM</h5>
@@ -142,83 +144,129 @@
             <h2>Buonasera</h2>
             <div
               id="ultimiAscoltiWrapper"
-              class="row d-flex justify-content-between gx-0"
+              class="row d-flex justify-content-between gx-0 px-4"
             ></div>
           </section>
+          <hr />
 
           <section id="consigliati">
             <div id="headingConsigliati">
               <h2>Altro di ciò che ti piace</h2>
-              <button class="">Visualizza Tutto</button>
+              <button class="showMore">Visualizza Tutto</button>
             </div>
-            <div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
+            <div
+              id="ultimiAscoltiWrapper"
+              class="row row-cols-5 d-flex justify-content-between gx-0"
+            >
+              <div class="p-2">
+                <div class="col custCard">
+                  <img src="./assets/img/user.png" />
+                  <div>
+                    <h4>Titolo playlist</h4>
+                    <h5>Descrizione playlist</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="p-2">
+                <div class="col custCard">
+                  <img src="./assets/img/user.png" />
+                  <div>
+                    <h4>Titolo playlist</h4>
+                    <h5>Descrizione playlist</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="p-2">
+                <div class="col custCard">
+                  <img src="./assets/img/user.png" />
+                  <div>
+                    <h4>Titolo playlist</h4>
+                    <h5>Descrizione playlist</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="p-2">
+                <div class="col custCard">
+                  <img src="./assets/img/user.png" />
+                  <div>
+                    <h4>Titolo playlist</h4>
+                    <h5>Descrizione playlist</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="p-2">
+                <div class="col custCard">
+                  <img src="./assets/img/user.png" />
+                  <div>
+                    <h4>Titolo playlist</h4>
+                    <h5>Descrizione playlist</h5>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
         </main>
         <aside class="col-2">zzdthzdthz</aside>
 
-      <footer>
-        <div class="container-fluid mt-5 py-5 ">
-          <div class="row d-flex justify-content-between align-items-center g-2">
-            <div class="col-3">
-              here artist name and song and heart
-            </div>
-            <div class="col-3 ">
-              <div class="justify-content-end d-flex pb-2 ">
-                <div class="col d-flex  justify-content-end">
+        <footer>
+          <div class="container-fluid mt-5 py-5">
+            <div
+              class="row d-flex justify-content-between align-items-center g-2"
+            >
+              <div class="col-3">here artist name and song and heart</div>
+              <div class="col-3">
+                <div class="justify-content-end d-flex pb-2">
+                  <div class="col d-flex justify-content-end">
+                    <i class="fa-solid fa-shuffle"></i>
+                  </div>
 
-                  <i class="fa-solid fa-shuffle"></i>
+                  <div class="col d-flex justify-content-end">
+                    <i class="fa-solid fa-backward-step"></i>
+                  </div>
+                  <div class="col d-flex justify-content-center">
+                    <i class="fa-solid fa-circle-play"></i>
+                  </div>
+                  <div class="col d-flex justify-content-start">
+                    <i class="fa-solid fa-forward-step"></i>
+                  </div>
+
+                  <div class="col d-flex justify-content-start">
+                    <i class="fa-solid fa-repeat"></i>
+                  </div>
                 </div>
 
-                <div class="col d-flex  justify-content-end"><i class="fa-solid fa-backward-step"></i></div>
-                <div class="col d-flex  justify-content-center"><i class="fa-solid fa-circle-play"></i></div>
-                <div class="col d-flex  justify-content-start"> <i class="fa-solid fa-forward-step"></i></div>
-
-                <div class="col d-flex  justify-content-start">
-
-                  <i class="fa-solid fa-repeat"></i>
-                </div>
-
-
+                <div class="slider-styled" id="slider-round"></div>
               </div>
-
-              <div class=" slider-styled " id="slider-round"></div>
-            </div>
-            <div class="col-3">
-              <div class="row justify-content-center align-items-center g-2">
-                <div class="col-1 d-flex justify-content-end">
-                  <i class="fa-solid fa-microphone"></i>
-                </div>
-                <div class="col-1 d-flex  justify-content-end">
-                  <i class="bi bi-list-columns-reverse"></i>
-                </div>
-                <div class="col-1 d-flex  justify-content-end">
-                  <i class="bi bi-pc-display"></i>
-                </div>
-                <div class="col-5 ">
-                  <div class="slider-styled " id="slider-round2"></div>
+              <div class="col-3">
+                <div class="row justify-content-center align-items-center g-2">
+                  <div class="col-1 d-flex justify-content-end">
+                    <i class="fa-solid fa-microphone"></i>
+                  </div>
+                  <div class="col-1 d-flex justify-content-end">
+                    <i class="bi bi-list-columns-reverse"></i>
+                  </div>
+                  <div class="col-1 d-flex justify-content-end">
+                    <i class="bi bi-pc-display"></i>
+                  </div>
+                  <div class="col-5">
+                    <div class="slider-styled" id="slider-round2"></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-
-      </footer>
+        </footer>
+      </div>
     </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
-    </script>
-  <script src="./assets/resources/noUiSlider-15.6.1/dist/nouislider.js">
-  </script>
-  <script src="./assets/js/homePage.js"></script>
 
-  <script src="./assets/js/player.js"></script>
-</body>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/resources/noUiSlider-15.6.1/dist/nouislider.js"></script>
+    <script src="./assets/js/homePage.js"></script>
 
+    <script src="./assets/js/player.js"></script>
+  </body>
 </html>
