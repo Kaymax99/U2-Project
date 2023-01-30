@@ -70,4 +70,43 @@ hr {
 
 #left-Nav .hovered {
   color: white;
+}
+
+#mainNav {
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#mainNav .bi {
+  font-size: 1.5em;
+  color: white;
+}
+#mainNav > div {
+  display: flex;
+  gap: 16px;
+}
+#mainNav .navigation {
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#mainNav #userWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 25px;
+  padding-left: 0;
+}
+#mainNav #userWrapper img {
+  border-radius: 25px;
+}
+#mainNav #userWrapper span {
+  color: white;
+  font-weight: 700;
+}
+#mainNav #userWrapper .bi-caret-down-fill {
+  font-size: 1.1em;
+  align-self: flex-end;
 }/*# sourceMappingURL=app.css.map */

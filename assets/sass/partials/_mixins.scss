@@ -3,3 +3,8 @@
   display: flex;
   align-items: center;
 }
+
+@mixin dFlexAlignCenter {
+  display: flex;
+  align-items: center;
+} ;
