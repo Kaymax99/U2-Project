@@ -37,7 +37,7 @@ hr {
 #left-Nav {
   background-color: black;
   min-height: 100vh;
-  padding: 0 24px;
+  padding: 0 0 0 24px;
   overflow-y: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
@@ -85,27 +85,27 @@ hr {
   color: white;
 }
 
-#mainNav {
-  padding: 16px 32px;
+main #mainNav {
+  padding: 16px 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
-#mainNav .bi {
+main #mainNav .bi {
   font-size: 1.5em;
   color: white;
 }
-#mainNav > div {
+main #mainNav > div {
   display: flex;
   gap: 16px;
 }
-#mainNav .navigation {
+main #mainNav .navigation {
   border: none;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.7);
 }
-#mainNav #userWrapper {
+main #mainNav #userWrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -114,14 +114,14 @@ hr {
   border-radius: 25px;
   padding-left: 0;
 }
-#mainNav #userWrapper img {
+main #mainNav #userWrapper img {
   border-radius: 25px;
 }
-#mainNav #userWrapper span {
+main #mainNav #userWrapper span {
   color: white;
   font-weight: 700;
 }
-#mainNav #userWrapper .bi-caret-down-fill {
+main #mainNav #userWrapper .bi-caret-down-fill {
   font-size: 1.1em;
   align-self: flex-end;
 }
@@ -161,6 +161,4 @@ hr {
 
 #slider-round2 .noUi-connect {
   background: #1DB954;
-}
-
-/*# sourceMappingURL=app.css.map */
+}/*# sourceMappingURL=app.css.map */
