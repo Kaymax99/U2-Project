@@ -2,212 +2,195 @@
 <html lang="en">
 
 <head>
-    <head>
+
+  <head>
     <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Home Page</title>
-      <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
-      crossorigin="anonymous"
-    />
-      <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
-    />
-      <link href="./assets/css/app.css" rel="stylesheet" />
-      <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
-      <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-        rel="stylesheet"
-    />
-      <link
-      rel="stylesheet"
-      href="./assets/resources/noUiSlider-15.6.1/dist/nouislider.css"
-    />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <link href="./assets/css/app.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/resources/noUiSlider-15.6.1/dist/nouislider.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
   </head>
 
-  <body>
-    <div class="container-fluid p-0">
-      <div class="row w-100 m-0">
-        <nav id="left-Nav" class="col-3">
-          <div id="left-Nav-Upper-Wrapper">
-            <div class="dropdown">
-              <button
-                class="btn btn-secondary dropdown-toggle"
-                type="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
+<body>
+  <div class="container-fluid p-0">
+    <div class="row w-100 m-0">
+      <nav id="left-Nav" class="col-3">
+        <div id="left-Nav-Upper-Wrapper">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="bi bi-three-dots"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">File</a></li>
+              <li><a class="dropdown-item" href="#">Modifica</a></li>
+              <li><a class="dropdown-item" href="#">Visualizza</a></li>
+              <li><a class="dropdown-item" href="#">Riproduzione</a></li>
+              <li><a class="dropdown-item" href="#">Assistenza</a></li>
+            </ul>
+          </div>
+          <ul>
+            <li><i class="bi bi-house-door-fill"></i>Home</li>
+            <li><i class="bi bi-search"></i>Cerca</li>
+            <li><i class="bi bi-music-note-list"></i>La tua libreria</li>
+          </ul>
+          <div id="newAndLiked">
+            <ul>
+              <li><i class="bi bi-plus-square-fill"></i>Crea Playlist</li>
+              <li><i class="bi bi-heart-fill"></i>Brani che ti piacciono</li>
+              <li><i class="bi bi-bookmark-fill"></i>I tuoi episodi</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+
+        <div id="playlists">
+          <ul>
+            <li>Placeholder Playlist 1</li>
+            <li>Placeholder Playlist 2</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+            <li>Placeholder Playlist 3</li>
+          </ul>
+        </div>
+      </nav>
+      <main class="col-7">
+        <nav id="mainNav">
+          <div>
+            <button class="navigation">
+              <i class="bi bi-chevron-left"></i>
+            </button>
+            <button class="navigation">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+          </div>
+          <button id="userWrapper">
+            <img src="./assets/img/user.png" width="28px" height="28px" />
+            <span>Utente Bellissimo</span>
+            <i class="bi bi-caret-down-fill"></i>
+          </button>
+        </nav>
+
+        <article id="annuncio">
+          <div>
+            <img />
+          </div>
+          <div id="wrapperAnnuncio">
+            <h5 class="albumAnnuncio">ALBUM</h5>
+            <button id="hideAnnuncio">nascondi annunci</button>
+            <div class="songAuthor">
+              <h1>VIOLA (feat. Salmo)</h1>
+              <h5>Fedez, Salmo</h5>
+            </div>
+            <h5>Ascolta il nuovo singolo di Fedez e Salmo!</h5>
+            <div class="btnContainer">
+              <button class="btn btnAnnuncio playBtn">Play</button>
+              <button class="btn btnAnnuncio saveBtn">Salva</button>
+              <button class="btn moreBtn">
                 <i class="bi bi-three-dots"></i>
               </button>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">File</a></li>
-                <li><a class="dropdown-item" href="#">Modifica</a></li>
-                <li><a class="dropdown-item" href="#">Visualizza</a></li>
-                <li><a class="dropdown-item" href="#">Riproduzione</a></li>
-                <li><a class="dropdown-item" href="#">Assistenza</a></li>
-              </ul>
-            </div>
-            <ul>
-              <li><i class="bi bi-house-door-fill"></i>Home</li>
-              <li><i class="bi bi-search"></i>Cerca</li>
-              <li><i class="bi bi-music-note-list"></i>La tua libreria</li>
-            </ul>
-            <div id="newAndLiked">
-              <ul>
-                <li><i class="bi bi-plus-square-fill"></i>Crea Playlist</li>
-                <li><i class="bi bi-heart-fill"></i>Brani che ti piacciono</li>
-                <li><i class="bi bi-bookmark-fill"></i>I tuoi episodi</li>
-              </ul>
             </div>
           </div>
-          <hr />
+        </article>
 
-          <div id="playlists">
-            <ul>
-              <li>Placeholder Playlist 1</li>
-              <li>Placeholder Playlist 2</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-              <li>Placeholder Playlist 3</li>
-            </ul>
+        <section id="ultimiAscolti">
+          <h2>Buonasera</h2>
+          <div id="ultimiAscoltiWrapper" class="row d-flex justify-content-between gx-0"></div>
+        </section>
+
+        <section id="consigliati">
+          <div id="headingConsigliati">
+            <h2>Altro di ciò che ti piace</h2>
+            <button class="">Visualizza Tutto</button>
           </div>
-        </nav>
-        <main class="col-7">
-          <nav id="mainNav">
+          <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </section>
+      </main>
+
+      <aside class="col-2">
+        <div id="upper-right-nav">
+          <div id="friendsActivity">Attività amici</div>
+          <div id="activityIcon">
+            <i class="bi bi-people"></i>
+            <i class="bi bi-x-lg"></i>
+          </div>
+        </div>
+        <div id="main-right-nav">
+          <div class="profile">
+            <img src="./assets/img/user.png" alt="profile picture" />
             <div>
-              <button class="navigation">
-                <i class="bi bi-chevron-left"></i>
-              </button>
-              <button class="navigation">
-                <i class="bi bi-chevron-right"></i>
-              </button>
-            </div>
-            <button id="userWrapper">
-              <img src="./assets/img/user.png" width="28px" height="28px" />
-              <span>Utente Bellissimo</span>
-              <i class="bi bi-caret-down-fill"></i>
-            </button>
-          </nav>
-
-          <article id="annuncio">
-            <div>
-              <img />
-            </div>
-            <div id="wrapperAnnuncio">
-              <h5 class="albumAnnuncio">ALBUM</h5>
-              <button id="hideAnnuncio">nascondi annunci</button>
-              <div class="songAuthor">
-                <h1>VIOLA (feat. Salmo)</h1>
-                <h5>Fedez, Salmo</h5>
-              </div>
-              <h5>Ascolta il nuovo singolo di Fedez e Salmo!</h5>
-              <div class="btnContainer">
-                <button class="btn btnAnnuncio playBtn">Play</button>
-                <button class="btn btnAnnuncio saveBtn">Salva</button>
-                <button class="btn moreBtn">
-                  <i class="bi bi-three-dots"></i>
-                </button>
+              <h4 class="profile-title">Charlie Hookham</h4>
+              <p>In camera <span>&#x2022;</span> Yumi Zouma</p>
+              <div class="profile-description">
+                <i class="bi bi-vinyl"></i>
+                <p id="album">EP III</p>
               </div>
             </div>
-          </article>
-
-          <section id="ultimiAscolti">
-            <h2>Buonasera</h2>
-            <div
-              id="ultimiAscoltiWrapper"
-              class="row d-flex justify-content-between gx-0"
-            ></div>
-          </section>
-
-          <section id="consigliati">
-            <div id="headingConsigliati">
-              <h2>Altro di ciò che ti piace</h2>
-              <button class="">Visualizza Tutto</button>
-            </div>
-            <div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-          </section>
-        </main>
-        
-        <aside class="col-2">
-          <div id="upper-right-nav">
-            <div id="friendsActivity">Attività amici</div>
-            <div id="activityIcon">
-              <i class="bi bi-people"></i>
-              <i class="bi bi-x-lg"></i>
-            </div>
+            <p>4 ore</p>
           </div>
-          <div id="main-right-nav">
-            <div class="profile">
-              <img src="./assets/img/user.png" alt="profile picture" />
-              <div>
-                <h4 class="profile-title">Charlie Hookham</h4>
-                <p>In camera <span>&#x2022;</span> Yumi Zouma</p>
-                <div class="profile-description">
-                  <i class="bi bi-vinyl"></i>
-                  <p id="album">EP III</p>
-                </div>
+          <div class="profile">
+            <img src="./assets/img/user.png" alt="profile picture" />
+            <div>
+              <h4 class="profile-title">lightdark02</h4>
+              <p>Aimed to kill <span>&#x2022;</span> Jade LeMac</p>
+              <div class="profile-description">
+                <i class="bi bi-vinyl"></i>
+                <p id="album">Aimed to kill</p>
               </div>
-              <p>4 ore</p>
             </div>
-            <div class="profile">
-              <img src="./assets/img/user.png" alt="profile picture" />
-              <div>
-                <h4 class="profile-title">lightdark02</h4>
-                <p>Aimed to kill <span>&#x2022;</span> Jade LeMac</p>
-                <div class="profile-description">
-                  <i class="bi bi-vinyl"></i>
-                  <p id="album">Aimed to kill</p>
-                </div>
-              </div>
-              <p>4 ore</p>
-            </div>
-            <div class="profile">
-              <img src="./assets/img/user.png" alt="profile picture" />
-              <div>
-                <h4 class="profile-title">Valeria Traverso</h4>
-                <p>New Kings <span>&#x2022;</span> Sleeping Wolf</p>
-                <div class="profile-description">
-                  <i class="bi bi-music-note-beamed"></i>
-                  <p id="album">Twint Badass mood</p>
-                </div>
-              </div>
-              <p>4 ore</p>
-            </div>
+            <p>4 ore</p>
           </div>
-        </aside>
+          <div class="profile">
+            <img src="./assets/img/user.png" alt="profile picture" />
+            <div>
+              <h4 class="profile-title">Valeria Traverso</h4>
+              <p>New Kings <span>&#x2022;</span> Sleeping Wolf</p>
+              <div class="profile-description">
+                <i class="bi bi-music-note-beamed"></i>
+                <p id="album">Twint Badass mood</p>
+              </div>
+            </div>
+            <p>4 ore</p>
+          </div>
+        </div>
+      </aside>
 
       <footer>
         <div class="container-fluid mt-5 py-5 ">
