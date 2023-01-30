@@ -14,8 +14,11 @@
       color: $c-text-primary;
     }
   }
+  li {
+    display: flex;
+    gap: 16px;
+  }
   i {
-    padding-right: 16px;
     font-size: 1.5em;
   }
   #newAndLiked {
@@ -23,6 +26,14 @@
   }
   #left-Nav-Upper-Wrapper {
     font-weight: 700;
+    .dropdown-toggle {
+      padding: 6px 0;
+      background-color: inherit;
+      border: none;
+    }
+    .dropdown-toggle::after {
+      display: none;
+    }
   }
   .bi-three-dots {
     color: $c-text-primary;

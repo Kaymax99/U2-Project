@@ -10,6 +10,7 @@ body {
   overflow-x: hidden;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  font-family: "Roboto", sans-serif;
 }
 
 :root::-webkit-scrollbar {
@@ -51,8 +52,11 @@ hr {
 #left-Nav li:hover {
   color: white;
 }
+#left-Nav li {
+  display: flex;
+  gap: 16px;
+}
 #left-Nav i {
-  padding-right: 16px;
   font-size: 1.5em;
 }
 #left-Nav #newAndLiked {
@@ -60,6 +64,14 @@ hr {
 }
 #left-Nav #left-Nav-Upper-Wrapper {
   font-weight: 700;
+}
+#left-Nav #left-Nav-Upper-Wrapper .dropdown-toggle {
+  padding: 6px 0;
+  background-color: inherit;
+  border: none;
+}
+#left-Nav #left-Nav-Upper-Wrapper .dropdown-toggle::after {
+  display: none;
 }
 #left-Nav .bi-three-dots {
   color: white;
