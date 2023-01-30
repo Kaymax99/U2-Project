@@ -38,3 +38,18 @@ main {
     }
   }
 }
+
+#wrapperAnnuncio {
+  position: relative;
+  h5 {
+    font-size: 0.9em;
+  }
+  h1 {
+    font-size: 4em;
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+  .songAuthor {
+    margin-bottom: 1.25em;
+  }
+}
