@@ -8,6 +8,7 @@
 
   li {
     @include leftNavLi;
+    @include row;
     margin: 0.5em 0;
     &:hover {
       color: $c-text-primary;
