@@ -1,0 +1,24 @@
+@mixin column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin column-r {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@mixin row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin row-r {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@mixin leftNavLi {
+  height: 32px;
+  align-items: center;
+}

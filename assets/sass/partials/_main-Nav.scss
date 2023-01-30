@@ -1,0 +1,38 @@
+#mainNav {
+  padding: 16px 32px;
+  @include row;
+  align-items: center;
+  justify-content: space-between;
+  .bi {
+    font-size: 1.5em;
+    color: $c-text-primary;
+  }
+  > div {
+    display: flex;
+    gap: 16px;
+  }
+  .navigation {
+    border: none;
+    border-radius: 50%;
+    background-color: $bg-buttons-subdued;
+  }
+  #userWrapper {
+    @include row;
+    align-items: center;
+    gap: 8px;
+    background-color: $bg-buttons-default;
+    border-radius: 25px;
+    padding-left: 0;
+    img {
+      border-radius: 25px;
+    }
+    span {
+      color: $c-text-primary;
+      font-weight: 700;
+    }
+    .bi-caret-down-fill {
+      font-size: 1.1em;
+      align-self: flex-end;
+    }
+  }
+}
