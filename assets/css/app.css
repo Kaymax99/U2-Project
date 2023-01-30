@@ -132,7 +132,7 @@ main #mainNav #userWrapper .bi-caret-down-fill {
 }
 
 #slider-round {
-  height: 6px;
+  height: 7px;
 }
 
 #slider-round .noUi-handle {
@@ -144,11 +144,11 @@ main #mainNav #userWrapper .bi-caret-down-fill {
 }
 
 #slider-round .noUi-connect {
-  background: #1DB954;
+  background: white;
 }
 
 #slider-round2 {
-  height: 6px;
+  height: 7px;
 }
 
 #slider-round2 .noUi-handle {
@@ -160,5 +160,15 @@ main #mainNav #userWrapper .bi-caret-down-fill {
 }
 
 #slider-round2 .noUi-connect {
-  background: #1DB954;
-}/*# sourceMappingURL=app.css.map */
+  background: white;
+}
+
+.noUi-handle {
+  display: none;
+}
+
+.noUi-base {
+  background-color: #5E5E5E;
+}
+
+/*# sourceMappingURL=app.css.map */
