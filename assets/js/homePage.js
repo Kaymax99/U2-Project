@@ -8,35 +8,6 @@ const getMusic = async () => {
       }
     );
 
-    //sezione annuncio
-    if (discografiaAnnincio1.ok) {
-      let elencoAnnuncio1 = await discografiaAnnincio1.json();
-
-      let annuncio = document.getElementById("annuncio");
-
-      annuncio.innerHTML += `<div class="p-3">
-<img src="${elencoAnnuncio1.cover_small}" height="200px" />
-</div>
-<div id="wrapperAnnuncio">
-<h5 class="albumAnnuncio">ALBUM</h5>
-<button id="hideAnnuncio">nascondi annunci</button>
-<div class="songAuthor">
-  <h1>${elencoAnnuncio1.title}</h1>
-  <h5>${elencoAnnuncio1.contributors[0].name}</h5>
-</div>
-<h5>Ascolta il nuovo singolo di ${elencoAnnuncio1.contributors[0].name}</h5>
-<div class="btnContainer">
-  <button class="btn btnAnnuncio playBtn">Play</button>
-  <button class="btn btnAnnuncio saveBtn">Salva</button>
-  <button class="btn moreBtn">
-    <i class="bi bi-three-dots"></i>
-  </button>
-</div>
-</div>`;
-    } else {
-      throw "errore nella sezione buonasera";
-    }
-
     //fetch sezione "buonasera"
     let discografiaBuonasera1 = await fetch(
       "https://striveschool-api.herokuapp.com/api/deezer/album/75621062",
@@ -79,6 +50,89 @@ const getMusic = async () => {
         input: "GET",
       }
     );
+
+    //fetch sezione "altro di ciò che ti piace"
+
+    let discografiaAltro1 = await fetch(
+      "https://striveschool-api.herokuapp.com/api/deezer/search?q=codingMode",
+      {
+        input: "GET",
+      }
+    );
+
+    let discografiaAltro2 = await fetch(
+      "https://striveschool-api.herokuapp.com/api/deezer/search?q=codingMode",
+      {
+        input: "GET",
+      }
+    );
+
+    let discografiaAltro3 = await fetch(
+      "https://striveschool-api.herokuapp.com/api/deezer/search?q=codingMode",
+      {
+        input: "GET",
+      }
+    );
+
+    let discografiaAltro4 = await fetch(
+      "https://striveschool-api.herokuapp.com/api/deezer/search?q=codingMode",
+      {
+        input: "GET",
+      }
+    );
+
+    let discografiaAltro5 = await fetch(
+      "https://striveschool-api.herokuapp.com/api/deezer/search?q=codingMode",
+      {
+        input: "GET",
+      }
+    );
+    // sezione arrayCanzoni
+
+    class DataSongsWID {
+      constructor(target) {
+        this.autore = autore;
+        this.songsTitle = target.title;
+        this.albumTitle = album;
+        this.songAlbum = [
+          { title, duration, rank },
+          { title, duration, rank },
+        ];
+        this.picture = picture;
+        this.pictureAlbum = pictureAlbum;
+        this.duration = duration;
+        this.fans = fans;
+      }
+    }
+
+    //sezione annuncio
+    if (discografiaAnnincio1.ok) {
+      let elencoAnnuncio1 = await discografiaAnnincio1.json();
+
+      let annuncio = document.getElementById("annuncio");
+
+      annuncio.innerHTML += `<div class="p-3">
+<img src="${elencoAnnuncio1.cover_small}" height="200px" />
+</div>
+<div id="wrapperAnnuncio">
+<h5 class="albumAnnuncio">ALBUM</h5>
+<button id="hideAnnuncio">nascondi annunci</button>
+<div class="songAuthor">
+  <h1>${elencoAnnuncio1.title}</h1>
+  <h5>${elencoAnnuncio1.contributors[0].name}</h5>
+</div>
+<h5>Ascolta il nuovo singolo di ${elencoAnnuncio1.contributors[0].name}</h5>
+<div class="btnContainer">
+  <button class="btn btnAnnuncio playBtn">Play</button>
+  <button class="btn btnAnnuncio saveBtn">Salva</button>
+  <button class="btn moreBtn">
+    <i class="bi bi-three-dots"></i>
+  </button>
+</div>
+</div>`;
+    } else {
+      throw "errore nella sezione buonasera";
+    }
 
     //sezione "buonasera"
     if (
@@ -124,43 +178,6 @@ const getMusic = async () => {
     } else {
       throw "errore nella sezione buonasera";
     }
-
-    //fetch sezione "altro di ciò che ti piace"
-
-    let discografiaAltro1 = await fetch(
-      "https://striveschool-api.herokuapp.com/api/deezer/search?q=codingMode",
-      {
-        input: "GET",
-      }
-    );
-
-    let discografiaAltro2 = await fetch(
-      "https://striveschool-api.herokuapp.com/api/deezer/search?q=codingMode",
-      {
-        input: "GET",
-      }
-    );
-
-    let discografiaAltro3 = await fetch(
-      "https://striveschool-api.herokuapp.com/api/deezer/search?q=codingMode",
-      {
-        input: "GET",
-      }
-    );
-
-    let discografiaAltro4 = await fetch(
-      "https://striveschool-api.herokuapp.com/api/deezer/search?q=codingMode",
-      {
-        input: "GET",
-      }
-    );
-
-    let discografiaAltro5 = await fetch(
-      "https://striveschool-api.herokuapp.com/api/deezer/search?q=codingMode",
-      {
-        input: "GET",
-      }
-    );
 
     //sezione "altro di ciò che ti piace"
     if (
