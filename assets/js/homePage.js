@@ -1,4 +1,63 @@
-const getMusic = async () => {
+const arrayIDAlbum = [
+  75621062, 8887733, 7823038, 7824595, 7824584, 91333612, 345755977, 192529232,
+  100674742, 59853252,
+];
+
+const shuffleArray = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+};
+shuffleArray(arrayIDAlbum);
+/* console.log(arrayIDAlbum); */
+const selectedAlbumIDs = arrayIDAlbum.slice(0, 6);
+/* console.log(selectedAlbumIDs); */
+
+const baseAlbumURL = "https://striveschool-api.herokuapp.com/api/deezer/album/";
+
+const fetchAlbum = async (index) => {
+  try {
+    let res = await fetch(baseAlbumURL + index);
+    if (res.ok) {
+      let data = await res.json();
+      /*       console.log(res);
+      console.log(data); */
+      return data;
+    } else {
+      throw "errore nella sezione altro";
+    }
+  } catch (err) {
+    console.log(err);
+  }
+};
+/* getAlbum(selectedAlbumIDs[0]); */
+
+const albumArray = [];
+const getAlbums = async function (id) {
+  let albums = await fetchAlbum(id);
+  albumArray.push(albums);
+  testFunc(albumArray);
+};
+
+const testFunc = (albumArray) => {
+  let divBuonasera = document.getElementById("ultimiAscoltiWrapper");
+  if (albumArray.length === 6) {
+    for (i = 0; i < albumArray.length; i++) {
+      divBuonasera.innerHTML += `<div class="row col-4 p-1"><div class="p-0 custCardLG">
+      <img src="${albumArray[i].cover_small}" class="col-3 p-0" />
+      <div class="col-9">${albumArray[i].title}</div></div>`;
+    }
+  }
+};
+
+for (i = 0; i < selectedAlbumIDs.length; i++) {
+  getAlbums(selectedAlbumIDs[i]);
+}
+
+/* const getMusic = async () => {
   try {
     //fetch sezione annuncio
     let discografiaAnnincio1 = await fetch(
@@ -7,14 +66,6 @@ const getMusic = async () => {
         input: "GET",
       }
     );
-
-    //sezione annuncio
-    if (discografiaAnnincio1.ok) {
-      let elencoAnnuncio1 = await discografiaAnnincio1.json();
-      let branoAnnuncio1 = elencoAnnuncio1.data;
-    } else {
-      throw "errore nella sezione buonasera";
-    }
 
     //fetch sezione "buonasera"
     let discografiaBuonasera1 = await fetch(
@@ -58,6 +109,89 @@ const getMusic = async () => {
         input: "GET",
       }
     );
+
+    //fetch sezione "altro di ciò che ti piace"
+
+    let discografiaAltro1 = await fetch(
+      "https://striveschool-api.herokuapp.com/api/deezer/search?q=codingMode",
+      {
+        input: "GET",
+      }
+    );
+
+    let discografiaAltro2 = await fetch(
+      "https://striveschool-api.herokuapp.com/api/deezer/search?q=codingMode",
+      {
+        input: "GET",
+      }
+    );
+
+    let discografiaAltro3 = await fetch(
+      "https://striveschool-api.herokuapp.com/api/deezer/search?q=codingMode",
+      {
+        input: "GET",
+      }
+    );
+
+    let discografiaAltro4 = await fetch(
+      "https://striveschool-api.herokuapp.com/api/deezer/search?q=codingMode",
+      {
+        input: "GET",
+      }
+    );
+
+    let discografiaAltro5 = await fetch(
+      "https://striveschool-api.herokuapp.com/api/deezer/search?q=codingMode",
+      {
+        input: "GET",
+      }
+    );
+    // sezione arrayCanzoni
+
+    class DataSongsWID {
+      constructor(target) {
+        this.autore = autore;
+        this.songsTitle = target.title;
+        this.albumTitle = album;
+        this.songAlbum = [
+          { title, duration, rank },
+          { title, duration, rank },
+        ];
+        this.picture = picture;
+        this.pictureAlbum = pictureAlbum;
+        this.duration = duration;
+        this.fans = fans;
+      }
+    }
+
+    //sezione annuncio
+    if (discografiaAnnincio1.ok) {
+      let elencoAnnuncio1 = await discografiaAnnincio1.json();
+
+      let annuncio = document.getElementById("annuncio");
+
+      annuncio.innerHTML += `<div class="p-3">
+<img src="${elencoAnnuncio1.cover_small}" height="200px" />
+</div>
+<div id="wrapperAnnuncio">
+<h5 class="albumAnnuncio">ALBUM</h5>
+<button id="hideAnnuncio">nascondi annunci</button>
+<div class="songAuthor">
+  <h1>${elencoAnnuncio1.title}</h1>
+  <h5>${elencoAnnuncio1.contributors[0].name}</h5>
+</div>
+<h5>Ascolta il nuovo singolo di ${elencoAnnuncio1.contributors[0].name}</h5>
+<div class="btnContainer">
+  <button class="btn btnAnnuncio playBtn">Play</button>
+  <button class="btn btnAnnuncio saveBtn">Salva</button>
+  <button class="btn moreBtn">
+    <i class="bi bi-three-dots"></i>
+  </button>
+</div>
+</div>`;
+    } else {
+      throw "errore nella sezione buonasera";
+    }
 
     //sezione "buonasera"
     if (
@@ -103,43 +237,6 @@ const getMusic = async () => {
     } else {
       throw "errore nella sezione buonasera";
     }
-
-    //fetch sezione "altro di ciò che ti piace"
-
-    let discografiaAltro1 = await fetch(
-      "https://striveschool-api.herokuapp.com/api/deezer/search?q=codingMode",
-      {
-        input: "GET",
-      }
-    );
-
-    let discografiaAltro2 = await fetch(
-      "https://striveschool-api.herokuapp.com/api/deezer/search?q=codingMode",
-      {
-        input: "GET",
-      }
-    );
-
-    let discografiaAltro3 = await fetch(
-      "https://striveschool-api.herokuapp.com/api/deezer/search?q=codingMode",
-      {
-        input: "GET",
-      }
-    );
-
-    let discografiaAltro4 = await fetch(
-      "https://striveschool-api.herokuapp.com/api/deezer/search?q=codingMode",
-      {
-        input: "GET",
-      }
-    );
-
-    let discografiaAltro5 = await fetch(
-      "https://striveschool-api.herokuapp.com/api/deezer/search?q=codingMode",
-      {
-        input: "GET",
-      }
-    );
 
     //sezione "altro di ciò che ti piace"
     if (
@@ -219,4 +316,4 @@ const getMusic = async () => {
   }
 };
 
-getMusic();
+getMusic(); */

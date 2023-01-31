@@ -29,7 +29,8 @@ li {
 }
 
 hr {
-  background-color: white;
+  opacity: 100%;
+  background-color: #282828;
   border: none;
   min-height: 1px;
 }
@@ -41,6 +42,7 @@ hr {
   overflow-y: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  padding-bottom: 5em;
 }
 #left-Nav li {
   height: 32px;
@@ -85,8 +87,15 @@ hr {
   color: white;
 }
 
+main {
+  max-height: 100vh;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 main #mainNav {
   padding: 16px 0;
+  margin: 0 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -126,6 +135,15 @@ main #mainNav #userWrapper .bi-caret-down-fill {
   align-self: flex-end;
 }
 
+.container-fluid {
+  background-color: #181818;
+  color: white;
+}
+
+main::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
 #ultimiAscolti {
   font-size: 1.5em;
 }
@@ -158,9 +176,147 @@ main #mainNav #userWrapper .bi-caret-down-fill {
   margin: 0 0.5em;
 }
 
+#consigliati {
+  padding-bottom: 7em;
+}
+
 h2 {
   margin: 0.75em 0.5em;
   font-size: 1.25em;
+}
+
+body > footer {
+  padding: 0px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+}
+
+footer .container-fluid {
+  border-top: 1px solid #282828;
+}
+
+#slider-round {
+  height: 7px;
+}
+
+#slider-round .noUi-handle {
+  height: 18px;
+  width: 18px;
+  top: -5px;
+  right: -9px;
+  border-radius: 9px;
+}
+
+#slider-round2 {
+  height: 7px;
+}
+
+#slider-round2 .noUi-handle {
+  height: 18px;
+  width: 18px;
+  top: -5px;
+  right: -9px;
+  border-radius: 9px;
+}
+
+.noUi-handle {
+  display: none;
+}
+
+.noUi-base {
+  background-color: #5e5e5e;
+}
+
+.btnContainer {
+  display: flex;
+  gap: 15px;
+}
+
+.btnAnnuncio,
+#hideAnnuncio {
+  padding: 0 2em;
+  border-radius: 25px;
+  height: 40px;
+  font-size: 0.9em;
+}
+
+.playBtn {
+  background-color: #1ed760;
+  font-weight: 700;
+}
+
+.saveBtn {
+  border: 1px solid gray;
+  color: white;
+}
+
+.moreBtn {
+  height: 40px;
+  padding: 0 0.5em;
+}
+.moreBtn i {
+  font-size: 1.5em;
+  color: #a7a7a7;
+}
+
+#hideAnnuncio {
+  text-transform: uppercase;
+  background-color: inherit;
+  border: transparent;
+  box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.1);
+  color: #a7a7a7;
+  font-size: 0.75em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 30px;
+  opacity: 50%;
+}
+
+.showMore {
+  background-color: inherit;
+  border: none;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  color: #a7a7a7;
+}
+
+.custCardLG {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #2a2a2a;
+  font-size: 0.6em;
+}
+.custCardLG img {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.custCardLG div {
+  padding-left: 10px;
+}
+
+.custCard {
+  display: flex;
+  flex-direction: column;
+  background-color: #242424;
+  padding: 20px;
+  border-radius: 7px;
+}
+.custCard img {
+  border-radius: 7px;
+  margin-bottom: 1em;
+  height: 70%;
+}
+.custCard h5 {
+  font-size: 0.9em;
+  color: #a7a7a7;
 }
 
 aside {
@@ -412,7 +568,7 @@ footer {
 }
 
 .noUi-base {
-  background-color: #5E5E5E;
+  background-color: #5e5e5e;
 }
 
 .btnContainer {
@@ -420,7 +576,8 @@ footer {
   gap: 15px;
 }
 
-.btnAnnuncio, #hideAnnuncio {
+.btnAnnuncio,
+#hideAnnuncio {
   padding: 0 2em;
   border-radius: 25px;
   height: 40px;
@@ -623,4 +780,4 @@ footer {
   display: flex;
   justify-content: center;
   font-size: 0.8em;
-}/*# sourceMappingURL=app.css.map */
+} /*# sourceMappingURL=app.css.map */

@@ -1,30 +1,27 @@
-body>footer {
-    padding: 0px;
+body > footer {
+  padding: 0px;
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    z-index: 99;
-
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
 }
 
-.container-fluid {
-    background-color: #181818;
-    color: white;
+footer .container-fluid {
+  border-top: 1px solid $border-hr;
 }
 
 #slider-round {
-    height: 7px;
-
+  height: 7px;
 }
 
 #slider-round .noUi-handle {
-    height: 18px;
-    width: 18px;
-    top: -5px;
-    right: -9px;
-    border-radius: 9px;
+  height: 18px;
+  width: 18px;
+  top: -5px;
+  right: -9px;
+  border-radius: 9px;
 }
 
 // #slider-round .noUi-connect {
@@ -32,15 +29,15 @@ footer {
 // }
 
 #slider-round2 {
-    height: 7px;
+  height: 7px;
 }
 
 #slider-round2 .noUi-handle {
-    height: 18px;
-    width: 18px;
-    top: -5px;
-    right: -9px;
-    border-radius: 9px;
+  height: 18px;
+  width: 18px;
+  top: -5px;
+  right: -9px;
+  border-radius: 9px;
 }
 
 // #slider-round2 .noUi-connect {
@@ -48,11 +45,11 @@ footer {
 // }
 
 .noUi-handle {
-    display: none;
+  display: none;
 }
 
 .noUi-base {
-    background-color: #5E5E5E;
+  background-color: #5e5e5e;
 }
 
 // .noUi-handle:hover {
