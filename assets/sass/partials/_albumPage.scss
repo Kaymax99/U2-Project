@@ -1,0 +1,149 @@
+#annuncioAB {
+  display: flex;
+  align-items: flex-end;
+}
+
+#wrapperAnnuncioAB {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  width: 100%;
+  height: 200px;
+  padding: 16px 0;
+  h5 {
+    margin-left: 0.5em;
+    font-size: 0.7em;
+  }
+  h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 0.6em;
+  }
+
+  #albumCredits {
+    display: flex;
+    align-items: center;
+    font-size: 0.7em;
+
+    img {
+      width: 25px;
+      height: 25px;
+      border-radius: 50px;
+    }
+
+    h5,
+    p {
+      margin: 0;
+    }
+
+    #albumAuthor {
+      margin-left: 10px;
+    }
+
+    .dot {
+      margin: 0 3px;
+    }
+
+    #albumLength {
+      color: $c-text-subdued;
+    }
+  }
+}
+
+#albumRow {
+  padding: 0;
+  margin: 0;
+
+  .col {
+    margin: 0;
+    padding: 0;
+  }
+
+  .row {
+    margin: 0;
+    padding: 0;
+  }
+
+  #albumButtonContainer {
+    padding: 1.5em 0 1.5em 2em;
+
+    display: flex;
+    align-items: center;
+
+    > i {
+      font-size: 1.7em;
+      color: $c-text-subdued;
+      margin-left: 0.8em;
+    }
+
+    #playButton {
+      font-size: 1.7em;
+      background-color: $theme-primary;
+      transition: 0.2s;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background-color: #189945;
+        transition: 0.2s;
+      }
+    }
+  }
+
+  #innerRowContainer {
+    padding-left: 3.5em;
+    font-size: 0.9em;
+    color: $c-text-subdued;
+
+    #hashtag {
+      margin-right: 15px;
+      font-size: 1.1em;
+    }
+
+    #counterHeader,
+    #timeHeader {
+      display: flex;
+      justify-content: center;
+    }
+    hr {
+      width: 95%;
+      margin-top: 0.4em;
+      margin-bottom: 1em;
+    }
+  }
+
+  .albumSongItem {
+    padding-left: 3.5em;
+    align-items: center;
+
+    .firstItem {
+      display: flex;
+      align-items: center;
+
+      > p {
+        margin-right: 15px;
+      }
+
+      h3 {
+        font-size: 0.9em;
+        font-weight: 400;
+        margin-bottom: 5px;
+      }
+
+      div > p {
+        font-size: 0.8em;
+        color: $c-text-subdued;
+      }
+    }
+
+    .listens,
+    .length {
+      display: flex;
+      justify-content: center;
+      font-size: 0.8em;
+    }
+  }
+}
