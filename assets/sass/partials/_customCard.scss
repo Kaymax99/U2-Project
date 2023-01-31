@@ -28,6 +28,9 @@
     font-size: 0.9em;
     color: $c-text-subdued;
     /* height: 40px; */
+  }
+  h4,
+  h5 {
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
