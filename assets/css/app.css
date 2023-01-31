@@ -42,7 +42,7 @@ hr {
   overflow-y: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
-  padding-bottom: 5em;
+  padding-bottom: 6em;
 }
 #left-Nav li {
   height: 32px;
