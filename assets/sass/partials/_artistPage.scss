@@ -1,0 +1,173 @@
+main {
+  padding: 0 0 8em 0 !important;
+}
+
+#annuncioAR {
+  padding: 7em 0 1em 1em;
+  background-image: url("https://wallpapercrafter.com/desktop/163883-digital-art-women-mountains-lagoon-landscape-Kvacm.jpg");
+  background-size: cover;
+
+  #verification {
+    display: flex;
+    align-items: center;
+
+    i {
+      font-size: 1.4em;
+      color: #0d6efd;
+    }
+
+    p {
+      margin: 0;
+      margin-left: 10px;
+
+      font-size: 0.9em;
+    }
+  }
+
+  h1 {
+    font-weight: 900;
+    font-size: 5em;
+    margin-bottom: 0.2em;
+  }
+
+  > p {
+    margin: 0;
+    #monthlyListeners {
+      margin-right: 10px;
+    }
+  }
+}
+
+#artistRow {
+  margin: 0 !important;
+  .col {
+    padding: 0;
+  }
+
+  #artistButtonContainer {
+    padding: 1.5em 0 1.5em 2em;
+
+    display: flex;
+    align-items: center;
+
+    #playButton {
+      font-size: 1.7em;
+      background-color: $theme-primary;
+      margin-right: 20px;
+      transition: 0.2s;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        background-color: #189945;
+        transition: 0.2s;
+      }
+    }
+
+    #followButton {
+      font-size: 0.9em;
+      padding: 2px 5px;
+      background-color: rgba(0, 0, 0, 0);
+      border: 1px solid $c-text-subdued;
+      border-radius: 5px;
+      color: white;
+      &:hover {
+        border: 1px solid white;
+      }
+    }
+
+    .bi-three-dots {
+      color: $c-text-subdued;
+      font-size: 1.5em;
+      margin-left: 20px;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  #artistSongRow {
+    h4 {
+      font-size: 1.2em;
+      font-weight: 900;
+      padding-left: 2em;
+      margin-bottom: 1em;
+    }
+
+    #songContainer {
+      padding-left: 3em;
+      color: $c-text-subdued;
+      display: flex;
+      align-items: center;
+
+      #firstSongData {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        img {
+          width: 35px;
+          margin: 5px 15px;
+        }
+
+        p {
+          font-size: 0.8em;
+          margin: 0;
+        }
+      }
+
+      > p {
+        font-size: 0.8em;
+        text-align: right;
+        width: 25%;
+        margin: 0;
+      }
+    }
+
+    #otherButton {
+      @extend .showMore;
+      margin-top: 0.7em;
+      font-size: 0.7em;
+      font-weight: 900;
+      padding-left: 4em;
+
+      &:hover {
+        color: white !important;
+      }
+    }
+
+    #currentArtistContainer {
+      h4 {
+        font-size: 1.2em;
+        font-weight: 900;
+        margin-bottom: 1em;
+      }
+
+      #currentArtist {
+        display: flex;
+        align-items: center;
+        padding-left: 2.5em;
+
+        img {
+          width: 70px;
+          border-radius: 50px;
+          margin-right: 10px;
+        }
+        #asideSongTextContainer {
+          h3 {
+            font-size: 0.8em;
+          }
+
+          p {
+            color: $c-text-subdued;
+            font-size: 0.7em;
+          }
+        }
+      }
+    }
+  }
+}
