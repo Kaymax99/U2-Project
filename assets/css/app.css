@@ -29,7 +29,8 @@ li {
 }
 
 hr {
-  background-color: white;
+  opacity: 100%;
+  background-color: #282828;
   border: none;
   min-height: 1px;
 }
@@ -85,8 +86,15 @@ hr {
   color: white;
 }
 
+main {
+  max-height: 100vh;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 main #mainNav {
   padding: 16px 0;
+  margin: 0 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -126,6 +134,15 @@ main #mainNav #userWrapper .bi-caret-down-fill {
   align-self: flex-end;
 }
 
+.container-fluid {
+  background-color: #181818;
+  color: white;
+}
+
+main::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
 #ultimiAscolti {
   font-size: 1.5em;
 }
@@ -158,6 +175,10 @@ main #mainNav #userWrapper .bi-caret-down-fill {
   margin: 0 0.5em;
 }
 
+#consigliati {
+  padding-bottom: 9em;
+}
+
 h2 {
   margin: 0.75em 0.5em;
   font-size: 1.25em;
@@ -173,9 +194,8 @@ footer {
   z-index: 99;
 }
 
-.container-fluid {
-  background-color: #181818;
-  color: white;
+footer .container-fluid {
+  border-top: 1px solid #282828;
 }
 
 #slider-round {
@@ -207,7 +227,7 @@ footer {
 }
 
 .noUi-base {
-  background-color: #5E5E5E;
+  background-color: #5e5e5e;
 }
 
 .btnContainer {
