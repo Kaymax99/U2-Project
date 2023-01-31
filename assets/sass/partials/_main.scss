@@ -60,7 +60,13 @@ main::-webkit-scrollbar {
 #annuncio {
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 95%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    25deg,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(24, 24, 24, 1) 75%
+  );
 }
 
 #wrapperAnnuncio {
@@ -86,10 +92,10 @@ main::-webkit-scrollbar {
 }
 
 #consigliati {
-  padding-bottom: 7em;
+  padding-bottom: 11em;
 }
 
 h2 {
-  margin: 0.75em 0.5em;
+  margin: 0.75em 1em;
   font-size: 1.25em;
 }
