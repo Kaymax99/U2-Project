@@ -6,6 +6,7 @@ main {
   #mainNav {
     padding: 16px 0;
     margin: 0 10px;
+
     @include row;
     align-items: center;
     justify-content: space-between;

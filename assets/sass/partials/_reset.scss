@@ -17,6 +17,14 @@ body {
   display: none; /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
+.container-fluid {
+  padding: 0;
+
+  > .row {
+    margin: 0;
+  }
+}
+
 ul {
   padding: 0;
 }
