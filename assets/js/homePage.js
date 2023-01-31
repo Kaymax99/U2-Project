@@ -1,3 +1,22 @@
+const arrayIDAlbum = [
+  75621062, 8887733, 7823038, 7824595, 7824584, 91333612, 345755977, 192529232,
+  100674742, 59853252,
+];
+
+const shuffleArray = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+};
+shuffleArray(arrayIDAlbum);
+/* console.log(arrayIDAlbum); */
+
+const selectedAlbumIDs = arrayIDAlbum.slice(0, 5);
+/* console.log(selectedAlbumIDs); */
+
 const getMusic = async () => {
   try {
     //fetch sezione annuncio

@@ -42,6 +42,7 @@ hr {
   overflow-y: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  padding-bottom: 5em;
 }
 #left-Nav li {
   height: 32px;
@@ -252,6 +253,10 @@ footer .container-fluid {
   color: white;
 }
 
+.moreBtn {
+  height: 40px;
+  padding: 0 0.5em;
+}
 .moreBtn i {
   font-size: 1.5em;
   color: #a7a7a7;
