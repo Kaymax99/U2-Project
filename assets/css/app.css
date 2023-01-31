@@ -317,6 +317,9 @@ footer .container-fluid {
   font-size: 0.9em;
   color: #a7a7a7;
   /* height: 40px; */
+}
+.custCard h4,
+.custCard h5 {
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
