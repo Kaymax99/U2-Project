@@ -241,7 +241,6 @@ footer {
   text-transform: uppercase;
   background-color: inherit;
   border: transparent;
-  -webkit-box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.1);
   color: #a7a7a7;
   font-size: 0.75em;
@@ -497,6 +496,4 @@ aside #main-right-nav .profile > p {
 #main-right-nav #album:hover {
   text-decoration: underline;
   color: #a7a7a7;
-}
-
-/*# sourceMappingURL=app.css.map */
+}/*# sourceMappingURL=app.css.map */
