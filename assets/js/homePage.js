@@ -13,11 +13,51 @@ const shuffleArray = (array) => {
 };
 shuffleArray(arrayIDAlbum);
 /* console.log(arrayIDAlbum); */
-
-const selectedAlbumIDs = arrayIDAlbum.slice(0, 5);
+const selectedAlbumIDs = arrayIDAlbum.slice(0, 6);
 /* console.log(selectedAlbumIDs); */
 
-const getMusic = async () => {
+const baseAlbumURL = "https://striveschool-api.herokuapp.com/api/deezer/album/";
+
+const fetchAlbum = async (index) => {
+  try {
+    let res = await fetch(baseAlbumURL + index);
+    if (res.ok) {
+      let data = await res.json();
+      /*       console.log(res);
+      console.log(data); */
+      return data;
+    } else {
+      throw "errore nella sezione altro";
+    }
+  } catch (err) {
+    console.log(err);
+  }
+};
+/* getAlbum(selectedAlbumIDs[0]); */
+
+const albumArray = [];
+const getAlbums = async function (id) {
+  let albums = await fetchAlbum(id);
+  albumArray.push(albums);
+  testFunc(albumArray);
+};
+
+const testFunc = (albumArray) => {
+  let divBuonasera = document.getElementById("ultimiAscoltiWrapper");
+  if (albumArray.length === 6) {
+    for (i = 0; i < albumArray.length; i++) {
+      divBuonasera.innerHTML += `<div class="row col-4 p-1"><div class="p-0 custCardLG">
+      <img src="${albumArray[i].cover_small}" class="col-3 p-0" />
+      <div class="col-9">${albumArray[i].title}</div></div>`;
+    }
+  }
+};
+
+for (i = 0; i < selectedAlbumIDs.length; i++) {
+  getAlbums(selectedAlbumIDs[i]);
+}
+
+/* const getMusic = async () => {
   try {
     //fetch sezione annuncio
     let discografiaAnnincio1 = await fetch(
@@ -276,4 +316,4 @@ const getMusic = async () => {
   }
 };
 
-getMusic();
+getMusic(); */
