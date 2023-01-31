@@ -153,7 +153,7 @@ main::-webkit-scrollbar {
   align-items: center;
   width: 95%;
   background: rgb(0, 0, 0);
-  background: linear-gradient(30deg, rgb(0, 0, 0) 30%, rgb(24, 24, 24) 75%);
+  background: linear-gradient(25deg, rgb(0, 0, 0) 30%, rgb(24, 24, 24) 75%);
 }
 
 #wrapperAnnuncio {
@@ -179,7 +179,7 @@ main::-webkit-scrollbar {
 }
 
 #consigliati {
-  padding-bottom: 7em;
+  padding-bottom: 11em;
 }
 
 h2 {
