@@ -29,7 +29,8 @@ li {
 }
 
 hr {
-  background-color: $c-text-primary;
+  opacity: 100%;
+  background-color: $border-hr;
   border: none;
   min-height: 1px;
 }
