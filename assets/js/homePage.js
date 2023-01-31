@@ -11,7 +11,28 @@ const getMusic = async () => {
     //sezione annuncio
     if (discografiaAnnincio1.ok) {
       let elencoAnnuncio1 = await discografiaAnnincio1.json();
-      let branoAnnuncio1 = elencoAnnuncio1.data;
+
+      let annuncio = document.getElementById("annuncio");
+
+      annuncio.innerHTML += `<div class="p-3">
+<img src="${elencoAnnuncio1.cover_small}" height="200px" />
+</div>
+<div id="wrapperAnnuncio">
+<h5 class="albumAnnuncio">ALBUM</h5>
+<button id="hideAnnuncio">nascondi annunci</button>
+<div class="songAuthor">
+  <h1>${elencoAnnuncio1.title}</h1>
+  <h5>${elencoAnnuncio1.contributors[0].name}</h5>
+</div>
+<h5>Ascolta il nuovo singolo di ${elencoAnnuncio1.contributors[0].name}</h5>
+<div class="btnContainer">
+  <button class="btn btnAnnuncio playBtn">Play</button>
+  <button class="btn btnAnnuncio saveBtn">Salva</button>
+  <button class="btn moreBtn">
+    <i class="bi bi-three-dots"></i>
+  </button>
+</div>
+</div>`;
     } else {
       throw "errore nella sezione buonasera";
     }
