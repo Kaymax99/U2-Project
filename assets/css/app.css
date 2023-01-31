@@ -710,8 +710,8 @@ main {
   font-size: 0.9em;
 }
 #annuncioAR h1 {
-  font-size: 5em;
   font-weight: 900;
+  font-size: 5em;
   margin-bottom: 0.2em;
 }
 #annuncioAR > p {
