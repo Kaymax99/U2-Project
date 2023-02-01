@@ -1,10 +1,9 @@
-.dropdown {
+.dropdown1 {
     position: relative;
     display: inline-block;
 }
 
-.dropdown-toggle {
-    background-color: #f2f2f2;
+.dropdown-toggle1 {
     color: black;
     padding: 16px;
     font-size: 16px;
@@ -12,26 +11,67 @@
     cursor: pointer;
 }
 
-.dropdown-content {
+.dropdown-content1 {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
+    background-color: #282828;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 50;
+    top: 68px;
+    left: 36px;
+}
+
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    bottom: 29px;
+    right: -154px;
+    background-color: #282828;
+    min-width: 300px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
 
-.dropdown-content a {
-    color: black;
+
+
+.dropdown-content1 a {
+    color: #FFFFFF;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
 }
 
-.dropdown-content a:hover {
-    background-color: #ddd;
+.dropdown-content1 a:hover {
+    background-color: #3E3E3E;
+
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.dopperRadius {
+
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+
+}
+
+
+
+// .dropdown1:hover .dropdown-content1 {
+//     show little popup top
+// }
+
+// .btn .moreBtn {
+//     background-color: #181818;
+// }
+.dropdown-content2 {
+    display: none;
+    transition: all 1s ease;
 }
