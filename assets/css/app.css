@@ -42,6 +42,12 @@ hr {
   min-height: 1px;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+  padding: 0;
+}
+
 #left-Nav {
   background-color: black;
   height: 100vh;
