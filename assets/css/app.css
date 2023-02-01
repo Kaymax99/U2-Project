@@ -706,6 +706,12 @@ footer .container-fluid {
   top: 0;
   height: 30px;
   opacity: 50%;
+  transition: 0.2s;
+}
+#hideAnnuncio:hover {
+  color: white;
+  background-color: #383838;
+  transition: 0.2s;
 }
 
 .showMore, #artistRow #artistSongRow #otherButton {
@@ -881,12 +887,29 @@ main::-webkit-scrollbar {
 #annuncioAB {
   display: flex;
   align-items: flex-end;
-  padding-top: 4.5em !important;
+  padding-top: 4em;
+  transition: 0.2s;
+}
+@media screen and (min-width: 992px) {
+  #annuncioAB {
+    padding-top: 5.5em;
+  }
+}
+@media screen and (min-width: 992px) {
+  #annuncioAB {
+    padding-top: 6.5em;
+  }
+}
+@media screen and (min-width: 992px) {
+  #annuncioAB {
+    padding-top: 7.5em;
+  }
 }
 #annuncioAB img {
   height: 200px;
 }
 #annuncioAB #albumAuthor {
+  color: white;
   font-weight: 700;
 }
 #annuncioAB a:hover {
@@ -907,13 +930,28 @@ main::-webkit-scrollbar {
   text-overflow: ellipsis;
 }
 #wrapperAnnuncioAB h5 {
+  color: white;
   margin-left: 0.5em;
-  font-size: 0.7em;
+  font-size: 0.8em;
+  transition: 0.2s;
+}
+@media screen and (min-width: 1200px) {
+  #wrapperAnnuncioAB h5 {
+    font-size: 1em;
+    margin-bottom: 1em;
+  }
 }
 #wrapperAnnuncioAB h1 {
-  font-size: 3em;
+  color: white;
+  font-size: 3.2em;
   font-weight: 700;
-  margin-bottom: 0.6em;
+  margin-bottom: 0.4em;
+  transition: 0.2s;
+}
+@media screen and (min-width: 1200px) {
+  #wrapperAnnuncioAB h1 {
+    font-size: 3.6em;
+  }
 }
 #wrapperAnnuncioAB #albumCredits {
   display: flex;
@@ -927,6 +965,7 @@ main::-webkit-scrollbar {
 }
 #wrapperAnnuncioAB #albumCredits h5,
 #wrapperAnnuncioAB #albumCredits p {
+  color: white;
   margin: 0;
 }
 #wrapperAnnuncioAB #albumCredits #albumAuthor {
@@ -961,6 +1000,11 @@ main::-webkit-scrollbar {
   font-size: 1.7em;
   color: #a7a7a7;
   margin-left: 0.8em;
+  transition: 0.2s;
+}
+#albumRow #albumButtonContainer > i:hover {
+  color: white;
+  transition: 0.2s;
 }
 #albumRow #albumButtonContainer #playButton {
   font-size: 1.7em;
@@ -994,25 +1038,31 @@ main::-webkit-scrollbar {
   margin-bottom: 1em;
 }
 #albumRow .albumSongItem {
+  border-radius: 10px;
   align-items: center;
-  padding: 0.5em 0 0.5em 50.4px;
+  transition: 0.1s;
+  padding: 0.5em 0 0.5em 3.15em;
 }
 #albumRow .albumSongItem:hover {
   background-color: #383838;
   color: white;
+  transition: 0.1s;
 }
 #albumRow .albumSongItem .firstItem {
   display: flex;
   align-items: center;
 }
 #albumRow .albumSongItem .firstItem > p {
+  color: white;
   margin-right: 15px;
   margin-bottom: 0;
 }
 #albumRow .albumSongItem .firstItem h3 {
+  color: white;
   font-size: 0.9em;
   font-weight: 400;
   margin-bottom: 5px;
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
@@ -1020,6 +1070,7 @@ main::-webkit-scrollbar {
   margin-bottom: 0;
   font-size: 0.8em;
   color: #a7a7a7;
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
@@ -1130,10 +1181,16 @@ main {
   margin-bottom: 1em;
 }
 #artistRow #artistSongRow #songContainer {
-  padding-left: 3em;
+  margin-left: 3em;
+  padding: 0 10px;
+  border-radius: 5px;
   color: #a7a7a7;
   display: flex;
   align-items: center;
+}
+#artistRow #artistSongRow #songContainer:hover {
+  background-color: #383838;
+  transition: 0.2s;
 }
 #artistRow #artistSongRow #songContainer #firstSongData {
   width: 50%;

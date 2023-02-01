@@ -107,10 +107,17 @@ main {
     }
 
     #songContainer {
-      padding-left: 3em;
+      margin-left: 3em;
+      padding: 0 10px;
+      border-radius: 5px;
       color: $c-text-subdued;
       display: flex;
       align-items: center;
+
+      &:hover {
+        background-color: #383838;
+        transition: 0.2s;
+      }
 
       #firstSongData {
         width: 50%;
