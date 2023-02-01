@@ -184,6 +184,7 @@ const drawAlbum = (albumArray) => {
     </div>`;
     }
   }
+  // THIS IS THE COLOR THIEF LOGIC
   const art = document.querySelector(".p-3>img")
   console.log(art)
   // initialize colorThief
