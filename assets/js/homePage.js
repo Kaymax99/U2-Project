@@ -63,20 +63,20 @@ const drawAnnuncio = async (album) => {
       <button class="btn btnAnnuncio playBtn">Play</button>
       <button class="btn btnAnnuncio saveBtn">Salva</button>
       <div class="dropdown1">
-      <ul class="dopperRadius dropdown-content2">
-        <li>More Options for $ PLACEHOLDER $</li>
-      </ul>
-      <button class="dropdown-toggle1 btn moreBtn">
+        <ul class="dopperRadius dropdown-content2">
+          <li>More Options for $ PLACEHOLDER $</li>
+        </ul>
+        <button class="dropdown-toggle1 btn moreBtn">
         <i class="bi bi-three-dots"></i>
-      </button>
-      <ul class="dopperRadius dropdown-content1">
-        <li><a class="topA" href="#">Add to queue</a></li>
-        <li><a href="#">Go to playlist radio</a></li>
-        <li><a href="#">Report</a></li>
-        <li><a href="#">Add to your Library</a></li>
-        <li>
-          <hr>
-        </li>
+        </button>
+        <ul class="dopperRadius dropdown-content1">
+          <li><a class="topA" href="#">Add to queue</a></li>
+          <li><a href="#">Go to playlist radio</a></li>
+          <li><a href="#">Report</a></li>
+          <li><a href="#">Add to your Library</a></li>
+          <li>
+            <hr>
+          </li>
         <li><a class="botA" href="#">Share</a></li>
         <li>
           <hr>
@@ -93,7 +93,7 @@ const drawAnnuncio = async (album) => {
 `;
 
 
-  // this code make all the buttons generated with the popups property
+  // this code make all the buttons generated with the popups function
 
 
   const dropdownToggle = document.querySelector(".dropdown-toggle1 ");
