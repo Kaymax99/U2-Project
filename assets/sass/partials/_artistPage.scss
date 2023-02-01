@@ -3,7 +3,7 @@ main {
 }
 
 #annuncioAR {
-  padding: 7em 0 1em 1em;
+  padding: 9em 0 1.5em 1em;
   background-image: url("https://wallpapercrafter.com/desktop/163883-digital-art-women-mountains-lagoon-landscape-Kvacm.jpg");
   background-size: cover;
 
@@ -111,7 +111,7 @@ main {
 
         img {
           width: 35px;
-          margin: 5px 15px;
+          margin: 7px 15px;
         }
 
         p {
@@ -130,7 +130,7 @@ main {
 
     #otherButton {
       @extend .showMore;
-      margin-top: 0.7em;
+      margin-top: 1.5em;
       font-size: 0.7em;
       font-weight: 900;
       padding-left: 4em;
@@ -144,7 +144,7 @@ main {
       h4 {
         font-size: 1.2em;
         font-weight: 900;
-        margin-bottom: 1em;
+        margin-bottom: 2em;
       }
 
       #currentArtist {

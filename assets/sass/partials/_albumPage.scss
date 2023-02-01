@@ -4,6 +4,48 @@ main {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   padding-bottom: 10em !important;
+
+  #mainNavB {
+    width: 58.33%;
+    position: fixed;
+    padding: 16px 10px;
+
+    @include row;
+    align-items: center;
+    justify-content: space-between;
+    .bi {
+      font-size: 1.5em;
+      color: $c-text-primary;
+    }
+    > div {
+      display: flex;
+      gap: 16px;
+    }
+    .navigation {
+      border: none;
+      border-radius: 50%;
+      background-color: $bg-buttons-subdued;
+    }
+    #userWrapper {
+      @include row;
+      align-items: center;
+      gap: 8px;
+      background-color: $bg-buttons-default;
+      border-radius: 25px;
+      padding-left: 0;
+      img {
+        border-radius: 25px;
+      }
+      span {
+        color: $c-text-primary;
+        font-weight: 700;
+      }
+      .bi-caret-down-fill {
+        font-size: 1.1em;
+        align-self: flex-end;
+      }
+    }
+  }
 }
 
 main::-webkit-scrollbar {
@@ -13,6 +55,7 @@ main::-webkit-scrollbar {
 #annuncioAB {
   display: flex;
   align-items: flex-end;
+  padding-top: 4.5em !important;
 
   img {
     width: 180px;
@@ -138,8 +181,14 @@ main::-webkit-scrollbar {
   }
 
   .albumSongItem {
-    padding-left: 50.4px;
     align-items: center;
+
+    padding: 0.5em 0 0.5em 50.4px;
+
+    &:hover {
+      background-color: #383838;
+      color: white;
+    }
 
     .firstItem {
       display: flex;
@@ -147,6 +196,7 @@ main::-webkit-scrollbar {
 
       > p {
         margin-right: 15px;
+        margin-bottom: 0;
       }
 
       h3 {
@@ -158,6 +208,7 @@ main::-webkit-scrollbar {
       }
 
       div > p {
+        margin-bottom: 0;
         font-size: 0.8em;
         color: $c-text-subdued;
         white-space: nowrap;
@@ -170,6 +221,10 @@ main::-webkit-scrollbar {
       display: flex;
       justify-content: center;
       font-size: 0.8em;
+
+      > p {
+        margin-bottom: 0;
+      }
     }
   }
 }
