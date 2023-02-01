@@ -257,10 +257,12 @@ main::-webkit-scrollbar {
   width: 100%;
 }
 #wrapperAnnuncio h5 {
+  color: white;
   font-size: 0.9em;
 }
 #wrapperAnnuncio h1 {
   font-size: 3em;
+  color: white;
   font-weight: 700;
   margin-bottom: 0;
 }
@@ -381,6 +383,9 @@ aside #main-right-nav .profile h4 {
   font-size: 1em;
   margin: 0;
   padding-bottom: 3px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 @media screen and (max-width: 1600px) {
   aside #main-right-nav .profile h4 {
@@ -410,6 +415,9 @@ aside #main-right-nav .profile h4 {
 aside #main-right-nav .profile div > p {
   font-size: 0.7em;
   margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 @media screen and (max-width: 1600px) {
   aside #main-right-nav .profile div > p {
@@ -719,7 +727,19 @@ footer .container-fluid {
   border-radius: 5px;
   margin-top: 10px;
   background-color: #2a2a2a;
+  color: white;
   font-size: 0.4em;
+  transition: 0.2s;
+}
+@media screen and (min-width: 992px) {
+  .custCardLG {
+    font-size: 0.5em;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .custCardLG {
+    font-size: 0.6em;
+  }
 }
 .custCardLG img {
   border-top-left-radius: 5px;
@@ -731,6 +751,9 @@ footer .container-fluid {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+.custCardLG:hover {
+  background-color: #383838;
 }
 
 .custCard {
@@ -766,8 +789,12 @@ footer .container-fluid {
     font-size: 0.8em;
   }
 }
+.custCard h5:hover {
+  text-decoration: underline;
+}
 .custCard h4 {
   font-size: 0.5em;
+  color: white;
   transition: 0.2s;
 }
 @media screen and (min-width: 992px) {
@@ -787,6 +814,9 @@ footer .container-fluid {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.custCard:hover {
+  background-color: #383838;
 }
 
 main {
