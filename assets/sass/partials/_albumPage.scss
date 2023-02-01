@@ -6,9 +6,13 @@ main {
   padding-bottom: 10em !important;
 
   #mainNavB {
-    width: 58.33%;
+    width: 75%;
     position: fixed;
     padding: 16px 10px;
+
+    @media screen and (min-width: 992px) {
+      width: 66.6%;
+    }
 
     @include row;
     align-items: center;
