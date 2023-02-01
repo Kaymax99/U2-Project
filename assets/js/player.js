@@ -1,4 +1,6 @@
+// import albums from "./homePage.js"
 
+// console.log(albums)
 let slider = document.getElementById('slider-round');
 noUiSlider.create(slider, {
     start: 20,
@@ -19,94 +21,6 @@ noUiSlider.create(slider2, {
         'max': 100
     }
 });
-
-// const greenLine = document.querySelector("#slider-round")
-// const greenLine2 = document.querySelector("#slider-round2")
-// let isDragging = false
-
-// ***hover animations player.V2***
-
-// const circle = document.querySelector("#slider-round .noUi-handle")
-// const circle2 = document.querySelector("#slider-round2 .noUi-handle")
-
-
-// circle.addEventListener("mousedown", function () {
-//     const bgSlider = document.querySelector(" #slider-round .noUi-connect")
-//     isDragging = true;
-//     circle.style.display = "block"
-//     bgSlider.style.backgroundColor = "#1DB954";
-
-//     document.addEventListener("mouseup", function () {
-//         // circle.style.display = "none"
-//         let isDragging = false;
-
-//         console.log(isDragging)
-//         bgSlider.style.background = "white"
-//         console.log("mouse up")
-//     })
-// })
-
-
-
-// greenLine.addEventListener("mouseover", function () {
-//     const circle = document.querySelector("#slider-round .noUi-handle")
-//     const bgSlider = document.querySelector(" #slider-round .noUi-connect")
-
-//     circle.style.display = "block"
-//     bgSlider.style.backgroundColor = "#1DB954"
-
-
-// })
-
-// greenLine.addEventListener("mouseout",
-
-//     function () {
-//         const bgSlider = document.querySelector(" #slider-round .noUi-connect")
-
-//         console.log(isDragging)
-
-//         if (isDragging) {
-//             console.log(isDragging)
-//             circle.style.display = "block"
-//             bgSlider.style.backgroundColor = "#1DB954"
-//         } else {
-//             console.log(isDragging)
-
-//             circle.style.display = "none"
-//             bgSlider.style.backgroundColor = "white"
-//         }
-
-//     })
-
-//     greenLine.addEventListener("mouseover", function () {
-//     const circle = document.querySelector("#slider-round .noUi-handle")
-//     const bgSlider = document.querySelector(" #slider-round .noUi-connect")
-
-//     circle.style.display = "block"
-//     bgSlider.style.backgroundColor = "#1DB954"
-//     document.addEventListener("mouseout",
-//         function () {
-//             circle.style.display = "none"
-//             // if (bgSlider.style.backgroundColor !== "#1DB954") {
-
-//             bgSlider.style.backgroundColor = "white";
-
-//         }
-//     )
-
-
-// });
-
-
-
-
-
-
-
-
-
-
-
 const greenLine1 = document.querySelector("#slider-round");
 const greenLine2 = document.querySelector("#slider-round2");
 const circle1 = document.querySelector("#slider-round .noUi-handle");
@@ -161,21 +75,6 @@ document.addEventListener("mouseup", function () {
 
 handleSliderEvent(greenLine1, circle1, "slider1");
 handleSliderEvent(greenLine2, circle2, "slider2");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // greenLine.addEventListener("mouseout", circleOff)// SSHHHTI.V1;
 
