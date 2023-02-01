@@ -38,6 +38,13 @@
   top: 0;
   height: 30px;
   opacity: 50%;
+  transition: 0.2s;
+
+  &:hover {
+    color: $c-text-primary;
+    background-color: #383838;
+    transition: 0.2s;
+  }
 }
 .showMore {
   background-color: inherit;

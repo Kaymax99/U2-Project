@@ -668,7 +668,8 @@ footer .container-fluid {
   gap: 15px;
 }
 
-.btnAnnuncio, #hideAnnuncio {
+.btnAnnuncio,
+#hideAnnuncio {
   padding: 0 2em;
   border-radius: 25px;
   height: 40px;
@@ -707,9 +708,16 @@ footer .container-fluid {
   top: 0;
   height: 30px;
   opacity: 50%;
+  transition: 0.2s;
+}
+#hideAnnuncio:hover {
+  color: white;
+  background-color: #383838;
+  transition: 0.2s;
 }
 
-.showMore, #artistRow #artistSongRow #otherButton {
+.showMore,
+#artistRow #artistSongRow #otherButton {
   background-color: inherit;
   border: none;
   text-transform: uppercase;
@@ -828,13 +836,18 @@ main {
   padding-bottom: 10em !important;
 }
 main #mainNavB {
-  width: 58.33%;
+  width: 75%;
   position: fixed;
   padding: 16px 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+@media screen and (min-width: 992px) {
+  main #mainNavB {
+    width: 66.6%;
+  }
 }
 main #mainNavB .bi {
   font-size: 1.5em;
@@ -877,12 +890,29 @@ main::-webkit-scrollbar {
 #annuncioAB {
   display: flex;
   align-items: flex-end;
-  padding-top: 4.5em !important;
+  padding-top: 4em;
+  transition: 0.2s;
+}
+@media screen and (min-width: 992px) {
+  #annuncioAB {
+    padding-top: 5.5em;
+  }
+}
+@media screen and (min-width: 992px) {
+  #annuncioAB {
+    padding-top: 6.5em;
+  }
+}
+@media screen and (min-width: 992px) {
+  #annuncioAB {
+    padding-top: 7.5em;
+  }
 }
 #annuncioAB img {
   height: 200px;
 }
 #annuncioAB #albumAuthor {
+  color: white;
   font-weight: 700;
 }
 #annuncioAB a:hover {
@@ -903,13 +933,28 @@ main::-webkit-scrollbar {
   text-overflow: ellipsis;
 }
 #wrapperAnnuncioAB h5 {
+  color: white;
   margin-left: 0.5em;
-  font-size: 0.7em;
+  font-size: 0.8em;
+  transition: 0.2s;
+}
+@media screen and (min-width: 1200px) {
+  #wrapperAnnuncioAB h5 {
+    font-size: 1em;
+    margin-bottom: 1em;
+  }
 }
 #wrapperAnnuncioAB h1 {
-  font-size: 3em;
+  color: white;
+  font-size: 3.2em;
   font-weight: 700;
-  margin-bottom: 0.6em;
+  margin-bottom: 0.4em;
+  transition: 0.2s;
+}
+@media screen and (min-width: 1200px) {
+  #wrapperAnnuncioAB h1 {
+    font-size: 3.6em;
+  }
 }
 #wrapperAnnuncioAB #albumCredits {
   display: flex;
@@ -923,6 +968,7 @@ main::-webkit-scrollbar {
 }
 #wrapperAnnuncioAB #albumCredits h5,
 #wrapperAnnuncioAB #albumCredits p {
+  color: white;
   margin: 0;
 }
 #wrapperAnnuncioAB #albumCredits #albumAuthor {
@@ -957,6 +1003,11 @@ main::-webkit-scrollbar {
   font-size: 1.7em;
   color: #a7a7a7;
   margin-left: 0.8em;
+  transition: 0.2s;
+}
+#albumRow #albumButtonContainer > i:hover {
+  color: white;
+  transition: 0.2s;
 }
 #albumRow #albumButtonContainer #playButton {
   font-size: 1.7em;
@@ -990,25 +1041,31 @@ main::-webkit-scrollbar {
   margin-bottom: 1em;
 }
 #albumRow .albumSongItem {
+  border-radius: 10px;
   align-items: center;
-  padding: 0.5em 0 0.5em 50.4px;
+  transition: 0.1s;
+  padding: 0.5em 0 0.5em 3.15em;
 }
 #albumRow .albumSongItem:hover {
   background-color: #383838;
   color: white;
+  transition: 0.1s;
 }
 #albumRow .albumSongItem .firstItem {
   display: flex;
   align-items: center;
 }
 #albumRow .albumSongItem .firstItem > p {
+  color: white;
   margin-right: 15px;
   margin-bottom: 0;
 }
 #albumRow .albumSongItem .firstItem h3 {
+  color: white;
   font-size: 0.9em;
   font-weight: 400;
   margin-bottom: 5px;
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
@@ -1016,6 +1073,7 @@ main::-webkit-scrollbar {
   margin-bottom: 0;
   font-size: 0.8em;
   color: #a7a7a7;
+  overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
@@ -1035,9 +1093,20 @@ main {
 }
 
 #annuncioAR {
-  padding: 20em 0 1.5em 1em;
+  padding: 15em 0 1.5em 1em;
   background-size: cover;
   background-position: top;
+  transition: 0.2s;
+}
+@media screen and (min-width: 1200px) {
+  #annuncioAR {
+    padding: 17.5em 0 1.5em 1em;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #annuncioAR {
+    padding: 20em 0 1.5em 1em;
+  }
 }
 #annuncioAR #verification {
   display: flex;
@@ -1048,16 +1117,19 @@ main {
   color: #0d6efd;
 }
 #annuncioAR #verification p {
+  color: white;
   margin: 0;
   margin-left: 10px;
   font-size: 0.9em;
 }
 #annuncioAR h1 {
+  color: white;
   font-weight: 900;
   font-size: 5em;
   margin-bottom: 0.2em;
 }
 #annuncioAR > p {
+  color: white;
   margin: 0;
 }
 
@@ -1105,16 +1177,23 @@ main {
   color: white;
 }
 #artistRow #artistSongRow h4 {
+  color: white;
   font-size: 1.2em;
   font-weight: 900;
   padding-left: 2em;
   margin-bottom: 1em;
 }
 #artistRow #artistSongRow #songContainer {
-  padding-left: 3em;
+  margin-left: 3em;
+  padding: 0 10px;
+  border-radius: 5px;
   color: #a7a7a7;
   display: flex;
   align-items: center;
+}
+#artistRow #artistSongRow #songContainer:hover {
+  background-color: #383838;
+  transition: 0.2s;
 }
 #artistRow #artistSongRow #songContainer #firstSongData {
   width: 50%;
@@ -1123,18 +1202,54 @@ main {
   justify-content: flex-start;
 }
 #artistRow #artistSongRow #songContainer #firstSongData img {
-  width: 35px;
+  width: 30px;
   margin: 7px 15px;
 }
+@media screen and (min-width: 992px) {
+  #artistRow #artistSongRow #songContainer #firstSongData img {
+    width: 35px;
+  }
+}
 #artistRow #artistSongRow #songContainer #firstSongData p {
-  font-size: 0.8em;
+  font-size: 0.6em;
+  color: white;
   margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: 0.2s;
+}
+@media screen and (min-width: 992px) {
+  #artistRow #artistSongRow #songContainer #firstSongData p {
+    font-size: 0.7em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #artistRow #artistSongRow #songContainer #firstSongData p {
+    font-size: 0.8em;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #artistRow #artistSongRow #songContainer #firstSongData p {
+    font-size: 0.9em;
+  }
 }
 #artistRow #artistSongRow #songContainer > p {
-  font-size: 0.8em;
+  font-size: 0.6em;
   text-align: right;
   width: 25%;
   margin: 0;
+  transition: 0.2s;
+}
+@media screen and (min-width: 992px) {
+  #artistRow #artistSongRow #songContainer > p {
+    font-size: 0.7em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #artistRow #artistSongRow #songContainer > p {
+    font-size: 0.8em;
+  }
 }
 #artistRow #artistSongRow #otherButton {
   margin-top: 1.5em;
@@ -1142,13 +1257,18 @@ main {
   font-weight: 900;
   padding-left: 4em;
 }
+@media screen and (min-width: 1400px) {
+  #artistRow #artistSongRow #otherButton {
+    font-size: 0.85em;
+  }
+}
 #artistRow #artistSongRow #otherButton:hover {
   color: white !important;
 }
 #artistRow #artistSongRow #currentArtistContainer h4 {
   font-size: 1.2em;
   font-weight: 900;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 #artistRow #artistSongRow #currentArtistContainer #currentArtist {
   display: flex;
@@ -1156,12 +1276,45 @@ main {
   padding-left: 2.5em;
 }
 #artistRow #artistSongRow #currentArtistContainer #currentArtist img {
-  width: 70px;
+  width: 50px;
   border-radius: 50px;
   margin-right: 10px;
+  transition: 0.2s;
+}
+@media screen and (min-width: 992px) {
+  #artistRow #artistSongRow #currentArtistContainer #currentArtist img {
+    width: 55px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #artistRow #artistSongRow #currentArtistContainer #currentArtist img {
+    width: 60px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #artistRow #artistSongRow #currentArtistContainer #currentArtist img {
+    width: 70px;
+  }
 }
 #artistRow #artistSongRow #currentArtistContainer #currentArtist #asideSongTextContainer h3 {
-  font-size: 0.8em;
+  color: white;
+  font-size: 0.6em;
+  transition: 0.2s;
+}
+@media screen and (min-width: 992px) {
+  #artistRow #artistSongRow #currentArtistContainer #currentArtist #asideSongTextContainer h3 {
+    font-size: 0.7em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #artistRow #artistSongRow #currentArtistContainer #currentArtist #asideSongTextContainer h3 {
+    font-size: 0.9em;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #artistRow #artistSongRow #currentArtistContainer #currentArtist #asideSongTextContainer h3 {
+    font-size: 1em;
+  }
 }
 #artistRow #artistSongRow #currentArtistContainer #currentArtist #asideSongTextContainer p {
   color: #a7a7a7;
@@ -1204,14 +1357,14 @@ main {
 }
 
 .dropdown-content1 a {
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
 .dropdown-content1 a:hover {
-  background-color: #3E3E3E;
+  background-color: #3e3e3e;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   border-bottom-left-radius: 3px;
@@ -1225,4 +1378,8 @@ main {
   border-bottom-right-radius: 3px;
 }
 
-/*# sourceMappingURL=app.css.map */
+@media screen and (min-width: 1400px) {
+  #artistRow #artistSongRow #currentArtistContainer #currentArtist #asideSongTextContainer p {
+    font-size: 0.8em;
+  }
+} /*# sourceMappingURL=app.css.map */
