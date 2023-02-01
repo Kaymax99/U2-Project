@@ -698,6 +698,7 @@ footer .container-fluid {
   text-transform: uppercase;
   background-color: inherit;
   border: transparent;
+  -webkit-box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.1);
   color: #a7a7a7;
   font-size: 0.75em;
@@ -1165,4 +1166,63 @@ main {
 #artistRow #artistSongRow #currentArtistContainer #currentArtist #asideSongTextContainer p {
   color: #a7a7a7;
   font-size: 0.7em;
-}/*# sourceMappingURL=app.css.map */
+}
+
+.dropdown1 {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle1 {
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content1 {
+  display: none;
+  position: absolute;
+  background-color: #282828;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 50;
+  top: 68px;
+  left: 36px;
+}
+
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  bottom: 29px;
+  right: -154px;
+  background-color: #282828;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content1 a {
+  color: #FFFFFF;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content1 a:hover {
+  background-color: #3E3E3E;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.dopperRadius {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+/*# sourceMappingURL=app.css.map */

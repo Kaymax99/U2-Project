@@ -39,30 +39,92 @@ const drawAnnuncio = async (album) => {
   //console.log(spotlightAlbum);
 
   let annuncio = document.getElementById("annuncio");
-  annuncio.innerHTML = "";
+  //   annuncio.innerHTML = "";
 
-  annuncio.innerHTML += `<div class="p-3">
-<img src="${spotlightAlbum.cover_big}" height="200px" />
-</div>
-<div id="wrapperAnnuncio">
+  annuncio.innerHTML +=
+    `
+  <div class="p-3">
+    <img src="${spotlightAlbum.cover_big}" height="200px" />
+  </div>
+  <div id="wrapperAnnuncio">
 
-<h5 class="albumAnnuncio">ALBUM</h5>
-<button id="hideAnnuncio">nascondi annunci</button>
-<div class="songAuthor">
-<a href="./albumPage.html?id=${spotlightAlbum.id}">
-  <h1>${spotlightAlbum.title}</h1></a>
-  <a href="./artistPage.html?id=${spotlightAlbum.artist.id}">
-  <h5>${spotlightAlbum.contributors[0].name}</h5></a>
+    <h5 class="albumAnnuncio">ALBUM</h5>
+    <button id="hideAnnuncio">nascondi annunci</button>
+    <div class="songAuthor">
+      <a href="./albumPage.html?id=${spotlightAlbum.id}">
+      <h1>${spotlightAlbum.title}</h1>
+      </a>
+      <a href="./artistPage.html?id=${spotlightAlbum.artist.id}">
+      <h5>${spotlightAlbum.contributors[0].name}</h5>
+      </a>
+    </div>
+    <h5>Ascolta il nuovo singolo di ${spotlightAlbum.contributors[0].name}</h5>
+    <div class="btnContainer">
+      <button class="btn btnAnnuncio playBtn">Play</button>
+      <button class="btn btnAnnuncio saveBtn">Salva</button>
+      <div class="dropdown1">
+      <ul class="dopperRadius dropdown-content2">
+        <li>More Options for $ PLACEHOLDER $</li>
+      </ul>
+      <button class="dropdown-toggle1 btn moreBtn">
+        <i class="bi bi-three-dots"></i>
+      </button>
+      <ul class="dopperRadius dropdown-content1">
+        <li><a class="topA" href="#">Add to queue</a></li>
+        <li><a href="#">Go to playlist radio</a></li>
+        <li><a href="#">Report</a></li>
+        <li><a href="#">Add to your Library</a></li>
+        <li>
+          <hr>
+        </li>
+        <li><a class="botA" href="#">Share</a></li>
+        <li>
+          <hr>
+        </li>
+        <li><a href="">About recommendations</a></li>
+        <li>
+          <hr>
+        </li>
+        <li><a href="">Open in Desktop app</a></li>
+      </ul>
+    </div>
+  </div>
 </div>
-<h5>Ascolta il nuovo singolo di ${spotlightAlbum.contributors[0].name}</h5>
-<div class="btnContainer">
-  <button class="btn btnAnnuncio playBtn">Play</button>
-  <button class="btn btnAnnuncio saveBtn">Salva</button>
-  <button class="btn moreBtn">
-    <i class="bi bi-three-dots"></i>
-  </button>
-</div>
-</div>`;
+`;
+
+
+  // this code make all the buttons generated with the popups property
+
+
+  const dropdownToggle = document.querySelector(".dropdown-toggle1 ");
+  const dropdownContent = document.querySelector(".dropdown-content1");
+  const dropdownContent2 = document.querySelector(".dropdown-content2")
+
+
+  dropdownToggle.addEventListener("click", function () {
+    if (dropdownContent.style.display === "block" && !active) {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+
+  document.addEventListener("click", function (event) {
+    if (!dropdownToggle.contains(event.target) && dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    }
+  });
+
+  dropdownToggle.addEventListener("mouseover", function () {
+    dropdownContent2.style.display = "block"
+    document.addEventListener("mouseout", function () {
+      dropdownContent2.style.display = "none"
+
+    })
+  })
+
+
+
 };
 drawAnnuncio(120044);
 
@@ -126,12 +188,40 @@ const startDrawingAlbums = (albumArray, givenNumber) => {
 window.onload = startDrawingAlbums(buonaseraAlbums, 6);
 window.onload = startDrawingAlbums(selectedAlbumIDs, 5);
 
-// let requestURL = `${baseAlbumURL} + ${spotlightAlbum.id}`;
-// let request = new XMLHttpRequest(requestURL);
-// request.open("GET", requestURL);
-// request.responssType = "json";
-// request.send();
 
-// request.onload = function () {
-//   const nameConst = request.response;
-// };
+
+
+
+
+
+// window.addEventListener("load", () => {
+
+//   const dropdownToggle = document.querySelector(".dropdown-toggle1");
+//   const dropdownContent = document.querySelector(".dropdown-content1");
+//   const dropdownContent2 = document.querySelector(".dropdown-content2")
+
+
+//   dropdownToggle.addEventListener("click", function () {
+//     if (dropdownContent.style.display === "block" && !active) {
+//       dropdownContent.style.display = "none";
+//     } else {
+//       dropdownContent.style.display = "block";
+//     }
+//   });
+
+//   document.addEventListener("click", function (event) {
+//     if (!dropdownToggle.contains(event.target) && dropdownContent.style.display === "block") {
+//       dropdownContent.style.display = "none";
+//     }
+//   });
+
+//   dropdownToggle.addEventListener("mouseover", function () {
+//     dropdownContent2.style.display = "block"
+//     document.addEventListener("mouseout", function () {
+//       dropdownContent2.style.display = "none"
+
+//     })
+//   })
+//   console.log("helloooooooooo")
+
+
