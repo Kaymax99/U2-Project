@@ -46,9 +46,13 @@ const fetchAlbum = async (index) => {
     } else {
       throw "errore nella sezione altro";
     }
+
+
+
   } catch (err) {
     console.log(err);
   }
+
 };
 
 const drawAlbumPage = async () => {
@@ -63,7 +67,7 @@ const drawAlbumPage = async () => {
   <img
     id="albumImage"
     src="${album.cover_big}"
-    alt="Album cover"
+    alt="Album cover" crossorigin="anonymous"
   />
 </div>
 <div id="wrapperAnnuncioAB">
@@ -105,7 +109,32 @@ const drawAlbumPage = async () => {
       <p>${convertSongDuration(lunghezzaData[i].duration)}</p>
     </div>
   </div>`;
-  }
-};
 
+    // this code make the container del colore della imagine caricata dal api usando colorthief
+    const art = document.querySelector("#albumImage")
+    // initialize colorThief
+    const colorThief = new ColorThief();
+    // get the image
+    const img = new Image();
+    img.crossOrigin = 'Anonymous';
+    img.src = art.src;
+    img.addEventListener('load', function () {
+      colorThief.getColor(img);
+
+      console.log(img.src)
+      // get the background element
+      let background = document.querySelector("#mainNavB");
+      // get color palette
+      let color = colorThief.getColor(img);
+      // set the background color
+      background.style.backgroundColor = "rgb(" + color + ")";
+    });
+
+
+
+  }
+
+
+}
 drawAlbumPage();
+
