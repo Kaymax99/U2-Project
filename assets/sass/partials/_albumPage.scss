@@ -58,8 +58,13 @@ main::-webkit-scrollbar {
   padding-top: 4.5em !important;
 
   img {
-    width: 180px;
-    height: 180px;
+    height: 200px;
+  }
+  #albumAuthor {
+    font-weight: 700;
+  }
+  a:hover {
+    text-decoration: underline;
   }
 }
 
@@ -119,6 +124,7 @@ main::-webkit-scrollbar {
 #albumRow {
   padding: 0;
   margin: 0;
+  margin-bottom: 3em;
 
   .col {
     margin: 0;
