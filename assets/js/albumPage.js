@@ -11,6 +11,32 @@ const id = correctArray[1];
 
 const baseAlbumURL = "https://striveschool-api.herokuapp.com/api/deezer/album/";
 
+const convertSongDuration = (seconds) => {
+  let minutes = ~~(seconds / 60);
+  let extraSeconds = seconds % 60;
+  let stringSeconds = extraSeconds.toString();
+
+  if (stringSeconds.length == 1) {
+    return minutes + ":" + "0" + extraSeconds;
+  } else {
+    return minutes + ":" + extraSeconds;
+  }
+};
+
+function toHoursAndMinutes(totalSeconds) {
+  const totalMinutes = Math.floor(totalSeconds / 60);
+
+  const seconds = totalSeconds % 60;
+  const hours = Math.floor(totalMinutes / 60);
+  const minutes = totalMinutes % 60;
+
+  if (hours == 0) {
+    return minutes + " min " + seconds + " sec";
+  } else {
+    return hours + " hr " + minutes + " min " + seconds + " sec";
+  }
+}
+
 const fetchAlbum = async (index) => {
   try {
     let res = await fetch(baseAlbumURL + index);
@@ -27,23 +53,44 @@ const fetchAlbum = async (index) => {
 
 const drawAlbumPage = async () => {
   let trackList = document.getElementById("trackListContainer");
+  let annuncioAB = document.getElementById("annuncioAB");
+
   let album = await fetchAlbum(id);
   let lunghezzaData = album.tracks.data;
-  let durationSeconds = lunghezzaData.duration;
+
+  annuncioAB.innerHTML += `
+  <div class="p-3">
+  <img
+    id="albumImage"
+    src="${album.cover_big}"
+    alt="Album cover"
+  />
+</div>
+<div id="wrapperAnnuncioAB">
+  <h5 class="albumAnnuncio">ALBUM</h5>
+  <div class="songAuthor">
+    <h1 id="albumName">${album.title}</h1>
+    <div id="albumCredits">
+      <img
+        id="artistImage"
+        src="${album.artist.picture}"
+        alt="Artists photo"
+      />
+      <p id="albumAuthor"><a href="./albumPage.html?id=${album.artist.id}">${
+    album.artist.name
+  }</a></p>
+      <span class="dot">•</span>
+      <p id="albumYear">${album.release_date.slice(0, -6)}</p>
+      <span class="dot">•</span>
+      <p id="albumTracks">${album.nb_tracks + " songs"}</p>
+      <p id="albumLength">${", " + toHoursAndMinutes(album.duration)}</p>
+    </div>
+  </div>
+
+  <div class="btnContainer"></div>
+</div>`;
 
   for (let i = 0; i < lunghezzaData.length; i++) {
-    function convertStoMs(seconds) {
-      let minutes = ~~(seconds / 60);
-      let extraSeconds = 0 + (seconds % 60);
-      let stringSeconds = extraSeconds.toString();
-      console.log(stringSeconds.length);
-      if (stringSeconds.length == 1) {
-        return minutes + ":" + "0" + extraSeconds;
-      } else {
-        return minutes + ":" + extraSeconds;
-      }
-    }
-
     trackList.innerHTML += `<div class="row albumSongItem">
     <div class="col col-6 firstItem">
       <p>${i + 1}</p>
@@ -56,11 +103,10 @@ const drawAlbumPage = async () => {
       <p>${lunghezzaData[i].rank}</p>
     </div>
     <div class="col col-3 length">
-      <p>${convertStoMs(lunghezzaData[i].duration)}</p>
+      <p>${convertSongDuration(lunghezzaData[i].duration)}</p>
     </div>
   </div>`;
   }
 };
 
 drawAlbumPage();
-// let song = data.tracks.data[i].title;

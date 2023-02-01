@@ -879,8 +879,13 @@ main::-webkit-scrollbar {
   padding-top: 4.5em !important;
 }
 #annuncioAB img {
-  width: 180px;
-  height: 180px;
+  height: 200px;
+}
+#annuncioAB #albumAuthor {
+  font-weight: 700;
+}
+#annuncioAB a:hover {
+  text-decoration: underline;
 }
 
 #wrapperAnnuncioAB {
@@ -932,6 +937,7 @@ main::-webkit-scrollbar {
 #albumRow {
   padding: 0;
   margin: 0;
+  margin-bottom: 3em;
 }
 #albumRow .col {
   margin: 0;
