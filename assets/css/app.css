@@ -106,8 +106,9 @@ main {
   scrollbar-width: none; /* Firefox */
 }
 main #mainNav {
-  padding: 16px 0;
-  margin: 0 10px;
+  width: 66.6%;
+  position: fixed;
+  padding: 16px 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -163,6 +164,7 @@ main::-webkit-scrollbar {
 #annuncio {
   display: flex;
   align-items: center;
+  padding-top: 4.5em;
   width: 95%;
   background: rgb(0, 0, 0);
   background: linear-gradient(25deg, rgb(0, 0, 0) 30%, rgb(24, 24, 24) 75%);
@@ -553,6 +555,48 @@ main {
   scrollbar-width: none; /* Firefox */
   padding-bottom: 10em !important;
 }
+main #mainNavB {
+  width: 58.33%;
+  position: fixed;
+  padding: 16px 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+main #mainNavB .bi {
+  font-size: 1.5em;
+  color: white;
+}
+main #mainNavB > div {
+  display: flex;
+  gap: 16px;
+}
+main #mainNavB .navigation {
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+main #mainNavB #userWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 25px;
+  padding-left: 0;
+}
+main #mainNavB #userWrapper img {
+  border-radius: 25px;
+}
+main #mainNavB #userWrapper span {
+  color: white;
+  font-weight: 700;
+}
+main #mainNavB #userWrapper .bi-caret-down-fill {
+  font-size: 1.1em;
+  align-self: flex-end;
+}
 
 main::-webkit-scrollbar {
   display: none;
@@ -561,6 +605,7 @@ main::-webkit-scrollbar {
 #annuncioAB {
   display: flex;
   align-items: flex-end;
+  padding-top: 4.5em !important;
 }
 #annuncioAB img {
   width: 180px;
@@ -667,8 +712,12 @@ main::-webkit-scrollbar {
   margin-bottom: 1em;
 }
 #albumRow .albumSongItem {
-  padding-left: 50.4px;
   align-items: center;
+  padding: 0.5em 0 0.5em 50.4px;
+}
+#albumRow .albumSongItem:hover {
+  background-color: #383838;
+  color: white;
 }
 #albumRow .albumSongItem .firstItem {
   display: flex;
@@ -676,6 +725,7 @@ main::-webkit-scrollbar {
 }
 #albumRow .albumSongItem .firstItem > p {
   margin-right: 15px;
+  margin-bottom: 0;
 }
 #albumRow .albumSongItem .firstItem h3 {
   font-size: 0.9em;
@@ -685,6 +735,7 @@ main::-webkit-scrollbar {
   text-overflow: ellipsis;
 }
 #albumRow .albumSongItem .firstItem div > p {
+  margin-bottom: 0;
   font-size: 0.8em;
   color: #a7a7a7;
   white-space: nowrap;
@@ -696,13 +747,17 @@ main::-webkit-scrollbar {
   justify-content: center;
   font-size: 0.8em;
 }
+#albumRow .albumSongItem .listens > p,
+#albumRow .albumSongItem .length > p {
+  margin-bottom: 0;
+}
 
 main {
   padding: 0 0 8em 0 !important;
 }
 
 #annuncioAR {
-  padding: 7em 0 1em 1em;
+  padding: 9em 0 1.5em 1em;
   background-image: url("https://wallpapercrafter.com/desktop/163883-digital-art-women-mountains-lagoon-landscape-Kvacm.jpg");
   background-size: cover;
 }
@@ -794,7 +849,7 @@ main {
 }
 #artistRow #artistSongRow #songContainer #firstSongData img {
   width: 35px;
-  margin: 5px 15px;
+  margin: 7px 15px;
 }
 #artistRow #artistSongRow #songContainer #firstSongData p {
   font-size: 0.8em;
@@ -807,7 +862,7 @@ main {
   margin: 0;
 }
 #artistRow #artistSongRow #otherButton {
-  margin-top: 0.7em;
+  margin-top: 1.5em;
   font-size: 0.7em;
   font-weight: 900;
   padding-left: 4em;
@@ -818,7 +873,7 @@ main {
 #artistRow #artistSongRow #currentArtistContainer h4 {
   font-size: 1.2em;
   font-weight: 900;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 #artistRow #artistSongRow #currentArtistContainer #currentArtist {
   display: flex;
