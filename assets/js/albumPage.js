@@ -29,9 +29,38 @@ const drawAlbumPage = async () => {
   let trackList = document.getElementById("trackListContainer");
   let album = await fetchAlbum(id);
   let lunghezzaData = album.tracks.data;
-  console.log(lunghezzaData);
+  let durationSeconds = lunghezzaData.duration;
 
-  //   for (let i = 0; i < lunghezzaData.length; i++) {}
+  for (let i = 0; i < lunghezzaData.length; i++) {
+    function convertStoMs(seconds) {
+      let minutes = ~~(seconds / 60);
+      let extraSeconds = 0 + (seconds % 60);
+      let stringSeconds = extraSeconds.toString();
+      console.log(stringSeconds.length);
+      if (stringSeconds.length == 1) {
+        return minutes + ":" + "0" + extraSeconds;
+      } else {
+        return minutes + ":" + extraSeconds;
+      }
+    }
 
-  //   let song = data.tracks.data[i].title;
+    trackList.innerHTML += `<div class="row albumSongItem">
+    <div class="col col-6 firstItem">
+      <p>${i + 1}</p>
+      <div>
+        <h3>${lunghezzaData[i].title}</h3>
+        <p>${lunghezzaData[i].artist.name}</p>
+      </div>
+    </div>
+    <div class="col col-3 listens">
+      <p>${lunghezzaData[i].rank}</p>
+    </div>
+    <div class="col col-3 length">
+      <p>${convertStoMs(lunghezzaData[i].duration)}</p>
+    </div>
+  </div>`;
+  }
 };
+
+drawAlbumPage();
+// let song = data.tracks.data[i].title;
