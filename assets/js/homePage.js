@@ -49,9 +49,9 @@ const drawAnnuncio = async (album) => {
 <h5 class="albumAnnuncio">ALBUM</h5>
 <button id="hideAnnuncio">nascondi annunci</button>
 <div class="songAuthor">
-<a href="/albumPage.html?id=${spotlightAlbum.id}" target="_blank">
+<a href="/albumPage.html?id=${spotlightAlbum.id}">
   <h1>${spotlightAlbum.title}</h1></a>
-  <a href="/artistPage.html?id=${spotlightAlbum.artist.id}" target="_blank">
+  <a href="/artistPage.html?id=${spotlightAlbum.artist.id}">
   <h5>${spotlightAlbum.contributors[0].name}</h5></a>
 </div>
 <h5>Ascolta il nuovo singolo di ${spotlightAlbum.contributors[0].name}</h5>
