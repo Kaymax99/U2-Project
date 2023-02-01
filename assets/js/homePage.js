@@ -157,8 +157,15 @@ const drawAlbumBuonasera = (albumArray) => {
           </div>
         </a>
       </div>`;
+
+
+
+
     }
+
   }
+
+
 };
 
 const drawAlbum = (albumArray) => {
@@ -177,6 +184,26 @@ const drawAlbum = (albumArray) => {
     </div>`;
     }
   }
+  const art = document.querySelector(".p-3>img")
+  console.log(art)
+  // initialize colorThief
+  console.log("hi")
+  const colorThief = new ColorThief();
+  // get the image
+  const img = new Image();
+  img.crossOrigin = 'Anonymous';
+  img.src = art.src;
+  img.addEventListener('load', function () {
+    colorThief.getColor(img);
+
+    console.log(img.src)
+    // get the background element
+    let background = document.querySelector("#mainNav");
+    // get color palette
+    let color = colorThief.getColor(img);
+    // set the background color
+    background.style.backgroundColor = "rgb(" + color + ")";
+  });
 };
 
 const startDrawingAlbums = (albumArray, givenNumber) => {
