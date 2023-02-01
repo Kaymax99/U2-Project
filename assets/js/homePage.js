@@ -45,11 +45,13 @@ const drawAnnuncio = async (album) => {
 <img src="${spotlightAlbum.cover_big}" height="200px" />
 </div>
 <div id="wrapperAnnuncio">
+
 <h5 class="albumAnnuncio">ALBUM</h5>
 <button id="hideAnnuncio">nascondi annunci</button>
-<div class="songAuthor">
+<div class="songAuthor"><a href="/albumPage.html?id=${album.id}">
   <h1>${spotlightAlbum.title}</h1></a>
-  <h5>${spotlightAlbum.contributors[0].name}</h5>
+  <a href="/artistPage.html?id=${album.id}">
+  <h5>${spotlightAlbum.contributors[0].name}</h5></a>
 </div>
 <h5>Ascolta il nuovo singolo di ${spotlightAlbum.contributors[0].name}</h5>
 <div class="btnContainer">
