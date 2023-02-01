@@ -36,21 +36,22 @@ const fetchAlbum = async (index) => {
 
 const drawAnnuncio = async (album) => {
   let spotlightAlbum = await fetchAlbum(album);
-  console.log(spotlightAlbum);
+  //console.log(spotlightAlbum);
 
   let annuncio = document.getElementById("annuncio");
   annuncio.innerHTML = "";
 
-  annuncio.innerHTML += `<div class="p-3" onclick="newLoad()">
+  annuncio.innerHTML += `<div class="p-3">
 <img src="${spotlightAlbum.cover_big}" height="200px" />
 </div>
 <div id="wrapperAnnuncio">
 
 <h5 class="albumAnnuncio">ALBUM</h5>
 <button id="hideAnnuncio">nascondi annunci</button>
-<div class="songAuthor"><a href="/albumPage.html?id=${album.id}">
+<div class="songAuthor">
+<a href="/albumPage.html?id=${spotlightAlbum.id}" target="_blank">
   <h1>${spotlightAlbum.title}</h1></a>
-  <a href="/artistPage.html?id=${album.id}">
+  <a href="/artistPage.html?id=${spotlightAlbum.artist.id}" target="_blank">
   <h5>${spotlightAlbum.contributors[0].name}</h5></a>
 </div>
 <h5>Ascolta il nuovo singolo di ${spotlightAlbum.contributors[0].name}</h5>
@@ -80,6 +81,21 @@ const getAlbums = async function (id, givenNumber) {
   }
 };
 
+const drawAlbumBuonasera = (albumArray) => {
+  let divBuonasera = document.getElementById("ultimiAscoltiWrapper");
+
+  if (albumArray.length == 6) {
+    for (i = 0; i < albumArray.length; i++) {
+      divBuonasera.innerHTML += `<div class="row col-4 p-1">
+      <div class="p-0 custCardLG">
+      <img src="${albumArray[i].cover_medium}" class="col-3 p-0" />
+      <a href="/albumPage.html?id=${albumArray[i].id}" target="_blank">
+        <div class="col-9">${albumArray[i].title}</div>
+        </a></div></div>`;
+    }
+  }
+};
+
 const drawAlbum = (albumArray) => {
   let divAltro = document.getElementById("consigliatiWrapper");
 
@@ -89,23 +105,11 @@ const drawAlbum = (albumArray) => {
       <div class="col custCard">
         <img src="${albumArray[i].cover_big}" />
         <div>
-          <h4>${albumArray[i].title}</h4>
-          <h5>${albumArray[i].artist.name}</h5>
+        <a href="/albumPage.html?id=${albumArray[i].id}" target="_blank"><h4>${albumArray[i].title}</h4></a>
+        <a href="/artistPage.html?id=${albumArray[i].contributors[0].id}" target="_blank"><h5>${albumArray[i].artist.name}</h5></a>
         </div>
       </div>
     </div>`;
-    }
-  }
-};
-
-const drawAlbumBuonasera = (albumArray) => {
-  let divBuonasera = document.getElementById("ultimiAscoltiWrapper");
-
-  if (albumArray.length == 6) {
-    for (i = 0; i < albumArray.length; i++) {
-      divBuonasera.innerHTML += `<div class="row col-4 p-1"><div class="p-0 custCardLG">
-        <img src="${albumArray[i].cover_medium}" class="col-3 p-0" />
-        <div class="col-9">${albumArray[i].title}</div></div>`;
     }
   }
 };
