@@ -45,11 +45,22 @@ hr {
 #left-Nav {
   background-color: black;
   height: 100vh;
-  padding: 0 24px;
+  padding: 0 12px;
   overflow-y: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   padding-bottom: 6em;
+  transition: 0.2s;
+}
+@media screen and (min-width: 850px) {
+  #left-Nav {
+    padding: 0 24px;
+  }
+}
+@media screen and (min-width: 992px) {
+  #left-Nav {
+    padding: 0 12px;
+  }
 }
 #left-Nav li {
   height: 32px;
@@ -57,19 +68,84 @@ hr {
   display: flex;
   flex-direction: row;
   margin: 0.5em 0;
+  font-size: 0.8em;
+  transition: 0.2s;
+  color: #a7a7a7;
 }
 #left-Nav li:hover {
   color: white;
+  transition: 0.2s;
+}
+@media screen and (min-width: 900px) {
+  #left-Nav li {
+    font-size: 0.9em;
+  }
+}
+@media screen and (min-width: 992px) {
+  #left-Nav li {
+    font-size: 0.8em;
+  }
+}
+@media screen and (min-width: 1100px) {
+  #left-Nav li {
+    font-size: 0.9em;
+  }
 }
 #left-Nav li {
   display: flex;
   gap: 16px;
 }
 #left-Nav i {
-  font-size: 1.5em;
+  font-size: 1.2em;
+}
+@media screen and (min-width: 900px) {
+  #left-Nav i {
+    font-size: 1.4em;
+  }
+}
+@media screen and (min-width: 992px) {
+  #left-Nav i {
+    font-size: 1.2em;
+  }
+}
+@media screen and (min-width: 1100px) {
+  #left-Nav i {
+    font-size: 1.4em;
+  }
 }
 #left-Nav #newAndLiked {
   margin-top: 2em;
+}
+@media screen and (min-width: 992px) {
+  #left-Nav #newAndLiked {
+    font-size: 0.8em;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #left-Nav #newAndLiked {
+    font-size: 0.9em;
+  }
+}
+#left-Nav #playlists li {
+  margin: 0 !important;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+@media screen and (min-width: 900px) {
+  #left-Nav #playlists li {
+    margin: 0.5em 0 !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  #left-Nav #playlists li {
+    margin: 0 !important;
+  }
+}
+@media screen and (min-width: 1100px) {
+  #left-Nav #playlists li {
+    margin: 0.5em 0 !important;
+  }
 }
 #left-Nav #left-Nav-Upper-Wrapper {
   font-weight: 700;
@@ -145,7 +221,6 @@ main #mainNav #userWrapper .bi-caret-down-fill {
 
 .container-fluid {
   background-color: #181818;
-  color: white;
 }
 
 main::-webkit-scrollbar {
