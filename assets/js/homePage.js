@@ -2,8 +2,7 @@ const baseAlbumURL = "https://striveschool-api.herokuapp.com/api/deezer/album/";
 const spotlightAlbum = 120044;
 
 const arrayIDAlbum = [
-  75621062, 8887733, 7823038, 7824595, 7824584, 91333612, 345755977, 192529232,
-  100674742, 59853252, 130678282,
+  75621062, 8887733, 7823038, 7824595, 7824584, 91333612, 345755977, 192529232, 100674742, 59853252, 130678282,
 ];
 
 const shuffleArray = (array) => {
@@ -49,9 +48,9 @@ const drawAnnuncio = async (album) => {
 <h5 class="albumAnnuncio">ALBUM</h5>
 <button id="hideAnnuncio">nascondi annunci</button>
 <div class="songAuthor">
-<a href="/albumPage.html?id=${spotlightAlbum.id}">
+<a href="./albumPage.html?id=${spotlightAlbum.id}">
   <h1>${spotlightAlbum.title}</h1></a>
-  <a href="/artistPage.html?id=${spotlightAlbum.artist.id}">
+  <a href="./artistPage.html?id=${spotlightAlbum.artist.id}">
   <h5>${spotlightAlbum.contributors[0].name}</h5></a>
 </div>
 <h5>Ascolta il nuovo singolo di ${spotlightAlbum.contributors[0].name}</h5>
