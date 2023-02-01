@@ -1,8 +1,4 @@
 main {
-  max-height: 100vh;
-  overflow: scroll;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
   padding-bottom: 10em !important;
 
   #mainNavB {
@@ -183,21 +179,6 @@ main::-webkit-scrollbar {
         transition: 0.2s;
       }
     }
-
-    #playButton {
-      font-size: 1.7em;
-      background-color: $theme-primary;
-      transition: 0.2s;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      &:hover {
-        background-color: #189945;
-        transition: 0.2s;
-      }
-    }
   }
 
   #innerRowContainer {
@@ -276,4 +257,8 @@ main::-webkit-scrollbar {
       }
     }
   }
+}
+
+#trackListContainer {
+  margin-bottom: 10em;
 }

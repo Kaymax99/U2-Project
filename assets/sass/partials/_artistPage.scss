@@ -58,34 +58,6 @@ main {
     display: flex;
     align-items: center;
 
-    #playButton {
-      font-size: 1.7em;
-      background-color: $theme-primary;
-      margin-right: 20px;
-      transition: 0.2s;
-
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      &:hover {
-        background-color: #189945;
-        transition: 0.2s;
-      }
-    }
-
-    #followButton {
-      font-size: 0.9em;
-      padding: 2px 5px;
-      background-color: rgba(0, 0, 0, 0);
-      border: 1px solid $c-text-subdued;
-      border-radius: 5px;
-      color: $c-text-primary;
-      &:hover {
-        border: 1px solid $c-text-primary;
-      }
-    }
-
     .bi-three-dots {
       color: $c-text-subdued;
       font-size: 1.5em;
