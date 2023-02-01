@@ -10,10 +10,121 @@ footer {
 
 footer .container-fluid {
   border-top: 1px solid $border-hr;
+  height: 10vh;
+  transition: 0.2s;
+
+  @media screen and (min-width: 1200px) {
+    height: 12vh;
+    transition: 0.2s;
+  }
+}
+
+#playerRow {
+  width: 100%;
+  height: 100%;
+
+  @media screen and (min-width: 992px) {
+    i {
+      font-size: 1.2em;
+    }
+  }
+
+  i {
+    transition: 0.2s;
+    &:hover {
+      color: white;
+      transition: 0.2s;
+    }
+  }
+
+  #playBtnPlayer {
+    color: white;
+  }
+}
+
+#playerRowLeft {
+  width: 80%;
+  height: 100%;
+
+  #playerImgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  div {
+    img {
+      width: 70%;
+      max-width: 80px;
+    }
+
+    h5 {
+      font-size: 0.7em;
+      margin: 0;
+      color: white;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      transition: 0.2s;
+
+      &:hover {
+        text-decoration: underline;
+        transition: 0.2s;
+      }
+
+      @media screen and(min-width: 900px) {
+        font-size: 0.8em;
+      }
+      @media screen and(min-width: 992px) {
+        font-size: 0.9em;
+      }
+      @media screen and(min-width: 1400px) {
+        font-size: 1em;
+      }
+    }
+
+    p {
+      font-size: 0.5em;
+      margin: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      transition: 0.2s;
+
+      @media screen and(min-width: 900px) {
+        font-size: 0.6em;
+      }
+      @media screen and(min-width: 992px) {
+        font-size: 0.7em;
+      }
+      @media screen and(min-width: 1400px) {
+        font-size: 0.8em;
+      }
+    }
+  }
+}
+
+#playerCenter {
+  width: 80%;
+}
+
+#playerRight {
+  justify-content: flex-end !important;
+  transition: 0.2s;
+  @media screen and (min-width: 1200px) {
+    margin-right: 25px;
+  }
+  div {
+    margin-right: 5px;
+    @media screen and (min-width: 1200px) {
+      margin-right: 0;
+    }
+  }
 }
 
 #slider-round {
   height: 7px;
+  width: 80%;
 }
 
 #slider-round .noUi-handle {
