@@ -1,0 +1,56 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+  <script src="dist/color-thief.min.js"></script>
+
+</head>
+
+<body>
+
+  <header>
+    <div class="container">
+      <div id="samedomain">
+        <img src="examples/img/image-2.jpg" width="400" height="200">
+        <h1>Same domain, image by url</h1>
+      </div>
+      <script type="text/javascript">
+        window.onload = () => {
+          getDominantImageColor = () => {
+            // get the image
+            let sourceImage = document.querySelector("img");
+            // get the background element
+            let background = document.querySelector(".container");
+            // initialize colorThief
+            let colorThief = new ColorThief();
+            // get color palette
+            let color = colorThief.getColor(sourceImage);
+            // set the background color
+            background.style.backgroundColor = "rgb(" + color + ")";
+          }
+          getDominantImageColor();
+        }
+
+      </script>
+      <div id="crossdomain">
+        <img width="400" height="200">
+        <h1>Cross-domain, image by url</h1>
+      </div>
+      <script type="text/javascript">
+        colorThief.getColorAsync("https://lokeshdhakar.com/media/posts/color-thief/color-thief-pixels.png", function (color, element) {
+          $('#crossdomain').css('background-color', 'rgb(' + color[0] + ',' + color[1] + ',' + color[2] + ')')
+          $('#crossdomain img').attr('src', element.src)
+          console.log('async', color, element.src)
+        });
+      </script>
+
+    </div>
+
+
+
+
+</body>
+
+</html>
