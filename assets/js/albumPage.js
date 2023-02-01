@@ -76,7 +76,7 @@ const drawAlbumPage = async () => {
         src="${album.artist.picture}"
         alt="Artists photo"
       />
-      <p id="albumAuthor"><a href="./albumPage.html?id=${album.artist.id}">${
+      <p id="albumAuthor"><a href="./artistPage.html?id=${album.artist.id}">${
     album.artist.name
   }</a></p>
       <span class="dot">•</span>
