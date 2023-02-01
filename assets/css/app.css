@@ -1377,6 +1377,10 @@ main {
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
 }
+.dopperRadius li hr {
+  background-color: #3E3E3E;
+  margin: 0 4px;
+}
 
 @media screen and (min-width: 1400px) {
   #artistRow #artistSongRow #currentArtistContainer #currentArtist #asideSongTextContainer p {
