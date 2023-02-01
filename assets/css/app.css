@@ -183,13 +183,18 @@ main {
   scrollbar-width: none; /* Firefox */
 }
 main #mainNav {
-  width: 66.6%;
+  width: 75%;
   position: fixed;
   padding: 16px 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+@media screen and (min-width: 992px) {
+  main #mainNav {
+    width: 66.6%;
+  }
 }
 main #mainNav .bi {
   font-size: 1.5em;
@@ -240,7 +245,7 @@ main::-webkit-scrollbar {
 #annuncio {
   display: flex;
   align-items: center;
-  padding-top: 4.5em;
+  margin-top: 4.5em;
   width: 95%;
   background: rgb(0, 0, 0);
   background: linear-gradient(25deg, rgb(0, 0, 0) 30%, rgb(24, 24, 24) 75%);
@@ -588,7 +593,7 @@ footer .container-fluid {
   border-radius: 5px;
   margin-top: 10px;
   background-color: #2a2a2a;
-  font-size: 0.6em;
+  font-size: 0.4em;
 }
 .custCardLG img {
   border-top-left-radius: 5px;
@@ -596,6 +601,9 @@ footer .container-fluid {
 }
 .custCardLG div {
   padding-left: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .custCard {

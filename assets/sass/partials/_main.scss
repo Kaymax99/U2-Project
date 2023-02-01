@@ -4,9 +4,13 @@ main {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   #mainNav {
-    width: 66.6%;
+    width: 75%;
     position: fixed;
     padding: 16px 10px;
+
+    @media screen and (min-width: 992px) {
+      width: 66.6%;
+    }
 
     @include row;
     align-items: center;
@@ -61,7 +65,7 @@ main::-webkit-scrollbar {
 #annuncio {
   display: flex;
   align-items: center;
-  padding-top: 4.5em;
+  margin-top: 4.5em;
   width: 95%;
   background: rgb(0, 0, 0);
   background: linear-gradient(25deg, rgba(0, 0, 0, 1) 30%, rgba(24, 24, 24, 1) 75%);

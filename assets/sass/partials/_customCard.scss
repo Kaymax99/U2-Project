@@ -4,13 +4,16 @@
   border-radius: 5px;
   margin-top: 10px;
   background-color: $bg-elevated-highlight;
+  font-size: 0.4em;
   img {
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
   }
-  font-size: 0.6em;
   div {
     padding-left: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
   }
 }
 
