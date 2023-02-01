@@ -34,7 +34,7 @@
   <body>
     <div class="container-fluid">
       <div class="row w-100">
-        <nav id="left-Nav" class="col-3">
+        <nav id="left-Nav" class="col-3 col-lg-2">
           <div id="left-Nav-Upper-Wrapper">
             <div class="dropdown">
               <button
@@ -100,7 +100,7 @@
           </div>
         </nav>
 
-        <main class="col-7">
+        <main class="col-9 col-lg-8 p-0">
           <nav id="mainNavB">
             <div>
               <button class="navigation">
@@ -117,33 +117,7 @@
             </button>
           </nav>
 
-          <article id="annuncioAB">
-            <div class="p-3">
-              <img
-                src="./assets/img/user.png"
-                height="200px"
-                alt="Album cover"
-              />
-            </div>
-            <div id="wrapperAnnuncioAB">
-              <h5 class="albumAnnuncio">ALBUM</h5>
-              <div class="songAuthor">
-                <h1>VIOLA (feat. Salmo)</h1>
-                <div id="albumCredits">
-                  <img src="./assets/img/user.png" alt="Artists photo" />
-                  <p id="albumAuthor">Fedez, Salmo</p>
-                  <span class="dot">•</span>
-                  <p id="albumYear">Anno</p>
-                  <span class="dot">•</span>
-                  <p id="albumTracks">
-                    tracklist, <span id="albumLength">time</span>
-                  </p>
-                </div>
-              </div>
-
-              <div class="btnContainer"></div>
-            </div>
-          </article>
+          <article id="annuncioAB"></article>
 
           <section class="row" id="albumRow">
             <div class="col col-12" id="albumButtonContainer">
@@ -166,132 +140,11 @@
               </div>
               <hr />
             </div>
-            <div id="trackListContainer">
-              <div class="row albumSongItem">
-                <div class="col col-6 firstItem">
-                  <p>i+1</p>
-                  <div>
-                    <h3>title</h3>
-                    <p>artist</p>
-                  </div>
-                </div>
-                <div class="col col-3 listens">
-                  <p>694.578</p>
-                </div>
-                <div class="col col-3 length">
-                  <p>1:28</p>
-                </div>
-              </div>
-              <div class="row albumSongItem">
-                <div class="col col-6 firstItem">
-                  <p>2</p>
-                  <div>
-                    <h3>Montanelli - Intro</h3>
-                    <p>Pinguini Tattici Nucleari</p>
-                  </div>
-                </div>
-                <div class="col col-3 listens">
-                  <p>694.578</p>
-                </div>
-                <div class="col col-3 length">
-                  <p>1:28</p>
-                </div>
-              </div>
-              <div class="row albumSongItem">
-                <div class="col col-6 firstItem">
-                  <p>3</p>
-                  <div>
-                    <h3>Montanelli - Intro</h3>
-                    <p>Pinguini Tattici Nucleari</p>
-                  </div>
-                </div>
-                <div class="col col-3 listens">
-                  <p>694.578</p>
-                </div>
-                <div class="col col-3 length">
-                  <p>1:28</p>
-                </div>
-              </div>
-              <div class="row albumSongItem">
-                <div class="col col-6 firstItem">
-                  <p>4</p>
-                  <div>
-                    <h3>Montanelli - Intro</h3>
-                    <p>Pinguini Tattici Nucleari</p>
-                  </div>
-                </div>
-                <div class="col col-3 listens">
-                  <p>694.578</p>
-                </div>
-                <div class="col col-3 length">
-                  <p>1:28</p>
-                </div>
-              </div>
-              <div class="row albumSongItem">
-                <div class="col col-6 firstItem">
-                  <p>5</p>
-                  <div>
-                    <h3>Montanelli - Intro</h3>
-                    <p>Pinguini Tattici Nucleari</p>
-                  </div>
-                </div>
-                <div class="col col-3 listens">
-                  <p>694.578</p>
-                </div>
-                <div class="col col-3 length">
-                  <p>1:28</p>
-                </div>
-              </div>
-              <div class="row albumSongItem">
-                <div class="col col-6 firstItem">
-                  <p>6</p>
-                  <div>
-                    <h3>Montanelli - Intro</h3>
-                    <p>Pinguini Tattici Nucleari</p>
-                  </div>
-                </div>
-                <div class="col col-3 listens">
-                  <p>694.578</p>
-                </div>
-                <div class="col col-3 length">
-                  <p>1:28</p>
-                </div>
-              </div>
-              <div class="row albumSongItem">
-                <div class="col col-6 firstItem">
-                  <p>7</p>
-                  <div>
-                    <h3>Montanelli - Intro</h3>
-                    <p>Pinguini Tattici Nucleari</p>
-                  </div>
-                </div>
-                <div class="col col-3 listens">
-                  <p>694.578</p>
-                </div>
-                <div class="col col-3 length">
-                  <p>1:28</p>
-                </div>
-              </div>
-              <div class="row albumSongItem">
-                <div class="col col-6 firstItem">
-                  <p>8</p>
-                  <div>
-                    <h3>Montanelli - Intro</h3>
-                    <p>Pinguini Tattici Nucleari</p>
-                  </div>
-                </div>
-                <div class="col col-3 listens">
-                  <p>694.578</p>
-                </div>
-                <div class="col col-3 length">
-                  <p>1:28</p>
-                </div>
-              </div>
-            </div>
+            <div id="trackListContainer"></div>
           </section>
         </main>
 
-        <aside class="col-2">
+        <aside class="col-2 d-none d-lg-block">
           <div id="upper-right-nav">
             <div id="friendsActivity">Attività amici</div>
             <div id="activityIcon">

@@ -3,10 +3,15 @@ main {
   overflow: scroll;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+  transition: 0.2s;
   #mainNav {
-    width: 66.6%;
+    width: 75%;
     position: fixed;
     padding: 16px 10px;
+
+    @media screen and (min-width: 992px) {
+      width: 66.6%;
+    }
 
     @include row;
     align-items: center;
@@ -48,7 +53,6 @@ main {
 
 .container-fluid {
   background-color: #181818;
-  color: white;
 }
 
 main::-webkit-scrollbar {
@@ -62,7 +66,7 @@ main::-webkit-scrollbar {
 #annuncio {
   display: flex;
   align-items: center;
-  padding-top: 4.5em;
+  margin-top: 4.5em;
   width: 95%;
   background: rgb(0, 0, 0);
   background: linear-gradient(25deg, rgba(0, 0, 0, 1) 30%, rgba(24, 24, 24, 1) 75%);
@@ -72,10 +76,12 @@ main::-webkit-scrollbar {
   position: relative;
   width: 100%;
   h5 {
+    color: white;
     font-size: 0.9em;
   }
   h1 {
     font-size: 3em;
+    color: white;
     font-weight: 700;
     margin-bottom: 0;
   }
@@ -96,5 +102,8 @@ main::-webkit-scrollbar {
 
 h2 {
   margin: 0.75em 1em;
-  font-size: 1.25em;
+  font-size: 1em;
+  @media screen and (min-width: 992px) {
+    font-size: 1.25em;
+  }
 }

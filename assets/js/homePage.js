@@ -41,27 +41,28 @@ const drawAnnuncio = async (album) => {
   let annuncio = document.getElementById("annuncio");
   //   annuncio.innerHTML = "";
 
-  //   annuncio.innerHTML += `<div class="p-3">
-  // <img src="${spotlightAlbum.cover_big}" height="200px" />
-  // </div>
-  // <div id="wrapperAnnuncio">
-  // <h5 class="albumAnnuncio">ALBUM</h5>
-  // <button id="hideAnnuncio">nascondi annunci</button>
-  // <div class="songAuthor">
-  // <a href="/albumPage.html?id=${spotlightAlbum.id}" target="_blank">
-  //   <h1>${spotlightAlbum.title}</h1></a>
-  //   <a href="/artistPage.html?id=${spotlightAlbum.artist.id}" target="_blank">
-  //   <h5>${spotlightAlbum.contributors[0].name}</h5></a>
-  // </div>
-  // <h5>Ascolta il nuovo singolo di ${spotlightAlbum.contributors[0].name}</h5>
-  // <div class="btnContainer">
-  //   <button class="btn btnAnnuncio playBtn">Play</button>
-  //   <button class="btn btnAnnuncio saveBtn">Salva</button>
-  //   <button class="btn moreBtn">
-  //     <i class="bi bi-three-dots"></i>
-  //   </button>
-  // </div>
-  // </div>`;
+  annuncio.innerHTML += `<div class="p-3">
+<img src="${spotlightAlbum.cover_big}" height="200px" />
+</div>
+<div id="wrapperAnnuncio">
+
+<h5 class="albumAnnuncio">ALBUM</h5>
+<button id="hideAnnuncio">nascondi annunci</button>
+<div class="songAuthor">
+<a href="/albumPage.html?id=${spotlightAlbum.id}">
+  <h1>${spotlightAlbum.title}</h1></a>
+  <a href="/artistPage.html?id=${spotlightAlbum.artist.id}">
+  <h5>${spotlightAlbum.contributors[0].name}</h5></a>
+</div>
+<h5>Ascolta il nuovo singolo di ${spotlightAlbum.contributors[0].name}</h5>
+<div class="btnContainer">
+  <button class="btn btnAnnuncio playBtn">Play</button>
+  <button class="btn btnAnnuncio saveBtn">Salva</button>
+  <button class="btn moreBtn">
+    <i class="bi bi-three-dots"></i>
+  </button>
+</div>
+</div>`;
 };
 drawAnnuncio(120044);
 
