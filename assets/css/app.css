@@ -506,6 +506,10 @@ footer .container-fluid {
   color: #a7a7a7;
 }
 
+.row a {
+  padding: 0;
+}
+
 .custCardLG {
   display: flex;
   flex-direction: row;

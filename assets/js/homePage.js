@@ -86,12 +86,15 @@ const drawAlbumBuonasera = (albumArray) => {
 
   if (albumArray.length == 6) {
     for (i = 0; i < albumArray.length; i++) {
-      divBuonasera.innerHTML += `<div class="row col-4 p-1">
-      <div class="p-0 custCardLG">
-      <img src="${albumArray[i].cover_medium}" class="col-3 p-0" />
-      <a href="/albumPage.html?id=${albumArray[i].id}" target="_blank">
-        <div class="col-9">${albumArray[i].title}</div>
-        </a></div></div>`;
+      divBuonasera.innerHTML += `    
+      <div class="row col-4 p-1">
+        <a href="/albumPage.html?id=${albumArray[i].id}" target="_blank">
+          <div class="p-0 custCardLG">
+          <img src="${albumArray[i].cover_medium}" class="col-3 p-0" />
+          <div class="col-9">${albumArray[i].title}</div>
+          </div>
+        </a>
+      </div>`;
     }
   }
 };
