@@ -71,12 +71,13 @@ a {
 #left-Nav li {
   height: 32px;
   align-items: center;
-  display: flex;
-  flex-direction: row;
   margin: 0.5em 0;
   font-size: 0.8em;
   transition: 0.2s;
   color: #a7a7a7;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: wrap;
 }
 #left-Nav li:hover {
   color: white;
@@ -97,11 +98,8 @@ a {
     font-size: 0.9em;
   }
 }
-#left-Nav li {
-  display: flex;
-  gap: 16px;
-}
 #left-Nav i {
+  padding-right: 0.5em;
   font-size: 1.2em;
 }
 @media screen and (min-width: 900px) {
@@ -131,6 +129,9 @@ a {
   #left-Nav #newAndLiked {
     font-size: 0.9em;
   }
+}
+#left-Nav #playlists {
+  padding-bottom: 7em;
 }
 #left-Nav #playlists li {
   margin: 0 !important;
