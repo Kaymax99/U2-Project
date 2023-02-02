@@ -200,12 +200,14 @@ const drawAlbum = (albumArray) => {
     console.log(img.src)
     // get the background element
     let background = document.querySelector("#mainNav");
+    let background2 = document.querySelector("#annuncio")
     // get color palette
     let color = colorThief.getColor(img);
     // set the background color
     background.style.backgroundColor = "rgb(" + color + ")";
     background.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
-
+    background2.style.backgroundColor = "rgb(" + color + ")";
+    background2.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
   });
 };
 
