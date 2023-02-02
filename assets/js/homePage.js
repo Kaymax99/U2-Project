@@ -135,20 +135,11 @@ const drawAlbumBuonasera = (albumArray) => {
     for (i = 0; i < albumArray.length; i++) {
       divBuonasera.innerHTML += `<div class="row col-4 p-1">
       <a href="./albumPage.html?id=${albumArray[i].id}" target="_blank">
-        <div class="p-0 custCardLG">
+      <div class="p-0 custCardLG">
           <img src="${albumArray[i].cover_medium}" class="col-3 p-0" />
           <div class="col-9 col-md-6">${albumArray[i].title}</div>
           <div class="col-md-3 d-none d-md-block cardButtonContainer">
-            <button class="hoverCardButton" onclick="addToPlayer()">
-              <i class="fa-sharp fa-solid fa-play"></i>
-           </button>
-          </div>
-        </div>
-        <div class="p-0 custCardLG">
-          <img src="${albumArray[i].cover_medium}" class="col-3 p-0" />
-          <div class="col-9 col-md-6">${albumArray[i].title}</div>
-          <div class="col-md-3 d-none d-md-block cardButtonContainer">
-            <button class="hoverCardButton" onclick="addToPlayer()">
+            <button class="hoverCardButton" onclick="addToPlayer(i)">
               <i class="fa-sharp fa-solid fa-play"></i>
            </button>
           </div>
@@ -159,70 +150,94 @@ const drawAlbumBuonasera = (albumArray) => {
   }
 };
 
-const addToPlayer = () => {
-  playerRowLeft = document.getElementById("playerRowLeft");
-  playerRowLeft.innerHTML = ``;
-  playerRowLeft.innerHTML = `<div id="playerImgContainer">
-  <img
-    src="${albumArray[i].cover_medium}"
-    alt=""
-  />
-</div>
-<div id="playerName">
-  <h5>${albumArray[i].artist.name}</h5>
-  <p>${albumArray[i].title}</p>
-</div>
-
-<div class="d-flex justify-content-center gap-3">
-  <i class="bi bi-heart"></i>
-  <i class="bi bi-pip"></i>
-</div>`;
-};
-
-const addToPlayer = () => {
-  playerRowLeft = document.getElementById("playerRowLeft");
-  playerRowLeft.innerHTML = ``;
-  playerRowLeft.innerHTML = `<div id="playerImgContainer">
-  <img
-    src="${albumArray[i].cover_medium}"
-    alt=""
-  />
-</div>
-<div id="playerName">
-  <h5>${albumArray[i].artist.name}</h5>
-  <p>${albumArray[i].title}</p>
-</div>
-
-<div class="d-flex justify-content-center gap-3">
-  <i class="bi bi-heart"></i>
-  <i class="bi bi-pip"></i>
-</div>`;
-};
-
 const drawAlbum = (albumArray) => {
   let divAltro = document.getElementById("consigliatiWrapper");
 
   if (albumArray.length == 5) {
-    for (i = 0; i < albumArray.length; i++) {
-      divAltro.innerHTML += `<div class="p-2">
-                  <div class="col custCard">
-                    <img src="${albumArray[i].cover_big}" />
-                    <a href="#">
-                      <button class="hoverCardButtonOthers">
-                        <i class="fa-sharp fa-solid fa-play"></i>
-                      </button>
-                    </a>
-                    <div>
-                      <a href="./albumPage.html?id=${albumArray[i].id}" target="_blank">
-                        <h4>${albumArray[i].title}</h4>
-                      </a>
-                      <a href="./artistPage.html?id=${albumArray[i].contributors[0].id}" target="_blank">
-                        <h5>${albumArray[i].artist.name}</h5>
-                      </a>
-                    </div>
-                  </div>
-                </div>`;
-    }
+    divAltro.innerHTML += `<div class="p-2">
+      <div class="col custCard">
+        <img src="${albumArray[0].cover_big}" />
+        <button class="hoverCardButtonOthers" onclick="addToPlayer(0)">
+          <i class="fa-sharp fa-solid fa-play"></i>
+        </button>
+        <div>
+          <a href="./albumPage.html?id=${albumArray[0].id}" target="_blank">
+            <h4>${albumArray[0].title}</h4>
+          </a>
+          <a href="./artistPage.html?id=${albumArray[0].contributors[0].id}" target="_blank">
+            <h5>${albumArray[0].artist.name}</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="p-2">
+      <div class="col custCard">
+        <img src="${albumArray[1].cover_big}" />
+        <button class="hoverCardButtonOthers" onclick="addToPlayer(1)">
+          <i class="fa-sharp fa-solid fa-play"></i>
+        </button>
+        <div>
+          <a href="./albumPage.html?id=${albumArray[1].id}" target="_blank">
+            <h4>${albumArray[1].title}</h4>
+          </a>
+          <a href="./artistPage.html?id=${albumArray[1].contributors[0].id}" target="_blank">
+            <h5>${albumArray[1].artist.name}</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="p-2">
+      <div class="col custCard">
+        <img src="${albumArray[2].cover_big}" />
+        <button class="hoverCardButtonOthers" onclick="addToPlayer(2)">
+          <i class="fa-sharp fa-solid fa-play"></i>
+        </button>
+        <div>
+          <a href="./albumPage.html?id=${albumArray[2].id}" target="_blank">
+            <h4>${albumArray[2].title}</h4>
+          </a>
+          <a href="./artistPage.html?id=${albumArray[2].contributors[0].id}" target="_blank">
+            <h5>${albumArray[2].artist.name}</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="p-2">
+      <div class="col custCard">
+        <img src="${albumArray[3].cover_big}" />
+        <button class="hoverCardButtonOthers" onclick="addToPlayer(3)">
+          <i class="fa-sharp fa-solid fa-play"></i>
+        </button>
+        <div>
+          <a href="./albumPage.html?id=${albumArray[3].id}" target="_blank">
+            <h4>${albumArray[3].title}</h4>
+          </a>
+          <a href="./artistPage.html?id=${albumArray[3].contributors[0].id}" target="_blank">
+            <h5>${albumArray[3].artist.name}</h5>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="p-2">
+      <div class="col custCard">
+        <img src="${albumArray[4].cover_big}" />
+        <button class="hoverCardButtonOthers" onclick="addToPlayer(4)">
+          <i class="fa-sharp fa-solid fa-play"></i>
+        </button>
+        <div>
+          <a href="./albumPage.html?id=${albumArray[4].id}" target="_blank">
+            <h4>${albumArray[4].title}</h4>
+          </a>
+          <a href="./artistPage.html?id=${albumArray[4].contributors[0].id}" target="_blank">
+            <h5>${albumArray[4].artist.name}</h5>
+          </a>
+        </div>
+      </div>
+    </div>`;
   }
   // THIS IS THE COLOR THIEF LOGIC
   const art = document.querySelector(".p-3>img");
@@ -249,6 +264,26 @@ const drawAlbum = (albumArray) => {
     background2.style.backgroundColor = "rgb(" + color + ")";
     background2.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
   });
+};
+
+const addToPlayer = (index) => {
+  playerRowLeft = document.getElementById("playerRowLeft");
+  playerRowLeft.innerHTML = ``;
+  playerRowLeft.innerHTML = `<div id="playerImgContainer">
+  <img
+    src="${albumArray[index].cover_medium}"
+    alt=""
+  />
+</div>
+<div id="playerName">
+  <h5>${albumArray[index].artist.name}</h5>
+  <p>${albumArray[index].title}</p>
+</div>
+
+<div class="d-flex justify-content-center gap-3">
+  <i class="bi bi-heart"></i>
+  <i class="bi bi-pip"></i>
+</div>`;
 };
 
 const startDrawingAlbums = (albumArray, givenNumber) => {
