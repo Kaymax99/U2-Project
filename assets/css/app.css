@@ -843,6 +843,7 @@ footer .container-fluid {
   aspect-ratio: 1/1;
   border: none;
   transition: 0.2s;
+  z-index: 10;
 }
 .custCardLG .hoverCardButton:hover {
   background-color: #189945;
