@@ -23,14 +23,42 @@
   }
   div {
     padding-left: 10px;
-    padding-right: 10px;
+    // padding-right: 10px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
 
+  .cardButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.2s;
+  }
+
+  .hoverCardButton {
+    @include playButton;
+    aspect-ratio: 1 / 1;
+    border: none;
+    transition: 0.2s;
+
+    @media screen and (max-width: 1100px) {
+      transform: scale(0.8);
+      margin-right: 20px;
+    }
+    @media screen and (min-width: 1600px) {
+      transform: translateX(15px);
+    }
+  }
+
   &:hover {
     background-color: #383838;
+
+    .cardButtonContainer {
+      opacity: 1;
+      transition: 0.2s;
+    }
   }
 }
 
