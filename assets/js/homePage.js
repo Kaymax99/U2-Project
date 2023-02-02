@@ -6,15 +6,6 @@ const arrayIDAlbum = [
   100674742, 59853252, 130678282,
 ];
 
-const shuffleArray = (array) => {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    const temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-  }
-};
-
 shuffleArray(arrayIDAlbum);
 const buonaseraAlbums = [...arrayIDAlbum.slice(0, 6)];
 const selectedAlbumIDs = [...arrayIDAlbum.slice(6)];
@@ -153,10 +144,39 @@ const drawAlbumBuonasera = (albumArray) => {
            </button>
           </div>
         </div>
+        <div class="p-0 custCardLG">
+          <img src="${albumArray[i].cover_medium}" class="col-3 p-0" />
+          <div class="col-9 col-md-6">${albumArray[i].title}</div>
+          <div class="col-md-3 d-none d-md-block cardButtonContainer">
+            <button class="hoverCardButton" onclick="addToPlayer()">
+              <i class="fa-sharp fa-solid fa-play"></i>
+           </button>
+          </div>
+        </div>
       </a>
       </div>`;
     }
   }
+};
+
+const addToPlayer = () => {
+  playerRowLeft = document.getElementById("playerRowLeft");
+  playerRowLeft.innerHTML = ``;
+  playerRowLeft.innerHTML = `<div id="playerImgContainer">
+  <img
+    src="${albumArray[i].cover_medium}"
+    alt=""
+  />
+</div>
+<div id="playerName">
+  <h5>${albumArray[i].artist.name}</h5>
+  <p>${albumArray[i].title}</p>
+</div>
+
+<div class="d-flex justify-content-center gap-3">
+  <i class="bi bi-heart"></i>
+  <i class="bi bi-pip"></i>
+</div>`;
 };
 
 const addToPlayer = () => {
