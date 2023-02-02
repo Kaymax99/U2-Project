@@ -16,10 +16,12 @@ const fetchAlbum = async (index) => {
     if (res.ok) {
       let data = await res.json();
 
+
       return data;
     } else {
       throw "errore nella sezione altro";
     }
+    console.log(data)
   } catch (err) {
     console.log(err);
   }
@@ -78,8 +80,36 @@ const drawAnnuncio = async (album) => {
       </ul>
     </div>
   </div>
-</div>
-`;
+  </div>
+  `;
+
+
+
+  const song = spotlightAlbum.tracks.data[2].preview
+  console.log(song)
+
+
+  const audio = new Audio(song)
+
+
+  const playButton = document.querySelector("#playBtnPlayer")
+
+
+  playButton.addEventListener("click", () => {
+    audio.play()
+    playButton.style.color = "#1ED760"
+    playButton.addEventListener("click", () => {
+      audio.pause()
+      playButton.style.color = "white"
+
+    })
+  })
+
+
+
+
+
+
 
   // this code make all the buttons generated with the popups function
 
