@@ -48,7 +48,8 @@ main {
       gap: 8px;
       background-color: $bg-buttons-default;
       border-radius: 25px;
-      padding-left: 0;
+      border: 0;
+      padding-left: 5px;
       img {
         border-radius: 25px;
       }
@@ -56,11 +57,37 @@ main {
         color: $c-text-primary;
         font-weight: 700;
       }
-      .bi-caret-down-fill {
-        font-size: 1.1em;
-        align-self: flex-end;
-      }
     }
+  }
+}
+
+.dropdown-toggle::after {
+  margin: 0;
+}
+#userDropdown {
+  min-width: 230px;
+  background-color: $c-bg-primary;
+  padding: 4px;
+  margin: 0;
+  transform: translate3d(-5px, 44px, 0px) !important;
+  hr {
+    margin: 0;
+  }
+  li {
+    padding: 0;
+  }
+  li a {
+    color: $c-text-primary;
+    padding: 8px;
+  }
+  li a p {
+    margin-bottom: 0;
+  }
+  a:hover {
+    background-color: $c-bg-default;
+  }
+  .bi-box-arrow-up-right {
+    scale: 0.8;
   }
 }
 

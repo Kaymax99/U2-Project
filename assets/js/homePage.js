@@ -48,7 +48,7 @@ const drawAnnuncio = async (album) => {
       <h5>${spotlightAlbum.contributors[0].name}</h5>
       </a>
     </div>
-    <h5>Ascolta il nuovo singolo di ${spotlightAlbum.contributors[0].name}</h5>
+    <h5>Ascolta il nuovo album di ${spotlightAlbum.contributors[0].name}</h5>
     <div class="btnContainer">
       <button class="btn btnAnnuncio playBtn">Play</button>
       <button class="btn btnAnnuncio saveBtn">Salva</button>
