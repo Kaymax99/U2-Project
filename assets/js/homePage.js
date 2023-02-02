@@ -41,8 +41,7 @@ const drawAnnuncio = async (album) => {
   let annuncio = document.getElementById("annuncio");
   //   annuncio.innerHTML = "";
 
-  annuncio.innerHTML +=
-    `
+  annuncio.innerHTML += `
   <div class="p-3">
     <img src="${spotlightAlbum.cover_big}" height="200px" />
   </div>
@@ -92,14 +91,11 @@ const drawAnnuncio = async (album) => {
 </div>
 `;
 
-
   // this code make all the buttons generated with the popups function
-
 
   const dropdownToggle = document.querySelector(".dropdown-toggle1 ");
   const dropdownContent = document.querySelector(".dropdown-content1");
-  const dropdownContent2 = document.querySelector(".dropdown-content2")
-
+  const dropdownContent2 = document.querySelector(".dropdown-content2");
 
   dropdownToggle.addEventListener("click", function () {
     if (dropdownContent.style.display === "block" && !active) {
@@ -110,21 +106,20 @@ const drawAnnuncio = async (album) => {
   });
 
   document.addEventListener("click", function (event) {
-    if (!dropdownToggle.contains(event.target) && dropdownContent.style.display === "block") {
+    if (
+      !dropdownToggle.contains(event.target) &&
+      dropdownContent.style.display === "block"
+    ) {
       dropdownContent.style.display = "none";
     }
   });
 
   dropdownToggle.addEventListener("mouseover", function () {
-    dropdownContent2.style.display = "block"
+    dropdownContent2.style.display = "block";
     document.addEventListener("mouseout", function () {
-      dropdownContent2.style.display = "none"
-
-    })
-  })
-
-
-
+      dropdownContent2.style.display = "none";
+    });
+  });
 };
 drawAnnuncio(120044);
 
@@ -148,24 +143,21 @@ const drawAlbumBuonasera = (albumArray) => {
 
   if (albumArray.length == 6) {
     for (i = 0; i < albumArray.length; i++) {
-      divBuonasera.innerHTML += `    
-      <div class="row col-4 p-1">
-        <a href="./albumPage.html?id=${albumArray[i].id}" target="_blank">
-          <div class="p-0 custCardLG">
-          <img src="${albumArray[i].cover_medium}" class="col-3 p-0" />
-          <div class="col-9">${albumArray[i].title}</div>
-          </div>
-        </a>
+      divBuonasera.innerHTML += `<div class="row col-4 p-1">
+      <a href="./albumPage.html?id=${albumArray[i].id}" target="_blank">
+      <div class="p-0 custCardLG">
+      <img src="${albumArray[i].cover_medium}" class="col-3 p-0" />
+      <div class="col-9 col-md-6">${albumArray[i].title}</div>
+      <div class="col-md-3 d-none d-md-block cardButtonContainer">
+      <button class="hoverCardButton">
+      <i class="fa-sharp fa-solid fa-play"></i>
+      </button>
+      </div>
+      </div>
+      </a>
       </div>`;
-
-
-
-
     }
-
   }
-
-
 };
 
 const drawAlbum = (albumArray) => {
@@ -185,22 +177,22 @@ const drawAlbum = (albumArray) => {
     }
   }
   // THIS IS THE COLOR THIEF LOGIC
-  const art = document.querySelector(".p-3>img")
-  console.log(art)
+  const art = document.querySelector(".p-3>img");
+  console.log(art);
   // initialize colorThief
-  console.log("hi")
+  console.log("hi");
   const colorThief = new ColorThief();
   // get the image
   const img = new Image();
-  img.crossOrigin = 'Anonymous';
+  img.crossOrigin = "Anonymous";
   img.src = art.src;
-  img.addEventListener('load', function () {
+  img.addEventListener("load", function () {
     colorThief.getColor(img);
 
-    console.log(img.src)
+    console.log(img.src);
     // get the background element
     let background = document.querySelector("#mainNav");
-    let background2 = document.querySelector("#annuncio")
+    let background2 = document.querySelector("#annuncio");
     // get color palette
     let color = colorThief.getColor(img);
     // set the background color
@@ -220,18 +212,11 @@ const startDrawingAlbums = (albumArray, givenNumber) => {
 window.onload = startDrawingAlbums(buonaseraAlbums, 6);
 window.onload = startDrawingAlbums(selectedAlbumIDs, 5);
 
-
-
-
-
-
-
 // window.addEventListener("load", () => {
 
 //   const dropdownToggle = document.querySelector(".dropdown-toggle1");
 //   const dropdownContent = document.querySelector(".dropdown-content1");
 //   const dropdownContent2 = document.querySelector(".dropdown-content2")
-
 
 //   dropdownToggle.addEventListener("click", function () {
 //     if (dropdownContent.style.display === "block" && !active) {
@@ -255,5 +240,3 @@ window.onload = startDrawingAlbums(selectedAlbumIDs, 5);
 //     })
 //   })
 //   console.log("helloooooooooo")
-
-
