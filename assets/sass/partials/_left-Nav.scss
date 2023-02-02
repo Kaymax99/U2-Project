@@ -103,3 +103,9 @@
 #left-Nav .hovered {
   color: $c-text-primary;
 }
+
+.dropdown-menu {
+  li {
+    padding-left: 1.5em;
+  }
+}

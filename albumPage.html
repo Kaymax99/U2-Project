@@ -1,282 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>albumPageSpotify</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <link href="./assets/css/app.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/resources/noUiSlider-15.6.1/dist/nouislider.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <script src="./assets/resources/color-thief-2.3.2/dist/color-thief.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>albumPageSpotify</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
-  <link href="./assets/css/app.css" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="./assets/resources/noUiSlider-15.6.1/dist/nouislider.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-  <script src="./assets/resources/color-thief-2.3.2/dist/color-thief.min.js"></script>
-
-</head>
-
-<body>
-  <div class="container-fluid">
-    <div class="row w-100">
-      <nav id="left-Nav" class="col-3 col-lg-2">
-        <div id="left-Nav-Upper-Wrapper">
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <i class="bi bi-three-dots"></i>
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">File</a></li>
-              <li><a class="dropdown-item" href="#">Modifica</a></li>
-              <li><a class="dropdown-item" href="#">Visualizza</a></li>
-              <li><a class="dropdown-item" href="#">Riproduzione</a></li>
-              <li><a class="dropdown-item" href="#">Assistenza</a></li>
-            </ul>
-          </div>
-          <ul>
-            <li><i class="bi bi-house-door-fill"></i>Home</li>
-            <li><i class="bi bi-search"></i>Cerca</li>
-            <li><i class="bi bi-music-note-list"></i>La tua libreria</li>
-          </ul>
-          <div id="newAndLiked">
-            <ul>
-              <li><i class="bi bi-plus-square-fill"></i>Crea Playlist</li>
-              <li><i class="bi bi-heart-fill"></i>Brani che ti piacciono</li>
-              <li><i class="bi bi-bookmark-fill"></i>I tuoi episodi</li>
-            </ul>
-          </div>
-        </div>
-        <hr />
-
-        <div id="playlists">
-          <ul>
-            <li>Placeholder Playlist 1</li>
-            <li>Placeholder Playlist 2</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-          </ul>
-        </div>
-      </nav>
-
-      <main class="col-9 col-lg-8 p-0">
-        <nav id="mainNavB">
-          <div>
-            <button class="navigation">
-              <i class="bi bi-chevron-left"></i>
-            </button>
-            <button class="navigation">
-              <i class="bi bi-chevron-right"></i>
-            </button>
-          </div>
-          <button id="userWrapper">
-            <img src="./assets/img/user.png" width="28px" height="28px" />
-            <span>Utente Bellissimo</span>
-            <i class="bi bi-caret-down-fill"></i>
-          </button>
-        </nav>
-
-        <article id="annuncioAB"></article>
-
-        <section class="row" id="albumRow">
-          <div class="col col-12" id="albumButtonContainer">
-            <button type="button" id="playButton" class="btn text-dark">
-              <i class="fa-sharp fa-solid fa-play"></i>
-            </button>
-            <i class="bi bi-suit-heart"></i>
-            <i class="bi bi-download"></i>
-            <div class="dropdown1">
-              <ul class="dopperRadius dropdown-content2">
-                <li>More Options for $ PLACEHOLDER $</li>
-              </ul>
-              <button class="dropdown-toggle1 btn moreBtn">
+  <body>
+    <div class="container-fluid">
+      <div class="row w-100">
+        <nav id="left-Nav" class="col-3 col-lg-2">
+          <div id="left-Nav-Upper-Wrapper">
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
                 <i class="bi bi-three-dots"></i>
               </button>
-              <ul class="dopperRadius dropdown-content1">
-                <li><a class="topA" href="#">Add to queue</a></li>
-                <li><a href="#">Go to playlist radio</a></li>
-                <li><a href="#">Report</a></li>
-                <li><a href="#">Add to your Library</a></li>
-                <li>
-                  <hr />
-                </li>
-                <li><a class="botA" href="#">Share</a></li>
-                <li>
-                  <hr />
-                </li>
-                <li><a href="">About recommendations</a></li>
-                <li>
-                  <hr />
-                </li>
-                <li><a href="">Open in Desktop app</a></li>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">File</a></li>
+                <li><a class="dropdown-item" href="#">Modifica</a></li>
+                <li><a class="dropdown-item" href="#">Visualizza</a></li>
+                <li><a class="dropdown-item" href="#">Riproduzione</a></li>
+                <li><a class="dropdown-item" href="#">Assistenza</a></li>
+              </ul>
+            </div>
+            <ul>
+              <li><i class="bi bi-house-door-fill"></i>Home</li>
+              <li><i class="bi bi-search"></i>Cerca</li>
+              <li><i class="bi bi-music-note-list"></i>La tua libreria</li>
+            </ul>
+            <div id="newAndLiked">
+              <ul>
+                <li><i class="bi bi-plus-square-fill"></i>Crea Playlist</li>
+                <li><i class="bi bi-heart-fill"></i>Brani che ti piacciono</li>
+                <li><i class="bi bi-bookmark-fill"></i>I tuoi episodi</li>
               </ul>
             </div>
           </div>
-          <div class="row" id="innerRowContainer">
-            <div class="col col-6"><span id="hashtag">#</span>TITOLO</div>
-            <div class="col col-3" id="counterHeader">RIPRODUZIONI</div>
-            <div class="col col-3" id="timeHeader">
-              <i class="bi bi-clock"></i>
-            </div>
-            <hr />
-          </div>
-          <div id="trackListContainer"></div>
-        </section>
-      </main>
+          <hr />
 
-      <aside class="col-2 d-none d-lg-block">
-        <div id="upper-right-nav">
-          <div id="friendsActivity">Attività amici</div>
-          <div id="activityIcon">
-            <i class="bi bi-people"></i>
-            <i class="bi bi-x-lg"></i>
+          <div id="playlists">
+            <ul>
+              <li>Placeholder Playlist 1</li>
+              <li>Placeholder Playlist 2</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+            </ul>
           </div>
-        </div>
-        <div id="main-right-nav">
-          <div class="profile">
-            <img src="./assets/img/user.png" alt="profile picture" />
-            <div>
-              <h4 class="profile-title">Charlie Hookham</h4>
-              <p>In camera <span>&#x2022;</span> Yumi Zouma</p>
-              <div class="profile-description">
-                <i class="bi bi-vinyl"></i>
-                <p id="album">EP III</p>
-              </div>
-            </div>
-            <p>4 ore</p>
-          </div>
-          <div class="profile">
-            <img src="./assets/img/user.png" alt="profile picture" />
-            <div>
-              <h4 class="profile-title">lightdark02</h4>
-              <p>Aimed to kill <span>&#x2022;</span> Jade LeMac</p>
-              <div class="profile-description">
-                <i class="bi bi-vinyl"></i>
-                <p id="album">Aimed to kill</p>
-              </div>
-            </div>
-            <p>4 ore</p>
-          </div>
-          <div class="profile">
-            <img src="./assets/img/user.png" alt="profile picture" />
-            <div>
-              <h4 class="profile-title">Valeria Traverso</h4>
-              <p>New Kings <span>&#x2022;</span> Sleeping Wolf</p>
-              <div class="profile-description">
-                <i class="bi bi-music-note-beamed"></i>
-                <p id="album">Twint Badass mood</p>
-              </div>
-            </div>
-            <p>4 ore</p>
-          </div>
-        </div>
-      </aside>
+        </nav>
 
-      <footer class="px-0">
-        <div class="container-fluid">
-          <div class="row d-flex justify-content-between align-items-center g-2" id="playerRow">
-            <div class="col-4">
-              <div class="row justify-content-center d-flex align-items-center g-2" id="playerRowLeft">
-                <div class="col-4" id="playerImgContainer">
+        <main class="col-9 col-lg-8 p-0">
+          <nav id="mainNavB">
+            <div>
+              <button class="navigation">
+                <i class="bi bi-chevron-left"></i>
+              </button>
+              <button class="navigation">
+                <i class="bi bi-chevron-right"></i>
+              </button>
+            </div>
+            <button id="userWrapper">
+              <img src="./assets/img/user.png" width="28px" height="28px" />
+              <span>Utente Bellissimo</span>
+              <i class="bi bi-caret-down-fill"></i>
+            </button>
+          </nav>
+
+          <article id="annuncioAB"></article>
+
+          <section class="row" id="albumRow">
+            <div class="col col-12" id="albumButtonContainer">
+              <button type="button" id="playButton" class="btn text-dark">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <i class="bi bi-suit-heart"></i>
+              <i class="bi bi-download"></i>
+              <div class="dropdown1">
+                <ul class="dopperRadius dropdown-content2">
+                  <li>More Options for $ PLACEHOLDER $</li>
+                </ul>
+                <button class="dropdown-toggle1 btn moreBtn">
+                  <i class="bi bi-three-dots"></i>
+                </button>
+                <ul class="dopperRadius dropdown-content1">
+                  <li><a class="topA" href="#">Add to queue</a></li>
+                  <li><a href="#">Go to playlist radio</a></li>
+                  <li><a href="#">Report</a></li>
+                  <li><a href="#">Add to your Library</a></li>
+                  <li>
+                    <hr />
+                  </li>
+                  <li><a class="botA" href="#">Share</a></li>
+                  <li>
+                    <hr />
+                  </li>
+                  <li><a href="">About recommendations</a></li>
+                  <li>
+                    <hr />
+                  </li>
+                  <li><a href="">Open in Desktop app</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="row" id="innerRowContainer">
+              <div class="col col-6"><span id="hashtag">#</span>TITOLO</div>
+              <div class="col col-3" id="counterHeader">RIPRODUZIONI</div>
+              <div class="col col-3" id="timeHeader">
+                <i class="bi bi-clock"></i>
+              </div>
+              <hr />
+            </div>
+            <div id="trackListContainer"></div>
+          </section>
+        </main>
+
+        <aside class="col-2 d-none d-lg-block">
+          <div id="upper-right-nav">
+            <div id="friendsActivity">Attività amici</div>
+            <div id="activityIcon">
+              <i class="bi bi-people"></i>
+              <i class="bi bi-x-lg"></i>
+            </div>
+          </div>
+          <div id="main-right-nav">
+            <div class="profile">
+              <img src="./assets/img/user.png" alt="profile picture" />
+              <div>
+                <h4 class="profile-title">Charlie Hookham</h4>
+                <p>In camera <span>&#x2022;</span> Yumi Zouma</p>
+                <div class="profile-description">
+                  <i class="bi bi-vinyl"></i>
+                  <p id="album">EP III</p>
+                </div>
+              </div>
+              <p>4 ore</p>
+            </div>
+            <div class="profile">
+              <img src="./assets/img/user.png" alt="profile picture" />
+              <div>
+                <h4 class="profile-title">lightdark02</h4>
+                <p>Aimed to kill <span>&#x2022;</span> Jade LeMac</p>
+                <div class="profile-description">
+                  <i class="bi bi-vinyl"></i>
+                  <p id="album">Aimed to kill</p>
+                </div>
+              </div>
+              <p>4 ore</p>
+            </div>
+            <div class="profile">
+              <img src="./assets/img/user.png" alt="profile picture" />
+              <div>
+                <h4 class="profile-title">Valeria Traverso</h4>
+                <p>New Kings <span>&#x2022;</span> Sleeping Wolf</p>
+                <div class="profile-description">
+                  <i class="bi bi-music-note-beamed"></i>
+                  <p id="album">Twint Badass mood</p>
+                </div>
+              </div>
+              <p>4 ore</p>
+            </div>
+          </div>
+        </aside>
+
+        <footer class="px-0">
+          <div class="container-fluid">
+            <div class="d-flex justify-content-between align-items-center g-2" id="playerRow">
+              <div class="d-flex justify-content-start align-items-center gap-3" id="playerRowLeft">
+                <div id="playerImgContainer">
                   <img
                     src="data:image/jpeg;base64,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"
-                    alt="" />
+                    alt=""
+                  />
                 </div>
-                <div class="col-4">
+                <div>
                   <h5>MetalCats</h5>
                   <p>Sweet meow o' mine</p>
                 </div>
 
-                <div class="col-2 d-flex justify-content-center p-0">
+                <div class="d-flex justify-content-center gap-3">
                   <i class="bi bi-heart"></i>
-                </div>
-                <div class="col-2 d-flex justify-content-center p-0">
                   <i class="bi bi-pip"></i>
                 </div>
               </div>
-            </div>
-            <div class="col-4 d-flex flex-column align-items-center">
-              <div class="justify-content-end d-flex pb-2 pb-lg-3" id="playerCenter">
-                <div class="col d-flex justify-content-end">
-                  <i class="fa-solid fa-shuffle"></i>
+              <div class="col-4 d-flex flex-column align-items-center">
+                <div class="justify-content-center d-flex pb-2 pb-lg-3 align-items-center gap-4" id="playerCenter">
+                  <div class="d-flex justify-content-end gap-4">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-backward-step"></i>
+                  </div>
+                  <div class="d-flex justify-content-center" id="playBtnPlayer">
+                    <i class="fa-solid fa-circle-play"></i>
+                  </div>
+                  <div class="d-flex justify-content-start gap-4">
+                    <i class="fa-solid fa-forward-step"></i>
+                    <i class="fa-solid fa-repeat"></i>
+                  </div>
                 </div>
 
-                <div class="col d-flex justify-content-end">
-                  <i class="fa-solid fa-backward-step"></i>
-                </div>
-                <div class="col d-flex justify-content-center" id="playBtnPlayer">
-                  <i class="fa-solid fa-circle-play"></i>
-                </div>
-                <div class="col d-flex justify-content-start">
-                  <i class="fa-solid fa-forward-step"></i>
-                </div>
-
-                <div class="col d-flex justify-content-start">
-                  <i class="fa-solid fa-repeat"></i>
-                </div>
+                <div class="slider-styled" id="slider-round"></div>
               </div>
-
-              <div class="slider-styled" id="slider-round"></div>
-            </div>
-            <div class="col-4">
-              <div class="row justify-content-center align-items-center g-2" id="playerRight">
-                <div class="col-1 d-flex justify-content-center">
-                  <i class="fa-solid fa-microphone"></i>
-                </div>
-                <div class="col-1 d-flex justify-content-center">
-                  <i class="bi bi-list-columns-reverse"></i>
-                </div>
-                <div class="col-1 d-flex justify-content-center">
-                  <i class="bi bi-pc-display"></i>
-                </div>
-                <div class="col-5">
-                  <div class="slider-styled" id="slider-round2"></div>
+              <div class="col-4">
+                <div class="d-flex justify-content-center align-items-center g-2" id="playerRight">
+                  <div class="d-flex justify-content-center gap-4">
+                    <i class="bi bi-mic"></i>
+                    <i class="bi bi-list-columns-reverse"></i>
+                    <i class="bi bi-pc-display"></i>
+                  </div>
+                  <i class="fas fa-volume-down"></i>
+                  <div id="volumeContainer">
+                    <div class="slider-styled" id="slider-round2"></div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
     </div>
-  </div>
 
-
-
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
-  <script src="./assets/resources/noUiSlider-15.6.1/dist/nouislider.js"></script>
-  <script src="./assets/js/albumPage.js"></script>
-  <script src="./assets/js/player.js"></script>
-  <script src="./assets/js/popups.js"></script>
-</body>
-
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/resources/noUiSlider-15.6.1/dist/nouislider.js"></script>
+    <script src="./assets/js/albumPage.js"></script>
+    <script src="./assets/js/player.js"></script>
+    <script src="./assets/js/popups.js"></script>
+  </body>
 </html>
