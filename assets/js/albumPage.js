@@ -54,6 +54,7 @@ const fetchAlbum = async (index) => {
 const drawAlbumPage = async () => {
   let trackList = document.getElementById("trackListContainer");
   let annuncioAB = document.getElementById("annuncioAB");
+  let albumNavContainer = document.getElementById("pageContentNav");
   let albumNavName = document.getElementById("pageContentName");
 
   let album = await fetchAlbum(id);
@@ -108,7 +109,7 @@ const drawAlbumPage = async () => {
     </div>
   </div>`;
 
-    // this code make the container del colore della imagine caricata dal api usando colorthief
+    // Color Thief logic
     const art = document.querySelector("#albumImage");
     // initialize colorThief
     const colorThief = new ColorThief();
@@ -135,7 +136,6 @@ const drawAlbumPage = async () => {
       const main = document.querySelector("main");
 
       const changeNav = () => {
-        const navBar = document.getElementById("mainNav");
         let scrollValue = main.scrollTop;
         /* console.log(scrollValue); */
         if (scrollValue == 0) {
@@ -144,12 +144,14 @@ const drawAlbumPage = async () => {
         if (scrollValue >= 100) {
           background.style.backgroundColor = `rgba(${color}, 0.5)`;
         }
-        if (scrollValue < 150) {
-          albumNavName.style.opacity = "0%";
-        }
         if (scrollValue >= 150) {
           background.style.backgroundColor = `rgba(${color}, 1)`;
-          albumNavName.style.opacity = "100%";
+        }
+        if (scrollValue < 300) {
+          albumNavContainer.style.opacity = "0%";
+        }
+        if (scrollValue >= 300) {
+          albumNavContainer.style.opacity = "100%";
         }
       };
       main.addEventListener("scroll", changeNav);

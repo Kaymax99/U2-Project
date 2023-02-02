@@ -223,7 +223,6 @@ const drawAlbum = (albumArray) => {
     const main = document.querySelector("main");
 
     const changeNav = () => {
-      const navBar = document.getElementById("mainNav");
       let scrollValue = main.scrollTop;
       /* console.log(scrollValue); */
       if (scrollValue == 0) {
