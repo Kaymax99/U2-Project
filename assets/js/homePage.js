@@ -42,7 +42,6 @@ const drawAnnuncio = async (album) => {
   //   annuncio.innerHTML = "";
 
   annuncio.innerHTML += `
-  annuncio.innerHTML += `
   <div class="p-3">
     <img src="${spotlightAlbum.cover_big}" height="200px" />
   </div>
@@ -96,7 +95,6 @@ const drawAnnuncio = async (album) => {
   const dropdownToggle = document.querySelector(".dropdown-toggle1 ");
   const dropdownContent = document.querySelector(".dropdown-content1");
   const dropdownContent2 = document.querySelector(".dropdown-content2");
-  const dropdownContent2 = document.querySelector(".dropdown-content2");
 
   dropdownToggle.addEventListener("click", function () {
     if (dropdownContent.style.display === "block" && !active) {
@@ -117,11 +115,7 @@ const drawAnnuncio = async (album) => {
 
   dropdownToggle.addEventListener("mouseover", function () {
     dropdownContent2.style.display = "block";
-    dropdownContent2.style.display = "block";
     document.addEventListener("mouseout", function () {
-      dropdownContent2.style.display = "none";
-    });
-  });
       dropdownContent2.style.display = "none";
     });
   });
@@ -182,26 +176,21 @@ const drawAlbum = (albumArray) => {
     }
   }
   // THIS IS THE COLOR THIEF LOGIC
-  const art = document.querySelector(".p-3>img");;
-  /* console.log(art); */
+  const art = document.querySelector(".p-3>img");
+  /* console.log(art) */
   // initialize colorThief
   /* console.log("hi") */
-  console.log("hi");
   const colorThief = new ColorThief();
   // get the image
   const img = new Image();
   img.crossOrigin = "Anonymous";
-  img.crossOrigin = "Anonymous";
   img.src = art.src;
-  img.addEventListener("load", function () {
   img.addEventListener("load", function () {
     colorThief.getColor(img);
 
     /* console.log(img.src) */
-    console.log(img.src);
     // get the background element
     let background = document.querySelector("#mainNav");
-    let background2 = document.querySelector("#annuncio");
     let background2 = document.querySelector("#annuncio");
     // get color palette
     let color = colorThief.getColor(img);
