@@ -85,13 +85,9 @@ main::-webkit-scrollbar {
   flex-direction: column;
   justify-content: flex-end;
   position: relative;
-  width: 100%;
+  width: 80%;
   height: 180px;
   padding: 16px 0;
-  h1 {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
 
   h5 {
     color: $c-text-primary;
@@ -110,6 +106,9 @@ main::-webkit-scrollbar {
     font-weight: 700;
     margin-bottom: 0.4em;
     transition: 0.2s;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 
     @media screen and (min-width: 1200px) {
       font-size: 3.6em;
