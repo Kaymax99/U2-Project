@@ -6,15 +6,6 @@ const arrayIDAlbum = [
   100674742, 59853252, 130678282,
 ];
 
-const shuffleArray = (array) => {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    const temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-  }
-};
-
 shuffleArray(arrayIDAlbum);
 const buonaseraAlbums = [...arrayIDAlbum.slice(0, 6)];
 const selectedAlbumIDs = [...arrayIDAlbum.slice(6)];
@@ -144,19 +135,39 @@ const drawAlbumBuonasera = (albumArray) => {
     for (i = 0; i < albumArray.length; i++) {
       divBuonasera.innerHTML += `<div class="row col-4 p-1">
       <a href="./albumPage.html?id=${albumArray[i].id}" target="_blank">
-      <div class="p-0 custCardLG">
-      <img src="${albumArray[i].cover_medium}" class="col-3 p-0" />
-      <div class="col-9 col-md-6">${albumArray[i].title}</div>
-      <div class="col-md-3 d-none d-md-block cardButtonContainer">
-      <button class="hoverCardButton">
-      <i class="fa-sharp fa-solid fa-play"></i>
-      </button>
-      </div>
-      </div>
+        <div class="p-0 custCardLG">
+          <img src="${albumArray[i].cover_medium}" class="col-3 p-0" />
+          <div class="col-9 col-md-6">${albumArray[i].title}</div>
+          <div class="col-md-3 d-none d-md-block cardButtonContainer">
+            <button class="hoverCardButton" onclick="addToPlayer()">
+              <i class="fa-sharp fa-solid fa-play"></i>
+           </button>
+          </div>
+        </div>
       </a>
       </div>`;
     }
   }
+};
+
+const addToPlayer = () => {
+  playerRowLeft = document.getElementById("playerRowLeft");
+  playerRowLeft.innerHTML = ``;
+  playerRowLeft.innerHTML = `<div id="playerImgContainer">
+  <img
+    src="${albumArray[i].cover_medium}"
+    alt=""
+  />
+</div>
+<div id="playerName">
+  <h5>${albumArray[i].artist.name}</h5>
+  <p>${albumArray[i].title}</p>
+</div>
+
+<div class="d-flex justify-content-center gap-3">
+  <i class="bi bi-heart"></i>
+  <i class="bi bi-pip"></i>
+</div>`;
 };
 
 const drawAlbum = (albumArray) => {
@@ -167,9 +178,18 @@ const drawAlbum = (albumArray) => {
       divAltro.innerHTML += `<div class="p-2">
       <div class="col custCard">
         <img src="${albumArray[i].cover_big}" />
+        <a href="#">
+          <button class="hoverCardButtonOthers" onclick="addToPlayer()">
+            <i class="fa-sharp fa-solid fa-play"></i>
+          </button>
+        </a>
         <div>
-        <a href="./albumPage.html?id=${albumArray[i].id}" target="_blank"><h4>${albumArray[i].title}</h4></a>
-        <a href="./artistPage.html?id=${albumArray[i].contributors[0].id}" target="_blank"><h5>${albumArray[i].artist.name}</h5></a>
+          <a href="./albumPage.html?id=${albumArray[i].id}" target="_blank">
+            <h4>${albumArray[i].title}</h4>
+          </a>
+          <a href="./artistPage.html?id=${albumArray[i].contributors[0].id}" target="_blank">
+            <h5>${albumArray[i].artist.name}</h5>
+          </a>
         </div>
       </div>
     </div>`;
@@ -195,10 +215,28 @@ const drawAlbum = (albumArray) => {
     // get color palette
     let color = colorThief.getColor(img);
     // set the background color
-    background.style.backgroundColor = "rgb(" + color + ")";
-    background.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
+    background.style.backgroundColor = `rgba(${color}, 0)`;
+    /*     background.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`; */
     background2.style.backgroundColor = "rgb(" + color + ")";
     background2.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
+
+    const main = document.querySelector("main");
+
+    const changeNav = () => {
+      const navBar = document.getElementById("mainNav");
+      let scrollValue = main.scrollTop;
+      /* console.log(scrollValue); */
+      if (scrollValue == 0) {
+        background.style.backgroundColor = `rgba(${color}, 0)`;
+      }
+      if (scrollValue >= 100) {
+        background.style.backgroundColor = `rgba(${color}, 0.5)`;
+      }
+      if (scrollValue >= 150) {
+        background.style.backgroundColor = `rgba(${color}, 1)`;
+      }
+    };
+    main.addEventListener("scroll", changeNav);
   });
 };
 

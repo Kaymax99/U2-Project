@@ -16,16 +16,17 @@
 
   li {
     @include leftNavLi;
-    @include row;
     margin: 0.5em 0;
     font-size: 0.8em;
     transition: 0.2s;
     color: $c-text-subdued;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
     &:hover {
       color: $c-text-primary;
       transition: 0.2s;
     }
-
     @media screen and (min-width: 900px) {
       font-size: 0.9em;
     }
@@ -36,11 +37,8 @@
       font-size: 0.9em;
     }
   }
-  li {
-    display: flex;
-    gap: 16px;
-  }
   i {
+    padding-right: 0.5em;
     font-size: 1.2em;
     @media screen and (min-width: 900px) {
       font-size: 1.4em;
@@ -63,11 +61,13 @@
   }
 
   #playlists {
+    padding-bottom: 7em;
     li {
       margin: 0 !important;
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
+
       @media screen and (min-width: 900px) {
         margin: 0.5em 0 !important;
       }
