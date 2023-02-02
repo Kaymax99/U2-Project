@@ -920,7 +920,7 @@ footer .container-fluid {
   justify-content: center;
   align-items: center;
   border: none;
-  opacity: 1;
+  opacity: 0;
   transition: all 0.2s;
   z-index: 10;
   transform: scale(0.5);
