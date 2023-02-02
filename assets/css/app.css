@@ -546,6 +546,9 @@ footer .container-fluid {
 #playerRow #playBtnPlayer {
   color: white;
 }
+#playerRow #playBtnPlayer i {
+  font-size: 2.5em;
+}
 
 #playerRowLeft {
   width: 80%;
