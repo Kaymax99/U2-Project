@@ -27,7 +27,7 @@
   <body>
     <div class="container-fluid p-0">
       <div class="row w-100 m-0">
-        <nav id="left-Nav" class="col-3 col-lg-2">
+        <nav id="left-Nav" class="col-md-3 col-lg-2 d-none d-md-block">
           <div id="left-Nav-Upper-Wrapper">
             <div class="dropdown">
               <button
@@ -93,8 +93,8 @@
           </div>
         </nav>
 
-        <main class="col-9 col-lg-8 p-0">
-          <nav id="mainNav">
+        <main class="col-12 col-md-9 col-lg-8 p-0">
+          <nav id="mainNav" class="d-none d-md-flex">
             <div>
               <button class="navigation">
                 <i class="bi bi-chevron-left"></i>
@@ -110,10 +110,17 @@
             </button>
           </nav>
 
-          <article id="annuncio" class="mx-4"></article>
+          <article id="annuncio" class="mx-4 d-none d-md-flex"></article>
 
           <section id="ultimiAscolti">
-            <h2>Buonasera</h2>
+            <div id="greetingContainer" class="d-flex justify-content-between align-items-center">
+              <div>
+                <h2>Buonasera</h2>
+              </div>
+              <div class="d-md-none">
+                <i class="bi bi-bell"></i><i class="bi bi-clock-history"></i><i class="bi bi-gear-wide-connected"></i>
+              </div>
+            </div>
             <div id="ultimiAscoltiWrapper" class="row d-flex justify-content-between gx-0 px-5"></div>
           </section>
           <hr />

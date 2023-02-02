@@ -61,6 +61,7 @@ a {
 @media screen and (min-width: 850px) {
   #left-Nav {
     padding: 0 24px;
+    transition: 0.2s;
   }
 }
 @media screen and (min-width: 992px) {
@@ -188,14 +189,24 @@ main {
   scrollbar-width: none; /* Firefox */
   transition: 0.2s;
 }
+@media screen and (max-width: 767px) {
+  main {
+    height: 100vh;
+  }
+}
 main #mainNav {
-  width: 75%;
+  width: 100%;
   position: fixed;
   padding: 16px 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  main #mainNav {
+    width: 75%;
+  }
 }
 @media screen and (min-width: 992px) {
   main #mainNav {
