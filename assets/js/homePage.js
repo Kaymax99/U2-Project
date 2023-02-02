@@ -259,10 +259,27 @@ const drawAlbum = (albumArray) => {
     // get color palette
     let color = colorThief.getColor(img);
     // set the background color
-    background.style.backgroundColor = "rgb(" + color + ")";
-    background.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
+    background.style.backgroundColor = `rgba(${color}, 0)`;
+    /*     background.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`; */
     background2.style.backgroundColor = "rgb(" + color + ")";
     background2.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
+
+    const main = document.querySelector("main");
+
+    const changeNav = () => {
+      let scrollValue = main.scrollTop;
+      /* console.log(scrollValue); */
+      if (scrollValue == 0) {
+        background.style.backgroundColor = `rgba(${color}, 0)`;
+      }
+      if (scrollValue >= 100) {
+        background.style.backgroundColor = `rgba(${color}, 0.5)`;
+      }
+      if (scrollValue >= 150) {
+        background.style.backgroundColor = `rgba(${color}, 1)`;
+      }
+    };
+    main.addEventListener("scroll", changeNav);
   });
 };
 
