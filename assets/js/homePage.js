@@ -218,7 +218,7 @@ const drawAlbum = (albumArray) => {
       </div>
     </div>
     
-    <div class="p-2 ">
+    <div class="p-2 d-none d-md-block">
       <div class="col custCard">
         <img src="${albumArray[4].cover_big}" />
         <button class="hoverCardButtonOthers" onclick="addToPlayer(4)">
