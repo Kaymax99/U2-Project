@@ -191,7 +191,7 @@ main {
 main #mainNav {
   width: 75%;
   position: fixed;
-  padding: 16px 10px;
+  padding: 8px 10px;
   z-index: 9999;
   transition: background-color 0.3s;
   display: flex;
@@ -213,12 +213,15 @@ main #mainNav > div {
   align-items: center;
   gap: 16px;
 }
-main #mainNav > div p {
-  font-size: 1.5em;
-  margin-bottom: 0;
+main #mainNav #pageContentNav {
   opacity: 0%;
   color: white;
   transition: opacity 0.3s;
+}
+main #mainNav #pageContentNav p {
+  font-size: 1.5em;
+  margin-bottom: 0;
+  color: white;
 }
 main #mainNav .navigation {
   border: none;
@@ -261,7 +264,7 @@ main::-webkit-scrollbar {
 #annuncio {
   display: flex;
   align-items: center;
-  margin-top: 70px;
+  margin-top: 54px;
   width: 95%;
   background: rgb(0, 0, 0);
   background: linear-gradient(25deg, rgb(0, 0, 0) 30%, rgb(24, 24, 24) 75%);
