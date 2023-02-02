@@ -46,13 +46,9 @@ const fetchAlbum = async (index) => {
     } else {
       throw "errore nella sezione altro";
     }
-
-
-
   } catch (err) {
     console.log(err);
   }
-
 };
 
 const drawAlbumPage = async () => {
@@ -80,8 +76,9 @@ const drawAlbumPage = async () => {
         src="${album.artist.picture}"
         alt="Artists photo"
       />
-      <p id="albumAuthor"><a href="./artistPage.html?id=${album.artist.id}">${album.artist.name
-    }</a></p>
+      <p id="albumAuthor"><a href="./artistPage.html?id=${album.artist.id}">${
+    album.artist.name
+  }</a></p>
       <span class="dot">•</span>
       <p id="albumYear">${album.release_date.slice(0, -6)}</p>
       <span class="dot">•</span>
@@ -111,20 +108,20 @@ const drawAlbumPage = async () => {
   </div>`;
 
     // this code make the container del colore della imagine caricata dal api usando colorthief
-    const art = document.querySelector("#albumImage")
+    const art = document.querySelector("#albumImage");
     // initialize colorThief
     const colorThief = new ColorThief();
     // get the image
     const img = new Image();
-    img.crossOrigin = 'Anonymous';
+    img.crossOrigin = "Anonymous";
     img.src = art.src;
-    img.addEventListener('load', function () {
+    img.addEventListener("load", function () {
       colorThief.getColor(img);
 
-      console.log(img.src)
+      /* console.log(img.src) */
       // get the background element
       let background = document.querySelector("#mainNavB");
-      let background2 = document.querySelector("#annuncioAB")
+      let background2 = document.querySelector("#annuncioAB");
 
       // get color palette
       let color = colorThief.getColor(img);
@@ -133,14 +130,7 @@ const drawAlbumPage = async () => {
       background.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
       background2.style.backgroundColor = "rgb(" + color + ")";
       background2.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
-
     });
-
-
-
   }
-
-
-}
+};
 drawAlbumPage();
-
