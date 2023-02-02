@@ -76,9 +76,8 @@ const drawAlbumPage = async () => {
         src="${album.artist.picture}"
         alt="Artists photo"
       />
-      <p id="albumAuthor"><a href="./artistPage.html?id=${album.artist.id}">${
-    album.artist.name
-  }</a></p>
+      <p id="albumAuthor"><a href="./artistPage.html?id=${album.artist.id}">${album.artist.name
+    }</a></p>
       <span class="dot">•</span>
       <p id="albumYear">${album.release_date.slice(0, -6)}</p>
       <span class="dot">•</span>
@@ -130,7 +129,15 @@ const drawAlbumPage = async () => {
       background.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
       background2.style.backgroundColor = "rgb(" + color + ")";
       background2.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
+
+
     });
+
+
+
+
+
+
   }
 };
 drawAlbumPage();
