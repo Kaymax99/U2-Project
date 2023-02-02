@@ -1182,6 +1182,15 @@ footer .container-fluid {
   transition: 0.2s;
 }
 
+#consigliatiWrapper .strap:last-child {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  #consigliatiWrapper .strap:last-child {
+    display: block;
+  }
+}
+
 main {
   padding-bottom: 10em !important;
 }
@@ -1672,10 +1681,6 @@ main {
   color: white;
 }
 
-#greetingContainer {
-  margin-bottom: 2.5em;
-}
-
 #greetingIcons {
   color: white;
   width: 30%;
@@ -1704,7 +1709,7 @@ main {
 @media screen and (max-width: 768px) {
   footer {
     background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgb(0, 0, 0) 25%, rgba(24, 24, 24, 0.8) 65%);
+    background: linear-gradient(0deg, rgb(0, 0, 0) 25%, rgba(24, 24, 24, 0.8) 50%);
   }
 }
 #mobilePlayer {

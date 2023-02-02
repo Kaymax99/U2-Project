@@ -159,7 +159,7 @@ const drawAlbum = (albumArray) => {
   if (albumArray.length == 5) {
     for (i = 0; i < albumArray.length; i++) {
       divAltro.innerHTML += `
-        <div class="p-2">
+        <div class="p-2 strap">
           <div class="col custCard">
             <img src="${albumArray[i].cover_big}" />
             <a href="#">
