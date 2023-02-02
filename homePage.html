@@ -149,9 +149,13 @@
               <div>
                 <h2>Buonasera</h2>
               </div>
-              <div class="d-md-none">
+              <div class="d-md-none d-flex justify-content-around" id="greetingIcons">
                 <i class="bi bi-bell"></i><i class="bi bi-clock-history"></i><i class="bi bi-gear-wide-connected"></i>
               </div>
+            </div>
+            <div class="d-flex justify-content-start" id="mobileOptions">
+              <div>Musica</div>
+              <div>Podcast e show</div>
             </div>
             <div id="ultimiAscoltiWrapper" class="row d-flex justify-content-between gx-0 px-5"></div>
           </section>
@@ -159,11 +163,14 @@
 
           <section id="consigliati">
             <div id="headingConsigliati">
-              <h2>Altro di ciò che ti piace</h2>
-              <button class="showMore">Visualizza Tutto</button>
+              <h2 class="d-none d-md-block">Altro di ciò che ti piace</h2>
+              <button class="showMore d-none d-md-block">Visualizza Tutto</button>
             </div>
             <div class="mx-4">
-              <div id="consigliatiWrapper" class="row row-cols-5 d-flex justify-content-between gx-0"></div>
+              <div
+                id="consigliatiWrapper"
+                class="row row-cols-2 row-cols-md-5 d-flex justify-content-between gx-0"
+              ></div>
             </div>
           </section>
         </main>
@@ -228,7 +235,7 @@
           </div>
         </aside>
 
-        <footer class="px-0">
+        <footer class="px-0 d-none d-md-block">
           <div class="container-fluid">
             <div class="d-flex justify-content-between align-items-center g-2" id="playerRow">
               <div class="d-flex justify-content-start align-items-center gap-3" id="playerRowLeft">

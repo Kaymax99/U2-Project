@@ -308,7 +308,12 @@ main::-webkit-scrollbar {
 }
 
 #ultimiAscolti {
-  font-size: 1.5em;
+  font-size: 1.2em;
+}
+@media screen and (min-width: 768px) {
+  #ultimiAscolti {
+    font-size: 1.5em;
+  }
 }
 
 #annuncio {
@@ -943,6 +948,26 @@ footer .container-fluid {
   position: relative;
   transition: 0.2s;
 }
+@media screen and (min-width: 300px) {
+  .custCard {
+    max-width: 120px;
+  }
+}
+@media screen and (min-width: 400px) {
+  .custCard {
+    max-width: 150px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .custCard {
+    max-width: 200px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .custCard {
+    max-width: 250px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .custCard {
     padding: 20px;
@@ -1017,6 +1042,13 @@ footer .container-fluid {
 }
 .custCard .hoverCardButtonOthers i {
   margin-left: 4px;
+}
+@media screen and (max-width: 767px) {
+  .custCard .hoverCardButtonOthers {
+    transform: scale(1.1);
+    bottom: 25%;
+    right: 10%;
+  }
 }
 @media screen and (min-width: 900px) {
   .custCard .hoverCardButtonOthers {
@@ -1543,4 +1575,48 @@ main {
 .dopperRadius li hr {
   background-color: #3e3e3e;
   margin: 0 4px;
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #ultimiAscolti {
+    margin-top: 1em;
+  }
+}
+#ultimiAscolti h2 {
+  color: white;
+}
+
+#greetingContainer {
+  margin-bottom: 2.5em;
+}
+
+#greetingIcons {
+  color: white;
+  width: 30%;
+  margin: 0.75rem 1em;
+}
+
+#mobileOptions {
+  color: white;
+  font-size: 0.6em;
+  margin: 0 2.5em;
+}
+#mobileOptions > div {
+  margin-right: 2em;
+}
+
+#consigliatiWrapper > div {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  #consigliatiWrapper > div {
+    display: block;
+  }
 }/*# sourceMappingURL=app.css.map */
