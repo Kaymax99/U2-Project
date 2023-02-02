@@ -69,7 +69,10 @@ a {
     padding: 0 12px;
   }
 }
-#left-Nav li {
+#left-Nav #topDropdown {
+  background-color: #2a2a2a;
+}
+#left-Nav #topDropdown li {
   height: 32px;
   align-items: center;
   margin: 0.5em 0;
@@ -80,24 +83,32 @@ a {
   text-overflow: ellipsis;
   white-space: wrap;
 }
-#left-Nav li:hover {
+#left-Nav #topDropdown li:hover {
   color: white;
   transition: 0.2s;
 }
 @media screen and (min-width: 900px) {
-  #left-Nav li {
+  #left-Nav #topDropdown li {
     font-size: 0.9em;
   }
 }
 @media screen and (min-width: 992px) {
-  #left-Nav li {
+  #left-Nav #topDropdown li {
     font-size: 0.8em;
   }
 }
 @media screen and (min-width: 1100px) {
-  #left-Nav li {
+  #left-Nav #topDropdown li {
     font-size: 0.9em;
   }
+}
+#left-Nav #topDropdown li {
+  margin: 0;
+}
+#left-Nav #topDropdown li a {
+  color: white;
+  padding: 8px;
+  margin: 0;
 }
 #left-Nav i {
   padding-right: 0.5em;
@@ -197,7 +208,9 @@ main {
 main #mainNav {
   width: 100%;
   position: fixed;
-  padding: 16px 10px;
+  padding: 8px 10px;
+  z-index: 9999;
+  transition: background-color 0.3s;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -219,7 +232,18 @@ main #mainNav .bi {
 }
 main #mainNav > div {
   display: flex;
+  align-items: center;
   gap: 16px;
+}
+main #mainNav #pageContentNav {
+  opacity: 0%;
+  color: white;
+  transition: opacity 0.3s;
+}
+main #mainNav #pageContentNav p {
+  font-size: 1.5em;
+  margin-bottom: 0;
+  color: white;
 }
 main #mainNav .navigation {
   border: none;
@@ -233,7 +257,8 @@ main #mainNav #userWrapper {
   gap: 8px;
   background-color: rgba(0, 0, 0, 0.9);
   border-radius: 25px;
-  padding-left: 0;
+  border: 0;
+  padding-left: 5px;
 }
 main #mainNav #userWrapper img {
   border-radius: 25px;
@@ -242,9 +267,36 @@ main #mainNav #userWrapper span {
   color: white;
   font-weight: 700;
 }
-main #mainNav #userWrapper .bi-caret-down-fill {
-  font-size: 1.1em;
-  align-self: flex-end;
+
+.dropdown-toggle::after {
+  margin: 0;
+}
+
+#userDropdown {
+  min-width: 230px;
+  background-color: black;
+  padding: 4px;
+  margin: 0;
+  transform: translate3d(-5px, 44px, 0px) !important;
+}
+#userDropdown hr {
+  margin: 0;
+}
+#userDropdown li {
+  padding: 0;
+}
+#userDropdown li a {
+  color: white;
+  padding: 8px;
+}
+#userDropdown li a p {
+  margin-bottom: 0;
+}
+#userDropdown a:hover {
+  background-color: #181818;
+}
+#userDropdown .bi-box-arrow-up-right {
+  scale: 0.8;
 }
 
 .container-fluid {
@@ -262,7 +314,7 @@ main::-webkit-scrollbar {
 #annuncio {
   display: flex;
   align-items: center;
-  margin-top: 4.5em;
+  margin-top: 54px;
   width: 95%;
   background: rgb(0, 0, 0);
   background: linear-gradient(25deg, rgb(0, 0, 0) 30%, rgb(24, 24, 24) 75%);
@@ -1020,53 +1072,6 @@ footer .container-fluid {
 
 main {
   padding-bottom: 10em !important;
-}
-main #mainNavB {
-  width: 75%;
-  position: fixed;
-  padding: 16px 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-@media screen and (min-width: 992px) {
-  main #mainNavB {
-    width: 66.6%;
-  }
-}
-main #mainNavB .bi {
-  font-size: 1.5em;
-  color: white;
-}
-main #mainNavB > div {
-  display: flex;
-  gap: 16px;
-}
-main #mainNavB .navigation {
-  border: none;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-main #mainNavB #userWrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
-  background-color: rgba(0, 0, 0, 0.9);
-  border-radius: 25px;
-  padding-left: 0;
-}
-main #mainNavB #userWrapper img {
-  border-radius: 25px;
-}
-main #mainNavB #userWrapper span {
-  color: white;
-  font-weight: 700;
-}
-main #mainNavB #userWrapper .bi-caret-down-fill {
-  font-size: 1.1em;
-  align-self: flex-end;
 }
 
 main::-webkit-scrollbar {

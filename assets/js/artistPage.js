@@ -71,7 +71,7 @@ drawArtistPage = async () => {
 
   let songs = await fetchTopSongs(artist.tracklist);
   let songsLength = songs.data;
-  console.log(songsLength);
+  /* console.log(songsLength); */
   /* console.log(songsLength.length); */
   let songList = document.getElementById("songList");
   for (let i = 0; i < songsLength.length; i++) {
@@ -91,6 +91,107 @@ drawArtistPage = async () => {
   <h3> Hai messo Mi piace a ${num} brani</h3>
   <p>di ${artist.name}</p>
   `;
+
+
+
+  const article = document.querySelector('#annuncioAR');
+  const style = article.style.backgroundImage;
+  const urlStart = style.indexOf('url(') + 4;
+  const urlEnd = style.indexOf(')', urlStart);
+  const urlwithcomas = style.substring(urlStart, urlEnd);
+  let url = urlwithcomas.slice(1, -1);
+
+  console.log(url);
+
+  // initialize colorThief
+  const colorThief = new ColorThief();
+  // get the image
+  const img = new Image();
+  img.crossOrigin = "Anonymous";
+  img.src = url;
+  console.log(img);
+
+
+  img.addEventListener("load", function () {
+    console.log(img)
+    colorThief.getColor(img);
+
+    /* console.log(img.src) */
+    // get the background element
+    let background = document.querySelector("#mainNav");
+
+    // get color palette
+    let color = colorThief.getColor(img);
+    console.log(color)
+
+    // set the background color
+    background.style.backgroundColor = "rgb(" + color + ")";
+    background.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
+
+
+
+
+    const main = document.querySelector("main");
+
+    const changeNav = () => {
+      const navBar = document.getElementById("mainNav");
+      let scrollValue = main.scrollTop;
+      /* console.log(scrollValue); */
+      if (scrollValue == 0) {
+        background.style.backgroundColor = `rgba(${color}, 0)`;
+      }
+      if (scrollValue >= 100) {
+        background.style.backgroundColor = `rgba(${color}, 0.5)`;
+      }
+      if (scrollValue < 150) {
+        albumNavName.style.opacity = "0%";
+      }
+      if (scrollValue >= 150) {
+        background.style.backgroundColor = `rgba(${color}, 1)`;
+        albumNavName.style.opacity = "100%";
+      }
+    };
+
+
+
+    main.addEventListener("scroll", changeNav);
+  });
+
+
+
+
 };
 
+
 drawArtistPage();
+// Color Thief logic
+
+
+
+
+// const art = document.querySelector("#annuncioAR")
+// console.log(art);
+// // initialize colorThief
+// const colorThief = new ColorThief();
+// // get the image
+// const img = new Image();
+// img.crossOrigin = "Anonymous";
+// img.style = art.style;
+// console.log(img);
+
+// img.addEventListener("load", function () {
+//   colorThief.getColor(img);
+
+//   /* console.log(img.src) */
+//   // get the background element
+//   let background = document.querySelector("#mainNav");
+
+//   // get color palette
+//   let color = colorThief.getColor(img);
+//   // set the background color
+//   background.style.backgroundColor = "rgb(" + color + ")";
+//   background.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
+
+// })
+
+

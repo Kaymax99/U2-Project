@@ -54,10 +54,13 @@ const fetchAlbum = async (index) => {
 const drawAlbumPage = async () => {
   let trackList = document.getElementById("trackListContainer");
   let annuncioAB = document.getElementById("annuncioAB");
+  let albumNavContainer = document.getElementById("pageContentNav");
+  let albumNavName = document.getElementById("pageContentName");
 
   let album = await fetchAlbum(id);
   let lunghezzaData = album.tracks.data;
 
+  albumNavName.innerText = album.title;
   annuncioAB.innerHTML += `
   <div class="p-3">
   <img
@@ -76,9 +79,8 @@ const drawAlbumPage = async () => {
         src="${album.artist.picture}"
         alt="Artists photo"
       />
-      <p id="albumAuthor"><a href="./artistPage.html?id=${album.artist.id}">${
-    album.artist.name
-  }</a></p>
+      <p id="albumAuthor"><a href="./artistPage.html?id=${album.artist.id}">${album.artist.name
+    }</a></p>
       <span class="dot">•</span>
       <p id="albumYear">${album.release_date.slice(0, -6)}</p>
       <span class="dot">•</span>
@@ -105,22 +107,27 @@ const drawAlbumPage = async () => {
     <div class="col col-3 length">
       <p>${convertSongDuration(lunghezzaData[i].duration)}</p>
     </div>
-  </div>`;
+    </div>`;
 
-    // this code make the container del colore della imagine caricata dal api usando colorthief
+    // Color Thief logic
     const art = document.querySelector("#albumImage");
+    console.log(art.src)
+
     // initialize colorThief
     const colorThief = new ColorThief();
     // get the image
     const img = new Image();
     img.crossOrigin = "Anonymous";
     img.src = art.src;
+    console.log(img);
+
     img.addEventListener("load", function () {
+      console.log(img)
       colorThief.getColor(img);
 
       /* console.log(img.src) */
       // get the background element
-      let background = document.querySelector("#mainNavB");
+      let background = document.querySelector("#mainNav");
       let background2 = document.querySelector("#annuncioAB");
 
       // get color palette
@@ -130,6 +137,29 @@ const drawAlbumPage = async () => {
       background.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
       background2.style.backgroundColor = "rgb(" + color + ")";
       background2.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
+
+      const main = document.querySelector("main");
+
+      const changeNav = () => {
+        let scrollValue = main.scrollTop;
+        /* console.log(scrollValue); */
+        if (scrollValue == 0) {
+          background.style.backgroundColor = `rgba(${color}, 0)`;
+        }
+        if (scrollValue >= 100) {
+          background.style.backgroundColor = `rgba(${color}, 0.5)`;
+        }
+        if (scrollValue >= 150) {
+          background.style.backgroundColor = `rgba(${color}, 1)`;
+        }
+        if (scrollValue < 300) {
+          albumNavContainer.style.opacity = "0%";
+        }
+        if (scrollValue >= 300) {
+          albumNavContainer.style.opacity = "100%";
+        }
+      };
+      main.addEventListener("scroll", changeNav);
     });
   }
 };

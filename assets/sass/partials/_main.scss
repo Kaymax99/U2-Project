@@ -12,7 +12,9 @@ main {
   #mainNav {
     width: 100%;
     position: fixed;
-    padding: 16px 10px;
+    padding: 8px 10px;
+    z-index: 9999;
+    transition: background-color 0.3s;
 
     @media screen and (min-width: 768px) {
       width: 75%;
@@ -31,7 +33,18 @@ main {
     }
     > div {
       display: flex;
+      align-items: center;
       gap: 16px;
+    }
+    #pageContentNav {
+      opacity: 0%;
+      color: white;
+      transition: opacity 0.3s;
+      p {
+        font-size: 1.5em;
+        margin-bottom: 0;
+        color: white;
+      }
     }
     .navigation {
       border: none;
@@ -44,7 +57,8 @@ main {
       gap: 8px;
       background-color: $bg-buttons-default;
       border-radius: 25px;
-      padding-left: 0;
+      border: 0;
+      padding-left: 5px;
       img {
         border-radius: 25px;
       }
@@ -52,11 +66,37 @@ main {
         color: $c-text-primary;
         font-weight: 700;
       }
-      .bi-caret-down-fill {
-        font-size: 1.1em;
-        align-self: flex-end;
-      }
     }
+  }
+}
+
+.dropdown-toggle::after {
+  margin: 0;
+}
+#userDropdown {
+  min-width: 230px;
+  background-color: $c-bg-primary;
+  padding: 4px;
+  margin: 0;
+  transform: translate3d(-5px, 44px, 0px) !important;
+  hr {
+    margin: 0;
+  }
+  li {
+    padding: 0;
+  }
+  li a {
+    color: $c-text-primary;
+    padding: 8px;
+  }
+  li a p {
+    margin-bottom: 0;
+  }
+  a:hover {
+    background-color: $c-bg-default;
+  }
+  .bi-box-arrow-up-right {
+    scale: 0.8;
   }
 }
 
@@ -75,10 +115,14 @@ main::-webkit-scrollbar {
 #annuncio {
   display: flex;
   align-items: center;
-  margin-top: 4.5em;
+  margin-top: 54px;
   width: 95%;
   background: rgb(0, 0, 0);
-  background: linear-gradient(25deg, rgba(0, 0, 0, 1) 30%, rgba(24, 24, 24, 1) 75%);
+  background: linear-gradient(
+    25deg,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(24, 24, 24, 1) 75%
+  );
 }
 
 #wrapperAnnuncio {
