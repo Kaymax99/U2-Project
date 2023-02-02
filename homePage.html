@@ -30,12 +30,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
+    <script src="./assets/resources/color-thief-2.3.2/dist/color-thief.min.js"></script>
   </head>
 
   <body>
     <div class="container-fluid p-0">
       <div class="row w-100 m-0">
-        <nav id="left-Nav" class="d-none d-md-block col-3 col-lg-2">
+        <nav id="left-Nav" class="col-md-3 col-lg-2 d-none d-md-block">
           <div id="left-Nav-Upper-Wrapper">
             <div class="dropdown">
               <button
@@ -102,7 +103,7 @@
         </nav>
 
         <main class="col-12 col-md-9 col-lg-8 p-0">
-          <nav id="mainNav">
+          <nav id="mainNav" class="d-none d-md-flex">
             <div>
               <button class="navigation">
                 <i class="bi bi-chevron-left"></i>
@@ -153,42 +154,43 @@
               </div>
             </div>
           </nav>
-          <div id="mt-6">
-            <article id="annuncio" class="mx-4"></article>
 
-            <section id="ultimiAscolti">
-              <div
-                id="greetingContainer"
-                class="d-flex justify-content-between align-items-center"
-              >
-                <div>
-                  <h2>Buonasera</h2>
-                </div>
-                <div class="d-md-none d-flex gap-3">
-                  <i class="bi bi-bell"></i><i class="bi bi-clock-history"></i
-                  ><i class="bi bi-gear"></i>
-                </div>
+          <article id="annuncio" class="mx-4"></article>
+
+          <section id="ultimiAscolti">
+            <div
+              id="greetingContainer"
+              class="d-flex justify-content-between align-items-center"
+            >
+              <div>
+                <h2>Buonasera</h2>
               </div>
+              <div class="d-md-none d-flex gap-3">
+                <i class="bi bi-bell"></i><i class="bi bi-clock-history"></i
+                ><i class="bi bi-gear"></i>
+              </div>
+            </div>
+            <div
+              id="ultimiAscoltiWrapper"
+              class="row d-flex justify-content-between gx-0 px-5 gap-3"
+            ></div>
+          </section>
+          <hr />
+
+          <section id="consigliati">
+            <div id="headingConsigliati">
+              <h2 class="d-none d-md-block">Altro di ciò che ti piace</h2>
+              <button class="showMore d-none d-md-block">
+                Visualizza Tutto
+              </button>
+            </div>
+            <div class="mx-4">
               <div
-                id="ultimiAscoltiWrapper"
-                class="row d-flex justify-content-between gx-0 px-5 gap-3"
+                id="consigliatiWrapper"
+                class="row row-cols-2 row-cols-md-5 d-flex justify-content-between gx-0"
               ></div>
-            </section>
-            <hr />
-
-            <section id="consigliati">
-              <div id="headingConsigliati">
-                <h2>Altro di ciò che ti piace</h2>
-                <button class="showMore">Visualizza Tutto</button>
-              </div>
-              <div class="mx-4">
-                <div
-                  id="consigliatiWrapper"
-                  class="row row-cols-5 d-flex justify-content-between gx-0"
-                ></div>
-              </div>
-            </section>
-          </div>
+            </div>
+          </section>
         </main>
 
         <aside class="col-2 d-none d-lg-block">
@@ -251,7 +253,7 @@
           </div>
         </aside>
 
-        <footer class="px-0">
+        <footer class="px-0 d-none d-md-block">
           <div id="mobilePlayer" class="d-md-none row gap-3">
             <div class="d-none d-sm-block col-sm-1 d-flex align-items-center">
               <img

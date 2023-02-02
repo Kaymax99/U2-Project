@@ -127,6 +127,22 @@
   position: relative;
   transition: 0.2s;
 
+  @media screen and (min-width: 300px) {
+    max-width: 120px;
+  }
+
+  @media screen and (min-width: 400px) {
+    max-width: 150px;
+  }
+
+  @media screen and (min-width: 500px) {
+    max-width: 200px;
+  }
+
+  @media screen and (min-width: 600px) {
+    max-width: 250px;
+  }
+
   @media screen and (min-width: 1200px) {
     padding: 20px;
   }
@@ -136,9 +152,17 @@
     height: 70%;
   }
   h5 {
+    margin-top: 1em;
     font-size: 0.5em;
     color: $c-text-subdued;
     transition: 0.2s;
+
+    @media screen and (min-width: 500px) {
+      font-size: 0.7em;
+    }
+    @media screen and (min-width: 768px) {
+      margin-top: 0;
+    }
 
     @media screen and (min-width: 992px) {
       font-size: 0.6em;
@@ -153,9 +177,18 @@
   }
 
   h4 {
+    margin-top: 1.5em;
     font-size: 0.5em;
     color: white;
     transition: 0.2s;
+
+    @media screen and (min-width: 500px) {
+      font-size: 0.7em;
+    }
+    @media screen and (min-width: 768px) {
+      margin-top: 0;
+    }
+
     @media screen and (min-width: 992px) {
       font-size: 0.7em;
     }
@@ -178,10 +211,19 @@
     border: none;
     opacity: 0;
     position: absolute;
-    transform: scale(0.5);
+    transform: scale(0.7);
     transition: 0.2;
-    bottom: 40%;
-    right: 5%;
+    bottom: 38%;
+    right: 10%;
+
+    @media screen and (min-width: 400px) {
+      bottom: 35%;
+      transform: scale(0.9);
+    }
+
+    @media screen and (min-width: 500px) {
+      transform: scale(1);
+    }
 
     @media screen and (min-width: 900px) {
       transform: scale(0.6);

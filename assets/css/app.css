@@ -62,6 +62,7 @@ a {
 @media screen and (min-width: 850px) {
   #left-Nav {
     padding: 0 24px;
+    transition: 0.2s;
   }
 }
 @media screen and (min-width: 900px) {
@@ -185,8 +186,13 @@ main {
   scrollbar-width: none; /* Firefox */
   transition: 0.2s;
 }
+@media screen and (max-width: 767px) {
+  main {
+    height: 100vh;
+  }
+}
 main #mainNav {
-  width: 75%;
+  width: 100%;
   position: fixed;
   padding: 8px 10px;
   z-index: 9999;
@@ -195,6 +201,11 @@ main #mainNav {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  main #mainNav {
+    width: 75%;
+  }
 }
 @media screen and (min-width: 992px) {
   main #mainNav {
@@ -283,7 +294,12 @@ main::-webkit-scrollbar {
 }
 
 #ultimiAscolti {
-  font-size: 1.5em;
+  font-size: 1.2em;
+}
+@media screen and (min-width: 768px) {
+  #ultimiAscolti {
+    font-size: 1.5em;
+  }
 }
 
 #annuncio {
@@ -986,6 +1002,26 @@ footer .container-fluid {
   position: relative;
   transition: 0.2s;
 }
+@media screen and (min-width: 300px) {
+  .custCard {
+    max-width: 120px;
+  }
+}
+@media screen and (min-width: 400px) {
+  .custCard {
+    max-width: 150px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .custCard {
+    max-width: 200px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .custCard {
+    max-width: 250px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .custCard {
     padding: 20px;
@@ -997,9 +1033,20 @@ footer .container-fluid {
   height: 70%;
 }
 .custCard h5 {
+  margin-top: 1em;
   font-size: 0.5em;
   color: #a7a7a7;
   transition: 0.2s;
+}
+@media screen and (min-width: 500px) {
+  .custCard h5 {
+    font-size: 0.7em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .custCard h5 {
+    margin-top: 0;
+  }
 }
 @media screen and (min-width: 992px) {
   .custCard h5 {
@@ -1015,9 +1062,20 @@ footer .container-fluid {
   text-decoration: underline;
 }
 .custCard h4 {
+  margin-top: 1.5em;
   font-size: 0.5em;
   color: white;
   transition: 0.2s;
+}
+@media screen and (min-width: 500px) {
+  .custCard h4 {
+    font-size: 0.7em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .custCard h4 {
+    margin-top: 0;
+  }
 }
 @media screen and (min-width: 992px) {
   .custCard h4 {
@@ -1049,10 +1107,10 @@ footer .container-fluid {
   border: none;
   opacity: 0;
   position: absolute;
-  transform: scale(0.5);
+  transform: scale(0.7);
   transition: 0.2;
-  bottom: 40%;
-  right: 5%;
+  bottom: 38%;
+  right: 10%;
 }
 .custCard .hoverCardButtonOthers:hover {
   background-color: #189945;
@@ -1060,6 +1118,17 @@ footer .container-fluid {
 }
 .custCard .hoverCardButtonOthers i {
   margin-left: 4px;
+}
+@media screen and (min-width: 400px) {
+  .custCard .hoverCardButtonOthers {
+    bottom: 35%;
+    transform: scale(0.9);
+  }
+}
+@media screen and (min-width: 500px) {
+  .custCard .hoverCardButtonOthers {
+    transform: scale(1);
+  }
 }
 @media screen and (min-width: 900px) {
   .custCard .hoverCardButtonOthers {
@@ -1586,6 +1655,50 @@ main {
 .dopperRadius li hr {
   background-color: #3e3e3e;
   margin: 0 4px;
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #ultimiAscolti {
+    margin-top: 1em;
+  }
+}
+#ultimiAscolti h2 {
+  color: white;
+}
+
+#greetingContainer {
+  margin-bottom: 2.5em;
+}
+
+#greetingIcons {
+  color: white;
+  width: 30%;
+  margin: 0.75rem 1em;
+}
+
+#mobileOptions {
+  color: white;
+  font-size: 0.6em;
+  margin: 0 2.5em;
+}
+#mobileOptions > div {
+  margin-right: 2em;
+}
+
+#consigliatiWrapper > div {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  #consigliatiWrapper > div {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 768px) {

@@ -1,0 +1,43 @@
+main {
+  @media screen and (max-width: 767px) {
+    height: 100vh;
+  }
+}
+
+#ultimiAscolti {
+  @media screen and (max-width: 767px) {
+    margin-top: 1em;
+  }
+
+  h2 {
+    color: $c-text-primary;
+  }
+}
+
+#greetingContainer {
+  margin-bottom: 2.5em;
+}
+
+#greetingIcons {
+  color: $c-text-primary;
+  width: 30%;
+  margin: 0.75rem 1em;
+}
+
+#mobileOptions {
+  color: $c-text-primary;
+  font-size: 0.6em;
+  margin: 0 2.5em;
+  > div {
+    margin-right: 2em;
+  }
+}
+
+#consigliatiWrapper > div {
+  display: flex;
+  justify-content: center;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
