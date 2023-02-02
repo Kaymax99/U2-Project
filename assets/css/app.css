@@ -517,12 +517,12 @@ footer {
 
 footer .container-fluid {
   border-top: 1px solid #282828;
-  height: 10vh;
+  height: 100px;
   transition: 0.2s;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (max-width: 992px) {
   footer .container-fluid {
-    height: 12vh;
+    height: 80px;
     transition: 0.2s;
   }
 }
@@ -549,6 +549,11 @@ footer .container-fluid {
 #playerRow #playBtnPlayer i {
   font-size: 2.5em;
 }
+@media screen and (max-width: 992px) {
+  #playerRow #playBtnPlayer i {
+    font-size: 2em;
+  }
+}
 
 #playerRowLeft {
   width: 80%;
@@ -558,10 +563,15 @@ footer .container-fluid {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-left: 1.25em;
 }
 #playerRowLeft div img {
-  width: 70%;
-  max-width: 80px;
+  max-width: 60px;
+}
+@media screen and (max-width: 992px) {
+  #playerRowLeft div img {
+    max-width: 50px;
+  }
 }
 #playerRowLeft div h5 {
   font-size: 0.7em;
@@ -652,6 +662,17 @@ footer .container-fluid {
 
 #slider-round2 {
   height: 7px;
+  margin-bottom: 2px;
+}
+
+#volumeContainer {
+  margin-left: 5px;
+  min-width: 35%;
+}
+
+.fa-volume-down {
+  margin-left: 20px;
+  padding-bottom: 4px;
 }
 
 #slider-round2 .noUi-handle {
