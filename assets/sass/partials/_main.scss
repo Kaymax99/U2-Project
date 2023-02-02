@@ -122,7 +122,11 @@ main::-webkit-scrollbar {
   margin-top: 60px;
   width: 95%;
   background: rgb(0, 0, 0);
-  background: linear-gradient(25deg, rgba(0, 0, 0, 1) 30%, rgba(24, 24, 24, 1) 75%);
+  background: linear-gradient(
+    25deg,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(24, 24, 24, 1) 75%
+  );
 }
 #mt-6 {
   margin-top: 60px;
@@ -161,6 +165,9 @@ h2 {
   color: $c-text-primary;
   @media screen and (min-width: 992px) {
     font-size: 1.25em;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 1.5em;
   }
 }
 

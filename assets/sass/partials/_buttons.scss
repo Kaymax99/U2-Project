@@ -95,3 +95,16 @@
     border: 1px solid $c-text-primary;
   }
 }
+
+#musica,
+#podcast {
+  color: $c-text-primary;
+  border: none;
+  background-color: $bg-elevated-highlight;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  border-radius: 25px;
+  &:hover {
+    background-color: #383838;
+  }
+}

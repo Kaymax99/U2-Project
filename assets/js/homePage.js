@@ -136,7 +136,7 @@ const drawAlbumBuonasera = (albumArray) => {
   if (albumArray.length == 6) {
     for (i = 0; i < albumArray.length; i++) {
       divBuonasera.innerHTML += `
-    <div class="row col-4" id="teston">
+    <div class="row col-12 col-sm-6 col-md-4" id="teston">
       <div class="p-0 custCardLG col-12">
         <a href="./albumPage.html?id=${albumArray[i].id}" target="_blank">
           <img src="${albumArray[i].cover_medium}" class="col-3 p-0" />

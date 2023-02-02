@@ -17,10 +17,26 @@
   padding: 0 !important;
 
   position: relative;
+
+  @media screen and (max-width: 768px) {
+    .custCardLG a div {
+      font-size: 2em;
+    }
+  }
+  @media screen and (max-width: 576px) {
+    &,
+    & .custCardLG {
+      --bs-gutter-x: 0;
+    }
+    .custCardLG a div {
+      font-size: 2.5em;
+    }
+  }
+
   .hoverCardButton {
     @include playButton;
     border: none;
-    opacity: 0;
+    opacity: 1;
     transition: all 0.2s;
     z-index: 10;
     transform: scale(0.5);
@@ -40,18 +56,18 @@
   }
   @media screen and (max-width: 768px) {
     .hoverCardButton {
-      padding: 0.6em;
+      padding: 1em;
     }
   }
   @media screen and (max-width: 576px) {
     #test2 {
-      right: 35px;
+      right: 60px;
     }
     .hoverCardButton {
-      padding: 0.3em;
+      padding: 1.5em;
     }
     .fa-play {
-      font-size: 0.7em;
+      font-size: 2em;
     }
   }
   @media screen and (max-width: 450px) {
@@ -153,14 +169,15 @@
   }
   h5 {
     margin-top: 1em;
-    font-size: 0.5em;
+    font-size: 1em;
     color: $c-text-subdued;
     transition: 0.2s;
 
     @media screen and (min-width: 500px) {
-      font-size: 0.7em;
+      font-size: 1em;
     }
     @media screen and (min-width: 768px) {
+      font-size: 0.6em;
       margin-top: 0;
     }
 
@@ -178,15 +195,16 @@
 
   h4 {
     margin-top: 1.5em;
-    font-size: 0.5em;
+    font-size: 1.1em;
     color: white;
     transition: 0.2s;
 
     @media screen and (min-width: 500px) {
-      font-size: 0.7em;
+      font-size: 1em;
+      margin-top: 0;
     }
     @media screen and (min-width: 768px) {
-      margin-top: 0;
+      font-size: 0.7em;
     }
 
     @media screen and (min-width: 992px) {
