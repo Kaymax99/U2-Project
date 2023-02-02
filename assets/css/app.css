@@ -875,6 +875,7 @@ footer .container-fluid {
   background-color: #242424;
   padding: 10px;
   border-radius: 7px;
+  position: relative;
   transition: 0.2s;
 }
 @media screen and (min-width: 1200px) {
@@ -928,8 +929,80 @@ footer .container-fluid {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.custCard .hoverCardButtonOthers {
+  font-size: 1.2em;
+  padding: 0.8em;
+  border-radius: 50%;
+  background-color: #1ed760;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  opacity: 0;
+  position: absolute;
+  transform: scale(0.5);
+  transition: 0.2;
+  bottom: 40%;
+  right: 5%;
+}
+.custCard .hoverCardButtonOthers:hover {
+  background-color: #189945;
+  transition: 0.2s;
+}
+.custCard .hoverCardButtonOthers i {
+  margin-left: 4px;
+}
+@media screen and (min-width: 900px) {
+  .custCard .hoverCardButtonOthers {
+    transform: scale(0.6);
+    bottom: 35%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .custCard .hoverCardButtonOthers {
+    transform: scale(0.7);
+    bottom: 38%;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .custCard .hoverCardButtonOthers {
+    transform: scale(0.8);
+    bottom: 40%;
+    right: 15%;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .custCard .hoverCardButtonOthers {
+    transform: scale(0.8);
+    bottom: 35%;
+    right: 12%;
+  }
+}
+@media screen and (min-width: 1700px) {
+  .custCard .hoverCardButtonOthers {
+    bottom: 31%;
+    right: 10%;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .custCard .hoverCardButtonOthers {
+    transform: scale(1);
+    bottom: 35%;
+    right: 15%;
+  }
+}
+@media screen and (min-width: 1900px) {
+  .custCard .hoverCardButtonOthers {
+    bottom: 33%;
+  }
+}
 .custCard:hover {
   background-color: #383838;
+}
+.custCard:hover .hoverCardButtonOthers {
+  opacity: 1;
+  transition: 0.2s;
 }
 
 main {
