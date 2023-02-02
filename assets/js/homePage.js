@@ -2,7 +2,8 @@ const baseAlbumURL = "https://striveschool-api.herokuapp.com/api/deezer/album/";
 const spotlightAlbum = 120044;
 
 const arrayIDAlbum = [
-  75621062, 8887733, 7823038, 7824595, 7824584, 91333612, 345755977, 192529232, 100674742, 59853252, 130678282,
+  75621062, 8887733, 7823038, 7824595, 7824584, 91333612, 345755977, 192529232,
+  100674742, 59853252, 130678282,
 ];
 
 const shuffleArray = (array) => {
@@ -104,7 +105,10 @@ const drawAnnuncio = async (album) => {
   });
 
   document.addEventListener("click", function (event) {
-    if (!dropdownToggle.contains(event.target) && dropdownContent.style.display === "block") {
+    if (
+      !dropdownToggle.contains(event.target) &&
+      dropdownContent.style.display === "block"
+    ) {
       dropdownContent.style.display = "none";
     }
   });
@@ -138,14 +142,18 @@ const drawAlbumBuonasera = (albumArray) => {
 
   if (albumArray.length == 6) {
     for (i = 0; i < albumArray.length; i++) {
-      divBuonasera.innerHTML += `
-       <div class="row col-4 p-1">
-         <a href="./albumPage.html?id=${albumArray[i].id}" target="_blank">
-          <div class="p-0 custCardLG">
-          <img src="${albumArray[i].cover_medium}" class="col-3 p-0" />
-          <div class="col-9">${albumArray[i].title}</div>
-          </div>
-        </a>
+      divBuonasera.innerHTML += `<div class="row col-4 p-1">
+      <a href="./albumPage.html?id=${albumArray[i].id}" target="_blank">
+      <div class="p-0 custCardLG">
+      <img src="${albumArray[i].cover_medium}" class="col-3 p-0" />
+      <div class="col-9 col-md-6">${albumArray[i].title}</div>
+      <div class="col-md-3 d-none d-md-block cardButtonContainer">
+      <button class="hoverCardButton">
+      <i class="fa-sharp fa-solid fa-play"></i>
+      </button>
+      </div>
+      </div>
+      </a>
       </div>`;
     }
   }
