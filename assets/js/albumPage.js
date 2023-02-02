@@ -107,17 +107,22 @@ const drawAlbumPage = async () => {
     <div class="col col-3 length">
       <p>${convertSongDuration(lunghezzaData[i].duration)}</p>
     </div>
-  </div>`;
+    </div>`;
 
     // Color Thief logic
     const art = document.querySelector("#albumImage");
+    console.log(art.src)
+
     // initialize colorThief
     const colorThief = new ColorThief();
     // get the image
     const img = new Image();
     img.crossOrigin = "Anonymous";
     img.src = art.src;
+    console.log(img);
+
     img.addEventListener("load", function () {
+      console.log(img)
       colorThief.getColor(img);
 
       /* console.log(img.src) */

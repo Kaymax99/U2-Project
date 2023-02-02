@@ -92,30 +92,44 @@ drawArtistPage = async () => {
   <p>di ${artist.name}</p>
   `;
 
-  // Color Thief logic
-  const art = document.querySelector("#annuncioAR").style.backgroundImage;
-  console.log(art);
+
+
+  const article = document.querySelector('#annuncioAR');
+  const style = article.style.backgroundImage;
+  const urlStart = style.indexOf('url(') + 4;
+  const urlEnd = style.indexOf(')', urlStart);
+  const urlwithcomas = style.substring(urlStart, urlEnd);
+  let url = urlwithcomas.slice(1, -1);
+
+  console.log(url);
+
   // initialize colorThief
   const colorThief = new ColorThief();
   // get the image
   const img = new Image();
   img.crossOrigin = "Anonymous";
-  img.src = art.src;
+  img.src = url;
+  console.log(img);
+
+
   img.addEventListener("load", function () {
+    console.log(img)
     colorThief.getColor(img);
 
     /* console.log(img.src) */
     // get the background element
     let background = document.querySelector("#mainNav");
-    let background2 = document.querySelector("#annuncioAB");
 
     // get color palette
     let color = colorThief.getColor(img);
+    console.log(color)
+
     // set the background color
     background.style.backgroundColor = "rgb(" + color + ")";
     background.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
-    background2.style.backgroundColor = "rgb(" + color + ")";
-    background2.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
+
+
+
 
     const main = document.querySelector("main");
 
@@ -137,8 +151,47 @@ drawArtistPage = async () => {
         albumNavName.style.opacity = "100%";
       }
     };
+
+
+
     main.addEventListener("scroll", changeNav);
   });
+
+
+
+
 };
 
+
 drawArtistPage();
+// Color Thief logic
+
+
+
+
+// const art = document.querySelector("#annuncioAR")
+// console.log(art);
+// // initialize colorThief
+// const colorThief = new ColorThief();
+// // get the image
+// const img = new Image();
+// img.crossOrigin = "Anonymous";
+// img.style = art.style;
+// console.log(img);
+
+// img.addEventListener("load", function () {
+//   colorThief.getColor(img);
+
+//   /* console.log(img.src) */
+//   // get the background element
+//   let background = document.querySelector("#mainNav");
+
+//   // get color palette
+//   let color = colorThief.getColor(img);
+//   // set the background color
+//   background.style.backgroundColor = "rgb(" + color + ")";
+//   background.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
+
+// })
+
+
