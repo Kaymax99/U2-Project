@@ -46,7 +46,7 @@
               >
                 <i class="bi bi-three-dots"></i>
               </button>
-              <ul class="dropdown-menu">
+              <ul id="topDropdown" class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">File</a></li>
                 <li><a class="dropdown-item" href="#">Modifica</a></li>
                 <li><a class="dropdown-item" href="#">Visualizza</a></li>
@@ -112,11 +112,46 @@
               </button>
               <p id="pageContentName"></p>
             </div>
-            <button id="userWrapper">
-              <img src="./assets/img/user.png" width="28px" height="28px" />
-              <span>Utente Bellissimo</span>
-              <i class="bi bi-caret-down-fill"></i>
-            </button>
+            <div>
+              <div class="dropdown d-flex">
+                <button
+                  id="userWrapper"
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  class="dropBtn"
+                >
+                  <img src="./assets/img/user.png" width="28px" height="28px" />
+                  <span>Utente Bellissimo</span>
+                </button>
+                <ul id="userDropdown" class="dropdown-menu">
+                  <li>
+                    <a
+                      class="dropdown-item d-flex justify-content-between align-items-center"
+                      href="#"
+                      ><p>Account</p>
+                      <i class="bi bi-box-arrow-up-right"></i
+                    ></a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Profilo</a></li>
+                  <li>
+                    <a
+                      class="dropdown-item d-flex justify-content-between align-items-center"
+                      href="#"
+                      ><p>Passa a Premium</p>
+                      <i class="bi bi-box-arrow-up-right"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Sessione Privata</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Impostazioni</a></li>
+                  <hr />
+                  <li><a class="dropdown-item" href="#">Log out</a></li>
+                </ul>
+              </div>
+            </div>
           </nav>
 
           <article id="annuncio" class="mx-4"></article>
@@ -220,7 +255,7 @@
                     alt=""
                   />
                 </div>
-                <div>
+                <div id="playerName">
                   <h5>MetalCats</h5>
                   <p>Sweet meow o' mine</p>
                 </div>

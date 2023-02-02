@@ -14,27 +14,38 @@
     padding: 0 12px;
   }
 
-  li {
-    @include leftNavLi;
-    margin: 0.5em 0;
-    font-size: 0.8em;
-    transition: 0.2s;
-    color: $c-text-subdued;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: wrap;
-    &:hover {
-      color: $c-text-primary;
-      transition: 0.2s;
-    }
-    @media screen and (min-width: 900px) {
-      font-size: 0.9em;
-    }
-    @media screen and (min-width: 992px) {
+  #topDropdown {
+    background-color: $bg-elevated-highlight;
+    li {
+      @include leftNavLi;
+      margin: 0.5em 0;
       font-size: 0.8em;
+      transition: 0.2s;
+      color: $c-text-subdued;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: wrap;
+      &:hover {
+        color: $c-text-primary;
+        transition: 0.2s;
+      }
+      @media screen and (min-width: 900px) {
+        font-size: 0.9em;
+      }
+      @media screen and (min-width: 992px) {
+        font-size: 0.8em;
+      }
+      @media screen and (min-width: 1100px) {
+        font-size: 0.9em;
+      }
     }
-    @media screen and (min-width: 1100px) {
-      font-size: 0.9em;
+    li {
+      margin: 0;
+    }
+    li a {
+      color: $c-text-primary;
+      padding: 8px;
+      margin: 0;
     }
   }
   i {
