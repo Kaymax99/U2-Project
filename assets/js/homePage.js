@@ -2,7 +2,8 @@ const baseAlbumURL = "https://striveschool-api.herokuapp.com/api/deezer/album/";
 const spotlightAlbum = 120044;
 
 const arrayIDAlbum = [
-  75621062, 8887733, 7823038, 7824595, 7824584, 91333612, 345755977, 192529232, 100674742, 59853252, 130678282,
+  75621062, 8887733, 7823038, 7824595, 7824584, 91333612, 345755977, 192529232,
+  100674742, 59853252, 130678282,
 ];
 
 shuffleArray(arrayIDAlbum);
@@ -95,7 +96,10 @@ const drawAnnuncio = async (album) => {
   });
 
   document.addEventListener("click", function (event) {
-    if (!dropdownToggle.contains(event.target) && dropdownContent.style.display === "block") {
+    if (
+      !dropdownToggle.contains(event.target) &&
+      dropdownContent.style.display === "block"
+    ) {
       dropdownContent.style.display = "none";
     }
   });
@@ -211,10 +215,28 @@ const drawAlbum = (albumArray) => {
     // get color palette
     let color = colorThief.getColor(img);
     // set the background color
-    background.style.backgroundColor = "rgb(" + color + ")";
-    background.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
+    background.style.backgroundColor = `rgba(${color}, 0)`;
+    /*     background.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`; */
     background2.style.backgroundColor = "rgb(" + color + ")";
     background2.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
+
+    const main = document.querySelector("main");
+
+    const changeNav = () => {
+      const navBar = document.getElementById("mainNav");
+      let scrollValue = main.scrollTop;
+      /* console.log(scrollValue); */
+      if (scrollValue == 0) {
+        background.style.backgroundColor = `rgba(${color}, 0)`;
+      }
+      if (scrollValue >= 100) {
+        background.style.backgroundColor = `rgba(${color}, 0.5)`;
+      }
+      if (scrollValue >= 150) {
+        background.style.backgroundColor = `rgba(${color}, 1)`;
+      }
+    };
+    main.addEventListener("scroll", changeNav);
   });
 };
 

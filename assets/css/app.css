@@ -192,6 +192,8 @@ main #mainNav {
   width: 75%;
   position: fixed;
   padding: 16px 10px;
+  z-index: 9999;
+  transition: background-color 0.3s;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -208,7 +210,15 @@ main #mainNav .bi {
 }
 main #mainNav > div {
   display: flex;
+  align-items: center;
   gap: 16px;
+}
+main #mainNav > div p {
+  font-size: 1.5em;
+  margin-bottom: 0;
+  opacity: 0%;
+  color: white;
+  transition: opacity 0.3s;
 }
 main #mainNav .navigation {
   border: none;
@@ -251,7 +261,7 @@ main::-webkit-scrollbar {
 #annuncio {
   display: flex;
   align-items: center;
-  margin-top: 4.5em;
+  margin-top: 70px;
   width: 95%;
   background: rgb(0, 0, 0);
   background: linear-gradient(25deg, rgb(0, 0, 0) 30%, rgb(24, 24, 24) 75%);
@@ -1009,53 +1019,6 @@ footer .container-fluid {
 
 main {
   padding-bottom: 10em !important;
-}
-main #mainNavB {
-  width: 75%;
-  position: fixed;
-  padding: 16px 10px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-}
-@media screen and (min-width: 992px) {
-  main #mainNavB {
-    width: 66.6%;
-  }
-}
-main #mainNavB .bi {
-  font-size: 1.5em;
-  color: white;
-}
-main #mainNavB > div {
-  display: flex;
-  gap: 16px;
-}
-main #mainNavB .navigation {
-  border: none;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-main #mainNavB #userWrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
-  background-color: rgba(0, 0, 0, 0.9);
-  border-radius: 25px;
-  padding-left: 0;
-}
-main #mainNavB #userWrapper img {
-  border-radius: 25px;
-}
-main #mainNavB #userWrapper span {
-  color: white;
-  font-weight: 700;
-}
-main #mainNavB #userWrapper .bi-caret-down-fill {
-  font-size: 1.1em;
-  align-self: flex-end;
 }
 
 main::-webkit-scrollbar {
