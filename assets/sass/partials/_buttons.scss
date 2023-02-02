@@ -31,14 +31,14 @@
   border: transparent;
   -webkit-box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.1);
-  color: $c-text-subdued;
+  color: $c-text-primary;
   font-size: 0.75em;
   position: absolute;
   right: 0;
   top: 0;
   height: 30px;
-  opacity: 50%;
   transition: 0.2s;
+  margin-right: 1em;
 
   &:hover {
     color: $c-text-primary;

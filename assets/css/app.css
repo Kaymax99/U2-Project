@@ -57,13 +57,26 @@ a {
   scrollbar-width: none; /* Firefox */
   padding-bottom: 6em;
   transition: 0.2s;
-  /*   @media screen and (min-width: 992px) {
-    padding: 0 12px;
-  } */
+  font-size: 0.8em;
 }
 @media screen and (min-width: 850px) {
   #left-Nav {
     padding: 0 24px;
+  }
+}
+@media screen and (min-width: 900px) {
+  #left-Nav {
+    font-size: 0.9em;
+  }
+}
+@media screen and (min-width: 992px) {
+  #left-Nav {
+    font-size: 0.8em;
+  }
+}
+@media screen and (min-width: 1100px) {
+  #left-Nav {
+    font-size: 0.9em;
   }
 }
 #left-Nav #topDropdown {
@@ -73,7 +86,6 @@ a {
   height: 32px;
   align-items: center;
   margin: 0.5em 0;
-  font-size: 0.8em;
   transition: 0.2s;
   color: #a7a7a7;
   overflow: hidden;
@@ -83,21 +95,6 @@ a {
 #left-Nav #topDropdown li:hover {
   color: white;
   transition: 0.2s;
-}
-@media screen and (min-width: 900px) {
-  #left-Nav #topDropdown li {
-    font-size: 0.9em;
-  }
-}
-@media screen and (min-width: 992px) {
-  #left-Nav #topDropdown li {
-    font-size: 0.8em;
-  }
-}
-@media screen and (min-width: 1100px) {
-  #left-Nav #topDropdown li {
-    font-size: 0.9em;
-  }
 }
 #left-Nav #topDropdown li {
   margin: 0;
@@ -143,25 +140,19 @@ a {
   padding-bottom: 7em;
 }
 #left-Nav #playlists li {
-  margin: 0 !important;
+  margin: 0.5em 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-@media screen and (min-width: 900px) {
-  #left-Nav #playlists li {
+  /*       @media screen and (min-width: 900px) {
     margin: 0.5em 0 !important;
   }
-}
-@media screen and (min-width: 992px) {
-  #left-Nav #playlists li {
+  @media screen and (min-width: 992px) {
     margin: 0 !important;
-  }
-}
-@media screen and (min-width: 1100px) {
-  #left-Nav #playlists li {
+  } */
+  /*       @media screen and (min-width: 1100px) {
     margin: 0.5em 0 !important;
-  }
+  } */
 }
 #left-Nav #left-Nav-Upper-Wrapper {
   font-weight: 700;
@@ -173,9 +164,6 @@ a {
 }
 #left-Nav #left-Nav-Upper-Wrapper .dropdown-toggle::after {
   display: none;
-}
-#left-Nav .bi-three-dots {
-  color: white;
 }
 
 #left-Nav::-webkit-scrollbar {
@@ -301,10 +289,14 @@ main::-webkit-scrollbar {
 #annuncio {
   display: flex;
   align-items: center;
-  margin-top: 54px;
+  margin-top: 60px;
   width: 95%;
   background: rgb(0, 0, 0);
   background: linear-gradient(25deg, rgb(0, 0, 0) 30%, rgb(24, 24, 24) 75%);
+}
+
+#mt-6 {
+  margin-top: 60px;
 }
 
 #wrapperAnnuncio {
@@ -328,7 +320,7 @@ main::-webkit-scrollbar {
 #headingConsigliati {
   display: flex;
   justify-content: space-between;
-  margin: 0 0.5em;
+  margin: 0.75em 2em;
 }
 
 #consigliati {
@@ -336,13 +328,18 @@ main::-webkit-scrollbar {
 }
 
 h2 {
-  margin: 0.75em 1em;
   font-size: 1em;
+  color: white;
 }
 @media screen and (min-width: 992px) {
   h2 {
     font-size: 1.25em;
   }
+}
+
+#greetingContainer {
+  margin: 0.75em 1.5em;
+  color: white;
 }
 
 aside {
@@ -565,6 +562,11 @@ footer {
   bottom: 0;
   z-index: 99;
 }
+@media screen and (max-width: 768px) {
+  footer .container-fluid {
+    display: none;
+  }
+}
 
 footer .container-fluid {
   border-top: 1px solid #282828;
@@ -778,14 +780,14 @@ footer .container-fluid {
   background-color: inherit;
   border: transparent;
   box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.1);
-  color: #a7a7a7;
+  color: white;
   font-size: 0.75em;
   position: absolute;
   right: 0;
   top: 0;
   height: 30px;
-  opacity: 50%;
   transition: 0.2s;
+  margin-right: 1em;
 }
 #hideAnnuncio:hover {
   color: white;
@@ -841,47 +843,26 @@ footer .container-fluid {
 
 .row a {
   padding: 0;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
-.custCardLG {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border-radius: 5px;
-  margin-top: 10px;
+#test2 {
+  position: absolute;
+  right: 60px;
+  justify-content: start;
+}
+
+#teston {
   background-color: #2a2a2a;
-  color: white;
-  font-size: 0.4em;
-  transition: 0.2s;
-}
-@media screen and (min-width: 992px) {
-  .custCardLG {
-    font-size: 0.5em;
-  }
-}
-@media screen and (min-width: 1400px) {
-  .custCardLG {
-    font-size: 0.6em;
-  }
-}
-.custCardLG img {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-}
-.custCardLG div {
-  padding-left: 10px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.custCardLG .cardButtonContainer {
+  border-radius: 5px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: 0.2s;
+  justify-content: space-between;
+  padding: 0 !important;
+  position: relative;
 }
-.custCardLG .hoverCardButton {
+#teston .hoverCardButton {
   font-size: 1.2em;
   padding: 0.8em;
   border-radius: 50%;
@@ -890,35 +871,110 @@ footer .container-fluid {
   display: flex;
   justify-content: center;
   align-items: center;
-  aspect-ratio: 1/1;
   border: none;
-  transition: 0.2s;
+  opacity: 0;
+  transition: all 0.2s;
   z-index: 10;
+  transform: scale(0.5);
 }
-.custCardLG .hoverCardButton:hover {
+#teston .hoverCardButton:hover {
   background-color: #189945;
   transition: 0.2s;
 }
-.custCardLG .hoverCardButton i {
+#teston .hoverCardButton i {
   margin-left: 4px;
 }
-@media screen and (max-width: 1100px) {
-  .custCardLG .hoverCardButton {
-    transform: scale(0.8);
-    margin-right: 20px;
+@media screen and (max-width: 992px) {
+  #teston #test2 {
+    right: 40px;
+  }
+  #teston .hoverCardButton {
+    padding: 0.6em;
   }
 }
-@media screen and (min-width: 1600px) {
-  .custCardLG .hoverCardButton {
-    transform: translateX(15px);
+@media screen and (max-width: 840px) {
+  #teston .hoverCardButton {
+    padding: 0.4em;
   }
 }
-.custCardLG:hover {
+@media screen and (max-width: 768px) {
+  #teston .hoverCardButton {
+    padding: 0.6em;
+  }
+}
+@media screen and (max-width: 576px) {
+  #teston #test2 {
+    right: 35px;
+  }
+  #teston .hoverCardButton {
+    padding: 0.3em;
+  }
+  #teston .fa-play {
+    font-size: 0.7em;
+  }
+}
+@media screen and (max-width: 450px) {
+  #teston .hoverCardButton {
+    opacity: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #teston .hoverCardButton {
+    padding: 1em;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #teston .hoverCardButton {
+    padding: 1.1em;
+  }
+}
+#teston:hover {
   background-color: #383838;
 }
-.custCardLG:hover .cardButtonContainer {
+#teston:hover .hoverCardButton {
   opacity: 1;
   transition: 0.2s;
+}
+#teston .custCardLG {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+  align-self: flex-start;
+  color: white;
+  font-size: 0.4em;
+  transition: 0.2s;
+}
+@media screen and (min-width: 992px) {
+  #teston .custCardLG {
+    font-size: 0.5em;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #teston .custCardLG {
+    font-size: 0.6em;
+  }
+}
+#teston .custCardLG img {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+#teston .custCardLG div {
+  padding-left: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#teston .custCardLG .cardButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.2s;
+}
+@media screen and (max-width: 1100px) {
+  #teston .custCardLG {
+    margin-right: 20px;
+  }
 }
 
 .custCard {
@@ -1530,4 +1586,73 @@ main {
 .dopperRadius li hr {
   background-color: #3e3e3e;
   margin: 0 4px;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgb(0, 0, 0) 25%, rgba(24, 24, 24, 0.8) 65%);
+  }
+}
+#mobilePlayer {
+  width: 97%;
+  margin: 0 auto;
+  background-color: #2a2a2a;
+  padding: 0.6em;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+}
+#mobilePlayer i {
+  font-size: 1.4em;
+  transition: all 0.2s;
+}
+#mobilePlayer .bi-play-fill {
+  font-size: 1.8em;
+  transition: all 0.2s;
+}
+#mobilePlayer > div {
+  padding: 0;
+}
+#mobilePlayer p {
+  transition: all 0.2s;
+  margin: 0;
+}
+
+@media screen and (max-width: 576px) {
+  #mobilePlayer i {
+    font-size: 1.2em;
+  }
+  #mobilePlayer .bi-play-fill {
+    font-size: 1.6em;
+  }
+  #mobilePlayer p {
+    font-size: 0.9em;
+  }
+}
+#mobilePlayerText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#mobileNav {
+  padding: 0.7em 0;
+}
+#mobileNav ul {
+  /*     display: flex;
+  align-items: center;
+  justify-content: space-around; */
+}
+#mobileNav ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#mobileNav ul li i {
+  font-size: 1.5em;
+}
+#mobileNav ul li p {
+  margin: 0;
+  font-size: 0.75em;
 }/*# sourceMappingURL=app.css.map */

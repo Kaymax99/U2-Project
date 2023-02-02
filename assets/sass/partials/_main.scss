@@ -106,7 +106,7 @@ main::-webkit-scrollbar {
 #annuncio {
   display: flex;
   align-items: center;
-  margin-top: 54px;
+  margin-top: 60px;
   width: 95%;
   background: rgb(0, 0, 0);
   background: linear-gradient(
@@ -114,6 +114,9 @@ main::-webkit-scrollbar {
     rgba(0, 0, 0, 1) 30%,
     rgba(24, 24, 24, 1) 75%
   );
+}
+#mt-6 {
+  margin-top: 60px;
 }
 
 #wrapperAnnuncio {
@@ -137,7 +140,7 @@ main::-webkit-scrollbar {
 #headingConsigliati {
   display: flex;
   justify-content: space-between;
-  margin: 0 0.5em;
+  margin: 0.75em 2em;
 }
 
 #consigliati {
@@ -145,9 +148,14 @@ main::-webkit-scrollbar {
 }
 
 h2 {
-  margin: 0.75em 1em;
   font-size: 1em;
+  color: $c-text-primary;
   @media screen and (min-width: 992px) {
     font-size: 1.25em;
   }
+}
+
+#greetingContainer {
+  margin: 0.75em 1.5em;
+  color: $c-text-primary;
 }
