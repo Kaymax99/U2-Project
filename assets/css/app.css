@@ -715,7 +715,7 @@ footer .container-fluid {
 
 .moreBtn {
   height: 40px;
-  padding: 0 0.5em;
+  padding: 0 1em;
 }
 .moreBtn i {
   font-size: 1.5em;
@@ -1361,7 +1361,6 @@ main {
 
 .dropdown-toggle1 {
   color: black;
-  padding: 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
@@ -1390,14 +1389,14 @@ main {
 }
 
 .dropdown-content1 a {
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
 }
 
 .dropdown-content1 a:hover {
-  background-color: #3E3E3E;
+  background-color: #3e3e3e;
   border-top-left-radius: 3px;
   border-top-right-radius: 3px;
   border-bottom-left-radius: 3px;
@@ -1411,6 +1410,6 @@ main {
   border-bottom-right-radius: 3px;
 }
 .dopperRadius li hr {
-  background-color: #3E3E3E;
+  background-color: #3e3e3e;
   margin: 0 4px;
 }/*# sourceMappingURL=app.css.map */
