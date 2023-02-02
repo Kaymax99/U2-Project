@@ -1,0 +1,217 @@
+main {
+  padding-bottom: 10em !important;
+}
+
+main::-webkit-scrollbar {
+  display: none;
+}
+
+#annuncioAB {
+  display: flex;
+  align-items: flex-end;
+  padding-top: 4em;
+  transition: 0.2s;
+
+  @media screen and (min-width: 992px) {
+    padding-top: 5.5em;
+  }
+  @media screen and (min-width: 992px) {
+    padding-top: 6.5em;
+  }
+  @media screen and (min-width: 992px) {
+    padding-top: 7.5em;
+  }
+
+  img {
+    height: 200px;
+  }
+  #albumAuthor {
+    color: $c-text-primary;
+    font-weight: 700;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+#wrapperAnnuncioAB {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+  width: 80%;
+  height: 180px;
+  padding: 16px 0;
+
+  h5 {
+    color: $c-text-primary;
+    margin-left: 0.5em;
+    font-size: 0.8em;
+    transition: 0.2s;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 1em;
+      margin-bottom: 1em;
+    }
+  }
+  h1 {
+    color: $c-text-primary;
+    font-size: 3.2em;
+    font-weight: 700;
+    margin-bottom: 0.4em;
+    transition: 0.2s;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 3.6em;
+    }
+  }
+
+  #albumCredits {
+    display: flex;
+    align-items: center;
+    font-size: 0.7em;
+
+    img {
+      width: 25px;
+      height: 25px;
+      border-radius: 50px;
+    }
+
+    h5,
+    p {
+      color: $c-text-primary;
+      margin: 0;
+    }
+
+    #albumAuthor {
+      margin-left: 10px;
+    }
+
+    .dot {
+      margin: 0 3px;
+    }
+
+    #albumLength {
+      color: $c-text-subdued;
+    }
+  }
+}
+
+#albumRow {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 3em;
+
+  .col {
+    margin: 0;
+    padding: 0;
+  }
+
+  .row {
+    margin: 0;
+    padding: 0;
+  }
+
+  #albumButtonContainer {
+    padding: 1.5em 0 1.5em 2em;
+
+    display: flex;
+    align-items: center;
+
+    > i {
+      font-size: 1.7em;
+      color: $c-text-subdued;
+      margin-left: 0.8em;
+      transition: 0.2s;
+
+      &:hover {
+        color: $c-text-primary;
+        transition: 0.2s;
+      }
+    }
+  }
+
+  #innerRowContainer {
+    padding-left: 3.5em;
+    font-size: 0.9em;
+    color: $c-text-subdued;
+
+    #hashtag {
+      margin-right: 15px;
+      font-size: 1.1em;
+    }
+
+    #counterHeader,
+    #timeHeader {
+      display: flex;
+      justify-content: center;
+    }
+    hr {
+      width: 95%;
+      margin-top: 0.4em;
+      margin-bottom: 1em;
+    }
+  }
+
+  .albumSongItem {
+    border-radius: 10px;
+    align-items: center;
+    transition: 0.1s;
+
+    padding: 0.5em 0 0.5em 3.15em;
+
+    &:hover {
+      background-color: #383838;
+      color: white;
+      transition: 0.1s;
+    }
+
+    .firstItem {
+      display: flex;
+      align-items: center;
+
+      > p {
+        color: $c-text-primary;
+        margin-right: 15px;
+        margin-bottom: 0;
+      }
+
+      h3 {
+        color: $c-text-primary;
+        font-size: 0.9em;
+        font-weight: 400;
+        margin-bottom: 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      div > p {
+        margin-bottom: 0;
+        font-size: 0.8em;
+        color: $c-text-subdued;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .listens,
+    .length {
+      display: flex;
+      justify-content: center;
+      font-size: 0.8em;
+
+      > p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+#trackListContainer {
+  margin-bottom: 10em;
+}

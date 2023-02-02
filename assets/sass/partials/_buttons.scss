@@ -1,0 +1,97 @@
+.btnContainer {
+  display: flex;
+  gap: 15px;
+}
+.btnAnnuncio {
+  padding: 0 2em;
+  border-radius: 25px;
+  height: 40px;
+  font-size: 0.9em;
+}
+.playBtn {
+  background-color: $theme-primary;
+  font-weight: 700;
+}
+.saveBtn {
+  border: 1px solid gray;
+  color: $c-text-primary;
+}
+.moreBtn {
+  height: 40px;
+  padding: 0 1em;
+  i {
+    font-size: 1.5em;
+    color: $c-text-subdued;
+  }
+}
+#hideAnnuncio {
+  @extend .btnAnnuncio;
+  text-transform: uppercase;
+  background-color: inherit;
+  border: transparent;
+  -webkit-box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.1);
+  color: $c-text-subdued;
+  font-size: 0.75em;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 30px;
+  opacity: 50%;
+  transition: 0.2s;
+
+  &:hover {
+    color: $c-text-primary;
+    opacity: 100%;
+    background-color: #383838;
+    transition: 0.2s;
+  }
+}
+.showMore {
+  background-color: inherit;
+  border: none;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  color: $c-text-subdued;
+  transition: 0.2s;
+
+  &:hover {
+    color: $c-text-primary;
+    transition: 0.2s;
+  }
+}
+
+#playButton {
+  font-size: 1.2em;
+  padding: 0.8em;
+  border-radius: 50%;
+  background-color: $theme-primary;
+  transition: 0.2s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: #189945;
+    transition: 0.2s;
+  }
+
+  i {
+    margin-left: 4px;
+  }
+}
+
+#followButton {
+  font-size: 0.9em;
+  padding: 2px 5px;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid $c-text-subdued;
+  border-radius: 5px;
+  margin-left: 20px;
+  color: $c-text-primary;
+  transition: 0.2s;
+  &:hover {
+    border: 1px solid $c-text-primary;
+  }
+}

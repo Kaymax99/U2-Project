@@ -1,0 +1,45 @@
+@mixin column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin column-r {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@mixin row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin row-r {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@mixin leftNavLi {
+  height: 32px;
+  align-items: center;
+}
+
+@mixin playButton {
+  font-size: 1.2em;
+  padding: 0.8em;
+  border-radius: 50%;
+  background-color: $theme-primary;
+  transition: 0.2s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: #189945;
+    transition: 0.2s;
+  }
+
+  i {
+    margin-left: 4px;
+  }
+}

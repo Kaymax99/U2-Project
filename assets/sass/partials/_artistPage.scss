@@ -1,0 +1,219 @@
+main {
+  padding: 0 0 8em 0 !important;
+}
+
+#annuncioAR {
+  padding: 15em 0 1.5em 1em;
+  background-size: cover;
+  background-position: top;
+  transition: 0.2s;
+
+  @media screen and (min-width: 1200px) {
+    padding: 17.5em 0 1.5em 1em;
+  }
+  @media screen and (min-width: 1400px) {
+    padding: 20em 0 1.5em 1em;
+  }
+
+  #verification {
+    display: flex;
+    align-items: center;
+
+    i {
+      font-size: 1.4em;
+      color: #0d6efd;
+    }
+
+    p {
+      color: $c-text-primary;
+      margin: 0;
+      margin-left: 10px;
+
+      font-size: 0.9em;
+    }
+  }
+
+  h1 {
+    color: $c-text-primary;
+    font-weight: 900;
+    font-size: 5em;
+    margin-bottom: 0.2em;
+  }
+
+  > p {
+    color: $c-text-primary;
+    margin: 0;
+  }
+}
+
+#artistRow {
+  margin: 0 !important;
+  .col {
+    padding: 0;
+  }
+
+  #artistButtonContainer {
+    padding: 1.5em 0 1.5em 2em;
+
+    display: flex;
+    align-items: center;
+
+    .bi-three-dots {
+      color: $c-text-subdued;
+      font-size: 1.5em;
+      margin-left: 20px;
+
+      &:hover {
+        color: $c-text-primary;
+      }
+    }
+  }
+
+  #artistSongRow {
+    h4 {
+      color: $c-text-primary;
+      font-size: 1.2em;
+      font-weight: 900;
+      padding-left: 2em;
+      margin-bottom: 1em;
+    }
+
+    #songContainer {
+      margin-left: 3em;
+      padding: 0 10px;
+      border-radius: 5px;
+      color: $c-text-subdued;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        background-color: #383838;
+        transition: 0.2s;
+      }
+
+      #firstSongData {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        img {
+          width: 30px;
+          margin: 7px 15px;
+          @media screen and (min-width: 992px) {
+            width: 35px;
+          }
+        }
+
+        p {
+          font-size: 0.6em;
+          color: $c-text-primary;
+          margin: 0;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          transition: 0.2s;
+
+          @media screen and (min-width: 992px) {
+            font-size: 0.7em;
+          }
+          @media screen and (min-width: 1200px) {
+            font-size: 0.8em;
+          }
+          @media screen and (min-width: 1400px) {
+            font-size: 0.9em;
+          }
+        }
+      }
+
+      > p {
+        font-size: 0.6em;
+        text-align: right;
+        width: 25%;
+        margin: 0;
+        transition: 0.2s;
+
+        @media screen and (min-width: 992px) {
+          font-size: 0.7em;
+        }
+        @media screen and (min-width: 1200px) {
+          font-size: 0.8em;
+        }
+      }
+    }
+
+    #otherButton {
+      @extend .showMore;
+      margin-top: 1.5em;
+      font-size: 0.7em;
+      font-weight: 900;
+      padding-left: 4em;
+
+      @media screen and (min-width: 1400px) {
+        font-size: 0.85em;
+      }
+
+      &:hover {
+        color: $c-text-primary !important;
+      }
+    }
+
+    #currentArtistContainer {
+      h4 {
+        font-size: 1.2em;
+        font-weight: 900;
+        margin-bottom: 1em;
+      }
+
+      #currentArtist {
+        display: flex;
+        align-items: center;
+        padding-left: 2.5em;
+
+        img {
+          width: 50px;
+          border-radius: 50px;
+          margin-right: 10px;
+          transition: 0.2s;
+
+          @media screen and (min-width: 992px) {
+            width: 55px;
+          }
+          @media screen and (min-width: 1200px) {
+            width: 60px;
+          }
+          @media screen and (min-width: 1400px) {
+            width: 70px;
+          }
+        }
+        #asideSongTextContainer {
+          h3 {
+            color: $c-text-primary;
+            font-size: 0.6em;
+            transition: 0.2s;
+
+            @media screen and (min-width: 992px) {
+              font-size: 0.7em;
+            }
+            @media screen and (min-width: 1200px) {
+              font-size: 0.9em;
+            }
+            @media screen and (min-width: 1400px) {
+              font-size: 1em;
+            }
+          }
+
+          p {
+            color: $c-text-subdued;
+            font-size: 0.7em;
+            transition: 0.2s;
+
+            @media screen and (min-width: 1400px) {
+              font-size: 0.8em;
+            }
+          }
+        }
+      }
+    }
+  }
+}

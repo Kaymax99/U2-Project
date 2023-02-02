@@ -1,0 +1,195 @@
+aside {
+  background-color: $c-bg-primary;
+  height: 100vh;
+
+  #upper-right-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 1.3em;
+
+    #friendsActivity {
+      color: $c-text-primary;
+      font-weight: 700;
+      font-size: 0.9em;
+
+      @media screen and (max-width: 1450px) {
+        font-size: 0.7em;
+      }
+
+      @media screen and (max-width: 1200px) {
+        font-size: 0.6em;
+      }
+
+      @media screen and (max-width: 1000px) {
+        font-size: 0.5em;
+      }
+
+      @media screen and (max-width: 800px) {
+        font-size: 0.4em;
+      }
+    }
+    #activityIcon {
+      display: flex;
+      align-items: center;
+    }
+    i {
+      padding-left: 10px;
+      @media screen and (max-width: 1450px) {
+        font-size: 0.7em;
+      }
+
+      @media screen and (max-width: 1200px) {
+        font-size: 0.6em;
+      }
+      @media screen and (max-width: 800px) {
+        padding-left: 5px;
+      }
+    }
+  }
+
+  #main-right-nav {
+    width: 100%;
+
+    .profile {
+      position: relative;
+      display: flex;
+      justify-content: flex-start;
+      width: 100%;
+      margin-bottom: 30px;
+      color: $c-text-subdued;
+
+      img {
+        width: 40px;
+        height: 40px;
+        margin-right: 20px;
+        border-radius: 50px;
+
+        @media screen and (max-width: 1450px) {
+          width: 30px;
+          height: 30px;
+          margin-right: 10px;
+        }
+
+        @media screen and (max-width: 1100px) {
+          width: 20px;
+          height: 20px;
+          margin-right: 5px;
+        }
+      }
+
+      h4 {
+        font-size: 1em;
+        margin: 0;
+        padding-bottom: 3px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        @media screen and (max-width: 1600px) {
+          font-size: 0.8em;
+        }
+
+        @media screen and (max-width: 1300px) {
+          font-size: 0.7em;
+        }
+
+        @media screen and (max-width: 1100px) {
+          font-size: 0.6em;
+        }
+
+        @media screen and (max-width: 1000px) {
+          font-size: 0.5em;
+        }
+
+        @media screen and (max-width: 900px) {
+          font-size: 0.4em;
+        }
+      }
+
+      div > p {
+        font-size: 0.7em;
+        margin: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+        @media screen and (max-width: 1600px) {
+          font-size: 0.6em;
+        }
+
+        @media screen and (max-width: 1300px) {
+          font-size: 0.5em;
+          margin-bottom: 3px;
+        }
+
+        @media screen and (max-width: 1000px) {
+          font-size: 0.4em;
+        }
+
+        @media screen and (max-width: 900px) {
+          font-size: 0.3em;
+        }
+      }
+
+      span {
+        color: $c-text-primary;
+      }
+
+      .profile-description {
+        display: flex;
+        align-items: center;
+        margin: 0;
+
+        i {
+          padding-right: 5px;
+          @media screen and (max-width: 1600px) {
+            font-size: 0.8em;
+          }
+          @media screen and (max-width: 1300px) {
+            font-size: 0.6em;
+          }
+
+          @media screen and (max-width: 900px) {
+            font-size: 0.4em;
+          }
+        }
+      }
+
+      > p {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 0.7em;
+        @media screen and (max-width: 1600px) {
+          font-size: 0.6em;
+        }
+
+        @media screen and (max-width: 1300px) {
+          font-size: 0.5em;
+        }
+        @media screen and (max-width: 1000px) {
+          font-size: 0.4em;
+        }
+      }
+    }
+  }
+}
+
+#main-right-nav {
+  h4:hover {
+    text-decoration: underline;
+    color: $c-text-primary;
+  }
+
+  div > p:hover {
+    text-decoration: underline;
+    color: $c-text-primary;
+  }
+
+  #album:hover {
+    text-decoration: underline;
+    color: $c-text-subdued;
+  }
+}
