@@ -1,11 +1,7 @@
 @media screen and (max-width: 768px) {
   footer {
     background: rgb(0, 0, 0);
-    background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 1) 25%,
-      rgba(24, 24, 24, 0.8) 50%
-    );
+    background: linear-gradient(0deg, rgba(0, 0, 0, 1) 25%, rgba(24, 24, 24, 0.8) 50%);
   }
 }
 
@@ -55,6 +51,7 @@
 
 #mobileNav {
   padding: 0.7em 0;
+  z-index: 100;
 
   ul {
     /*     display: flex;
@@ -64,6 +61,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      transition: 0.2s;
+
+      &:hover {
+        color: $c-text-primary;
+        transform: scale(1.05);
+        transition: 0.2s;
+      }
+
       i {
         font-size: 1.5em;
       }

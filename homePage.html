@@ -131,18 +131,20 @@
                     <a
                       class="dropdown-item d-flex justify-content-between align-items-center"
                       href="#"
-                      ><p>Account</p>
-                      <i class="bi bi-box-arrow-up-right"></i
-                    ></a>
+                    >
+                      <p>Account</p>
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
                   </li>
                   <li><a class="dropdown-item" href="#">Profilo</a></li>
                   <li>
                     <a
                       class="dropdown-item d-flex justify-content-between align-items-center"
                       href="#"
-                      ><p>Passa a Premium</p>
-                      <i class="bi bi-box-arrow-up-right"></i
-                    ></a>
+                    >
+                      <p>Passa a Premium</p>
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
                   </li>
                   <li>
                     <a class="dropdown-item" href="#">Sessione Privata</a>
@@ -170,9 +172,9 @@
                 ><i class="bi bi-gear"></i>
               </div>
             </div>
-            <div class="ps-4 mb-4 d-md-none" id="mobileTopBtns">
-              <button class="me-3" id="musica">Musica</button
-              ><button id="podcast">Podcast e show</button>
+            <div class="ps-5 mb-4 d-md-none">
+              <button class="me-3" id="musica">Musica</button>
+              <button id="podcast">Podcast e show</button>
             </div>
             <div
               id="ultimiAscoltiWrapper"
@@ -284,7 +286,7 @@
                 <i class="bi bi-house-door-fill"></i>
                 <p>Home</p>
               </li>
-              <li class="col-4">
+              <li class="col-4" id="searchButtonMobileNav">
                 <i class="bi bi-search"></i>
                 <p>Cerca</p>
               </li>
@@ -325,7 +327,10 @@
                   id="playerCenter"
                 >
                   <div class="d-flex justify-content-end gap-4">
-                    <i class="fa-solid fa-shuffle"></i>
+                    <i
+                      class="fa-solid fa-shuffle"
+                      onclick="greenFunction(event)"
+                    ></i>
                     <i class="fa-solid fa-backward-step"></i>
                   </div>
                   <div class="d-flex justify-content-center" id="playBtnPlayer">
@@ -333,7 +338,10 @@
                   </div>
                   <div class="d-flex justify-content-start gap-4">
                     <i class="fa-solid fa-forward-step"></i>
-                    <i class="fa-solid fa-repeat"></i>
+                    <i
+                      class="fa-solid fa-repeat"
+                      onclick="greenFunction(event)"
+                    ></i>
                   </div>
                 </div>
 
@@ -358,6 +366,50 @@
             </div>
           </div>
         </footer>
+
+        <div class="col col-12 d-md-none" id="searchContainer">
+          <div class="row">
+            <div class="col-12" id="searchTitle">Cerca</div>
+            <div class="col-12" id="searchBar">
+              <i class="bi bi-search"></i>
+              <input type="search" placeholder="Cosa vuoi ascoltare?" />
+            </div>
+            <div class="col-12" id="sfoglia">
+              <h3>Sfoglia tutto</h3>
+              <div class="row" id="typeRowContainer">
+                <div class="col col-5 col-sm-3 searchType one">
+                  <h4>Podcast</h4>
+                </div>
+                <div class="col col-5 col-sm-3 searchType two">
+                  <h4>Create per te</h4>
+                </div>
+                <div class="col col-5 col-sm-3 searchType three">
+                  <h4>Nuove uscite</h4>
+                </div>
+                <div class="col col-5 col-sm-3 searchType four">
+                  <h4>Pop</h4>
+                </div>
+                <div class="col col-5 col-sm-3 searchType five">
+                  <h4>Hip Hop</h4>
+                </div>
+                <div class="col col-5 col-sm-3 searchType six">
+                  <h4>Dance/ Elettronica</h4>
+                </div>
+                <div class="col col-5 col-sm-3 searchType seven">
+                  <h4>Latina</h4>
+                </div>
+                <div class="col col-5 col-sm-3 searchType eight">
+                  <h4>Classifiche</h4>
+                </div>
+                <div
+                  class="col col-5 col-sm-3 d-none d-sm-flex searchType nine"
+                >
+                  <h4>Classifiche</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 

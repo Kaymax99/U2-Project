@@ -2,8 +2,7 @@ const baseAlbumURL = "https://striveschool-api.herokuapp.com/api/deezer/album/";
 const spotlightAlbum = 120044;
 
 const arrayIDAlbum = [
-  75621062, 8887733, 7823038, 7824595, 7824584, 91333612, 345755977, 192529232,
-  100674742, 59853252, 130678282,
+  75621062, 8887733, 7823038, 7824595, 7824584, 91333612, 345755977, 192529232, 100674742, 59853252, 130678282,
 ];
 
 shuffleArray(arrayIDAlbum);
@@ -37,7 +36,6 @@ const drawAnnuncio = async (album) => {
     <img src="${spotlightAlbum.cover_big}" height="200px" />
   </div>
   <div id="wrapperAnnuncio">
-
     <h5 class="albumAnnuncio">ALBUM</h5>
     <button id="hideAnnuncio">nascondi annunci</button>
     <div class="songAuthor">
@@ -96,10 +94,7 @@ const drawAnnuncio = async (album) => {
   });
 
   document.addEventListener("click", function (event) {
-    if (
-      !dropdownToggle.contains(event.target) &&
-      dropdownContent.style.display === "block"
-    ) {
+    if (!dropdownToggle.contains(event.target) && dropdownContent.style.display === "block") {
       dropdownContent.style.display = "none";
     }
   });
@@ -163,9 +158,7 @@ const drawAlbum = (albumArray) => {
           <div class="col custCard">
             <img src="${albumArray[i].cover_big}" />
             <a href="#">
-              <button class="hoverCardButtonOthers" onclick="addToPlayer(${
-                i + 6
-              })">
+              <button class="hoverCardButtonOthers" onclick="addToPlayer(${i + 6})">
                 <i class="fa-sharp fa-solid fa-play"></i>
               </button>
             </a>
@@ -247,6 +240,44 @@ const drawAlbum = (albumArray) => {
 };
 
 const addToPlayer = (index) => {
+  const arrayToStoreAlbums = albumArray;
+
+  const playButton = document.querySelector("#playBtnPlayer");
+  let songArray = "";
+  songArray = arrayToStoreAlbums[index].tracks.data[0].preview;
+  console.log(songArray);
+
+  const audio = new Audio(songArray);
+
+  document.addEventListener("click", () => {
+    console.log("000" + audio);
+
+    audio.play();
+    console.log(audio + "000");
+
+    playButton.style.color = "#1ED760";
+    document.addEventListener("click", () => {
+      audio.pause();
+      playButton.style.color = "white";
+    });
+  });
+
+  const miniplay = document.querySelector("#mobilePlayer>.col-1>.bi-play-fill");
+
+  document.addEventListener("click", () => {
+    console.log("000" + audio);
+    audio.play();
+    console.log(audio + "000");
+
+    miniplay.style.color = "#1ED760";
+    document.addEventListener("click", () => {
+      audio.pause();
+      miniplay.style.color = "white";
+    });
+  });
+
+  console.log(audio);
+
   playerRowLeft = document.getElementById("playerRowLeft");
   playerRowLeft.innerHTML = ``;
   playerRowLeft.innerHTML += `<div id="playerImgContainer">
@@ -259,32 +290,91 @@ const addToPlayer = (index) => {
   <h5>${albumArray[index].artist.name}</h5>
   <p>${albumArray[index].title}</p>
 </div>
-
 <div class="d-flex justify-content-center gap-3">
   <i class="bi bi-heart"></i>
   <i class="bi bi-pip"></i>
 </div>`;
 
   // Mobile Player
-  const mobilePlayer = document.getElementById("mobilePlayer");
-  mobilePlayer.innerHTML = "";
-  mobilePlayer.innerHTML += `
-  <div class="d-none d-sm-block col-sm-1 d-flex align-items-center"><img
-  src="${albumArray[index].cover_small}"
-  alt=""
-/></div>
-  <div class="col-9 d-flex align-items-center">
-    <p id="mobilePlayerText">${albumArray[index].title}</p>
-  </div>
-  <div
-    class="col-1 d-flex justify-content-end align-items-center gap-3"
-  >
-    <i class="bi bi-pc-display"></i>
-    <i class="bi bi-heart"></i>
-    <i class="bi bi-play-fill"></i>
-  </div>
+  // change image
+  const mobileImage = document.querySelector("#mobilePlayer>div");
+  mobileImage.innerHTML = `
+
+<img src="${albumArray[index].cover_small}" alt=""/></div>
+`;
+  const mobileText = document.querySelector("#mobilePlayer>.col-9");
+
+  mobileText.innerHTML = `
+
+  <p id="mobilePlayerText">${albumArray[index].title}</p>
   `;
+
+  /////
+  // const mobilePlayer = document.getElementById("mobilePlayer");
+
+  // mobilePlayer.innerHTML = "";
+  // mobilePlayer.innerHTML += `
+  //   <div class="d-none d-sm-block col-sm-1 d-flex align-items-center"><img
+  //     src="${albumArray[index].cover_small}"
+  //     alt=""
+  //   /></div>
+  //   <div class="col-9 d-flex align-items-center">
+  //     <p id="mobilePlayerText">${albumArray[index].title}</p>
+  //   </div>
+  //   <div
+  //     class="col-1 d-flex justify-content-end align-items-center gap-3"
+  //     >
+  //   <i class="bi bi-pc-display"></i>
+  //   <i class="bi bi-heart"></i>
+  //   <i class="bi bi-play-fill"></i>
+  //   </div>
+  // `;
+
+  // console.log(audio)
+  // console.log("*-****")
+  // console.log(miniplay)
+
+  // const arrayToStoreAlbums = albumArray
+
+  // const playButton = document.querySelector("#playBtnPlayer")
+  // const songArray = arrayToStoreAlbums[index].tracks.data[0].preview
+  // console.log(songArray)
+
+  // const audio = new Audio(songArray)
+
+  // playButton.addEventListener("click", () => {
+  //   audio.play()
+  //   playButton.style.color = "#1ED760"
+  //   playButton.addEventListener("click", () => {
+  //     audio.pause()
+  //     playButton.style.color = "white"
+
+  //   })
+  // })
 };
+
+const searchAppear = function () {
+  console.log("clicked");
+  const searchLayover = document.getElementById("searchContainer");
+  if (window.getComputedStyle(searchLayover).display === "none") {
+    searchLayover.style.display = "block";
+  } else {
+    setTimeout(() => {
+      searchLayover.style.display = "none";
+    }, 500);
+  }
+
+  if (window.getComputedStyle(searchLayover).opacity === "0") {
+    searchLayover.style.opacity = "1";
+    searchLayover.style.top = "0";
+  } else {
+    searchLayover.style.opacity = "0";
+    searchLayover.style.top = "100vh";
+  }
+};
+
+const searchButton = document.getElementById("searchButtonMobileNav");
+searchButton.onclick = searchAppear;
 
 const startDrawingAlbums = (albumArray, givenNumber) => {
   for (i = 0; i < albumArray.length; i++) {
