@@ -5,7 +5,7 @@
   scrollbar-width: none; /* Firefox */
   transition: 0.2s;
   padding: 1.5em;
-  z-index: 10;
+  z-index: 9998;
   opacity: 0;
   display: none;
   top: 100vh;
@@ -132,7 +132,11 @@
 
   .seven {
     background: rgb(116, 94, 107);
-    background: linear-gradient(0deg, rgba(116, 94, 107, 1) 0%, rgba(225, 17, 139, 1) 40%);
+    background: linear-gradient(
+      0deg,
+      rgba(116, 94, 107, 1) 0%,
+      rgba(225, 17, 139, 1) 40%
+    );
     &:hover {
       -webkit-box-shadow: 0px 0px 6px 5px #e1118b;
       box-shadow: 0px 0px 6px 5px #e1118b;
@@ -141,7 +145,11 @@
 
   .eight {
     background: rgb(116, 108, 124);
-    background: linear-gradient(0deg, rgba(116, 108, 124, 1) 0%, rgba(140, 103, 172, 1) 40%);
+    background: linear-gradient(
+      0deg,
+      rgba(116, 108, 124, 1) 0%,
+      rgba(140, 103, 172, 1) 40%
+    );
     &:hover {
       -webkit-box-shadow: 0px 0px 6px 5px #8c67ac;
       box-shadow: 0px 0px 6px 5px #8c67ac;
