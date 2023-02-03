@@ -13,7 +13,7 @@ main {
     width: 100%;
     position: fixed;
     padding: 8px 10px;
-    z-index: 9997;
+    z-index: 5000;
     transition: background-color 0.3s;
 
     @media screen and (max-width: 768px) {

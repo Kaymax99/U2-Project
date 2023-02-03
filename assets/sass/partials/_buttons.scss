@@ -2,28 +2,34 @@
   display: flex;
   gap: 15px;
 }
+
 .btnAnnuncio {
   padding: 0 2em;
   border-radius: 25px;
   height: 40px;
   font-size: 0.9em;
 }
+
 .playBtn {
   background-color: $theme-primary;
   font-weight: 700;
 }
+
 .saveBtn {
   border: 1px solid gray;
   color: $c-text-primary;
 }
+
 .moreBtn {
   height: 40px;
   padding: 0 1em;
+
   i {
     font-size: 1.5em;
     color: $c-text-subdued;
   }
 }
+
 #hideAnnuncio {
   @extend .btnAnnuncio;
   text-transform: uppercase;
@@ -47,6 +53,7 @@
     transition: 0.2s;
   }
 }
+
 .showMore {
   background-color: inherit;
   border: none;
@@ -80,9 +87,11 @@
   i {
     margin-left: 4px;
   }
+
   @media screen and (max-width: 768px) {
     justify-self: end;
   }
+
   @media screen and (max-width: 576px) {
     font-size: 1.1em;
     padding: 0.6em;
@@ -97,6 +106,7 @@
   border-radius: 5px;
   color: $c-text-primary;
   transition: 0.2s;
+
   &:hover {
     border: 1px solid $c-text-primary;
   }
@@ -110,6 +120,7 @@
   padding: 0.5em 1em;
   font-size: 0.9em;
   border-radius: 25px;
+
   &:hover {
     background-color: #383838;
   }
@@ -123,9 +134,21 @@
   color: $c-text-primary;
   font-size: 1.8em;
 }
+
 #mobileTopBtns {
   transition: 0.2s;
-  @media screen and(max-width: 500px) {
+
+  @media screen and (max-width: 500px) {
     font-size: 0.8em;
   }
+}
+
+.songDrpDwn {
+  &::after {
+    display: none;
+  }
+
+  background-color: inherit;
+  color: $c-text-subdued;
+  border: none;
 }

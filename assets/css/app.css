@@ -195,7 +195,7 @@ main #mainNav {
   width: 100%;
   position: fixed;
   padding: 8px 10px;
-  z-index: 9997;
+  z-index: 5000;
   transition: background-color 0.3s;
   display: flex;
   flex-direction: row;
@@ -589,7 +589,7 @@ body > footer {
 footer {
   position: fixed;
   bottom: 0;
-  z-index: 9999;
+  z-index: 5001;
 }
 @media screen and (max-width: 768px) {
   footer .container-fluid {
@@ -915,6 +915,15 @@ footer .container-fluid {
   #mobileTopBtns {
     font-size: 0.8em;
   }
+}
+
+.songDrpDwn {
+  background-color: inherit;
+  color: #a7a7a7;
+  border: none;
+}
+.songDrpDwn::after {
+  display: none;
 }
 
 .row a {
@@ -1329,6 +1338,7 @@ main::-webkit-scrollbar {
     height: 450px;
   }
   #annuncioAB div img {
+    -webkit-box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.5);
     box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.5);
   }
 }
@@ -1904,6 +1914,11 @@ main {
   text-shadow: 0px 0px 10px #000000;
 }
 
+.TestWhite {
+  color: white;
+  font-size: 0.9em;
+}
+
 .dropdown1 {
   position: relative;
   display: inline-block;
@@ -1962,6 +1977,17 @@ main {
 .dopperRadius li hr {
   background-color: #3e3e3e;
   margin: 0 4px;
+}
+
+.songDropdown {
+  z-index: 9999;
+  background-color: #2a2a2a;
+}
+.songDropdown li {
+  padding: 8px 12px;
+}
+.songDropdown li a {
+  color: #a7a7a7;
 }
 
 @media screen and (max-width: 767px) {
@@ -2087,7 +2113,7 @@ main {
   scrollbar-width: none; /* Firefox */
   transition: 0.2s;
   padding: 1.5em;
-  z-index: 9998;
+  z-index: 5000;
   opacity: 0;
   display: none;
   top: 100vh;
