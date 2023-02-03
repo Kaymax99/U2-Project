@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: #181818;
+}
+
 html,
 body {
   min-height: 100vh;
@@ -763,6 +767,10 @@ footer .container-fluid {
 
 .noUi-base {
   background-color: #5e5e5e;
+}
+
+.makeItGreen {
+  color: #1db954;
 }
 
 .btnContainer {
