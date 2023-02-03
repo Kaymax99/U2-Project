@@ -11,6 +11,7 @@ main::-webkit-scrollbar {
   align-items: flex-end;
   padding-top: 4em;
   transition: 0.2s;
+  position: relative;
 
   @media screen and (min-width: 992px) {
     padding-top: 5.5em;
@@ -31,6 +32,24 @@ main::-webkit-scrollbar {
   }
   a:hover {
     text-decoration: underline;
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+
+    img {
+      height: 450px;
+    }
+    div img {
+      -webkit-box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.5);
+    }
+  }
+  @media screen and (max-width: 450px) {
+    img {
+      height: 300px;
+    }
   }
 }
 
@@ -60,12 +79,20 @@ main::-webkit-scrollbar {
     font-weight: 700;
     margin-bottom: 0.4em;
     transition: 0.2s;
-    overflow: hidden;
+    /*   overflow: hidden;
     white-space: nowrap;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; */
+
+    @media screen and (max-width: 992px) {
+      font-size: 2.5em;
+    }
 
     @media screen and (min-width: 1200px) {
       font-size: 3.6em;
+    }
+    @media screen and (max-width: 768px) {
+      font-size: 1.8em;
+      margin-bottom: 0.2em;
     }
   }
 
@@ -98,6 +125,13 @@ main::-webkit-scrollbar {
       color: $c-text-subdued;
     }
   }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 0.5em 1.5em;
+    .albumAnnuncio {
+      display: none;
+    }
+  }
 }
 
 #albumRow {
@@ -116,12 +150,11 @@ main::-webkit-scrollbar {
   }
 
   #albumButtonContainer {
-    padding: 1.5em 0 1.5em 2em;
-
+    padding: 1.5em;
     display: flex;
     align-items: center;
 
-    > i {
+    div > i {
       font-size: 1.7em;
       color: $c-text-subdued;
       margin-left: 0.8em;
@@ -130,6 +163,22 @@ main::-webkit-scrollbar {
       &:hover {
         color: $c-text-primary;
         transition: 0.2s;
+      }
+    }
+    .bi-shuffle {
+      margin-right: 16px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .bi-suit-heart {
+        margin-left: 0;
+      }
+      padding: 0.5em 1.5em;
+      justify-content: space-between;
+    }
+    @media screen and (max-width: 576px) {
+      div > i {
+        font-size: 1.4em;
       }
     }
   }
@@ -171,12 +220,15 @@ main::-webkit-scrollbar {
 
     .firstItem {
       display: flex;
+      flex-wrap: nowrap;
       align-items: center;
+      padding: 0;
 
       > p {
         color: $c-text-primary;
         margin-right: 15px;
         margin-bottom: 0;
+        width: auto;
       }
 
       h3 {
@@ -209,9 +261,30 @@ main::-webkit-scrollbar {
         margin-bottom: 0;
       }
     }
+    @media screen and (max-width: 768px) {
+      padding: 0.5em 1.5em;
+    }
   }
 }
 
 #trackListContainer {
   margin-bottom: 10em;
+  @media screen and (max-width: 768px) {
+    padding: 0;
+    margin-bottom: 8em;
+  }
+}
+
+#albumDetails {
+  @media screen and (max-width: 768px) {
+    margin-top: 0.5em;
+    .dot:nth-child(1) {
+      display: none;
+    }
+  }
+}
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

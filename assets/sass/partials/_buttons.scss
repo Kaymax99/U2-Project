@@ -31,14 +31,14 @@
   border: transparent;
   -webkit-box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.1);
-  color: $c-text-subdued;
+  color: $c-text-primary;
   font-size: 0.75em;
   position: absolute;
   right: 0;
   top: 0;
   height: 30px;
-  opacity: 50%;
   transition: 0.2s;
+  margin-right: 1em;
 
   &:hover {
     color: $c-text-primary;
@@ -80,6 +80,13 @@
   i {
     margin-left: 4px;
   }
+  @media screen and (max-width: 768px) {
+    justify-self: end;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 1.1em;
+    padding: 0.6em;
+  }
 }
 
 #followButton {
@@ -88,10 +95,46 @@
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid $c-text-subdued;
   border-radius: 5px;
-  margin-left: 20px;
   color: $c-text-primary;
   transition: 0.2s;
   &:hover {
     border: 1px solid $c-text-primary;
   }
+}
+
+#musica,
+#podcast {
+  color: $c-text-primary;
+  border: none;
+  background-color: $bg-elevated-highlight;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  border-radius: 25px;
+  &:hover {
+    background-color: #383838;
+  }
+}
+
+.navigationMobile {
+  position: absolute;
+  left: 20px;
+  border: none;
+  background-color: unset;
+  color: $c-text-primary;
+  font-size: 1.8em;
+}
+#mobileTopBtns {
+  transition: 0.2s;
+  @media screen and(max-width: 500px) {
+    font-size: 0.8em;
+  }
+}
+
+.songDrpDwn {
+  &::after {
+    display: none;
+  }
+  background-color: inherit;
+  color: $c-text-subdued;
+  border: none;
 }

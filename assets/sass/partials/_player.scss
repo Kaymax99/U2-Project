@@ -5,7 +5,12 @@ body > footer {
 footer {
   position: fixed;
   bottom: 0;
-  z-index: 99;
+  z-index: 5001;
+  @media screen and (max-width: 768px) {
+    .container-fluid {
+      display: none;
+    }
+  }
 }
 
 footer .container-fluid {
@@ -192,3 +197,7 @@ footer .container-fluid {
 //         display: block;
 //     }
 // }
+
+.makeItGreen {
+  color: #1db954;
+}

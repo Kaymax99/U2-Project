@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: #181818;
+}
+
 html,
 body {
   min-height: 100vh;
@@ -56,15 +60,34 @@ a {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   padding-bottom: 6em;
-  transition: 0.2s;
-  /*   @media screen and (min-width: 992px) {
-    padding: 0 12px;
-  } */
+  font-size: 0.8em;
 }
 @media screen and (min-width: 850px) {
   #left-Nav {
     padding: 0 24px;
+    transition: 0.2s;
   }
+}
+@media screen and (min-width: 900px) {
+  #left-Nav {
+    font-size: 0.9em;
+  }
+}
+@media screen and (min-width: 992px) {
+  #left-Nav {
+    font-size: 0.8em;
+  }
+}
+@media screen and (min-width: 1100px) {
+  #left-Nav {
+    font-size: 0.9em;
+  }
+}
+#left-Nav li {
+  transition: 0.2s;
+}
+#left-Nav li:hover {
+  color: white;
 }
 #left-Nav #topDropdown {
   background-color: #2a2a2a;
@@ -73,7 +96,6 @@ a {
   height: 32px;
   align-items: center;
   margin: 0.5em 0;
-  font-size: 0.8em;
   transition: 0.2s;
   color: #a7a7a7;
   overflow: hidden;
@@ -83,21 +105,6 @@ a {
 #left-Nav #topDropdown li:hover {
   color: white;
   transition: 0.2s;
-}
-@media screen and (min-width: 900px) {
-  #left-Nav #topDropdown li {
-    font-size: 0.9em;
-  }
-}
-@media screen and (min-width: 992px) {
-  #left-Nav #topDropdown li {
-    font-size: 0.8em;
-  }
-}
-@media screen and (min-width: 1100px) {
-  #left-Nav #topDropdown li {
-    font-size: 0.9em;
-  }
 }
 #left-Nav #topDropdown li {
   margin: 0;
@@ -143,25 +150,10 @@ a {
   padding-bottom: 7em;
 }
 #left-Nav #playlists li {
-  margin: 0 !important;
+  margin: 0.5em 0;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-@media screen and (min-width: 900px) {
-  #left-Nav #playlists li {
-    margin: 0.5em 0 !important;
-  }
-}
-@media screen and (min-width: 992px) {
-  #left-Nav #playlists li {
-    margin: 0 !important;
-  }
-}
-@media screen and (min-width: 1100px) {
-  #left-Nav #playlists li {
-    margin: 0.5em 0 !important;
-  }
 }
 #left-Nav #left-Nav-Upper-Wrapper {
   font-weight: 700;
@@ -173,9 +165,6 @@ a {
 }
 #left-Nav #left-Nav-Upper-Wrapper .dropdown-toggle::after {
   display: none;
-}
-#left-Nav .bi-three-dots {
-  color: white;
 }
 
 #left-Nav::-webkit-scrollbar {
@@ -197,23 +186,41 @@ main {
   scrollbar-width: none; /* Firefox */
   transition: 0.2s;
 }
+@media screen and (max-width: 767px) {
+  main {
+    height: 100vh;
+  }
+}
 main #mainNav {
-  width: 75%;
+  width: 100%;
   position: fixed;
   padding: 8px 10px;
-  z-index: 9999;
+  z-index: 5000;
   transition: background-color 0.3s;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  main #mainNav {
+    justify-content: start;
+  }
+  main #mainNav div #pageContentNav {
+    margin-left: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  main #mainNav {
+    width: 75%;
+  }
+}
 @media screen and (min-width: 992px) {
   main #mainNav {
     width: 66.6%;
   }
 }
-main #mainNav .bi {
+main #mainNav .navigation .bi {
   font-size: 1.5em;
   color: white;
 }
@@ -295,16 +302,25 @@ main::-webkit-scrollbar {
 }
 
 #ultimiAscolti {
-  font-size: 1.5em;
+  font-size: 1.2em;
+}
+@media screen and (min-width: 768px) {
+  #ultimiAscolti {
+    font-size: 1.5em;
+  }
 }
 
 #annuncio {
   display: flex;
   align-items: center;
-  margin-top: 54px;
+  margin-top: 60px;
   width: 95%;
   background: rgb(0, 0, 0);
   background: linear-gradient(25deg, rgb(0, 0, 0) 30%, rgb(24, 24, 24) 75%);
+}
+
+#mt-6 {
+  margin-top: 60px;
 }
 
 #wrapperAnnuncio {
@@ -328,7 +344,7 @@ main::-webkit-scrollbar {
 #headingConsigliati {
   display: flex;
   justify-content: space-between;
-  margin: 0 0.5em;
+  margin: 0.75em 2em;
 }
 
 #consigliati {
@@ -336,13 +352,23 @@ main::-webkit-scrollbar {
 }
 
 h2 {
-  margin: 0.75em 1em;
   font-size: 1em;
+  color: white;
 }
 @media screen and (min-width: 992px) {
   h2 {
     font-size: 1.25em;
   }
+}
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 1.5em;
+  }
+}
+
+#greetingContainer {
+  margin: 0.75em 1.5em;
+  color: white;
 }
 
 aside {
@@ -563,7 +589,12 @@ body > footer {
 footer {
   position: fixed;
   bottom: 0;
-  z-index: 99;
+  z-index: 5001;
+}
+@media screen and (max-width: 768px) {
+  footer .container-fluid {
+    display: none;
+  }
 }
 
 footer .container-fluid {
@@ -742,6 +773,10 @@ footer .container-fluid {
   background-color: #5e5e5e;
 }
 
+.makeItGreen {
+  color: #1db954;
+}
+
 .btnContainer {
   display: flex;
   gap: 15px;
@@ -778,14 +813,14 @@ footer .container-fluid {
   background-color: inherit;
   border: transparent;
   box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.1);
-  color: #a7a7a7;
+  color: white;
   font-size: 0.75em;
   position: absolute;
   right: 0;
   top: 0;
   height: 30px;
-  opacity: 50%;
   transition: 0.2s;
+  margin-right: 1em;
 }
 #hideAnnuncio:hover {
   color: white;
@@ -824,6 +859,17 @@ footer .container-fluid {
 #playButton i {
   margin-left: 4px;
 }
+@media screen and (max-width: 768px) {
+  #playButton {
+    justify-self: end;
+  }
+}
+@media screen and (max-width: 576px) {
+  #playButton {
+    font-size: 1.1em;
+    padding: 0.6em;
+  }
+}
 
 #followButton {
   font-size: 0.9em;
@@ -831,7 +877,6 @@ footer .container-fluid {
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #a7a7a7;
   border-radius: 5px;
-  margin-left: 20px;
   color: white;
   transition: 0.2s;
 }
@@ -839,49 +884,82 @@ footer .container-fluid {
   border: 1px solid white;
 }
 
-.row a {
-  padding: 0;
+#musica,
+#podcast {
+  color: white;
+  border: none;
+  background-color: #2a2a2a;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  border-radius: 25px;
+}
+#musica:hover,
+#podcast:hover {
+  background-color: #383838;
 }
 
-.custCardLG {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border-radius: 5px;
-  margin-top: 10px;
-  background-color: #2a2a2a;
+.navigationMobile {
+  position: absolute;
+  left: 20px;
+  border: none;
+  background-color: unset;
   color: white;
-  font-size: 0.4em;
+  font-size: 1.8em;
+}
+
+#mobileTopBtns {
   transition: 0.2s;
 }
-@media screen and (min-width: 992px) {
-  .custCardLG {
-    font-size: 0.5em;
+@media screen and (max-width: 500px) {
+  #mobileTopBtns {
+    font-size: 0.8em;
   }
 }
-@media screen and (min-width: 1400px) {
-  .custCardLG {
-    font-size: 0.6em;
-  }
+
+.songDrpDwn {
+  background-color: inherit;
+  color: #a7a7a7;
+  border: none;
 }
-.custCardLG img {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+.songDrpDwn::after {
+  display: none;
 }
-.custCardLG div {
-  padding-left: 10px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-.custCardLG .cardButtonContainer {
+
+.row a {
+  padding: 0;
   display: flex;
-  justify-content: center;
   align-items: center;
-  opacity: 0;
-  transition: 0.2s;
+  width: 100%;
 }
-.custCardLG .hoverCardButton {
+
+#test2 {
+  position: absolute;
+  right: 60px;
+  justify-content: start;
+}
+
+#teston {
+  background-color: #2a2a2a;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 !important;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  #teston .custCardLG a div {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 576px) {
+  #teston, #teston .custCardLG {
+    --bs-gutter-x: 0;
+  }
+  #teston .custCardLG a div {
+    font-size: 1.8em;
+  }
+}
+#teston .hoverCardButton {
   font-size: 1.2em;
   padding: 0.8em;
   border-radius: 50%;
@@ -890,35 +968,110 @@ footer .container-fluid {
   display: flex;
   justify-content: center;
   align-items: center;
-  aspect-ratio: 1/1;
   border: none;
-  transition: 0.2s;
+  opacity: 0;
+  transition: all 0.2s;
   z-index: 10;
+  transform: scale(0.5);
 }
-.custCardLG .hoverCardButton:hover {
+#teston .hoverCardButton:hover {
   background-color: #189945;
   transition: 0.2s;
 }
-.custCardLG .hoverCardButton i {
+#teston .hoverCardButton i {
   margin-left: 4px;
 }
-@media screen and (max-width: 1100px) {
-  .custCardLG .hoverCardButton {
-    transform: scale(0.8);
-    margin-right: 20px;
+@media screen and (max-width: 992px) {
+  #teston #test2 {
+    right: 40px;
+  }
+  #teston .hoverCardButton {
+    padding: 0.6em;
   }
 }
-@media screen and (min-width: 1600px) {
-  .custCardLG .hoverCardButton {
-    transform: translateX(15px);
+@media screen and (max-width: 840px) {
+  #teston .hoverCardButton {
+    padding: 0.4em;
   }
 }
-.custCardLG:hover {
+@media screen and (max-width: 768px) {
+  #teston .hoverCardButton {
+    padding: 1em;
+  }
+}
+@media screen and (max-width: 576px) {
+  #teston #test2 {
+    right: 45px;
+  }
+  #teston .hoverCardButton {
+    padding: 1em;
+  }
+  #teston .fa-play {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 450px) {
+  #teston .hoverCardButton {
+    opacity: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #teston .hoverCardButton {
+    padding: 1em;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #teston .hoverCardButton {
+    padding: 1.1em;
+  }
+}
+#teston:hover {
   background-color: #383838;
 }
-.custCardLG:hover .cardButtonContainer {
+#teston:hover .hoverCardButton {
   opacity: 1;
   transition: 0.2s;
+}
+#teston .custCardLG {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+  align-self: flex-start;
+  color: white;
+  font-size: 0.4em;
+  transition: 0.2s;
+}
+@media screen and (min-width: 992px) {
+  #teston .custCardLG {
+    font-size: 0.5em;
+  }
+}
+@media screen and (min-width: 1400px) {
+  #teston .custCardLG {
+    font-size: 0.6em;
+  }
+}
+#teston .custCardLG img {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+#teston .custCardLG div {
+  padding-left: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+#teston .custCardLG .cardButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.2s;
+}
+@media screen and (max-width: 1100px) {
+  #teston .custCardLG {
+    margin-right: 20px;
+  }
 }
 
 .custCard {
@@ -929,6 +1082,26 @@ footer .container-fluid {
   border-radius: 7px;
   position: relative;
   transition: 0.2s;
+}
+@media screen and (min-width: 300px) {
+  .custCard {
+    max-width: 120px;
+  }
+}
+@media screen and (min-width: 400px) {
+  .custCard {
+    max-width: 150px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .custCard {
+    max-width: 200px;
+  }
+}
+@media screen and (min-width: 600px) {
+  .custCard {
+    max-width: 250px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .custCard {
@@ -941,9 +1114,21 @@ footer .container-fluid {
   height: 70%;
 }
 .custCard h5 {
-  font-size: 0.5em;
+  margin-top: 1em;
+  font-size: 0.8em;
   color: #a7a7a7;
   transition: 0.2s;
+}
+@media screen and (min-width: 500px) {
+  .custCard h5 {
+    font-size: 1em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .custCard h5 {
+    font-size: 0.6em;
+    margin-top: 0;
+  }
 }
 @media screen and (min-width: 992px) {
   .custCard h5 {
@@ -959,9 +1144,20 @@ footer .container-fluid {
   text-decoration: underline;
 }
 .custCard h4 {
-  font-size: 0.5em;
+  font-size: 0.9em;
   color: white;
   transition: 0.2s;
+}
+@media screen and (min-width: 500px) {
+  .custCard h4 {
+    font-size: 1em;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .custCard h4 {
+    font-size: 0.7em;
+  }
 }
 @media screen and (min-width: 992px) {
   .custCard h4 {
@@ -993,10 +1189,10 @@ footer .container-fluid {
   border: none;
   opacity: 0;
   position: absolute;
-  transform: scale(0.5);
+  transform: scale(0.8);
   transition: 0.2;
-  bottom: 40%;
-  right: 5%;
+  bottom: 45%;
+  right: 10%;
 }
 .custCard .hoverCardButtonOthers:hover {
   background-color: #189945;
@@ -1005,16 +1201,41 @@ footer .container-fluid {
 .custCard .hoverCardButtonOthers i {
   margin-left: 4px;
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 400px) {
+  .custCard .hoverCardButtonOthers {
+    bottom: 40%;
+    transform: scale(0.9);
+  }
+}
+@media screen and (min-width: 500px) {
+  .custCard .hoverCardButtonOthers {
+    transform: scale(1);
+    bottom: 36%;
+  }
+}
+@media screen and (min-width: 768px) {
   .custCard .hoverCardButtonOthers {
     transform: scale(0.6);
+    bottom: 40%;
+    right: 7%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .custCard .hoverCardButtonOthers {
     bottom: 35%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .custCard .hoverCardButtonOthers {
+    transform: scale(0.7);
+    bottom: 38%;
   }
 }
 @media screen and (min-width: 1200px) {
   .custCard .hoverCardButtonOthers {
     transform: scale(0.7);
     bottom: 38%;
+    right: 13%;
   }
 }
 @media screen and (min-width: 1400px) {
@@ -1057,6 +1278,15 @@ footer .container-fluid {
   transition: 0.2s;
 }
 
+#consigliatiWrapper .strap:last-child {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  #consigliatiWrapper .strap:last-child {
+    display: block;
+  }
+}
+
 main {
   padding-bottom: 10em !important;
 }
@@ -1070,6 +1300,7 @@ main::-webkit-scrollbar {
   align-items: flex-end;
   padding-top: 4em;
   transition: 0.2s;
+  position: relative;
 }
 @media screen and (min-width: 992px) {
   #annuncioAB {
@@ -1095,6 +1326,24 @@ main::-webkit-scrollbar {
 }
 #annuncioAB a:hover {
   text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+  #annuncioAB {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+  }
+  #annuncioAB img {
+    height: 450px;
+  }
+  #annuncioAB div img {
+    box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.5);
+  }
+}
+@media screen and (max-width: 450px) {
+  #annuncioAB img {
+    height: 300px;
+  }
 }
 
 #wrapperAnnuncioAB {
@@ -1124,13 +1373,24 @@ main::-webkit-scrollbar {
   font-weight: 700;
   margin-bottom: 0.4em;
   transition: 0.2s;
-  overflow: hidden;
+  /*   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; */
+}
+@media screen and (max-width: 992px) {
+  #wrapperAnnuncioAB h1 {
+    font-size: 2.5em;
+  }
 }
 @media screen and (min-width: 1200px) {
   #wrapperAnnuncioAB h1 {
     font-size: 3.6em;
+  }
+}
+@media screen and (max-width: 768px) {
+  #wrapperAnnuncioAB h1 {
+    font-size: 1.8em;
+    margin-bottom: 0.2em;
   }
 }
 #wrapperAnnuncioAB #albumCredits {
@@ -1157,6 +1417,15 @@ main::-webkit-scrollbar {
 #wrapperAnnuncioAB #albumCredits #albumLength {
   color: #a7a7a7;
 }
+@media screen and (max-width: 768px) {
+  #wrapperAnnuncioAB {
+    width: 100%;
+    padding: 0.5em 1.5em;
+  }
+  #wrapperAnnuncioAB .albumAnnuncio {
+    display: none;
+  }
+}
 
 #albumRow {
   padding: 0;
@@ -1172,19 +1441,36 @@ main::-webkit-scrollbar {
   padding: 0;
 }
 #albumRow #albumButtonContainer {
-  padding: 1.5em 0 1.5em 2em;
+  padding: 1.5em;
   display: flex;
   align-items: center;
 }
-#albumRow #albumButtonContainer > i {
+#albumRow #albumButtonContainer div > i {
   font-size: 1.7em;
   color: #a7a7a7;
   margin-left: 0.8em;
   transition: 0.2s;
 }
-#albumRow #albumButtonContainer > i:hover {
+#albumRow #albumButtonContainer div > i:hover {
   color: white;
   transition: 0.2s;
+}
+#albumRow #albumButtonContainer .bi-shuffle {
+  margin-right: 16px;
+}
+@media screen and (max-width: 768px) {
+  #albumRow #albumButtonContainer {
+    padding: 0.5em 1.5em;
+    justify-content: space-between;
+  }
+  #albumRow #albumButtonContainer .bi-suit-heart {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  #albumRow #albumButtonContainer div > i {
+    font-size: 1.4em;
+  }
 }
 #albumRow #innerRowContainer {
   padding-left: 3.5em;
@@ -1218,12 +1504,15 @@ main::-webkit-scrollbar {
 }
 #albumRow .albumSongItem .firstItem {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
+  padding: 0;
 }
 #albumRow .albumSongItem .firstItem > p {
   color: white;
   margin-right: 15px;
   margin-bottom: 0;
+  width: auto;
 }
 #albumRow .albumSongItem .firstItem h3 {
   color: white;
@@ -1252,9 +1541,35 @@ main::-webkit-scrollbar {
 #albumRow .albumSongItem .length > p {
   margin-bottom: 0;
 }
+@media screen and (max-width: 768px) {
+  #albumRow .albumSongItem {
+    padding: 0.5em 1.5em;
+  }
+}
 
 #trackListContainer {
   margin-bottom: 10em;
+}
+@media screen and (max-width: 768px) {
+  #trackListContainer {
+    padding: 0;
+    margin-bottom: 8em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #albumDetails {
+    margin-top: 0.5em;
+  }
+  #albumDetails .dot:nth-child(1) {
+    display: none;
+  }
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 main {
@@ -1264,8 +1579,9 @@ main {
 #annuncioAR {
   padding: 15em 0 1.5em 1em;
   background-size: cover;
-  background-position: top;
+  background-position: center;
   transition: 0.2s;
+  text-shadow: 0px 0px 10px #000000;
 }
 @media screen and (min-width: 1200px) {
   #annuncioAR {
@@ -1296,66 +1612,90 @@ main {
   font-weight: 900;
   font-size: 5em;
   margin-bottom: 0.2em;
+  transition: all 0.2s;
+}
+@media screen and (max-width: 576px) {
+  #annuncioAR h1 {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 400px) {
+  #annuncioAR h1 {
+    font-size: 3em;
+  }
+}
+@media screen and (max-width: 768px) {
+  #annuncioAR h1 {
+    margin-bottom: 0;
+  }
 }
 #annuncioAR > p {
   color: white;
   margin: 0;
 }
+@media screen and (max-width: 768px) {
+  #annuncioAR {
+    padding-bottom: 0;
+  }
+}
 
 #artistRow {
   margin: 0 !important;
+  padding-bottom: 7em;
+}
+@media screen and (max-width: 768px) {
+  #artistRow {
+    padding-bottom: 2em;
+  }
 }
 #artistRow .col {
   padding: 0;
 }
 #artistRow #artistButtonContainer {
-  padding: 1.5em 0 1.5em 2em;
+  padding: 0.5em 1em;
   display: flex;
   align-items: center;
 }
-#artistRow #artistButtonContainer .bi-three-dots {
+#artistRow #artistButtonContainer .bi-three-dots,
+#artistRow #artistButtonContainer .bi-three-dots-vertical {
   color: #a7a7a7;
   font-size: 1.5em;
   margin-left: 20px;
 }
-#artistRow #artistButtonContainer .bi-three-dots:hover {
+#artistRow #artistButtonContainer .bi-three-dots:hover,
+#artistRow #artistButtonContainer .bi-three-dots-vertical:hover {
   color: white;
+}
+@media screen and (max-width: 768px) {
+  #artistRow #artistButtonContainer {
+    justify-content: space-between;
+  }
+}
+#artistRow #artistSongRow {
+  padding: 0;
 }
 #artistRow #artistSongRow h4 {
   color: white;
   font-size: 1.2em;
   font-weight: 900;
-  padding-left: 2em;
   margin-bottom: 1em;
 }
+@media screen and (max-width: 768px) {
+  #artistRow #artistSongRow {
+    padding: 0 1em;
+  }
+  #artistRow #artistSongRow div {
+    padding-left: 0;
+  }
+}
 #artistRow #artistSongRow #songContainer {
-  margin-left: 3em;
   padding: 0 10px;
   border-radius: 5px;
   color: #a7a7a7;
   display: flex;
   align-items: center;
 }
-#artistRow #artistSongRow #songContainer:hover {
-  background-color: #383838;
-  transition: 0.2s;
-}
-#artistRow #artistSongRow #songContainer #firstSongData {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-#artistRow #artistSongRow #songContainer #firstSongData img {
-  width: 30px;
-  margin: 7px 15px;
-}
-@media screen and (min-width: 992px) {
-  #artistRow #artistSongRow #songContainer #firstSongData img {
-    width: 35px;
-  }
-}
-#artistRow #artistSongRow #songContainer #firstSongData p {
+#artistRow #artistSongRow #songContainer p {
   font-size: 0.6em;
   color: white;
   margin: 0;
@@ -1364,19 +1704,62 @@ main {
   text-overflow: ellipsis;
   transition: 0.2s;
 }
+@media screen and (max-width: 768px) {
+  #artistRow #artistSongRow #songContainer p {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 500px) {
+  #artistRow #artistSongRow #songContainer p {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 400px) {
+  #artistRow #artistSongRow #songContainer p {
+    font-size: 0.7em;
+  }
+}
 @media screen and (min-width: 992px) {
-  #artistRow #artistSongRow #songContainer #firstSongData p {
+  #artistRow #artistSongRow #songContainer p {
     font-size: 0.7em;
   }
 }
 @media screen and (min-width: 1200px) {
-  #artistRow #artistSongRow #songContainer #firstSongData p {
+  #artistRow #artistSongRow #songContainer p {
     font-size: 0.8em;
   }
 }
 @media screen and (min-width: 1400px) {
-  #artistRow #artistSongRow #songContainer #firstSongData p {
+  #artistRow #artistSongRow #songContainer p {
     font-size: 0.9em;
+  }
+}
+#artistRow #artistSongRow #songContainer:hover {
+  background-color: #383838;
+  transition: 0.2s;
+}
+#artistRow #artistSongRow #songContainer .songData {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#artistRow #artistSongRow #songContainer .songData img {
+  width: 30px;
+  margin: 7px 15px;
+}
+@media screen and (min-width: 992px) {
+  #artistRow #artistSongRow #songContainer .songData img {
+    width: 35px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #artistRow #artistSongRow #songContainer .songData img {
+    width: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #artistRow #artistSongRow #songContainer .songData {
+    padding: 0;
   }
 }
 #artistRow #artistSongRow #songContainer > p {
@@ -1394,6 +1777,12 @@ main {
 @media screen and (min-width: 1200px) {
   #artistRow #artistSongRow #songContainer > p {
     font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 768px) {
+  #artistRow #artistSongRow #songContainer {
+    margin-left: 0;
+    padding: 0;
   }
 }
 #artistRow #artistSongRow #otherButton {
@@ -1419,6 +1808,12 @@ main {
   display: flex;
   align-items: center;
   padding-left: 2.5em;
+}
+@media screen and (max-width: 768px) {
+  #artistRow #artistSongRow #currentArtistContainer #currentArtist {
+    padding-left: 0;
+    margin: 1em 0;
+  }
 }
 #artistRow #artistSongRow #currentArtistContainer #currentArtist img {
   width: 50px;
@@ -1461,6 +1856,16 @@ main {
     font-size: 1em;
   }
 }
+@media screen and (max-width: 768px) {
+  #artistRow #artistSongRow #currentArtistContainer #currentArtist #asideSongTextContainer h3 {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 400px) {
+  #artistRow #artistSongRow #currentArtistContainer #currentArtist #asideSongTextContainer h3 {
+    font-size: 0.8em;
+  }
+}
 #artistRow #artistSongRow #currentArtistContainer #currentArtist #asideSongTextContainer p {
   color: #a7a7a7;
   font-size: 0.7em;
@@ -1470,6 +1875,46 @@ main {
   #artistRow #artistSongRow #currentArtistContainer #currentArtist #asideSongTextContainer p {
     font-size: 0.8em;
   }
+}
+
+#mobileNavContainer .navigationMobile {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+}
+#mobileNavContainer .navigationMobile div i {
+  padding: 0 0.25em;
+}
+@media screen and (max-width: 768px) {
+  #mobileNavContainer {
+    padding: 1.5em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #artistSongRow {
+    display: flex;
+  }
+  #currentArtistContainer {
+    order: 0;
+  }
+  #songListWrapper {
+    order: 2;
+    padding-bottom: 10em;
+  }
+  #artistSongRow h4 {
+    padding-left: 0;
+  }
+  #otherButton {
+    display: none;
+  }
+}
+#artistName {
+  text-shadow: 0px 0px 10px #000000;
+}
+
+.TestWhite {
+  color: white;
+  font-size: 0.9em;
 }
 
 .dropdown1 {
@@ -1530,4 +1975,262 @@ main {
 .dopperRadius li hr {
   background-color: #3e3e3e;
   margin: 0 4px;
+}
+
+.songDropdown {
+  z-index: 9999;
+  background-color: #2a2a2a;
+}
+.songDropdown li {
+  padding: 8px 12px;
+}
+.songDropdown li a {
+  color: #a7a7a7;
+}
+
+@media screen and (max-width: 767px) {
+  main {
+    height: 100vh;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #ultimiAscolti {
+    margin-top: 1em;
+  }
+}
+#ultimiAscolti h2 {
+  color: white;
+}
+
+#greetingIcons {
+  color: white;
+  width: 30%;
+  margin: 0.75rem 1em;
+}
+
+#mobileOptions {
+  color: white;
+  font-size: 0.6em;
+  margin: 0 2.5em;
+}
+#mobileOptions > div {
+  margin-right: 2em;
+}
+
+#consigliatiWrapper > div {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  #consigliatiWrapper > div {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgb(0, 0, 0) 25%, rgba(24, 24, 24, 0.8) 50%);
+  }
+}
+#mobilePlayer {
+  width: 97%;
+  margin: 0 auto;
+  background-color: #2a2a2a;
+  padding: 0.6em;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+}
+#mobilePlayer i {
+  font-size: 1.4em;
+  transition: all 0.2s;
+}
+#mobilePlayer .bi-play-fill {
+  font-size: 1.8em;
+  transition: all 0.2s;
+}
+#mobilePlayer > div {
+  padding: 0;
+}
+#mobilePlayer p {
+  transition: all 0.2s;
+  margin: 0;
+}
+
+@media screen and (max-width: 576px) {
+  #mobilePlayer i {
+    font-size: 1.2em;
+  }
+  #mobilePlayer .bi-play-fill {
+    font-size: 1.6em;
+  }
+  #mobilePlayer p {
+    font-size: 0.9em;
+  }
+}
+#mobilePlayerText {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#mobileNav {
+  padding: 0.7em 0;
+  z-index: 100;
+}
+#mobileNav ul {
+  /*     display: flex;
+  align-items: center;
+  justify-content: space-around; */
+}
+#mobileNav ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.2s;
+}
+#mobileNav ul li:hover {
+  color: white;
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+#mobileNav ul li i {
+  font-size: 1.5em;
+}
+#mobileNav ul li p {
+  margin: 0;
+  font-size: 0.75em;
+}
+
+#searchContainer {
+  height: 120vh;
+  overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  transition: 0.2s;
+  padding: 1.5em;
+  z-index: 5000;
+  opacity: 0;
+  display: none;
+  top: 100vh;
+  position: absolute;
+  background-color: black;
+  transition: ease-in-out 0.5s;
+}
+
+#searchContainer::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
+}
+
+#searchTitle {
+  color: white;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+#searchBar {
+  margin: 1.5em 0 1.5em 0;
+  display: flex;
+  align-items: center;
+  background-color: #2a2a2a;
+  border-radius: 5px;
+}
+#searchBar input {
+  width: 90%;
+  height: 80%;
+  color: #a7a7a7;
+  background-color: inherit;
+  border: none;
+}
+#searchBar i {
+  color: white;
+  font-size: 1.5em;
+  padding: 0 0.5em 0 0;
+}
+
+#sfoglia {
+  color: white;
+}
+#sfoglia h3 {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 500;
+  font-margin-bottom: 1em;
+}
+#sfoglia #typeRowContainer {
+  justify-content: center;
+}
+#sfoglia .searchType {
+  padding: 0;
+  margin: 0.5em;
+  height: 80px;
+  border-radius: 5px;
+  transition: 0.2s;
+}
+#sfoglia .searchType:hover {
+  transform: scale(1.05);
+  transition: 0.2s;
+}
+#sfoglia .searchType h4 {
+  padding-top: 0.9em;
+  padding-left: 0.6em;
+  font-size: 0.9em;
+}
+#sfoglia .one {
+  background-color: #e03300;
+}
+#sfoglia .one:hover {
+  box-shadow: 0px 0px 6px 5px #e03300;
+}
+#sfoglia .two {
+  background-color: #1e345d;
+}
+#sfoglia .two:hover {
+  box-shadow: 0px 0px 6px 5px #1e345d;
+}
+#sfoglia .three {
+  background-color: #e8115c;
+}
+#sfoglia .three:hover {
+  box-shadow: 0px 0px 6px 5px #e8115c;
+}
+#sfoglia .four {
+  background-color: #16890d;
+}
+#sfoglia .four:hover {
+  box-shadow: 0px 0px 6px 5px #16890d;
+}
+#sfoglia .five {
+  background-color: #bc5800;
+}
+#sfoglia .five:hover {
+  box-shadow: 0px 0px 6px 5px #bc5800;
+}
+#sfoglia .six {
+  background-color: #d84000;
+}
+#sfoglia .six:hover {
+  box-shadow: 0px 0px 6px 5px #d84000;
+}
+#sfoglia .seven {
+  background: rgb(116, 94, 107);
+  background: linear-gradient(0deg, rgb(116, 94, 107) 0%, rgb(225, 17, 139) 40%);
+}
+#sfoglia .seven:hover {
+  box-shadow: 0px 0px 6px 5px #e1118b;
+}
+#sfoglia .eight {
+  background: rgb(116, 108, 124);
+  background: linear-gradient(0deg, rgb(116, 108, 124) 0%, rgb(140, 103, 172) 40%);
+}
+#sfoglia .eight:hover {
+  box-shadow: 0px 0px 6px 5px #8c67ac;
+}
+#sfoglia .nine {
+  background-color: #1e345d;
+}
+#sfoglia .nine:hover {
+  box-shadow: 0px 0px 6px 5px #1e345d;
 }/*# sourceMappingURL=app.css.map */
