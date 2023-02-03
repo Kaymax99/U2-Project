@@ -769,6 +769,10 @@ footer .container-fluid {
   background-color: #5e5e5e;
 }
 
+.makeItGreen {
+  color: #1db954;
+}
+
 .btnContainer {
   display: flex;
   gap: 15px;
