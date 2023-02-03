@@ -77,7 +77,7 @@ drawArtistPage = async () => {
   for (let i = 0; i < songsLength.length; i++) {
     songList.innerHTML += `
   <div id="songContainer">
-    <div id="firstSongData">
+    <div id="firstSongData" onclick="addToPlayer()">
       <p>${i + 1}</p>
       <img src="${songsLength[i].album.cover_small}" alt="album cover" />
       <p>${songsLength[i].title}</p>
@@ -92,12 +92,10 @@ drawArtistPage = async () => {
   <p>di ${artist.name}</p>
   `;
 
-
-
-  const article = document.querySelector('#annuncioAR');
+  const article = document.querySelector("#annuncioAR");
   const style = article.style.backgroundImage;
-  const urlStart = style.indexOf('url(') + 4;
-  const urlEnd = style.indexOf(')', urlStart);
+  const urlStart = style.indexOf("url(") + 4;
+  const urlEnd = style.indexOf(")", urlStart);
   const urlwithcomas = style.substring(urlStart, urlEnd);
   let url = urlwithcomas.slice(1, -1);
 
@@ -111,9 +109,8 @@ drawArtistPage = async () => {
   img.src = url;
   console.log(img);
 
-
   img.addEventListener("load", function () {
-    console.log(img)
+    console.log(img);
     colorThief.getColor(img);
 
     /* console.log(img.src) */
@@ -122,14 +119,11 @@ drawArtistPage = async () => {
 
     // get color palette
     let color = colorThief.getColor(img);
-    console.log(color)
+    console.log(color);
 
     // set the background color
     background.style.backgroundColor = "rgb(" + color + ")";
     background.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
-
-
-
 
     const main = document.querySelector("main");
 
@@ -151,23 +145,12 @@ drawArtistPage = async () => {
         albumNavName.style.opacity = "100%";
       }
     };
-
-
-
     main.addEventListener("scroll", changeNav);
   });
-
-
-
-
 };
-
 
 drawArtistPage();
 // Color Thief logic
-
-
-
 
 // const art = document.querySelector("#annuncioAR")
 // console.log(art);
@@ -193,5 +176,3 @@ drawArtistPage();
 //   background.style.background = `linear-gradient(to bottom, rgb(${color}), transparent)`;
 
 // })
-
-
