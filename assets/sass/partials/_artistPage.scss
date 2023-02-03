@@ -5,7 +5,7 @@ main {
 #annuncioAR {
   padding: 15em 0 1.5em 1em;
   background-size: cover;
-  background-position: top;
+  background-position: center;
   transition: 0.2s;
 
   @media screen and (min-width: 1200px) {
@@ -30,6 +30,7 @@ main {
       margin-left: 10px;
 
       font-size: 0.9em;
+      text-shadow: 0px 0px 10px #000000;
     }
   }
 
@@ -61,6 +62,11 @@ main {
 
 #artistRow {
   margin: 0 !important;
+  padding-bottom: 7em;
+  @media screen and (max-width: 768px) {
+    padding-bottom: 2em;
+  }
+
   .col {
     padding: 0;
   }
@@ -301,4 +307,7 @@ main {
   #otherButton {
     display: none;
   }
+}
+#artistName {
+  text-shadow: 0px 0px 10px #000000;
 }

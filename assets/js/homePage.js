@@ -2,7 +2,8 @@ const baseAlbumURL = "https://striveschool-api.herokuapp.com/api/deezer/album/";
 const spotlightAlbum = 120044;
 
 const arrayIDAlbum = [
-  75621062, 8887733, 7823038, 7824595, 7824584, 91333612, 345755977, 192529232, 100674742, 59853252, 130678282,
+  75621062, 8887733, 7823038, 7824595, 7824584, 91333612, 345755977, 192529232,
+  100674742, 59853252, 130678282,
 ];
 
 shuffleArray(arrayIDAlbum);
@@ -94,7 +95,10 @@ const drawAnnuncio = async (album) => {
   });
 
   document.addEventListener("click", function (event) {
-    if (!dropdownToggle.contains(event.target) && dropdownContent.style.display === "block") {
+    if (
+      !dropdownToggle.contains(event.target) &&
+      dropdownContent.style.display === "block"
+    ) {
       dropdownContent.style.display = "none";
     }
   });
@@ -158,7 +162,9 @@ const drawAlbum = (albumArray) => {
           <div class="col custCard">
             <img src="${albumArray[i].cover_big}" />
             <a href="#">
-              <button class="hoverCardButtonOthers" onclick="addToPlayer(${i + 6})">
+              <button class="hoverCardButtonOthers" onclick="addToPlayer(${
+                i + 6
+              })">
                 <i class="fa-sharp fa-solid fa-play"></i>
               </button>
             </a>
@@ -352,29 +358,6 @@ const addToPlayer = (index) => {
   //   })
   // })
 };
-
-const searchAppear = function () {
-  console.log("clicked");
-  const searchLayover = document.getElementById("searchContainer");
-  if (window.getComputedStyle(searchLayover).display === "none") {
-    searchLayover.style.display = "block";
-  } else {
-    setTimeout(() => {
-      searchLayover.style.display = "none";
-    }, 500);
-  }
-
-  if (window.getComputedStyle(searchLayover).opacity === "0") {
-    searchLayover.style.opacity = "1";
-    searchLayover.style.top = "0";
-  } else {
-    searchLayover.style.opacity = "0";
-    searchLayover.style.top = "100vh";
-  }
-};
-
-const searchButton = document.getElementById("searchButtonMobileNav");
-searchButton.onclick = searchAppear;
 
 const startDrawingAlbums = (albumArray, givenNumber) => {
   for (i = 0; i < albumArray.length; i++) {

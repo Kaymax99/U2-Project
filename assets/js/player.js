@@ -1,3 +1,26 @@
+const searchAppear = function () {
+  console.log("clicked");
+  const searchLayover = document.getElementById("searchContainer");
+  if (window.getComputedStyle(searchLayover).display === "none") {
+    searchLayover.style.display = "block";
+  } else {
+    setTimeout(() => {
+      searchLayover.style.display = "none";
+    }, 500);
+  }
+
+  if (window.getComputedStyle(searchLayover).opacity === "0") {
+    searchLayover.style.opacity = "1";
+    searchLayover.style.top = "0";
+  } else {
+    searchLayover.style.opacity = "0";
+    searchLayover.style.top = "100vh";
+  }
+};
+
+const searchButton = document.getElementById("searchButtonMobileNav");
+searchButton.onclick = searchAppear;
+
 let slider = document.getElementById("slider-round");
 noUiSlider.create(slider, {
   start: 20,
