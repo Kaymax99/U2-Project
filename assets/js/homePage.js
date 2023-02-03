@@ -243,16 +243,36 @@ const addToPlayer = (index) => {
   const arrayToStoreAlbums = albumArray;
 
   const playButton = document.querySelector("#playBtnPlayer");
-  const songArray = arrayToStoreAlbums[index].tracks.data[0].preview;
+  let songArray = "";
+  songArray = arrayToStoreAlbums[index].tracks.data[0].preview;
   console.log(songArray);
+
   const audio = new Audio(songArray);
 
-  playButton.addEventListener("click", () => {
+  document.addEventListener("click", () => {
+    console.log("000" + audio);
+
     audio.play();
+    console.log(audio + "000");
+
     playButton.style.color = "#1ED760";
-    playButton.addEventListener("click", () => {
+    document.addEventListener("click", () => {
       audio.pause();
       playButton.style.color = "white";
+    });
+  });
+
+  const miniplay = document.querySelector("#mobilePlayer>.col-1>.bi-play-fill");
+
+  document.addEventListener("click", () => {
+    console.log("000" + audio);
+    audio.play();
+    console.log(audio + "000");
+
+    miniplay.style.color = "#1ED760";
+    document.addEventListener("click", () => {
+      audio.pause();
+      miniplay.style.color = "white";
     });
   });
 
@@ -276,24 +296,61 @@ const addToPlayer = (index) => {
 </div>`;
 
   // Mobile Player
-  const mobilePlayer = document.getElementById("mobilePlayer");
-  mobilePlayer.innerHTML = "";
-  mobilePlayer.innerHTML += `
-  <div class="d-none d-sm-block col-sm-1 d-flex align-items-center"><img
-  src="${albumArray[index].cover_small}"
-  alt=""
-/></div>
-  <div class="col-9 d-flex align-items-center">
-    <p id="mobilePlayerText">${albumArray[index].title}</p>
-  </div>
-  <div
-    class="col-1 d-flex justify-content-end align-items-center gap-3"
-  >
-    <i class="bi bi-pc-display"></i>
-    <i class="bi bi-heart"></i>
-    <i class="bi bi-play-fill"></i>
-  </div>
+  // change image
+  const mobileImage = document.querySelector("#mobilePlayer>div");
+  mobileImage.innerHTML = `
+
+<img src="${albumArray[index].cover_small}" alt=""/></div>
+`;
+  const mobileText = document.querySelector("#mobilePlayer>.col-9");
+
+  mobileText.innerHTML = `
+
+  <p id="mobilePlayerText">${albumArray[index].title}</p>
   `;
+
+  /////
+  // const mobilePlayer = document.getElementById("mobilePlayer");
+
+  // mobilePlayer.innerHTML = "";
+  // mobilePlayer.innerHTML += `
+  //   <div class="d-none d-sm-block col-sm-1 d-flex align-items-center"><img
+  //     src="${albumArray[index].cover_small}"
+  //     alt=""
+  //   /></div>
+  //   <div class="col-9 d-flex align-items-center">
+  //     <p id="mobilePlayerText">${albumArray[index].title}</p>
+  //   </div>
+  //   <div
+  //     class="col-1 d-flex justify-content-end align-items-center gap-3"
+  //     >
+  //   <i class="bi bi-pc-display"></i>
+  //   <i class="bi bi-heart"></i>
+  //   <i class="bi bi-play-fill"></i>
+  //   </div>
+  // `;
+
+  // console.log(audio)
+  // console.log("*-****")
+  // console.log(miniplay)
+
+  // const arrayToStoreAlbums = albumArray
+
+  // const playButton = document.querySelector("#playBtnPlayer")
+  // const songArray = arrayToStoreAlbums[index].tracks.data[0].preview
+  // console.log(songArray)
+
+  // const audio = new Audio(songArray)
+
+  // playButton.addEventListener("click", () => {
+  //   audio.play()
+  //   playButton.style.color = "#1ED760"
+  //   playButton.addEventListener("click", () => {
+  //     audio.pause()
+  //     playButton.style.color = "white"
+
+  //   })
+  // })
 };
 
 const searchAppear = function () {
