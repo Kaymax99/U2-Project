@@ -172,60 +172,164 @@
           <div class="profile">
             <img src="./assets/img/vincenzo.jpg" alt="profile picture" />
             <div>
-              <h4 class="profile-title">
-                <a href="https://github.com/VincenzoDePascale" target="_blank">Vincenzo De Pascale</a>
-              </h4>
-              <p>Dogs - 2011 Remaster <span>&#x2022;</span> Pink Floyd</p>
-              <div class="profile-description">
-                <i class="bi bi-vinyl"></i>
-                <p id="album">Animals Remaster</p>
+              <div class="dropdown d-flex">
+                <button id="userWrapper" class="btn btn-secondary dropdown-toggle" type="button"
+                  data-bs-toggle="dropdown" aria-expanded="false" class="dropBtn">
+                  <img src="./assets/img/cat.jpg" width="28px" height="28px" />
+                  <span>Giorgio</span>
+                </button>
+                <ul id="userDropdown" class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                      <p>Account</p>
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Profilo</a></li>
+                  <li>
+                    <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                      <p>Passa a Premium</p>
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Sessione Privata</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Impostazioni</a></li>
+                  <hr />
+                  <li><a class="dropdown-item" href="#">Log out</a></li>
+                </ul>
               </div>
             </div>
-            <p>4 ore</p>
-          </div>
-          <div class="profile">
-            <img src="./assets/img/carlos.webp" alt="profile picture" />
-            <div>
-              <h4 class="profile-title">
-                <a href="https://github.com/csarmientobaca" target="_blank">Carlos Sarmiento</a>
-              </h4>
-              <p>Sweer Meow o'mine <span>&#x2022;</span> MetalCats</p>
-              <div class="profile-description">
-                <i class="bi bi-music-note-beamed"></i>
-                <p id="album">Appetite For Destruction</p>
+            </nav>
+
+            <article id="annuncio" class="mx-4 d-none d-md-flex"></article>
+
+            <section id="ultimiAscolti">
+              <div id="greetingContainer" class="d-flex justify-content-between align-items-center">
+                <div>
+                  <h2>Buonasera</h2>
+                </div>
+                <div class="d-md-none d-flex gap-3">
+                  <i class="bi bi-bell"></i><i class="bi bi-clock-history"></i><i class="bi bi-gear"></i>
+                </div>
               </div>
-            </div>
-            <p>8 ore</p>
-          </div>
-          <div class="profile">
-            <img src="./assets/img/ale.JPG" alt="profile picture" />
-            <div>
-              <h4 class="profile-title">
-                <a href="https://github.com/AleOnta" target="_blank">Alessandro Ontani</a>
-              </h4>
-              <p>No Quarter <span>&#x2022;</span> Led Zeppelin</p>
-              <div class="profile-description">
-                <i class="bi bi-vinyl"></i>
-                <p id="album">Mothership Remaster</p>
+              <div class="ps-4 mb-4 d-md-none" id="mobileTopBtns">
+                <button class="me-3" id="musica">Musica</button>
+                <button id="podcast">Podcast e show</button>
               </div>
-            </div>
-            <p>12 ore</p>
-          </div>
-          <div class="profile">
-            <img src="./assets/img/simone.jpg" alt="profile picture" />
-            <div>
-              <h4 class="profile-title">
-                <a href="https://github.com/Kaymax99" target="_blank">Simone Basile</a>
-              </h4>
-              <p>Hurricane <span>&#x2022;</span> I Prevail</p>
-              <div class="profile-description">
-                <i class="bi bi-music-note-beamed"></i>
-                <p id="album">Trauma</p>
+              <div id="ultimiAscoltiWrapper" class="row d-flex justify-content-between gx-0 px-5 gap-3"></div>
+            </section>
+            <hr />
+
+            <section id="consigliati">
+              <div id="headingConsigliati">
+                <h2 class="d-none d-md-block">Altro di ciò che ti piace</h2>
+                <button class="showMore d-none d-md-block">Visualizza Tutto</button>
               </div>
-            </div>
-            <p>16 ore</p>
+              <div class="mx-4">
+                <div id="consigliatiWrapper" class="row row-cols-2 row-cols-md-5 d-flex justify-content-between gx-0">
+                </div>
+              </div>
+            </section>
+            </main>
+
+            <aside class="col-2 d-none d-lg-block">
+              <div id="upper-right-nav">
+                <div id="friendsActivity">Attività amici</div>
+                <div id="activityIcon">
+                  <i class="bi bi-people"></i>
+                  <i class="bi bi-x-lg"></i>
+                </div>
+              </div>
+              <div id="main-right-nav">
+                <div class="profile">
+                  <img src="./assets/img/vincenzo.jpg" alt="profile picture" />
+                  <div>
+                    <h4 class="profile-title">
+                      <a href="https://github.com/VincenzoDePascale" target="_blank">Vincenzo De Pascale</a>
+                    </h4>
+                    <p>Dogs - 2011 Remaster <span>&#x2022;</span> Pink Floyd</p>
+                    <div class="profile-description">
+                      <i class="bi bi-vinyl"></i>
+                      <p id="album">Animals Remaster</p>
+                    </div>
+                  </div>
+                  <p>4 ore</p>
+                </div>
+                <div class="profile">
+                  <img src="./assets/img/carlos.webp" alt="profile picture" />
+                  <div>
+                    <h4 class="profile-title">
+                      <a href="https://github.com/csarmientobaca" target="_blank">Carlos Sarmiento</a>
+                    </h4>
+                    <p>Sweer Meow o'mine <span>&#x2022;</span> MetalCats</p>
+                    <div class="profile-description">
+                      <i class="bi bi-music-note-beamed"></i>
+                      <p id="album">Appetite For Destruction</p>
+                    </div>
+                  </div>
+                  <p>8 ore</p>
+                </div>
+                <div class="profile">
+                  <img src="./assets/img/ale.JPG" alt="profile picture" />
+                  <div>
+                    <h4 class="profile-title">
+                      <a href="https://github.com/AleOnta" target="_blank">Alessandro Ontani</a>
+                    </h4>
+                    <p>No Quarter <span>&#x2022;</span> Led Zeppelin</p>
+                    <div class="profile-description">
+                      <i class="bi bi-vinyl"></i>
+                      <p id="album">Mothership Remaster</p>
+                    </div>
+                  </div>
+                  <p>12 ore</p>
+                </div>
+                <div class="profile">
+                  <img src="./assets/img/simone.jpg" alt="profile picture" />
+                  <div>
+                    <h4 class="profile-title">
+                      <a href="https://github.com/Kaymax99" target="_blank">Simone Basile</a>
+                    </h4>
+                    <p>Hurricane <span>&#x2022;</span> I Prevail</p>
+                    <div class="profile-description">
+                      <i class="bi bi-music-note-beamed"></i>
+                      <p id="album">Trauma</p>
+                    </div>
+                  </div>
+                  <p>16 ore</p>
+                </div>
+                <p>8 ore</p>
+              </div>
+              <div class="profile">
+                <img src="./assets/img/ale.JPG" alt="profile picture" />
+                <div>
+                  <h4 class="profile-title">
+                    <a href="https://github.com/AleOnta" target="_blank">Alessandro Ontani</a>
+                  </h4>
+                  <p>No Quarter <span>&#x2022;</span> Led Zeppelin</p>
+                  <div class="profile-description">
+                    <i class="bi bi-vinyl"></i>
+                    <p id="album">Mothership Remaster</p>
+                  </div>
+                </div>
+                <p>12 ore</p>
+              </div>
+              <div class="profile">
+                <img src="./assets/img/simone.jpg" alt="profile picture" />
+                <div>
+                  <h4 class="profile-title">
+                    <a href="https://github.com/Kaymax99" target="_blank">Simone Basile</a>
+                  </h4>
+                  <p>Hurricane <span>&#x2022;</span> I Prevail</p>
+                  <div class="profile-description">
+                    <i class="bi bi-music-note-beamed"></i>
+                    <p id="album">Trauma</p>
+                  </div>
+                </div>
+                <p>16 ore</p>
+              </div>
           </div>
-        </div>
       </aside>
 
       <footer class="px-0">
