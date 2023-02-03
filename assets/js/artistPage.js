@@ -116,8 +116,8 @@ drawArtistPage = async () => {
 
   const article = document.querySelector("#annuncioAR");
   const style = article.style.backgroundImage;
-  const urlStart = style.indexOf("url(") + 4;
-  const urlEnd = style.indexOf(")", urlStart);
+  const urlStart = style.indexOf("url") + 4;
+  const urlEnd = style.indexOf("", urlStart);
   const urlwithcomas = style.substring(urlStart, urlEnd);
   let url = urlwithcomas.slice(1, -1);
 
