@@ -80,6 +80,13 @@
   i {
     margin-left: 4px;
   }
+  @media screen and (max-width: 768px) {
+    justify-self: end;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 1.1em;
+    padding: 0.6em;
+  }
 }
 
 #followButton {
@@ -88,7 +95,6 @@
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid $c-text-subdued;
   border-radius: 5px;
-  margin-left: 20px;
   color: $c-text-primary;
   transition: 0.2s;
   &:hover {
@@ -106,5 +112,20 @@
   border-radius: 25px;
   &:hover {
     background-color: #383838;
+  }
+}
+
+.navigationMobile {
+  position: absolute;
+  left: 20px;
+  border: none;
+  background-color: unset;
+  color: $c-text-primary;
+  font-size: 1.8em;
+}
+#mobileTopBtns {
+  transition: 0.2s;
+  @media screen and(max-width: 500px) {
+    font-size: 0.8em;
   }
 }

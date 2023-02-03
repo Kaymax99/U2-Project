@@ -13,8 +13,15 @@ main {
     width: 100%;
     position: fixed;
     padding: 8px 10px;
-    z-index: 9999;
+    z-index: 9997;
     transition: background-color 0.3s;
+
+    @media screen and (max-width: 768px) {
+      justify-content: start;
+      div #pageContentNav {
+        margin-left: 15px;
+      }
+    }
 
     @media screen and (min-width: 768px) {
       width: 75%;
@@ -27,7 +34,7 @@ main {
     @include row;
     align-items: center;
     justify-content: space-between;
-    .bi {
+    .navigation .bi {
       font-size: 1.5em;
       color: $c-text-primary;
     }

@@ -5,7 +5,7 @@ main {
 #annuncioAR {
   padding: 15em 0 1.5em 1em;
   background-size: cover;
-  background-position: top;
+  background-position: center;
   transition: 0.2s;
 
   @media screen and (min-width: 1200px) {
@@ -30,6 +30,7 @@ main {
       margin-left: 10px;
 
       font-size: 0.9em;
+      text-shadow: 0px 0px 10px #000000;
     }
   }
 
@@ -38,27 +39,46 @@ main {
     font-weight: 900;
     font-size: 5em;
     margin-bottom: 0.2em;
+    transition: all 0.2s;
+    @media screen and (max-width: 576px) {
+      font-size: 4em;
+    }
+    @media screen and (max-width: 400px) {
+      font-size: 3em;
+    }
+    @media screen and (max-width: 768px) {
+      margin-bottom: 0;
+    }
   }
 
   > p {
     color: $c-text-primary;
     margin: 0;
   }
+  @media screen and (max-width: 768px) {
+    padding-bottom: 0;
+  }
 }
 
 #artistRow {
   margin: 0 !important;
+  padding-bottom: 7em;
+  @media screen and (max-width: 768px) {
+    padding-bottom: 2em;
+  }
+
   .col {
     padding: 0;
   }
 
   #artistButtonContainer {
-    padding: 1.5em 0 1.5em 2em;
+    padding: 0.5em 1em;
 
     display: flex;
     align-items: center;
 
-    .bi-three-dots {
+    .bi-three-dots,
+    .bi-three-dots-vertical {
       color: $c-text-subdued;
       font-size: 1.5em;
       margin-left: 20px;
@@ -67,32 +87,71 @@ main {
         color: $c-text-primary;
       }
     }
+    @media screen and (max-width: 768px) {
+      justify-content: space-between;
+    }
   }
 
   #artistSongRow {
+    padding: 0;
     h4 {
       color: $c-text-primary;
       font-size: 1.2em;
       font-weight: 900;
-      padding-left: 2em;
       margin-bottom: 1em;
+    }
+    @media screen and (max-width: 768px) {
+      padding: 0 1em;
+      div {
+        padding-left: 0;
+      }
     }
 
     #songContainer {
-      margin-left: 3em;
       padding: 0 10px;
       border-radius: 5px;
       color: $c-text-subdued;
       display: flex;
       align-items: center;
 
+      p {
+        font-size: 0.6em;
+        color: $c-text-primary;
+        margin: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        transition: 0.2s;
+
+        @media screen and (max-width: 768px) {
+          font-size: 1em;
+        }
+
+        @media screen and (max-width: 500px) {
+          font-size: 0.8em;
+        }
+
+        @media screen and (max-width: 400px) {
+          font-size: 0.7em;
+        }
+
+        @media screen and (min-width: 992px) {
+          font-size: 0.7em;
+        }
+        @media screen and (min-width: 1200px) {
+          font-size: 0.8em;
+        }
+        @media screen and (min-width: 1400px) {
+          font-size: 0.9em;
+        }
+      }
+
       &:hover {
         background-color: #383838;
         transition: 0.2s;
       }
 
-      #firstSongData {
-        width: 50%;
+      .songData {
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -103,26 +162,12 @@ main {
           @media screen and (min-width: 992px) {
             width: 35px;
           }
+          @media screen and (max-width: 768px) {
+            width: 50px;
+          }
         }
-
-        p {
-          font-size: 0.6em;
-          color: $c-text-primary;
-          margin: 0;
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          transition: 0.2s;
-
-          @media screen and (min-width: 992px) {
-            font-size: 0.7em;
-          }
-          @media screen and (min-width: 1200px) {
-            font-size: 0.8em;
-          }
-          @media screen and (min-width: 1400px) {
-            font-size: 0.9em;
-          }
+        @media screen and (max-width: 768px) {
+          padding: 0;
         }
       }
 
@@ -139,6 +184,10 @@ main {
         @media screen and (min-width: 1200px) {
           font-size: 0.8em;
         }
+      }
+      @media screen and (max-width: 768px) {
+        margin-left: 0;
+        padding: 0;
       }
     }
 
@@ -169,6 +218,10 @@ main {
         display: flex;
         align-items: center;
         padding-left: 2.5em;
+        @media screen and (max-width: 768px) {
+          padding-left: 0;
+          margin: 1em 0;
+        }
 
         img {
           width: 50px;
@@ -201,6 +254,12 @@ main {
             @media screen and (min-width: 1400px) {
               font-size: 1em;
             }
+            @media screen and (max-width: 768px) {
+              font-size: 1em;
+            }
+            @media screen and (max-width: 400px) {
+              font-size: 0.8em;
+            }
           }
 
           p {
@@ -216,4 +275,39 @@ main {
       }
     }
   }
+}
+#mobileNavContainer {
+  .navigationMobile {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+    div i {
+      padding: 0 0.25em;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    padding: 1.5em;
+  }
+}
+@media screen and (max-width: 768px) {
+  #artistSongRow {
+    display: flex;
+  }
+  #currentArtistContainer {
+    order: 0;
+  }
+  #songListWrapper {
+    order: 2;
+    padding-bottom: 10em;
+  }
+  #artistSongRow {
+    h4 {
+      padding-left: 0;
+    }
+  }
+  #otherButton {
+    display: none;
+  }
+}
+#artistName {
+  text-shadow: 0px 0px 10px #000000;
 }

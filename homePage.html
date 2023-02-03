@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home Page</title>
+  <title>Album Page</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
@@ -17,12 +17,11 @@
     rel="stylesheet" />
   <link rel="stylesheet" href="./assets/resources/noUiSlider-15.6.1/dist/nouislider.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-  <script src="./assets/resources/color-thief-2.3.2/dist/color-thief.min.js"></script>
 </head>
 
 <body>
-  <div class="container-fluid p-0">
-    <div class="row w-100 m-0">
+  <div class="container-fluid">
+    <div class="row w-100">
       <nav id="left-Nav" class="col-md-3 col-lg-2 d-none d-md-block">
         <div id="left-Nav-Upper-Wrapper">
           <div class="dropdown">
@@ -30,7 +29,7 @@
               aria-expanded="false">
               <i class="bi bi-three-dots"></i>
             </button>
-            <ul id="topDropdown" class="dropdown-menu">
+            <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">File</a></li>
               <li><a class="dropdown-item" href="#">Modifica</a></li>
               <li><a class="dropdown-item" href="#">Visualizza</a></li>
@@ -39,7 +38,9 @@
             </ul>
           </div>
           <ul>
-            <li><i class="bi bi-house-door-fill"></i>Home</li>
+            <a href="./homePage.html">
+              <li><i class="bi bi-house-door"></i>Home</li>
+            </a>
             <li><i class="bi bi-search"></i>Cerca</li>
             <li><i class="bi bi-music-note-list"></i>La tua libreria</li>
           </ul>
@@ -86,22 +87,35 @@
       </nav>
 
       <main class="col-12 col-md-9 col-lg-8 p-0">
-        <nav id="mainNav" class="d-none d-md-flex">
-          <div>
-            <button class="navigation">
-              <i class="bi bi-chevron-left"></i>
+        <nav id="mainNav">
+          <div id="mobileNavContainer" class="d-md-none">
+            <button class="navigationMobile p-0">
+              <div>
+                <a href="./homePage.html"><i class="bi bi-arrow-left"></i></a>
+              </div>
             </button>
-            <button class="navigation">
-              <i class="bi bi-chevron-right"></i>
-            </button>
-            <p id="pageContentName"></p>
           </div>
           <div>
+            <button class="navigation d-none d-md-flex">
+              <a href="./homePage.html"><i class="bi bi-chevron-left"></i></a>
+            </button>
+            <button class="navigation d-none d-md-flex">
+              <i class="bi bi-chevron-right"></i>
+            </button>
+            <div id="pageContentNav" class="d-flex align-items-center">
+              <button type="button" id="playButton" class="btn text-dark me-3 d-none d-md-flex">
+                <i class="fa-solid fa-play"></i>
+              </button>
+              <p id="pageContentName"></p>
+            </div>
+          </div>
+          <div class="d-none d-md-block">
             <div class="dropdown d-flex">
               <button id="userWrapper" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
                 aria-expanded="false" class="dropBtn">
-                <img src="./assets/img/user.png" width="28px" height="28px" />
-                <span>Utente Bellissimo</span>
+                <img src="./assets/img/cat.jpg" width="28px" height="28px" />
+                <span>Giorgio</span>
+                <i class="bi bi-caret-down-fill"></i>
               </button>
               <ul id="userDropdown" class="dropdown-menu">
                 <li>
@@ -128,32 +142,54 @@
           </div>
         </nav>
 
-        <article id="annuncio" class="mx-4 d-none d-md-flex"></article>
+        <article id="annuncioAB"></article>
 
-        <section id="ultimiAscolti">
-          <div id="greetingContainer" class="d-flex justify-content-between align-items-center">
+        <section class="row" id="albumRow">
+          <div class="col col-12" id="albumButtonContainer">
+            <div class="d-flex align-items-center order-2 order-md-0">
+              <i class="bi bi-shuffle d-md-none"></i>
+              <button type="button" id="playButton" class="btn text-dark">
+                <i class="fa-solid fa-play"></i>
+              </button>
+            </div>
             <div>
-              <h2>Buonasera</h2>
+              <i class="bi bi-suit-heart"></i>
+              <i class="bi bi-download"></i>
+              <div class="dropdown1">
+                <ul class="dopperRadius dropdown-content2"></ul>
+                <button class="dropdown-toggle1 btn moreBtn">
+                  <i class="bi bi-three-dots"></i>
+                </button>
+                <ul class="dopperRadius dropdown-content1">
+                  <li><a class="topA" href="#">Add to queue</a></li>
+                  <li><a href="#">Go to playlist radio</a></li>
+                  <li><a href="#">Report</a></li>
+                  <li><a href="#">Add to your Library</a></li>
+                  <li>
+                    <hr />
+                  </li>
+                  <li><a class="botA" href="#">Share</a></li>
+                  <li>
+                    <hr />
+                  </li>
+                  <li><a href="">About recommendations</a></li>
+                  <li>
+                    <hr />
+                  </li>
+                  <li><a href="">Open in Desktop app</a></li>
+                </ul>
+              </div>
             </div>
-            <div class="d-md-none d-flex gap-3">
-              <i class="bi bi-bell"></i><i class="bi bi-clock-history"></i><i class="bi bi-gear"></i>
+          </div>
+          <div class="row d-none d-md-flex" id="innerRowContainer">
+            <div class="col col-6"><span id="hashtag">#</span>TITOLO</div>
+            <div class="col col-3" id="counterHeader">RIPRODUZIONI</div>
+            <div class="col col-3" id="timeHeader">
+              <i class="bi bi-clock"></i>
             </div>
+            <hr />
           </div>
-          <div class="ps-5 mb-4 d-md-none">
-            <button class="me-3" id="musica">Musica</button><button id="podcast">Podcast e show</button>
-          </div>
-          <div id="ultimiAscoltiWrapper" class="row d-flex justify-content-between gx-0 px-5 gap-3"></div>
-        </section>
-        <hr />
-
-        <section id="consigliati">
-          <div id="headingConsigliati">
-            <h2 class="d-none d-md-block">Altro di ciò che ti piace</h2>
-            <button class="showMore d-none d-md-block">Visualizza Tutto</button>
-          </div>
-          <div class="mx-4">
-            <div id="consigliatiWrapper" class="row row-cols-2 row-cols-md-5 d-flex justify-content-between gx-0"></div>
-          </div>
+          <div id="trackListContainer"></div>
         </section>
       </main>
 
@@ -167,9 +203,11 @@
         </div>
         <div id="main-right-nav">
           <div class="profile">
-            <img src="./assets/img/user.png" alt="profile picture" />
+            <img src="./assets/img/vincenzo.jpg" alt="profile picture" />
             <div>
-              <h4 class="profile-title">Vincenzo De Pascale</h4>
+              <h4 class="profile-title">
+                <a href="https://github.com/VincenzoDePascale" target="_blank">Vincenzo De Pascale</a>
+              </h4>
               <p>Dogs - 2011 Remaster <span>&#x2022;</span> Pink Floyd</p>
               <div class="profile-description">
                 <i class="bi bi-vinyl"></i>
@@ -179,9 +217,11 @@
             <p>4 ore</p>
           </div>
           <div class="profile">
-            <img src="./assets/img/user.png" alt="profile picture" />
+            <img src="./assets/img/carlos.webp" alt="profile picture" />
             <div>
-              <h4 class="profile-title">Carlos Sarmiento</h4>
+              <h4 class="profile-title">
+                <a href="https://github.com/csarmientobaca" target="_blank">Carlos Sarmiento</a>
+              </h4>
               <p>Sweer Meow o'mine <span>&#x2022;</span> MetalCats</p>
               <div class="profile-description">
                 <i class="bi bi-music-note-beamed"></i>
@@ -191,9 +231,11 @@
             <p>8 ore</p>
           </div>
           <div class="profile">
-            <img src="./assets/img/user.png" alt="profile picture" />
+            <img src="./assets/img/ale.JPG" alt="profile picture" />
             <div>
-              <h4 class="profile-title">Alessandro Ontani</h4>
+              <h4 class="profile-title">
+                <a href="https://github.com/AleOnta" target="_blank">Alessandro Ontani</a>
+              </h4>
               <p>No Quarter <span>&#x2022;</span> Led Zeppelin</p>
               <div class="profile-description">
                 <i class="bi bi-vinyl"></i>
@@ -203,9 +245,11 @@
             <p>12 ore</p>
           </div>
           <div class="profile">
-            <img src="./assets/img/user.png" alt="profile picture" />
+            <img src="./assets/img/simone.jpg" alt="profile picture" />
             <div>
-              <h4 class="profile-title">Simone Basile</h4>
+              <h4 class="profile-title">
+                <a href="https://github.com/Kaymax99" target="_blank">Simone Basile</a>
+              </h4>
               <p>Hurricane <span>&#x2022;</span> I Prevail</p>
               <div class="profile-description">
                 <i class="bi bi-music-note-beamed"></i>
@@ -229,28 +273,16 @@
           </div>
           <div class="col-1 d-flex justify-content-end align-items-center gap-3">
             <i class="bi bi-pc-display"></i>
-            <div class="col-3 block">
-              <!-- heart shape SVG -->
-              <svg class="heart-icon" width="25" height="20" viewBox="0 0 106 97" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-
-                <!-- I am working with <path>, not the whole <svg> -->
-                <path class="fill-color-shape" fill-rule="evenodd" clip-rule="evenodd"
-                  d="M73.0406 3.04949C65.7359 2.94379 58.3559 5.38824 53.2483 12.3801C48.1271 5.39042 40.631 3.04941 33.4677 3.04941C18.2587 3.04941 3.04622 15.7081 3.04622 33.4698C3.04622 51.0995 14.3683 66.123 26.1679 76.6801C32.0812 81.9708 38.1493 86.1719 43.0557 89.0533C45.5086 90.4938 47.6791 91.6092 49.402 92.3672C50.2628 92.7459 51.0206 93.0393 51.6517 93.2395C52.2639 93.4336 52.8188 93.5607 53.2487 93.5607C53.6786 93.5607 54.2336 93.4336 54.8458 93.2395C55.4769 93.0393 56.2347 92.7459 57.0955 92.3672C58.8183 91.6092 60.9889 90.4938 63.4418 89.0533C68.3481 86.1719 74.4162 81.9708 80.3295 76.6801C92.1292 66.1229 103.451 51.0995 103.451 33.4698C103.451 15.6993 88.2313 3.26928 73.0406 3.04949Z" />
-                <path
-                  d="M53.2483 12.3801L51.2316 13.8577C51.7029 14.5009 52.4527 14.8807 53.25 14.8801C54.0474 14.8796 54.7966 14.4987 55.267 13.8548L53.2483 12.3801ZM73.0406 3.04949L73.0767 0.549748L73.0406 3.04949ZM26.1679 76.6801L24.501 78.5433L24.501 78.5433L26.1679 76.6801ZM43.0557 89.0533L44.3217 86.8975L44.3217 86.8975L43.0557 89.0533ZM49.402 92.3672L50.4088 90.0789L50.4088 90.0789L49.402 92.3672ZM51.6517 93.2395L52.4075 90.8565L52.4074 90.8565L51.6517 93.2395ZM54.8458 93.2395L54.09 90.8565L54.09 90.8565L54.8458 93.2395ZM57.0955 92.3672L58.1023 94.6555L58.1023 94.6555L57.0955 92.3672ZM63.4418 89.0533L62.1757 86.8975L62.1757 86.8975L63.4418 89.0533ZM80.3295 76.6801L81.9965 78.5433L81.9965 78.5433L80.3295 76.6801ZM55.267 13.8548C59.7836 7.67202 66.2981 5.45219 73.0044 5.54923L73.0767 0.549748C65.1736 0.435397 56.9283 3.10445 51.2295 10.9054L55.267 13.8548ZM33.4677 5.54941C40.0922 5.54941 46.7154 7.69369 51.2316 13.8577L55.2649 10.9026C49.5387 3.08715 41.1697 0.549414 33.4677 0.549414V5.54941ZM5.54622 33.4698C5.54622 17.2225 19.5018 5.54941 33.4677 5.54941V0.549414C17.0157 0.549414 0.546219 14.1936 0.546219 33.4698H5.54622ZM27.8349 74.817C16.2174 64.4228 5.54622 50.0268 5.54622 33.4698H0.546219C0.546219 52.1722 12.5192 67.8231 24.501 78.5433L27.8349 74.817ZM44.3217 86.8975C39.5433 84.0912 33.6121 79.9859 27.8349 74.817L24.501 78.5433C30.5503 83.9556 36.7554 88.2525 41.7897 91.209L44.3217 86.8975ZM50.4088 90.0789C48.7945 89.3686 46.7116 88.3011 44.3217 86.8975L41.7897 91.209C44.3055 92.6865 46.5638 93.8497 48.3951 94.6555L50.4088 90.0789ZM52.4074 90.8565C51.8878 90.6917 51.2173 90.4346 50.4088 90.0789L48.3951 94.6555C49.3082 95.0572 50.1534 95.387 50.8959 95.6225L52.4074 90.8565ZM53.2487 91.0607C53.2633 91.0607 53.1984 91.0609 53.0284 91.0254C52.867 90.9918 52.6608 90.9368 52.4075 90.8565L50.8959 95.6225C51.5581 95.8325 52.417 96.0607 53.2487 96.0607V91.0607ZM54.09 90.8565C53.8367 90.9368 53.6305 90.9918 53.4691 91.0254C53.299 91.0609 53.2341 91.0607 53.2487 91.0607V96.0607C54.0805 96.0607 54.9393 95.8325 55.6016 95.6225L54.09 90.8565ZM56.0887 90.0789C55.2801 90.4346 54.6096 90.6917 54.09 90.8565L55.6016 95.6225C56.3441 95.387 57.1893 95.0572 58.1023 94.6555L56.0887 90.0789ZM62.1757 86.8975C59.7858 88.3011 57.703 89.3686 56.0887 90.0789L58.1023 94.6555C59.9337 93.8497 62.1919 92.6865 64.7078 91.209L62.1757 86.8975ZM78.6626 74.817C72.8853 79.9859 66.9542 84.0913 62.1757 86.8975L64.7078 91.209C69.742 88.2525 75.9471 83.9556 81.9965 78.5433L78.6626 74.817ZM100.951 33.4698C100.951 50.0268 90.2801 64.4228 78.6626 74.817L81.9965 78.5433C93.9783 67.8231 105.951 52.1722 105.951 33.4698H100.951ZM73.0044 5.54923C87.0131 5.75192 100.951 17.2432 100.951 33.4698H105.951C105.951 14.1555 89.4496 0.78665 73.0767 0.549748L73.0044 5.54923Z"
-                  fill="#189945" />
-              </svg>
-
-              <!-- counter -->
-            </div> <i class="bi bi-play-fill"></i>
+            <i class="bi bi-heart"></i>
+            <i class="bi bi-play-fill"></i>
           </div>
         </div>
         <div id="mobileNav" class="d-md-none">
           <ul class="row mb-0">
             <li class="col-4">
-              <i class="bi bi-house-door-fill"></i>
-              <p>Home</p>
+              <a class="d-flex flex-column" href="./homePage.html"><i class="bi bi-house-door-fill"></i>
+                <p>Home</p>
+              </a>
             </li>
             <li class="col-4" id="searchButtonMobileNav">
               <i class="bi bi-search"></i>
@@ -270,26 +302,13 @@
                   src="data:image/jpeg;base64,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"
                   alt="" />
               </div>
-              <div id="playerName">
+              <div>
                 <h5>MetalCats</h5>
                 <p>Sweet meow o' mine</p>
               </div>
 
               <div class="d-flex justify-content-center gap-3">
-                <div class="block1 col-4">
-                  <!-- heart shape SVG -->
-                  <svg class="heart-icon1" width="25" height="20" viewBox="0 0 106 97" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-
-                    <!-- I am working with <path>, not the whole <svg> -->
-                    <path class="fill-color-shape1" fill-rule="evenodd" clip-rule="evenodd"
-                      d="M73.0406 3.04949C65.7359 2.94379 58.3559 5.38824 53.2483 12.3801C48.1271 5.39042 40.631 3.04941 33.4677 3.04941C18.2587 3.04941 3.04622 15.7081 3.04622 33.4698C3.04622 51.0995 14.3683 66.123 26.1679 76.6801C32.0812 81.9708 38.1493 86.1719 43.0557 89.0533C45.5086 90.4938 47.6791 91.6092 49.402 92.3672C50.2628 92.7459 51.0206 93.0393 51.6517 93.2395C52.2639 93.4336 52.8188 93.5607 53.2487 93.5607C53.6786 93.5607 54.2336 93.4336 54.8458 93.2395C55.4769 93.0393 56.2347 92.7459 57.0955 92.3672C58.8183 91.6092 60.9889 90.4938 63.4418 89.0533C68.3481 86.1719 74.4162 81.9708 80.3295 76.6801C92.1292 66.1229 103.451 51.0995 103.451 33.4698C103.451 15.6993 88.2313 3.26928 73.0406 3.04949Z" />
-                    <path
-                      d="M53.2483 12.3801L51.2316 13.8577C51.7029 14.5009 52.4527 14.8807 53.25 14.8801C54.0474 14.8796 54.7966 14.4987 55.267 13.8548L53.2483 12.3801ZM73.0406 3.04949L73.0767 0.549748L73.0406 3.04949ZM26.1679 76.6801L24.501 78.5433L24.501 78.5433L26.1679 76.6801ZM43.0557 89.0533L44.3217 86.8975L44.3217 86.8975L43.0557 89.0533ZM49.402 92.3672L50.4088 90.0789L50.4088 90.0789L49.402 92.3672ZM51.6517 93.2395L52.4075 90.8565L52.4074 90.8565L51.6517 93.2395ZM54.8458 93.2395L54.09 90.8565L54.09 90.8565L54.8458 93.2395ZM57.0955 92.3672L58.1023 94.6555L58.1023 94.6555L57.0955 92.3672ZM63.4418 89.0533L62.1757 86.8975L62.1757 86.8975L63.4418 89.0533ZM80.3295 76.6801L81.9965 78.5433L81.9965 78.5433L80.3295 76.6801ZM55.267 13.8548C59.7836 7.67202 66.2981 5.45219 73.0044 5.54923L73.0767 0.549748C65.1736 0.435397 56.9283 3.10445 51.2295 10.9054L55.267 13.8548ZM33.4677 5.54941C40.0922 5.54941 46.7154 7.69369 51.2316 13.8577L55.2649 10.9026C49.5387 3.08715 41.1697 0.549414 33.4677 0.549414V5.54941ZM5.54622 33.4698C5.54622 17.2225 19.5018 5.54941 33.4677 5.54941V0.549414C17.0157 0.549414 0.546219 14.1936 0.546219 33.4698H5.54622ZM27.8349 74.817C16.2174 64.4228 5.54622 50.0268 5.54622 33.4698H0.546219C0.546219 52.1722 12.5192 67.8231 24.501 78.5433L27.8349 74.817ZM44.3217 86.8975C39.5433 84.0912 33.6121 79.9859 27.8349 74.817L24.501 78.5433C30.5503 83.9556 36.7554 88.2525 41.7897 91.209L44.3217 86.8975ZM50.4088 90.0789C48.7945 89.3686 46.7116 88.3011 44.3217 86.8975L41.7897 91.209C44.3055 92.6865 46.5638 93.8497 48.3951 94.6555L50.4088 90.0789ZM52.4074 90.8565C51.8878 90.6917 51.2173 90.4346 50.4088 90.0789L48.3951 94.6555C49.3082 95.0572 50.1534 95.387 50.8959 95.6225L52.4074 90.8565ZM53.2487 91.0607C53.2633 91.0607 53.1984 91.0609 53.0284 91.0254C52.867 90.9918 52.6608 90.9368 52.4075 90.8565L50.8959 95.6225C51.5581 95.8325 52.417 96.0607 53.2487 96.0607V91.0607ZM54.09 90.8565C53.8367 90.9368 53.6305 90.9918 53.4691 91.0254C53.299 91.0609 53.2341 91.0607 53.2487 91.0607V96.0607C54.0805 96.0607 54.9393 95.8325 55.6016 95.6225L54.09 90.8565ZM56.0887 90.0789C55.2801 90.4346 54.6096 90.6917 54.09 90.8565L55.6016 95.6225C56.3441 95.387 57.1893 95.0572 58.1023 94.6555L56.0887 90.0789ZM62.1757 86.8975C59.7858 88.3011 57.703 89.3686 56.0887 90.0789L58.1023 94.6555C59.9337 93.8497 62.1919 92.6865 64.7078 91.209L62.1757 86.8975ZM78.6626 74.817C72.8853 79.9859 66.9542 84.0913 62.1757 86.8975L64.7078 91.209C69.742 88.2525 75.9471 83.9556 81.9965 78.5433L78.6626 74.817ZM100.951 33.4698C100.951 50.0268 90.2801 64.4228 78.6626 74.817L81.9965 78.5433C93.9783 67.8231 105.951 52.1722 105.951 33.4698H100.951ZM73.0044 5.54923C87.0131 5.75192 100.951 17.2432 100.951 33.4698H105.951C105.951 14.1555 89.4496 0.78665 73.0767 0.549748L73.0044 5.54923Z"
-                      fill="#189945" />
-                  </svg>
-
-                </div>
+                <i class="bi bi-heart"></i>
                 <i class="bi bi-pip"></i>
               </div>
             </div>
@@ -326,7 +345,6 @@
           </div>
         </div>
       </footer>
-
       <div class="col col-12 d-md-none" id="searchContainer">
         <div class="row">
           <div class="col-12" id="searchTitle">Cerca</div>
@@ -376,12 +394,9 @@
     integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
     crossorigin="anonymous"></script>
   <script src="./assets/resources/noUiSlider-15.6.1/dist/nouislider.js"></script>
-
   <script src="./assets/js/leftNav.js"></script>
-  <script src="./assets/js/homePage.js"></script>
-
+  <script src="./assets/js/albumPage.js"></script>
   <script src="./assets/js/player.js"></script>
-
   <script src="./assets/js/popups.js"></script>
 </body>
 

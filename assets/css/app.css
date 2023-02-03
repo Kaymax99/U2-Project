@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: #181818;
+}
+
 html,
 body {
   min-height: 100vh;
@@ -56,7 +60,6 @@ a {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
   padding-bottom: 6em;
-  transition: 0.2s;
   font-size: 0.8em;
 }
 @media screen and (min-width: 850px) {
@@ -79,6 +82,12 @@ a {
   #left-Nav {
     font-size: 0.9em;
   }
+}
+#left-Nav li {
+  transition: 0.2s;
+}
+#left-Nav li:hover {
+  color: white;
 }
 #left-Nav #topDropdown {
   background-color: #2a2a2a;
@@ -145,15 +154,6 @@ a {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  /*       @media screen and (min-width: 900px) {
-    margin: 0.5em 0 !important;
-  }
-  @media screen and (min-width: 992px) {
-    margin: 0 !important;
-  } */
-  /*       @media screen and (min-width: 1100px) {
-    margin: 0.5em 0 !important;
-  } */
 }
 #left-Nav #left-Nav-Upper-Wrapper {
   font-weight: 700;
@@ -195,12 +195,20 @@ main #mainNav {
   width: 100%;
   position: fixed;
   padding: 8px 10px;
-  z-index: 9999;
+  z-index: 9997;
   transition: background-color 0.3s;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  main #mainNav {
+    justify-content: start;
+  }
+  main #mainNav div #pageContentNav {
+    margin-left: 15px;
+  }
 }
 @media screen and (min-width: 768px) {
   main #mainNav {
@@ -212,7 +220,7 @@ main #mainNav {
     width: 66.6%;
   }
 }
-main #mainNav .bi {
+main #mainNav .navigation .bi {
   font-size: 1.5em;
   color: white;
 }
@@ -581,7 +589,7 @@ body > footer {
 footer {
   position: fixed;
   bottom: 0;
-  z-index: 99;
+  z-index: 9999;
 }
 @media screen and (max-width: 768px) {
   footer .container-fluid {
@@ -765,6 +773,10 @@ footer .container-fluid {
   background-color: #5e5e5e;
 }
 
+.makeItGreen {
+  color: #1db954;
+}
+
 .btnContainer {
   display: flex;
   gap: 15px;
@@ -848,6 +860,17 @@ footer .container-fluid {
 #playButton i {
   margin-left: 4px;
 }
+@media screen and (max-width: 768px) {
+  #playButton {
+    justify-self: end;
+  }
+}
+@media screen and (max-width: 576px) {
+  #playButton {
+    font-size: 1.1em;
+    padding: 0.6em;
+  }
+}
 
 #followButton {
   font-size: 0.9em;
@@ -855,7 +878,6 @@ footer .container-fluid {
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #a7a7a7;
   border-radius: 5px;
-  margin-left: 20px;
   color: white;
   transition: 0.2s;
 }
@@ -875,6 +897,24 @@ footer .container-fluid {
 #musica:hover,
 #podcast:hover {
   background-color: #383838;
+}
+
+.navigationMobile {
+  position: absolute;
+  left: 20px;
+  border: none;
+  background-color: unset;
+  color: white;
+  font-size: 1.8em;
+}
+
+#mobileTopBtns {
+  transition: 0.2s;
+}
+@media screen and (max-width: 500px) {
+  #mobileTopBtns {
+    font-size: 0.8em;
+  }
 }
 
 .row a {
@@ -1252,6 +1292,7 @@ main::-webkit-scrollbar {
   align-items: flex-end;
   padding-top: 4em;
   transition: 0.2s;
+  position: relative;
 }
 @media screen and (min-width: 992px) {
   #annuncioAB {
@@ -1277,6 +1318,24 @@ main::-webkit-scrollbar {
 }
 #annuncioAB a:hover {
   text-decoration: underline;
+}
+@media screen and (max-width: 768px) {
+  #annuncioAB {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+  }
+  #annuncioAB img {
+    height: 450px;
+  }
+  #annuncioAB div img {
+    box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.5);
+  }
+}
+@media screen and (max-width: 450px) {
+  #annuncioAB img {
+    height: 300px;
+  }
 }
 
 #wrapperAnnuncioAB {
@@ -1306,13 +1365,24 @@ main::-webkit-scrollbar {
   font-weight: 700;
   margin-bottom: 0.4em;
   transition: 0.2s;
-  overflow: hidden;
+  /*   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; */
+}
+@media screen and (max-width: 992px) {
+  #wrapperAnnuncioAB h1 {
+    font-size: 2.5em;
+  }
 }
 @media screen and (min-width: 1200px) {
   #wrapperAnnuncioAB h1 {
     font-size: 3.6em;
+  }
+}
+@media screen and (max-width: 768px) {
+  #wrapperAnnuncioAB h1 {
+    font-size: 1.8em;
+    margin-bottom: 0.2em;
   }
 }
 #wrapperAnnuncioAB #albumCredits {
@@ -1339,6 +1409,15 @@ main::-webkit-scrollbar {
 #wrapperAnnuncioAB #albumCredits #albumLength {
   color: #a7a7a7;
 }
+@media screen and (max-width: 768px) {
+  #wrapperAnnuncioAB {
+    width: 100%;
+    padding: 0.5em 1.5em;
+  }
+  #wrapperAnnuncioAB .albumAnnuncio {
+    display: none;
+  }
+}
 
 #albumRow {
   padding: 0;
@@ -1354,19 +1433,36 @@ main::-webkit-scrollbar {
   padding: 0;
 }
 #albumRow #albumButtonContainer {
-  padding: 1.5em 0 1.5em 2em;
+  padding: 1.5em;
   display: flex;
   align-items: center;
 }
-#albumRow #albumButtonContainer > i {
+#albumRow #albumButtonContainer div > i {
   font-size: 1.7em;
   color: #a7a7a7;
   margin-left: 0.8em;
   transition: 0.2s;
 }
-#albumRow #albumButtonContainer > i:hover {
+#albumRow #albumButtonContainer div > i:hover {
   color: white;
   transition: 0.2s;
+}
+#albumRow #albumButtonContainer .bi-shuffle {
+  margin-right: 16px;
+}
+@media screen and (max-width: 768px) {
+  #albumRow #albumButtonContainer {
+    padding: 0.5em 1.5em;
+    justify-content: space-between;
+  }
+  #albumRow #albumButtonContainer .bi-suit-heart {
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  #albumRow #albumButtonContainer div > i {
+    font-size: 1.4em;
+  }
 }
 #albumRow #innerRowContainer {
   padding-left: 3.5em;
@@ -1400,12 +1496,15 @@ main::-webkit-scrollbar {
 }
 #albumRow .albumSongItem .firstItem {
   display: flex;
+  flex-wrap: nowrap;
   align-items: center;
+  padding: 0;
 }
 #albumRow .albumSongItem .firstItem > p {
   color: white;
   margin-right: 15px;
   margin-bottom: 0;
+  width: auto;
 }
 #albumRow .albumSongItem .firstItem h3 {
   color: white;
@@ -1434,9 +1533,35 @@ main::-webkit-scrollbar {
 #albumRow .albumSongItem .length > p {
   margin-bottom: 0;
 }
+@media screen and (max-width: 768px) {
+  #albumRow .albumSongItem {
+    padding: 0.5em 1.5em;
+  }
+}
 
 #trackListContainer {
   margin-bottom: 10em;
+}
+@media screen and (max-width: 768px) {
+  #trackListContainer {
+    padding: 0;
+    margin-bottom: 8em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #albumDetails {
+    margin-top: 0.5em;
+  }
+  #albumDetails .dot:nth-child(1) {
+    display: none;
+  }
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 main {
@@ -1446,7 +1571,7 @@ main {
 #annuncioAR {
   padding: 15em 0 1.5em 1em;
   background-size: cover;
-  background-position: top;
+  background-position: center;
   transition: 0.2s;
 }
 @media screen and (min-width: 1200px) {
@@ -1472,72 +1597,97 @@ main {
   margin: 0;
   margin-left: 10px;
   font-size: 0.9em;
+  text-shadow: 0px 0px 10px #000000;
 }
 #annuncioAR h1 {
   color: white;
   font-weight: 900;
   font-size: 5em;
   margin-bottom: 0.2em;
+  transition: all 0.2s;
+}
+@media screen and (max-width: 576px) {
+  #annuncioAR h1 {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 400px) {
+  #annuncioAR h1 {
+    font-size: 3em;
+  }
+}
+@media screen and (max-width: 768px) {
+  #annuncioAR h1 {
+    margin-bottom: 0;
+  }
 }
 #annuncioAR > p {
   color: white;
   margin: 0;
 }
+@media screen and (max-width: 768px) {
+  #annuncioAR {
+    padding-bottom: 0;
+  }
+}
 
 #artistRow {
   margin: 0 !important;
+  padding-bottom: 7em;
+}
+@media screen and (max-width: 768px) {
+  #artistRow {
+    padding-bottom: 2em;
+  }
 }
 #artistRow .col {
   padding: 0;
 }
 #artistRow #artistButtonContainer {
-  padding: 1.5em 0 1.5em 2em;
+  padding: 0.5em 1em;
   display: flex;
   align-items: center;
 }
-#artistRow #artistButtonContainer .bi-three-dots {
+#artistRow #artistButtonContainer .bi-three-dots,
+#artistRow #artistButtonContainer .bi-three-dots-vertical {
   color: #a7a7a7;
   font-size: 1.5em;
   margin-left: 20px;
 }
-#artistRow #artistButtonContainer .bi-three-dots:hover {
+#artistRow #artistButtonContainer .bi-three-dots:hover,
+#artistRow #artistButtonContainer .bi-three-dots-vertical:hover {
   color: white;
+}
+@media screen and (max-width: 768px) {
+  #artistRow #artistButtonContainer {
+    justify-content: space-between;
+  }
+}
+#artistRow #artistSongRow {
+  padding: 0;
 }
 #artistRow #artistSongRow h4 {
   color: white;
   font-size: 1.2em;
   font-weight: 900;
-  padding-left: 2em;
   margin-bottom: 1em;
 }
+@media screen and (max-width: 768px) {
+  #artistRow #artistSongRow {
+    padding: 0 1em;
+  }
+  #artistRow #artistSongRow div {
+    padding-left: 0;
+  }
+}
 #artistRow #artistSongRow #songContainer {
-  margin-left: 3em;
   padding: 0 10px;
   border-radius: 5px;
   color: #a7a7a7;
   display: flex;
   align-items: center;
 }
-#artistRow #artistSongRow #songContainer:hover {
-  background-color: #383838;
-  transition: 0.2s;
-}
-#artistRow #artistSongRow #songContainer #firstSongData {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-#artistRow #artistSongRow #songContainer #firstSongData img {
-  width: 30px;
-  margin: 7px 15px;
-}
-@media screen and (min-width: 992px) {
-  #artistRow #artistSongRow #songContainer #firstSongData img {
-    width: 35px;
-  }
-}
-#artistRow #artistSongRow #songContainer #firstSongData p {
+#artistRow #artistSongRow #songContainer p {
   font-size: 0.6em;
   color: white;
   margin: 0;
@@ -1546,19 +1696,62 @@ main {
   text-overflow: ellipsis;
   transition: 0.2s;
 }
+@media screen and (max-width: 768px) {
+  #artistRow #artistSongRow #songContainer p {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 500px) {
+  #artistRow #artistSongRow #songContainer p {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 400px) {
+  #artistRow #artistSongRow #songContainer p {
+    font-size: 0.7em;
+  }
+}
 @media screen and (min-width: 992px) {
-  #artistRow #artistSongRow #songContainer #firstSongData p {
+  #artistRow #artistSongRow #songContainer p {
     font-size: 0.7em;
   }
 }
 @media screen and (min-width: 1200px) {
-  #artistRow #artistSongRow #songContainer #firstSongData p {
+  #artistRow #artistSongRow #songContainer p {
     font-size: 0.8em;
   }
 }
 @media screen and (min-width: 1400px) {
-  #artistRow #artistSongRow #songContainer #firstSongData p {
+  #artistRow #artistSongRow #songContainer p {
     font-size: 0.9em;
+  }
+}
+#artistRow #artistSongRow #songContainer:hover {
+  background-color: #383838;
+  transition: 0.2s;
+}
+#artistRow #artistSongRow #songContainer .songData {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#artistRow #artistSongRow #songContainer .songData img {
+  width: 30px;
+  margin: 7px 15px;
+}
+@media screen and (min-width: 992px) {
+  #artistRow #artistSongRow #songContainer .songData img {
+    width: 35px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #artistRow #artistSongRow #songContainer .songData img {
+    width: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #artistRow #artistSongRow #songContainer .songData {
+    padding: 0;
   }
 }
 #artistRow #artistSongRow #songContainer > p {
@@ -1576,6 +1769,12 @@ main {
 @media screen and (min-width: 1200px) {
   #artistRow #artistSongRow #songContainer > p {
     font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 768px) {
+  #artistRow #artistSongRow #songContainer {
+    margin-left: 0;
+    padding: 0;
   }
 }
 #artistRow #artistSongRow #otherButton {
@@ -1601,6 +1800,12 @@ main {
   display: flex;
   align-items: center;
   padding-left: 2.5em;
+}
+@media screen and (max-width: 768px) {
+  #artistRow #artistSongRow #currentArtistContainer #currentArtist {
+    padding-left: 0;
+    margin: 1em 0;
+  }
 }
 #artistRow #artistSongRow #currentArtistContainer #currentArtist img {
   width: 50px;
@@ -1643,6 +1848,16 @@ main {
     font-size: 1em;
   }
 }
+@media screen and (max-width: 768px) {
+  #artistRow #artistSongRow #currentArtistContainer #currentArtist #asideSongTextContainer h3 {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 400px) {
+  #artistRow #artistSongRow #currentArtistContainer #currentArtist #asideSongTextContainer h3 {
+    font-size: 0.8em;
+  }
+}
 #artistRow #artistSongRow #currentArtistContainer #currentArtist #asideSongTextContainer p {
   color: #a7a7a7;
   font-size: 0.7em;
@@ -1652,6 +1867,41 @@ main {
   #artistRow #artistSongRow #currentArtistContainer #currentArtist #asideSongTextContainer p {
     font-size: 0.8em;
   }
+}
+
+#mobileNavContainer .navigationMobile {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+}
+#mobileNavContainer .navigationMobile div i {
+  padding: 0 0.25em;
+}
+@media screen and (max-width: 768px) {
+  #mobileNavContainer {
+    padding: 1.5em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #artistSongRow {
+    display: flex;
+  }
+  #currentArtistContainer {
+    order: 0;
+  }
+  #songListWrapper {
+    order: 2;
+    padding-bottom: 10em;
+  }
+  #artistSongRow h4 {
+    padding-left: 0;
+  }
+  #otherButton {
+    display: none;
+  }
+}
+#artistName {
+  text-shadow: 0px 0px 10px #000000;
 }
 
 .dropdown1 {
@@ -1837,7 +2087,7 @@ main {
   scrollbar-width: none; /* Firefox */
   transition: 0.2s;
   padding: 1.5em;
-  z-index: 10;
+  z-index: 9998;
   opacity: 0;
   display: none;
   top: 100vh;

@@ -62,7 +62,7 @@ const drawAlbumPage = async () => {
 
   albumNavName.innerText = album.title;
   annuncioAB.innerHTML += `
-  <div class="p-3">
+  <div class="p-3 mt-3 mt-md-0">
   <img
     id="albumImage"
     src="${album.cover_big}"
@@ -73,19 +73,28 @@ const drawAlbumPage = async () => {
   <h5 class="albumAnnuncio">ALBUM</h5>
   <div class="songAuthor">
     <h1 id="albumName">${album.title}</h1>
-    <div id="albumCredits">
-      <img
-        id="artistImage"
-        src="${album.artist.picture}"
-        alt="Artists photo"
-      />
-      <p id="albumAuthor"><a href="./artistPage.html?id=${album.artist.id}">${album.artist.name
-    }</a></p>
-      <span class="dot">•</span>
-      <p id="albumYear">${album.release_date.slice(0, -6)}</p>
-      <span class="dot">•</span>
-      <p id="albumTracks">${album.nb_tracks + " songs"}</p>
-      <p id="albumLength">${", " + toHoursAndMinutes(album.duration)}</p>
+    <div id="albumCredits" class="d-block d-md-flex">
+      <div class="d-flex align-items-center">
+        <img
+          id="artistImage"
+          src="${album.artist.picture}"
+          alt="Artists photo"
+        />
+        <p id="albumAuthor"><a href="./artistPage.html?id=${album.artist.id}">${
+    album.artist.name
+  }</a></p>
+      </div>
+      <div id="albumDetails" class="d-flex">
+        <span class="dot">•</span>
+        <p class="d-md-none">Album</p>
+        <span class="dot d-md-none">•</span>
+        <p id="albumYear">${album.release_date.slice(0, -6)}</p>
+        <div class="d-none d-md-flex">
+          <span class="dot">•</span>
+          <p id="albumTracks">${album.nb_tracks + " songs"}</p>
+          <p id="albumLength">${", " + toHoursAndMinutes(album.duration)}</p>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -94,24 +103,27 @@ const drawAlbumPage = async () => {
 
   for (let i = 0; i < lunghezzaData.length; i++) {
     trackList.innerHTML += `<div class="row albumSongItem">
-    <div class="col col-6 firstItem">
-      <p>${i + 1}</p>
-      <div>
-        <h3>${lunghezzaData[i].title}</h3>
-        <p>${lunghezzaData[i].artist.name}</p>
+    <div class="row col-11 col-md-6 firstItem">
+      <p class="d-none d-md-flex p-0">${i + 1}</p>
+      <div class="col">
+        <h3 class="ellipsis">${lunghezzaData[i].title}</h3>
+        <p class="ellipsis">${lunghezzaData[i].artist.name}</p>
       </div>
     </div>
-    <div class="col col-3 listens">
+    <div class="col col-3 d-none d-md-flex listens">
       <p>${lunghezzaData[i].rank}</p>
     </div>
-    <div class="col col-3 length">
+    <div class="col col-3 ps-3 d-none d-md-flex length">
       <p>${convertSongDuration(lunghezzaData[i].duration)}</p>
+    </div>
+    <div class="col col-1 d-md-none d-flex justify-content-end">
+      <i class="bi bi-three-dots-vertical"></i>
     </div>
     </div>`;
 
     // Color Thief logic
     const art = document.querySelector("#albumImage");
-    console.log(art.src)
+    /* console.log(art.src); */
 
     // initialize colorThief
     const colorThief = new ColorThief();
@@ -119,10 +131,10 @@ const drawAlbumPage = async () => {
     const img = new Image();
     img.crossOrigin = "Anonymous";
     img.src = art.src;
-    console.log(img);
+    /* console.log(img); */
 
     img.addEventListener("load", function () {
-      console.log(img)
+      /* console.log(img); */
       colorThief.getColor(img);
 
       /* console.log(img.src) */
@@ -155,7 +167,7 @@ const drawAlbumPage = async () => {
         if (scrollValue < 300) {
           albumNavContainer.style.opacity = "0%";
         }
-        if (scrollValue >= 300) {
+        if (scrollValue >= 250) {
           albumNavContainer.style.opacity = "100%";
         }
       };
