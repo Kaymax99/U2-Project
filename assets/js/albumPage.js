@@ -123,7 +123,7 @@ const drawAlbumPage = async () => {
 
     // Color Thief logic
     const art = document.querySelector("#albumImage");
-    console.log(art.src);
+    /* console.log(art.src); */
 
     // initialize colorThief
     const colorThief = new ColorThief();
@@ -131,10 +131,10 @@ const drawAlbumPage = async () => {
     const img = new Image();
     img.crossOrigin = "Anonymous";
     img.src = art.src;
-    console.log(img);
+    /* console.log(img); */
 
     img.addEventListener("load", function () {
-      console.log(img);
+      /* console.log(img); */
       colorThief.getColor(img);
 
       /* console.log(img.src) */
@@ -167,7 +167,7 @@ const drawAlbumPage = async () => {
         if (scrollValue < 300) {
           albumNavContainer.style.opacity = "0%";
         }
-        if (scrollValue >= 300) {
+        if (scrollValue >= 250) {
           albumNavContainer.style.opacity = "100%";
         }
       };
