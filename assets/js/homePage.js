@@ -37,7 +37,6 @@ const drawAnnuncio = async (album) => {
     <img src="${spotlightAlbum.cover_big}" height="200px" />
   </div>
   <div id="wrapperAnnuncio">
-
     <h5 class="albumAnnuncio">ALBUM</h5>
     <button id="hideAnnuncio">nascondi annunci</button>
     <div class="songAuthor">
@@ -163,9 +162,8 @@ const drawAlbum = (albumArray) => {
           <div class="col custCard">
             <img src="${albumArray[i].cover_big}" />
             <a href="#">
-              <button class="hoverCardButtonOthers" onclick="addToPlayer(${
-                i + 6
-              })">
+              <button class="hoverCardButtonOthers" onclick="addToPlayer(${i + 6
+        })">
                 <i class="fa-sharp fa-solid fa-play"></i>
               </button>
             </a>
@@ -247,6 +245,34 @@ const drawAlbum = (albumArray) => {
 };
 
 const addToPlayer = (index) => {
+
+
+
+  const arrayToStoreAlbums = albumArray
+
+  const playButton = document.querySelector("#playBtnPlayer")
+  const songArray = arrayToStoreAlbums[index].tracks.data[0].preview
+  console.log(songArray)
+  const audio = new Audio(songArray)
+
+  playButton.addEventListener("click", () => {
+    audio.play()
+    playButton.style.color = "#1ED760"
+    playButton.addEventListener("click", () => {
+      audio.pause()
+      playButton.style.color = "white"
+
+    })
+  })
+
+
+  console.log(audio)
+
+
+
+
+
+
   playerRowLeft = document.getElementById("playerRowLeft");
   playerRowLeft.innerHTML = ``;
   playerRowLeft.innerHTML += `<div id="playerImgContainer">
@@ -259,7 +285,6 @@ const addToPlayer = (index) => {
   <h5>${albumArray[index].artist.name}</h5>
   <p>${albumArray[index].title}</p>
 </div>
-
 <div class="d-flex justify-content-center gap-3">
   <i class="bi bi-heart"></i>
   <i class="bi bi-pip"></i>
