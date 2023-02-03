@@ -1564,11 +1564,6 @@ main::-webkit-scrollbar {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-@media screen and (max-width: 500px) {
-  .ellipsis {
-    width: 70%;
-  }
-}
 
 main {
   padding: 0 0 8em 0 !important;

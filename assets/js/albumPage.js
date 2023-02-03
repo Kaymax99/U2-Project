@@ -103,9 +103,9 @@ const drawAlbumPage = async () => {
 
   for (let i = 0; i < lunghezzaData.length; i++) {
     trackList.innerHTML += `<div class="row albumSongItem">
-    <div class="col-11 col-md-6 firstItem">
+    <div class="row col-11 col-md-6 firstItem">
       <p class="d-none d-md-block">${i + 1}</p>
-      <div>
+      <div class="col">
         <h3 class="ellipsis">${lunghezzaData[i].title}</h3>
         <p class="ellipsis">${lunghezzaData[i].artist.name}</p>
       </div>
