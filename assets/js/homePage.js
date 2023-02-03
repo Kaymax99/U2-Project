@@ -138,7 +138,7 @@ const drawAlbumBuonasera = (albumArray) => {
       divBuonasera.innerHTML += `
     <div class="row col-12 col-sm-6 col-md-4" id="teston">
       <div class="p-0 custCardLG col-12">
-        <a href="./albumPage.html?id=${albumArray[i].id}" target="_blank">
+        <a href="./albumPage.html?id=${albumArray[i].id}">
           <img src="${albumArray[i].cover_medium}" class="col-3 p-0" />
           <div class="col-8">${albumArray[i].title}</div>
         </a>
@@ -170,13 +170,13 @@ const drawAlbum = (albumArray) => {
               </button>
             </a>
             <div>
-              <a href="./albumPage.html?id=${albumArray[i].id}" target="_blank">
-                <h4>${albumArray[i].title}</h4>
+              <a href="./albumPage.html?id=${albumArray[i].id}"><h4>${
+        albumArray[i].title
+      }</h4>
               </a>
               <a
                 href="./artistPage.html?id=${albumArray[i].contributors[0].id}"
-                target="_blank"
-              >
+                >
                 <h5>${albumArray[i].artist.name}</h5>
               </a>
             </div>

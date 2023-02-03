@@ -62,7 +62,7 @@ const drawAlbumPage = async () => {
 
   albumNavName.innerText = album.title;
   annuncioAB.innerHTML += `
-  <div class="p-3">
+  <div class="p-3 mt-3 mt-md-0">
   <img
     id="albumImage"
     src="${album.cover_big}"
@@ -116,7 +116,7 @@ const drawAlbumPage = async () => {
     <div class="col col-3 ps-3 d-none d-md-flex length">
       <p>${convertSongDuration(lunghezzaData[i].duration)}</p>
     </div>
-    <div class="col col-1 d-md-none d-flex justify-content-center">
+    <div class="col col-1 d-md-none d-flex justify-content-end">
       <i class="bi bi-three-dots-vertical"></i>
     </div>
     </div>`;

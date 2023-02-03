@@ -202,6 +202,14 @@ main #mainNav {
   align-items: center;
   justify-content: space-between;
 }
+@media screen and (max-width: 768px) {
+  main #mainNav {
+    justify-content: start;
+  }
+  main #mainNav div #pageContentNav {
+    margin-left: 15px;
+  }
+}
 @media screen and (min-width: 768px) {
   main #mainNav {
     width: 75%;
@@ -212,7 +220,7 @@ main #mainNav {
     width: 66.6%;
   }
 }
-main #mainNav .bi {
+main #mainNav .navigation .bi {
   font-size: 1.5em;
   color: white;
 }
@@ -865,7 +873,6 @@ footer .container-fluid {
   background-color: rgba(0, 0, 0, 0);
   border: 1px solid #a7a7a7;
   border-radius: 5px;
-  margin-left: 20px;
   color: white;
   transition: 0.2s;
 }
@@ -894,6 +901,15 @@ footer .container-fluid {
   background-color: unset;
   color: white;
   font-size: 1.8em;
+}
+
+#mobileTopBtns {
+  transition: 0.2s;
+}
+@media screen and (max-width: 500px) {
+  #mobileTopBtns {
+    font-size: 0.8em;
+  }
 }
 
 .row a {
@@ -1292,7 +1308,7 @@ main::-webkit-scrollbar {
     padding-top: 1em;
   }
   #annuncioAB img {
-    height: 350px;
+    height: 450px;
   }
   #annuncioAB div img {
     box-shadow: 0px 0px 25px 5px rgba(0, 0, 0, 0.5);
@@ -1300,7 +1316,7 @@ main::-webkit-scrollbar {
 }
 @media screen and (max-width: 450px) {
   #annuncioAB img {
-    height: 250px;
+    height: 300px;
   }
 }
 
@@ -1331,9 +1347,14 @@ main::-webkit-scrollbar {
   font-weight: 700;
   margin-bottom: 0.4em;
   transition: 0.2s;
-  overflow: hidden;
+  /*   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; */
+}
+@media screen and (max-width: 992px) {
+  #wrapperAnnuncioAB h1 {
+    font-size: 2.5em;
+  }
 }
 @media screen and (min-width: 1200px) {
   #wrapperAnnuncioAB h1 {
@@ -1342,6 +1363,7 @@ main::-webkit-scrollbar {
 }
 @media screen and (max-width: 768px) {
   #wrapperAnnuncioAB h1 {
+    font-size: 1.8em;
     margin-bottom: 0.2em;
   }
 }
@@ -1370,6 +1392,10 @@ main::-webkit-scrollbar {
   color: #a7a7a7;
 }
 @media screen and (max-width: 768px) {
+  #wrapperAnnuncioAB {
+    width: 100%;
+    padding: 0.5em 1.5em;
+  }
   #wrapperAnnuncioAB .albumAnnuncio {
     display: none;
   }
@@ -1411,6 +1437,9 @@ main::-webkit-scrollbar {
     padding: 0.5em 1.5em;
     justify-content: space-between;
   }
+  #albumRow #albumButtonContainer .bi-suit-heart {
+    margin-left: 0;
+  }
 }
 @media screen and (max-width: 576px) {
   #albumRow #albumButtonContainer div > i {
@@ -1450,6 +1479,7 @@ main::-webkit-scrollbar {
 #albumRow .albumSongItem .firstItem {
   display: flex;
   align-items: center;
+  padding: 0;
 }
 #albumRow .albumSongItem .firstItem > p {
   color: white;
@@ -1485,7 +1515,7 @@ main::-webkit-scrollbar {
 }
 @media screen and (max-width: 768px) {
   #albumRow .albumSongItem {
-    padding: 0.5em 0 0.5em 1.75em;
+    padding: 0.5em 1.5em;
   }
 }
 
@@ -1494,12 +1524,8 @@ main::-webkit-scrollbar {
 }
 @media screen and (max-width: 768px) {
   #trackListContainer {
-    margin-bottom: 0;
-  }
-}
-@media screen and (max-width: 576px) {
-  #trackListContainer {
     padding: 0;
+    margin-bottom: 8em;
   }
 }
 
@@ -1516,6 +1542,11 @@ main::-webkit-scrollbar {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+@media screen and (max-width: 500px) {
+  .ellipsis {
+    width: 70%;
+  }
 }
 
 main {
@@ -1557,10 +1588,31 @@ main {
   font-weight: 900;
   font-size: 5em;
   margin-bottom: 0.2em;
+  transition: all 0.2s;
+}
+@media screen and (max-width: 576px) {
+  #annuncioAR h1 {
+    font-size: 4em;
+  }
+}
+@media screen and (max-width: 400px) {
+  #annuncioAR h1 {
+    font-size: 3em;
+  }
+}
+@media screen and (max-width: 768px) {
+  #annuncioAR h1 {
+    margin-bottom: 0;
+  }
 }
 #annuncioAR > p {
   color: white;
   margin: 0;
+}
+@media screen and (max-width: 768px) {
+  #annuncioAR {
+    padding-bottom: 0;
+  }
 }
 
 #artistRow {
@@ -1570,53 +1622,50 @@ main {
   padding: 0;
 }
 #artistRow #artistButtonContainer {
-  padding: 1.5em 0 1.5em 2em;
+  padding: 0.5em 1em;
   display: flex;
   align-items: center;
 }
-#artistRow #artistButtonContainer .bi-three-dots {
+#artistRow #artistButtonContainer .bi-three-dots,
+#artistRow #artistButtonContainer .bi-three-dots-vertical {
   color: #a7a7a7;
   font-size: 1.5em;
   margin-left: 20px;
 }
-#artistRow #artistButtonContainer .bi-three-dots:hover {
+#artistRow #artistButtonContainer .bi-three-dots:hover,
+#artistRow #artistButtonContainer .bi-three-dots-vertical:hover {
   color: white;
+}
+@media screen and (max-width: 768px) {
+  #artistRow #artistButtonContainer {
+    justify-content: space-between;
+  }
+}
+#artistRow #artistSongRow {
+  padding: 0;
 }
 #artistRow #artistSongRow h4 {
   color: white;
   font-size: 1.2em;
   font-weight: 900;
-  padding-left: 2em;
   margin-bottom: 1em;
 }
+@media screen and (max-width: 768px) {
+  #artistRow #artistSongRow {
+    padding: 0 1em;
+  }
+  #artistRow #artistSongRow div {
+    padding-left: 0;
+  }
+}
 #artistRow #artistSongRow #songContainer {
-  margin-left: 3em;
   padding: 0 10px;
   border-radius: 5px;
   color: #a7a7a7;
   display: flex;
   align-items: center;
 }
-#artistRow #artistSongRow #songContainer:hover {
-  background-color: #383838;
-  transition: 0.2s;
-}
-#artistRow #artistSongRow #songContainer #firstSongData {
-  width: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-#artistRow #artistSongRow #songContainer #firstSongData img {
-  width: 30px;
-  margin: 7px 15px;
-}
-@media screen and (min-width: 992px) {
-  #artistRow #artistSongRow #songContainer #firstSongData img {
-    width: 35px;
-  }
-}
-#artistRow #artistSongRow #songContainer #firstSongData p {
+#artistRow #artistSongRow #songContainer p {
   font-size: 0.6em;
   color: white;
   margin: 0;
@@ -1625,19 +1674,62 @@ main {
   text-overflow: ellipsis;
   transition: 0.2s;
 }
+@media screen and (max-width: 768px) {
+  #artistRow #artistSongRow #songContainer p {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 500px) {
+  #artistRow #artistSongRow #songContainer p {
+    font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 400px) {
+  #artistRow #artistSongRow #songContainer p {
+    font-size: 0.7em;
+  }
+}
 @media screen and (min-width: 992px) {
-  #artistRow #artistSongRow #songContainer #firstSongData p {
+  #artistRow #artistSongRow #songContainer p {
     font-size: 0.7em;
   }
 }
 @media screen and (min-width: 1200px) {
-  #artistRow #artistSongRow #songContainer #firstSongData p {
+  #artistRow #artistSongRow #songContainer p {
     font-size: 0.8em;
   }
 }
 @media screen and (min-width: 1400px) {
-  #artistRow #artistSongRow #songContainer #firstSongData p {
+  #artistRow #artistSongRow #songContainer p {
     font-size: 0.9em;
+  }
+}
+#artistRow #artistSongRow #songContainer:hover {
+  background-color: #383838;
+  transition: 0.2s;
+}
+#artistRow #artistSongRow #songContainer .songData {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+#artistRow #artistSongRow #songContainer .songData img {
+  width: 30px;
+  margin: 7px 15px;
+}
+@media screen and (min-width: 992px) {
+  #artistRow #artistSongRow #songContainer .songData img {
+    width: 35px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #artistRow #artistSongRow #songContainer .songData img {
+    width: 50px;
+  }
+}
+@media screen and (max-width: 768px) {
+  #artistRow #artistSongRow #songContainer .songData {
+    padding: 0;
   }
 }
 #artistRow #artistSongRow #songContainer > p {
@@ -1655,6 +1747,12 @@ main {
 @media screen and (min-width: 1200px) {
   #artistRow #artistSongRow #songContainer > p {
     font-size: 0.8em;
+  }
+}
+@media screen and (max-width: 768px) {
+  #artistRow #artistSongRow #songContainer {
+    margin-left: 0;
+    padding: 0;
   }
 }
 #artistRow #artistSongRow #otherButton {
@@ -1680,6 +1778,12 @@ main {
   display: flex;
   align-items: center;
   padding-left: 2.5em;
+}
+@media screen and (max-width: 768px) {
+  #artistRow #artistSongRow #currentArtistContainer #currentArtist {
+    padding-left: 0;
+    margin: 1em 0;
+  }
 }
 #artistRow #artistSongRow #currentArtistContainer #currentArtist img {
   width: 50px;
@@ -1722,6 +1826,16 @@ main {
     font-size: 1em;
   }
 }
+@media screen and (max-width: 768px) {
+  #artistRow #artistSongRow #currentArtistContainer #currentArtist #asideSongTextContainer h3 {
+    font-size: 1em;
+  }
+}
+@media screen and (max-width: 400px) {
+  #artistRow #artistSongRow #currentArtistContainer #currentArtist #asideSongTextContainer h3 {
+    font-size: 0.8em;
+  }
+}
 #artistRow #artistSongRow #currentArtistContainer #currentArtist #asideSongTextContainer p {
   color: #a7a7a7;
   font-size: 0.7em;
@@ -1733,6 +1847,37 @@ main {
   }
 }
 
+#mobileNavContainer .navigationMobile {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50px;
+}
+#mobileNavContainer .navigationMobile div i {
+  padding: 0 0.25em;
+}
+@media screen and (max-width: 768px) {
+  #mobileNavContainer {
+    padding: 1.5em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #artistSongRow {
+    display: flex;
+  }
+  #currentArtistContainer {
+    order: 0;
+  }
+  #songListWrapper {
+    order: 2;
+    padding-bottom: 10em;
+  }
+  #artistSongRow h4 {
+    padding-left: 0;
+  }
+  #otherButton {
+    display: none;
+  }
+}
 .dropdown1 {
   position: relative;
   display: inline-block;
