@@ -30,12 +30,13 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
     />
+    <script src="./assets/resources/color-thief-2.3.2/dist/color-thief.min.js"></script>
   </head>
 
   <body>
     <div class="container-fluid p-0">
       <div class="row w-100 m-0">
-        <nav id="left-Nav" class="col-3 col-lg-2">
+        <nav id="left-Nav" class="col-md-3 col-lg-2 d-none d-md-block">
           <div id="left-Nav-Upper-Wrapper">
             <div class="dropdown">
               <button
@@ -101,8 +102,8 @@
           </div>
         </nav>
 
-        <main class="col-9 col-lg-8 p-0">
-          <nav id="mainNav">
+        <main class="col-12 col-md-9 col-lg-8 p-0">
+          <nav id="mainNav" class="d-none d-md-flex">
             <div>
               <button class="navigation">
                 <i class="bi bi-chevron-left"></i>
@@ -154,63 +155,43 @@
             </div>
           </nav>
 
-          <article id="annuncio" class="mx-4"></article>
+          <article id="annuncio" class="mx-4 d-none d-md-flex"></article>
 
           <section id="ultimiAscolti">
-            <h2>Buonasera</h2>
+            <div
+              id="greetingContainer"
+              class="d-flex justify-content-between align-items-center"
+            >
+              <div>
+                <h2>Buonasera</h2>
+              </div>
+              <div class="d-md-none d-flex gap-3">
+                <i class="bi bi-bell"></i><i class="bi bi-clock-history"></i
+                ><i class="bi bi-gear"></i>
+              </div>
+            </div>
+            <div class="ps-5 mb-4 d-md-none">
+              <button class="me-3" id="musica">Musica</button
+              ><button id="podcast">Podcast e show</button>
+            </div>
             <div
               id="ultimiAscoltiWrapper"
-              class="row d-flex justify-content-between gx-0 px-5"
-            >
-              <!-- vecchia card -->
-              <div class="row col-4 p-1">
-                <a href="#" target="_blank">
-                  <div class="p-0 custCardLG">
-                    <img src="./assets/img/user.png" class="col-3 p-0" />
-                    <div class="col-9 col-md-6">div come prima</div>
-                    <div class="col-md-3 d-none d-md-block cardButtonContainer">
-                      <!-- <button
-                        class="hoverCardButton"
-                        onclick="addToPlayer(${i})"
-                      >
-                        <i class="fa-sharp fa-solid fa-play"></i>
-                      </button> -->
-                    </div>
-                  </div>
-                </a>
-              </div>
-              <!-- nuovo div buonasera -->
-              <div id="newCard" class="col-4 p-1">
-                <div class="col-10 d-flex">
-                  <a id="a1" class="row gx-0 w-100 d-flex">
-                    <img
-                      class="col-3 p-0 d-flex"
-                      src="./assets/img/user.png"
-                      alt="user"
-                    />
-                    <div id="title" class="col-9">Titolone</div>
-                  </a>
-                </div>
-                <div id="cardButtonContainer" class="col-2">
-                  <button class="hoverCardButton">
-                    <i class="fa-sharp fa-solid fa-play"></i>
-                  </button>
-                </div>
-              </div>
-              <!-- fine nuovo div -->
-            </div>
+              class="row d-flex justify-content-between gx-0 px-5 gap-3"
+            ></div>
           </section>
           <hr />
 
           <section id="consigliati">
             <div id="headingConsigliati">
-              <h2>Altro di ciò che ti piace</h2>
-              <button class="showMore">Visualizza Tutto</button>
+              <h2 class="d-none d-md-block">Altro di ciò che ti piace</h2>
+              <button class="showMore d-none d-md-block">
+                Visualizza Tutto
+              </button>
             </div>
             <div class="mx-4">
               <div
                 id="consigliatiWrapper"
-                class="row row-cols-5 d-flex justify-content-between gx-0"
+                class="row row-cols-2 row-cols-md-5 d-flex justify-content-between gx-0"
               ></div>
             </div>
           </section>
@@ -277,6 +258,42 @@
         </aside>
 
         <footer class="px-0">
+          <div id="mobilePlayer" class="d-md-none row gap-3">
+            <div class="d-none d-sm-block col-sm-1 d-flex align-items-center">
+              <img
+                src="data:image/jpeg;base64,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"
+                alt=""
+                height="56"
+                aspect-ration="1/1"
+              />
+            </div>
+            <div class="col-9 d-flex align-items-center">
+              <p id="mobilePlayerText">Sweet Meow o' Mine</p>
+            </div>
+            <div
+              class="col-1 d-flex justify-content-end align-items-center gap-3"
+            >
+              <i class="bi bi-pc-display"></i>
+              <i class="bi bi-heart"></i>
+              <i class="bi bi-play-fill"></i>
+            </div>
+          </div>
+          <div id="mobileNav" class="d-md-none">
+            <ul class="row mb-0">
+              <li class="col-4">
+                <i class="bi bi-house-door-fill"></i>
+                <p>Home</p>
+              </li>
+              <li class="col-4">
+                <i class="bi bi-search"></i>
+                <p>Cerca</p>
+              </li>
+              <li class="col-4">
+                <i class="bi bi-music-note-list"></i>
+                <p>La tua libreria</p>
+              </li>
+            </ul>
+          </div>
           <div class="container-fluid">
             <div
               class="d-flex justify-content-between align-items-center g-2"
