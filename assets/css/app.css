@@ -800,6 +800,7 @@ footer .container-fluid {
   text-transform: uppercase;
   background-color: inherit;
   border: transparent;
+  -webkit-box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1px 15px 5px rgba(0, 0, 0, 0.1);
   color: white;
   font-size: 0.75em;
@@ -1907,36 +1908,42 @@ main {
   background-color: #e03300;
 }
 #sfoglia .one:hover {
+  -webkit-box-shadow: 0px 0px 6px 5px #e03300;
   box-shadow: 0px 0px 6px 5px #e03300;
 }
 #sfoglia .two {
   background-color: #1e345d;
 }
 #sfoglia .two:hover {
+  -webkit-box-shadow: 0px 0px 6px 5px #1e345d;
   box-shadow: 0px 0px 6px 5px #1e345d;
 }
 #sfoglia .three {
   background-color: #e8115c;
 }
 #sfoglia .three:hover {
+  -webkit-box-shadow: 0px 0px 6px 5px #e8115c;
   box-shadow: 0px 0px 6px 5px #e8115c;
 }
 #sfoglia .four {
   background-color: #16890d;
 }
 #sfoglia .four:hover {
+  -webkit-box-shadow: 0px 0px 6px 5px #16890d;
   box-shadow: 0px 0px 6px 5px #16890d;
 }
 #sfoglia .five {
   background-color: #bc5800;
 }
 #sfoglia .five:hover {
+  -webkit-box-shadow: 0px 0px 6px 5px #bc5800;
   box-shadow: 0px 0px 6px 5px #bc5800;
 }
 #sfoglia .six {
   background-color: #d84000;
 }
 #sfoglia .six:hover {
+  -webkit-box-shadow: 0px 0px 6px 5px #d84000;
   box-shadow: 0px 0px 6px 5px #d84000;
 }
 #sfoglia .seven {
@@ -1944,6 +1951,7 @@ main {
   background: linear-gradient(0deg, rgb(116, 94, 107) 0%, rgb(225, 17, 139) 40%);
 }
 #sfoglia .seven:hover {
+  -webkit-box-shadow: 0px 0px 6px 5px #e1118b;
   box-shadow: 0px 0px 6px 5px #e1118b;
 }
 #sfoglia .eight {
@@ -1951,11 +1959,73 @@ main {
   background: linear-gradient(0deg, rgb(116, 108, 124) 0%, rgb(140, 103, 172) 40%);
 }
 #sfoglia .eight:hover {
+  -webkit-box-shadow: 0px 0px 6px 5px #8c67ac;
   box-shadow: 0px 0px 6px 5px #8c67ac;
 }
 #sfoglia .nine {
   background-color: #1e345d;
 }
 #sfoglia .nine:hover {
+  -webkit-box-shadow: 0px 0px 6px 5px #1e345d;
   box-shadow: 0px 0px 6px 5px #1e345d;
-}/*# sourceMappingURL=app.css.map */
+}
+
+.block .heart-icon {
+  position: absolute;
+  bottom: 10;
+  user-select: none;
+  transform: translate(-20%, -50%);
+  fill: transparent;
+  transition: transform 0.25s ease-out;
+  transform-origin: 50% 50%;
+}
+
+/* initial state of the like heart button */
+.block .heart-icon .fill-color-shape {
+  fill: transparent;
+}
+
+.block .heart-icon.isLiked {
+  filter: drop-shadow(0 3px 5px #189945);
+}
+
+/* "liked" state of the like heart button */
+.block .heart-icon.isLiked .fill-color-shape {
+  transition: fill 0.5s linear;
+  fill: #189945;
+}
+
+.block .heart-icon:hover {
+  transform: translate(-20%, calc(-50% - 3px)) scale(1.03);
+}
+
+.block1 .heart-icon1 {
+  position: absolute;
+  bottom: 10;
+  user-select: none;
+  transform: translate(-20%, -50%);
+  fill: transparent;
+  transition: transform 0.25s ease-out;
+  transform-origin: 50% 50%;
+}
+
+/* initial state of the like heart button */
+.block1 .heart-icon1 .fill-color-shape1 {
+  fill: transparent;
+}
+
+.block1 .heart-icon1.isLiked {
+  filter: drop-shadow(0 3px 5px #189945);
+}
+
+/* "liked" state of the like heart button */
+.block1 .heart-icon1.isLiked .fill-color-shape1 {
+  transition: fill 0.5s linear;
+  fill: #189945;
+}
+
+.block1 .heart-icon1:hover {
+  transform: translate(-20%, calc(-50% - 3px)) scale(1.03);
+}
+
+/*# sourceMappingURL=app.css.map */

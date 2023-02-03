@@ -278,22 +278,19 @@ const addToPlayer = (index) => {
 
   console.log(audio);
 
-  playerRowLeft = document.getElementById("playerRowLeft");
-  playerRowLeft.innerHTML = ``;
-  playerRowLeft.innerHTML += `<div id="playerImgContainer">
-  <img
-    src="${albumArray[index].cover_medium}"
-    alt=""
-  />
-</div>
-<div id="playerName">
+  const playerImage = document.querySelector("#playerImgContainer")
+  playerImage.innerHTML = `<img
+  src="${albumArray[index].cover_medium}"
+  alt=""
+/>
+  `
+  const playerRowLeft = document.querySelector("#playerName")
+
+  playerRowLeft.innerHTML = `
   <h5>${albumArray[index].artist.name}</h5>
   <p>${albumArray[index].title}</p>
-</div>
-<div class="d-flex justify-content-center gap-3">
-  <i class="bi bi-heart"></i>
-  <i class="bi bi-pip"></i>
-</div>`;
+  `;
+
 
   // Mobile Player
   // change image
@@ -413,3 +410,53 @@ window.onload = startDrawingAlbums(selectedAlbumIDs, 5);
 //     })
 //   })
 //   console.log("helloooooooooo")
+
+
+
+
+// Variables
+const likeBtn = document.querySelector('.heart-icon');
+// get the value from the HTML element
+let isLiked = false;
+// Functions
+const likeClick = () => {
+  // if the like button hasn't been clicked
+  if (!isLiked) {
+    likeBtn.classList.add('isLiked');
+    isLiked = !isLiked;
+  }
+  // if the like button has been clicked
+  else {
+    likeBtn.classList.remove('isLiked');
+    isLiked = !isLiked;
+  }
+};
+// Event Listeners
+likeBtn.addEventListener('click', likeClick);
+
+
+
+
+
+
+
+// desktop
+// Variables
+const likeBtn1 = document.querySelector('.heart-icon1');
+// get the value from the HTML element
+let isLiked1 = false;
+// Functions
+const likeClick1 = () => {
+  // if the like button hasn't been clicked
+  if (!isLiked) {
+    likeBtn1.classList.add('isLiked');
+    isLiked = !isLiked;
+  }
+  // if the like button has been clicked
+  else {
+    likeBtn1.classList.remove('isLiked');
+    isLiked = !isLiked;
+  }
+};
+// Event Listeners
+likeBtn1.addEventListener('click', likeClick1);
