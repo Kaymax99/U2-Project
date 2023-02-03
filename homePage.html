@@ -1,322 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <link href="./assets/css/app.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/resources/noUiSlider-15.6.1/dist/nouislider.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <script src="./assets/resources/color-thief-2.3.2/dist/color-thief.min.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home Page</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
-  <link href="./assets/css/app.css" rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com/%22%3E" />
-  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="./assets/resources/noUiSlider-15.6.1/dist/nouislider.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
-  <script src="./assets/resources/color-thief-2.3.2/dist/color-thief.min.js"></script>
-</head>
-
-<body>
-  <div class="container-fluid p-0">
-    <div class="row w-100 m-0">
-      <nav id="left-Nav" class="col-md-3 col-lg-2 d-none d-md-block">
-        <div id="left-Nav-Upper-Wrapper">
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <i class="bi bi-three-dots"></i>
-            </button>
-            <ul id="topDropdown" class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">File</a></li>
-              <li><a class="dropdown-item" href="#">Modifica</a></li>
-              <li><a class="dropdown-item" href="#">Visualizza</a></li>
-              <li><a class="dropdown-item" href="#">Riproduzione</a></li>
-              <li><a class="dropdown-item" href="#">Assistenza</a></li>
-            </ul>
-          </div>
-          <ul>
-            <li><i class="bi bi-house-door-fill"></i>Home</li>
-            <li><i class="bi bi-search"></i>Cerca</li>
-            <li><i class="bi bi-music-note-list"></i>La tua libreria</li>
-          </ul>
-          <div id="newAndLiked">
-            <ul>
-              <li><i class="bi bi-plus-square-fill"></i>Crea Playlist</li>
-              <li><i class="bi bi-heart-fill"></i>Brani che ti piacciono</li>
-              <li><i class="bi bi-bookmark-fill"></i>I tuoi episodi</li>
-            </ul>
-          </div>
-        </div>
-        <hr />
-
-        <div>
-          <ul id="playlists">
-            <li>Placeholder Playlist 1</li>
-            <li>Placeholder Playlist 2</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-            <li>Placeholder Playlist 3</li>
-          </ul>
-        </div>
-      </nav>
-
-      <main class="col-12 col-md-9 col-lg-8 p-0">
-        <nav id="mainNav" class="d-none d-md-flex">
-          <div>
-            <button class="navigation">
-              <i class="bi bi-chevron-left"></i>
-            </button>
-            <button class="navigation">
-              <i class="bi bi-chevron-right"></i>
-            </button>
-            <p id="pageContentName"></p>
-          </div>
-          <div>
-            <div class="dropdown d-flex">
-              <button id="userWrapper" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                aria-expanded="false" class="dropBtn">
-                <img src="./assets/img/user.png" width="28px" height="28px" />
-                <span>Utente Bellissimo</span>
+  <body>
+    <div class="container-fluid p-0">
+      <div class="row w-100 m-0">
+        <nav id="left-Nav" class="col-md-3 col-lg-2 d-none d-md-block">
+          <div id="left-Nav-Upper-Wrapper">
+            <div class="dropdown">
+              <button
+                class="btn btn-secondary dropdown-toggle"
+                type="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="bi bi-three-dots"></i>
               </button>
-              <ul id="userDropdown" class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
-                    <p>Account</p>
-                    <i class="bi bi-box-arrow-up-right"></i>
-                  </a>
-                </li>
-                <li><a class="dropdown-item" href="#">Profilo</a></li>
-                <li>
-                  <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
-                    <p>Passa a Premium</p>
-                    <i class="bi bi-box-arrow-up-right"></i>
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">Sessione Privata</a>
-                </li>
-                <li><a class="dropdown-item" href="#">Impostazioni</a></li>
-                <hr />
-                <li><a class="dropdown-item" href="#">Log out</a></li>
+              <ul id="topDropdown" class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">File</a></li>
+                <li><a class="dropdown-item" href="#">Modifica</a></li>
+                <li><a class="dropdown-item" href="#">Visualizza</a></li>
+                <li><a class="dropdown-item" href="#">Riproduzione</a></li>
+                <li><a class="dropdown-item" href="#">Assistenza</a></li>
+              </ul>
+            </div>
+            <ul>
+              <li><i class="bi bi-house-door-fill"></i>Home</li>
+              <li><i class="bi bi-search"></i>Cerca</li>
+              <li><i class="bi bi-music-note-list"></i>La tua libreria</li>
+            </ul>
+            <div id="newAndLiked">
+              <ul>
+                <li><i class="bi bi-plus-square-fill"></i>Crea Playlist</li>
+                <li><i class="bi bi-heart-fill"></i>Brani che ti piacciono</li>
+                <li><i class="bi bi-bookmark-fill"></i>I tuoi episodi</li>
               </ul>
             </div>
           </div>
+          <hr />
+
+          <div>
+            <ul id="playlists">
+              <li>Placeholder Playlist 1</li>
+              <li>Placeholder Playlist 2</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+              <li>Placeholder Playlist 3</li>
+            </ul>
+          </div>
         </nav>
 
-        <article id="annuncio" class="mx-4 d-none d-md-flex"></article>
-
-        <section id="ultimiAscolti">
-          <div id="greetingContainer" class="d-flex justify-content-between align-items-center">
+        <main class="col-12 col-md-9 col-lg-8 p-0">
+          <nav id="mainNav" class="d-none d-md-flex">
             <div>
-              <h2>Buonasera</h2>
+              <button class="navigation">
+                <i class="bi bi-chevron-left"></i>
+              </button>
+              <button class="navigation">
+                <i class="bi bi-chevron-right"></i>
+              </button>
+              <p id="pageContentName"></p>
             </div>
-            <div class="d-md-none d-flex gap-3">
-              <i class="bi bi-bell"></i><i class="bi bi-clock-history"></i><i class="bi bi-gear"></i>
-            </div>
-          </div>
-          <div class="ps-5 mb-4 d-md-none">
-            <button class="me-3" id="musica">Musica</button><button id="podcast">Podcast e show</button>
-          </div>
-          <div id="ultimiAscoltiWrapper" class="row d-flex justify-content-between gx-0 px-5 gap-3"></div>
-        </section>
-        <hr />
-
-        <section id="consigliati">
-          <div id="headingConsigliati">
-            <h2 class="d-none d-md-block">Altro di ciò che ti piace</h2>
-            <button class="showMore d-none d-md-block">
-              Visualizza Tutto
-            </button>
-          </div>
-          <div class="mx-4">
-            <div id="consigliatiWrapper" class="row row-cols-2 row-cols-md-5 d-flex justify-content-between gx-0"></div>
-          </div>
-        </section>
-      </main>
-
-      <aside class="col-2 d-none d-lg-block">
-        <div id="upper-right-nav">
-          <div id="friendsActivity">Attività amici</div>
-          <div id="activityIcon">
-            <i class="bi bi-people"></i>
-            <i class="bi bi-x-lg"></i>
-          </div>
-        </div>
-        <div id="main-right-nav">
-          <div class="profile">
-            <img src="./assets/img/user.png" alt="profile picture" />
             <div>
-              <h4 class="profile-title">Vincenzo De Pascale</h4>
-              <p>Dogs - 2011 Remaster <span>&#x2022;</span> Pink Floyd</p>
-              <div class="profile-description">
-                <i class="bi bi-vinyl"></i>
-                <p id="album">Animals Remaster</p>
+              <div class="dropdown d-flex">
+                <button
+                  id="userWrapper"
+                  class="btn btn-secondary dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  class="dropBtn"
+                >
+                  <img src="./assets/img/user.png" width="28px" height="28px" />
+                  <span>Utente Bellissimo</span>
+                </button>
+                <ul id="userDropdown" class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                      <p>Account</p>
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Profilo</a></li>
+                  <li>
+                    <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                      <p>Passa a Premium</p>
+                      <i class="bi bi-box-arrow-up-right"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Sessione Privata</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Impostazioni</a></li>
+                  <hr />
+                  <li><a class="dropdown-item" href="#">Log out</a></li>
+                </ul>
               </div>
             </div>
-            <p>4 ore</p>
-          </div>
-          <div class="profile">
-            <img src="./assets/img/user.png" alt="profile picture" />
-            <div>
-              <h4 class="profile-title">Carlos Sarmiento</h4>
-              <p>Sweer Meow o'mine <span>&#x2022;</span> MetalCats</p>
-              <div class="profile-description">
-                <i class="bi bi-music-note-beamed"></i>
-                <p id="album">Appetite For Destruction</p>
-              </div>
-            </div>
-            <p>8 ore</p>
-          </div>
-          <div class="profile">
-            <img src="./assets/img/user.png" alt="profile picture" />
-            <div>
-              <h4 class="profile-title">Alessandro Ontani</h4>
-              <p>No Quarter <span>&#x2022;</span> Led Zeppelin</p>
-              <div class="profile-description">
-                <i class="bi bi-vinyl"></i>
-                <p id="album">Mothership Remaster</p>
-              </div>
-            </div>
-            <p>12 ore</p>
-          </div>
-          <div class="profile">
-            <img src="./assets/img/user.png" alt="profile picture" />
-            <div>
-              <h4 class="profile-title">Simone Basile</h4>
-              <p>Hurricane <span>&#x2022;</span> I Prevail</p>
-              <div class="profile-description">
-                <i class="bi bi-music-note-beamed"></i>
-                <p id="album">Trauma</p>
-              </div>
-            </div>
-            <p>16 ore</p>
-          </div>
-        </div>
-      </aside>
+          </nav>
 
-      <footer class="px-0">
-        <div id="mobilePlayer" class="d-md-none row gap-3">
-          <div class="d-none d-sm-block col-sm-1 d-flex align-items-center">
-            <img
-              src="data:image/jpeg;base64,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"
-              alt="" height="56" aspect-ration="1/1" />
+          <article id="annuncio" class="mx-4 d-none d-md-flex"></article>
+
+          <section id="ultimiAscolti">
+            <div id="greetingContainer" class="d-flex justify-content-between align-items-center">
+              <div>
+                <h2>Buonasera</h2>
+              </div>
+              <div class="d-md-none d-flex gap-3">
+                <i class="bi bi-bell"></i><i class="bi bi-clock-history"></i><i class="bi bi-gear"></i>
+              </div>
+            </div>
+            <div class="ps-5 mb-4 d-md-none">
+              <button class="me-3" id="musica">Musica</button><button id="podcast">Podcast e show</button>
+            </div>
+            <div id="ultimiAscoltiWrapper" class="row d-flex justify-content-between gx-0 px-5 gap-3"></div>
+          </section>
+          <hr />
+
+          <section id="consigliati">
+            <div id="headingConsigliati">
+              <h2 class="d-none d-md-block">Altro di ciò che ti piace</h2>
+              <button class="showMore d-none d-md-block">Visualizza Tutto</button>
+            </div>
+            <div class="mx-4">
+              <div
+                id="consigliatiWrapper"
+                class="row row-cols-2 row-cols-md-5 d-flex justify-content-between gx-0"
+              ></div>
+            </div>
+          </section>
+        </main>
+
+        <aside class="col-2 d-none d-lg-block">
+          <div id="upper-right-nav">
+            <div id="friendsActivity">Attività amici</div>
+            <div id="activityIcon">
+              <i class="bi bi-people"></i>
+              <i class="bi bi-x-lg"></i>
+            </div>
           </div>
-          <div class="col-9 d-flex align-items-center">
-            <p id="mobilePlayerText">Sweet Meow o' Mine</p>
+          <div id="main-right-nav">
+            <div class="profile">
+              <img src="./assets/img/user.png" alt="profile picture" />
+              <div>
+                <h4 class="profile-title">Vincenzo De Pascale</h4>
+                <p>Dogs - 2011 Remaster <span>&#x2022;</span> Pink Floyd</p>
+                <div class="profile-description">
+                  <i class="bi bi-vinyl"></i>
+                  <p id="album">Animals Remaster</p>
+                </div>
+              </div>
+              <p>4 ore</p>
+            </div>
+            <div class="profile">
+              <img src="./assets/img/user.png" alt="profile picture" />
+              <div>
+                <h4 class="profile-title">Carlos Sarmiento</h4>
+                <p>Sweer Meow o'mine <span>&#x2022;</span> MetalCats</p>
+                <div class="profile-description">
+                  <i class="bi bi-music-note-beamed"></i>
+                  <p id="album">Appetite For Destruction</p>
+                </div>
+              </div>
+              <p>8 ore</p>
+            </div>
+            <div class="profile">
+              <img src="./assets/img/user.png" alt="profile picture" />
+              <div>
+                <h4 class="profile-title">Alessandro Ontani</h4>
+                <p>No Quarter <span>&#x2022;</span> Led Zeppelin</p>
+                <div class="profile-description">
+                  <i class="bi bi-vinyl"></i>
+                  <p id="album">Mothership Remaster</p>
+                </div>
+              </div>
+              <p>12 ore</p>
+            </div>
+            <div class="profile">
+              <img src="./assets/img/user.png" alt="profile picture" />
+              <div>
+                <h4 class="profile-title">Simone Basile</h4>
+                <p>Hurricane <span>&#x2022;</span> I Prevail</p>
+                <div class="profile-description">
+                  <i class="bi bi-music-note-beamed"></i>
+                  <p id="album">Trauma</p>
+                </div>
+              </div>
+              <p>16 ore</p>
+            </div>
           </div>
-          <div class="col-1 d-flex justify-content-end align-items-center gap-3">
-            <i class="bi bi-pc-display"></i>
-            <i class="bi bi-heart"></i>
-            <i class="bi bi-play-fill"></i>
+        </aside>
+
+        <footer class="px-0">
+          <div id="mobilePlayer" class="d-md-none row gap-3">
+            <div class="d-none d-sm-block col-sm-1 d-flex align-items-center">
+              <img
+                src="data:image/jpeg;base64,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"
+                alt=""
+                height="56"
+                aspect-ration="1/1"
+              />
+            </div>
+            <div class="col-9 d-flex align-items-center">
+              <p id="mobilePlayerText">Sweet Meow o' Mine</p>
+            </div>
+            <div class="col-1 d-flex justify-content-end align-items-center gap-3">
+              <i class="bi bi-pc-display"></i>
+              <i class="bi bi-heart"></i>
+              <i class="bi bi-play-fill"></i>
+            </div>
           </div>
-        </div>
-        <div id="mobileNav" class="d-md-none">
-          <ul class="row mb-0">
-            <li class="col-4">
-              <i class="bi bi-house-door-fill"></i>
-              <p>Home</p>
-            </li>
-            <li class="col-4">
+          <div id="mobileNav" class="d-md-none">
+            <ul class="row mb-0">
+              <li class="col-4">
+                <i class="bi bi-house-door-fill"></i>
+                <p>Home</p>
+              </li>
+              <li class="col-4">
+                <i class="bi bi-search"></i>
+                <p>Cerca</p>
+              </li>
+              <li class="col-4">
+                <i class="bi bi-music-note-list"></i>
+                <p>La tua libreria</p>
+              </li>
+            </ul>
+          </div>
+          <div class="container-fluid">
+            <div class="d-flex justify-content-between align-items-center g-2" id="playerRow">
+              <div class="d-flex justify-content-start align-items-center gap-3" id="playerRowLeft">
+                <div id="playerImgContainer">
+                  <img
+                    src="data:image/jpeg;base64,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"
+                    alt=""
+                  />
+                </div>
+                <div id="playerName">
+                  <h5>MetalCats</h5>
+                  <p>Sweet meow o' mine</p>
+                </div>
+
+                <div class="d-flex justify-content-center gap-3">
+                  <i class="bi bi-heart"></i>
+                  <i class="bi bi-pip"></i>
+                </div>
+              </div>
+              <div class="col-4 d-flex flex-column align-items-center">
+                <div class="justify-content-center d-flex pb-2 pb-lg-3 align-items-center gap-4" id="playerCenter">
+                  <div class="d-flex justify-content-end gap-4">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-backward-step"></i>
+                  </div>
+                  <div class="d-flex justify-content-center" id="playBtnPlayer">
+                    <i class="fa-solid fa-circle-play"></i>
+                  </div>
+                  <div class="d-flex justify-content-start gap-4">
+                    <i class="fa-solid fa-forward-step"></i>
+                    <i class="fa-solid fa-repeat"></i>
+                  </div>
+                </div>
+
+                <div class="slider-styled" id="slider-round"></div>
+              </div>
+              <div class="col-4">
+                <div class="d-flex justify-content-center align-items-center g-2" id="playerRight">
+                  <div class="d-flex justify-content-center gap-4">
+                    <i class="bi bi-mic"></i>
+                    <i class="bi bi-list-columns-reverse"></i>
+                    <i class="bi bi-pc-display"></i>
+                  </div>
+                  <i class="fas fa-volume-down"></i>
+                  <div id="volumeContainer">
+                    <div class="slider-styled" id="slider-round2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+
+        <div class="col col-12" id="searchContainer">
+          <div class="row">
+            <div class="col-12" id="searchTitle">Cerca</div>
+            <div class="col-12" id="searchBar">
               <i class="bi bi-search"></i>
-              <p>Cerca</p>
-            </li>
-            <li class="col-4">
-              <i class="bi bi-music-note-list"></i>
-              <p>La tua libreria</p>
-            </li>
-          </ul>
-        </div>
-        <div class="container-fluid">
-          <div class="d-flex justify-content-between align-items-center g-2" id="playerRow">
-            <div class="d-flex justify-content-start align-items-center gap-3" id="playerRowLeft">
-              <div id="playerImgContainer">
-                <img
-                  src="data:image/jpeg;base64,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"
-                  alt="" />
-              </div>
-              <div id="playerName">
-                <h5>MetalCats</h5>
-                <p>Sweet meow o' mine</p>
-              </div>
-
-              <div class="d-flex justify-content-center gap-3">
-                <i class="bi bi-heart"></i>
-                <i class="bi bi-pip"></i>
-              </div>
+              <input type="search" placeholder="Cosa vuoi ascoltare?" />
             </div>
-            <div class="col-4 d-flex flex-column align-items-center">
-              <div class="justify-content-center d-flex pb-2 pb-lg-3 align-items-center gap-4" id="playerCenter">
-                <div class="d-flex justify-content-end gap-4">
-                  <i class="fa-solid fa-shuffle"></i>
-                  <i class="fa-solid fa-backward-step"></i>
+            <div class="col-12" id="sfoglia">
+              <h3>Sfoglia tutto</h3>
+              <div class="row" id="typeRowContainer">
+                <div class="col col-5 col-sm-3 searchType one">
+                  <h4>Podcast</h4>
                 </div>
-                <div class="d-flex justify-content-center" id="playBtnPlayer">
-                  <i class="fa-solid fa-circle-play"></i>
+                <div class="col col-5 col-sm-3 searchType two">
+                  <h4>Create per te</h4>
                 </div>
-                <div class="d-flex justify-content-start gap-4">
-                  <i class="fa-solid fa-forward-step"></i>
-                  <i class="fa-solid fa-repeat"></i>
+                <div class="col col-5 col-sm-3 searchType three">
+                  <h4>Nuove uscite</h4>
                 </div>
-              </div>
-
-              <div class="slider-styled" id="slider-round"></div>
-            </div>
-            <div class="col-4">
-              <div class="d-flex justify-content-center align-items-center g-2" id="playerRight">
-                <div class="d-flex justify-content-center gap-4">
-                  <i class="bi bi-mic"></i>
-                  <i class="bi bi-list-columns-reverse"></i>
-                  <i class="bi bi-pc-display"></i>
+                <div class="col col-5 col-sm-3 searchType four">
+                  <h4>Pop</h4>
                 </div>
-                <i class="fas fa-volume-down"></i>
-                <div id="volumeContainer">
-                  <div class="slider-styled" id="slider-round2"></div>
+                <div class="col col-5 col-sm-3 searchType five">
+                  <h4>Hip Hop</h4>
+                </div>
+                <div class="col col-5 col-sm-3 searchType six">
+                  <h4>Dance/ Elettronica</h4>
+                </div>
+                <div class="col col-5 col-sm-3 searchType seven">
+                  <h4>Latina</h4>
+                </div>
+                <div class="col col-5 col-sm-3 searchType eight">
+                  <h4>Classifiche</h4>
+                </div>
+                <div class="col col-5 col-sm-3 d-none d-sm-flex searchType nine">
+                  <h4>Classifiche</h4>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
     </div>
-  </div>
 
-  <script src="./assets/resources/color-thief-2.3.2/dist/color-thief.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
-  <script src="./assets/resources/noUiSlider-15.6.1/dist/nouislider.js"></script>
+    <script src="./assets/resources/color-thief-2.3.2/dist/color-thief.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/resources/noUiSlider-15.6.1/dist/nouislider.js"></script>
 
-  <script src="./assets/js/leftNav.js"></script>
-  <script src="./assets/js/homePage.js"></script>
+    <script src="./assets/js/leftNav.js"></script>
+    <script src="./assets/js/homePage.js"></script>
 
-  <script src="./assets/js/player.js"></script>
+    <script src="./assets/js/player.js"></script>
 
-  <script src="./assets/js/popups.js"></script>
-</body>
-
+    <script src="./assets/js/popups.js"></script>
+  </body>
 </html>
