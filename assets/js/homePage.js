@@ -251,17 +251,22 @@ const addToPlayer = (index) => {
   const arrayToStoreAlbums = albumArray
 
   const playButton = document.querySelector("#playBtnPlayer")
-  const songArray = arrayToStoreAlbums[index].tracks.data[0].preview
+  let songArray = ""
+  songArray = arrayToStoreAlbums[index].tracks.data[0].preview
   console.log(songArray)
 
   const audio = new Audio(songArray)
 
 
 
-  playButton.addEventListener("click", () => {
+  document.addEventListener("click", () => {
+    console.log("000" + audio)
+
     audio.play()
+    console.log(audio + "000")
+
     playButton.style.color = "#1ED760"
-    playButton.addEventListener("click", () => {
+    document.addEventListener("click", () => {
       audio.pause()
       playButton.style.color = "white"
 
@@ -269,7 +274,24 @@ const addToPlayer = (index) => {
   })
 
 
-  console.log(audio)
+  const miniplay = document.querySelector("#mobilePlayer>.col-1>.bi-play-fill")
+
+
+  document.addEventListener("click", () => {
+    console.log("000" + audio)
+    audio.play()
+    console.log(audio + "000")
+
+    miniplay.style.color = "#1ED760"
+    document.addEventListener("click", () => {
+      audio.pause()
+      miniplay.style.color = "white"
+
+    })
+  })
+
+
+
 
   playerRowLeft = document.getElementById("playerRowLeft");
   playerRowLeft.innerHTML = ``;
@@ -356,19 +378,7 @@ const addToPlayer = (index) => {
 
 
 
-  const miniplay = document.querySelector("#mobilePlayer>.col-1>.bi-play-fill")
-  console.log(miniplay)
 
-
-  miniplay.addEventListener("click", () => {
-    audio.play()
-    miniplay.style.color = "#1ED760"
-    miniplay.addEventListener("click", () => {
-      audio.pause()
-      miniplay.style.color = "white"
-
-    })
-  })
 
 };
 
