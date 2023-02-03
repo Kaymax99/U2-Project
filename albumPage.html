@@ -35,7 +35,7 @@
   <body>
     <div class="container-fluid">
       <div class="row w-100">
-        <nav id="left-Nav" class="col-3 col-lg-2">
+        <nav id="left-Nav" class="col-md-3 col-lg-2 d-none d-md-block">
           <div id="left-Nav-Upper-Wrapper">
             <div class="dropdown">
               <button
@@ -103,8 +103,8 @@
           </div>
         </nav>
 
-        <main class="col-9 col-lg-8 p-0">
-          <nav id="mainNav">
+        <main class="col-12 col-md-9 col-lg-8 p-0">
+          <nav id="mainNav" class="d-none d-md-flex">
             <div>
               <button class="navigation">
                 <i class="bi bi-chevron-left"></i>
@@ -130,41 +130,50 @@
             </button>
           </nav>
 
-          <article id="annuncioAB"></article>
+          <article id="annuncioAB">
+            <button class="navigationMobile d-md-none">
+              <i class="bi bi-arrow-left"></i>
+            </button>
+          </article>
 
           <section class="row" id="albumRow">
             <div class="col col-12" id="albumButtonContainer">
-              <button type="button" id="playButton" class="btn text-dark">
-                <i class="fa-solid fa-play"></i>
-              </button>
-              <i class="bi bi-suit-heart"></i>
-              <i class="bi bi-download"></i>
-              <div class="dropdown1">
-                <ul class="dopperRadius dropdown-content2"></ul>
-                <button class="dropdown-toggle1 btn moreBtn">
-                  <i class="bi bi-three-dots"></i>
+              <div class="d-flex align-items-center order-2 order-md-0">
+                <i class="bi bi-shuffle d-md-none"></i>
+                <button type="button" id="playButton" class="btn text-dark">
+                  <i class="fa-solid fa-play"></i>
                 </button>
-                <ul class="dopperRadius dropdown-content1">
-                  <li><a class="topA" href="#">Add to queue</a></li>
-                  <li><a href="#">Go to playlist radio</a></li>
-                  <li><a href="#">Report</a></li>
-                  <li><a href="#">Add to your Library</a></li>
-                  <li>
-                    <hr />
-                  </li>
-                  <li><a class="botA" href="#">Share</a></li>
-                  <li>
-                    <hr />
-                  </li>
-                  <li><a href="">About recommendations</a></li>
-                  <li>
-                    <hr />
-                  </li>
-                  <li><a href="">Open in Desktop app</a></li>
-                </ul>
+              </div>
+              <div>
+                <i class="bi bi-suit-heart"></i>
+                <i class="bi bi-download"></i>
+                <div class="dropdown1">
+                  <ul class="dopperRadius dropdown-content2"></ul>
+                  <button class="dropdown-toggle1 btn moreBtn">
+                    <i class="bi bi-three-dots"></i>
+                  </button>
+                  <ul class="dopperRadius dropdown-content1">
+                    <li><a class="topA" href="#">Add to queue</a></li>
+                    <li><a href="#">Go to playlist radio</a></li>
+                    <li><a href="#">Report</a></li>
+                    <li><a href="#">Add to your Library</a></li>
+                    <li>
+                      <hr />
+                    </li>
+                    <li><a class="botA" href="#">Share</a></li>
+                    <li>
+                      <hr />
+                    </li>
+                    <li><a href="">About recommendations</a></li>
+                    <li>
+                      <hr />
+                    </li>
+                    <li><a href="">Open in Desktop app</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div class="row" id="innerRowContainer">
+            <div class="row d-none d-md-flex" id="innerRowContainer">
               <div class="col col-6"><span id="hashtag">#</span>TITOLO</div>
               <div class="col col-3" id="counterHeader">RIPRODUZIONI</div>
               <div class="col col-3" id="timeHeader">

@@ -80,6 +80,13 @@
   i {
     margin-left: 4px;
   }
+  @media screen and (max-width: 768px) {
+    justify-self: end;
+  }
+  @media screen and (max-width: 576px) {
+    font-size: 1.1em;
+    padding: 0.6em;
+  }
 }
 
 #followButton {
@@ -107,4 +114,13 @@
   &:hover {
     background-color: #383838;
   }
+}
+
+.navigationMobile {
+  position: absolute;
+  left: 20px;
+  border: none;
+  background-color: unset;
+  color: $c-text-primary;
+  font-size: 1.8em;
 }
