@@ -129,3 +129,12 @@
     font-size: 0.8em;
   }
 }
+
+.songDrpDwn {
+  &::after {
+    display: none;
+  }
+  background-color: inherit;
+  color: $c-text-subdued;
+  border: none;
+}
