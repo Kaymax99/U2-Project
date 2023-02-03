@@ -245,6 +245,34 @@ const drawAlbum = (albumArray) => {
 };
 
 const addToPlayer = (index) => {
+
+
+
+  const arrayToStoreAlbums = albumArray
+
+  const playButton = document.querySelector("#playBtnPlayer")
+  const songArray = arrayToStoreAlbums[index].tracks.data[0].preview
+  console.log(songArray)
+  const audio = new Audio(songArray)
+
+  playButton.addEventListener("click", () => {
+    audio.play()
+    playButton.style.color = "#1ED760"
+    playButton.addEventListener("click", () => {
+      audio.pause()
+      playButton.style.color = "white"
+
+    })
+  })
+
+
+  console.log(audio)
+
+
+
+
+
+
   playerRowLeft = document.getElementById("playerRowLeft");
   playerRowLeft.innerHTML = ``;
   playerRowLeft.innerHTML += `<div id="playerImgContainer">
