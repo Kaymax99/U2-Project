@@ -99,19 +99,19 @@ drawArtistPage = async () => {
     </div>
     <div class="col col-1 d-md-none d-flex justify-content-end">
     <div class="dropdown">
-  <button class="dropdown-toggle songDrpDwn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-  <i class="bi bi-three-dots-vertical"></i>
-  </button>
-  <ul class="dropdown-menu songDropdown">
-    <li><a class="dropdown-item" href="#"><i class="bi bi-heart pe-2"></i><span class="TestWhite">Mi piace</span></a></li>
-    <li><a class="dropdown-item" href="#"><i class="bi bi-dash-circle pe-2"></i><span class="TestWhite">Nascondi canzone</span></a></li>
-    <li><a class="dropdown-item" href="#"><i class="bi bi-music-note-list pe-2"></i><span class="TestWhite">Aggiungi a Playlist</span></a></li>
-    <li><a class="dropdown-item" href="#"><i class="bi bi-person-lines-fill pe-2"></i><span class="TestWhite">Aggingi alla coda</span></a></li>
-    <li><a class="dropdown-item" href="#"><i class="bi bi-person-heart pe-2"></i><span class="TestWhite">Visualizza Artista</span></a></li>
-    <li><a class="dropdown-item" href="#"><i class="bi bi-share pe-2"></i><span class="TestWhite">Condividi</span></a></li>
-  </ul>
-  </div>
-  </div>
+      <button class="dropdown-toggle songDrpDwn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <i class="bi bi-three-dots-vertical"></i>
+      </button>
+      <ul class="dropdown-menu songDropdown">
+        <li><a class="dropdown-item" href="#"><i class="bi bi-heart pe-2"></i><span class="TestWhite">Mi piace</span></a></li>
+        <li><a class="dropdown-item" href="#"><i class="bi bi-dash-circle pe-2"></i><span class="TestWhite">Nascondi canzone</span></a></li>
+        <li><a class="dropdown-item" href="#"><i class="bi bi-music-note-list pe-2"></i><span class="TestWhite">Aggiungi a Playlist</span></a></li>
+        <li><a class="dropdown-item" href="#"><i class="bi bi-person-lines-fill pe-2"></i><span class="TestWhite">Aggingi alla coda</span></a></li>
+        <li><a class="dropdown-item" href="#"><i class="bi bi-person-heart pe-2"></i><span class="TestWhite">Visualizza Artista</span></a></li>
+        <li><a class="dropdown-item" href="#"><i class="bi bi-share pe-2"></i><span class="TestWhite">Condividi</span></a></li>
+      </ul>
+    </div>
+    </div>
   </div>
   `;
   }
