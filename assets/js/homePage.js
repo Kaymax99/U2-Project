@@ -162,104 +162,53 @@ const drawAlbumBuonasera = (albumArray) => {
   }
 };
 
+
 const drawAlbum = (albumArray) => {
   let divAltro = document.getElementById("consigliatiWrapper");
 
   if (albumArray.length == 5) {
-    // console.log(albumArray)
-
-
-    // THIS MAKE THE PLAYER SING WITH CLICK
-
-
-
-    divAltro.innerHTML += `<div class="p-2">
+    for (i = 0; i < albumArray.length; i++) {
+      divAltro.innerHTML += `
+        <div class="p-2">
+          <div class="col custCard">
+            <img src="${albumArray[i].cover_big}" />
+            <a href="#">
+              <button class="hoverCardButtonOthers" onclick="addToPlayer(${i + 6
+        })">
+                <i class="fa-sharp fa-solid fa-play"></i>
+              </button>
+            </a>
+            <div>
+              <a href="./albumPage.html?id=${albumArray[i].id}" target="_blank">
+                <h4>${albumArray[i].title}</h4>
+              </a>
+              <a
+                href="./artistPage.html?id=${albumArray[i].contributors[0].id}"
+                target="_blank"
+              >
+                <h5>${albumArray[i].artist.name}</h5>
+              </a>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+    /*    divAltro.innerHTML += `<div class="p-2">
       <div class="col custCard">
         <img src="${albumArray[0].cover_big}" />
         <button class="hoverCardButtonOthers" onclick="addToPlayer(0)">
           <i class="fa-sharp fa-solid fa-play"></i>
         </button>
         <div>
-          <a href="./albumPage.html?id=${albumArray[0].id}" target="_self">
+          <a href="./albumPage.html?id=${albumArray[0].id}" target="_blank">
             <h4>${albumArray[0].title}</h4>
           </a>
-          <a href="./artistPage.html?id=${albumArray[0].contributors[0].id}" target="_self">
+          <a href="./artistPage.html?id=${albumArray[0].contributors[0].id}" target="_blank">
             <h5>${albumArray[0].artist.name}</h5>
           </a>
         </div>
       </div>
-    </div>
-    
-    <div class="p-2">
-      <div class="col custCard">
-        <img src="${albumArray[1].cover_big}" />
-        <button class="hoverCardButtonOthers" onclick="addToPlayer(1)">
-          <i class="fa-sharp fa-solid fa-play"></i>
-        </button>
-        <div>
-          <a href="./albumPage.html?id=${albumArray[1].id}" target="_blank">
-            <h4>${albumArray[1].title}</h4>
-          </a>
-          <a href="./artistPage.html?id=${albumArray[1].contributors[0].id}" target="_blank">
-            <h5>${albumArray[1].artist.name}</h5>
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <div class="p-2">
-      <div class="col custCard">
-        <img src="${albumArray[2].cover_big}" />
-        <button class="hoverCardButtonOthers" onclick="addToPlayer(2)">
-          <i class="fa-sharp fa-solid fa-play"></i>
-        </button>
-        <div>
-          <a href="./albumPage.html?id=${albumArray[2].id}" target="_blank">
-            <h4>${albumArray[2].title}</h4>
-          </a>
-          <a href="./artistPage.html?id=${albumArray[2].contributors[0].id}" target="_blank">
-            <h5>${albumArray[2].artist.name}</h5>
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <div class="p-2">
-      <div class="col custCard">
-        <img src="${albumArray[3].cover_big}" />
-        <button class="hoverCardButtonOthers" onclick="addToPlayer(3)">
-          <i class="fa-sharp fa-solid fa-play"></i>
-        </button>
-        <div>
-          <a href="./albumPage.html?id=${albumArray[3].id}" target="_blank">
-            <h4>${albumArray[3].title}</h4>
-          </a>
-          <a href="./artistPage.html?id=${albumArray[3].contributors[0].id}" target="_blank">
-            <h5>${albumArray[3].artist.name}</h5>
-          </a>
-        </div>
-      </div>
-    </div>
-    
-    <div class="p-2">
-      <div class="col custCard">
-        <img src="${albumArray[4].cover_big}" />
-        <button class="hoverCardButtonOthers" onclick="addToPlayer(4)">
-          <i class="fa-sharp fa-solid fa-play"></i>
-        </button>
-        <div>
-          <a href="./albumPage.html?id=${albumArray[4].id}" target="_blank">
-            <h4>${albumArray[4].title}</h4>
-          </a>
-          <a href="./artistPage.html?id=${albumArray[4].contributors[0].id}" target="_blank">
-            <h5>${albumArray[4].artist.name}</h5>
-          </a>
-        </div>
-      </div>
-    </div>`;
-
-
-
+    </div>` */
   }
 
   // THIS IS THE COLOR THIEF LOGIC
