@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: $c-bg-default;
+}
+
 html,
 body {
   min-height: 100vh;
