@@ -6,9 +6,12 @@
   transition: 0.2s;
   padding: 1.5em;
   z-index: 10;
+  opacity: 0;
   display: none;
+  top: 100vh;
   position: absolute;
   background-color: black;
+  transition: 0.5s;
 }
 
 #searchContainer::-webkit-scrollbar {

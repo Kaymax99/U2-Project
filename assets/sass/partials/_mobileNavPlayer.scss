@@ -61,6 +61,14 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      transition: 0.2s;
+
+      &:hover {
+        color: $c-text-primary;
+        transform: scale(1.05);
+        transition: 0.2s;
+      }
+
       i {
         font-size: 1.5em;
       }

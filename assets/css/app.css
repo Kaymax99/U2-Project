@@ -1814,6 +1814,12 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: 0.2s;
+}
+#mobileNav ul li:hover {
+  color: white;
+  transform: scale(1.05);
+  transition: 0.2s;
 }
 #mobileNav ul li i {
   font-size: 1.5em;
@@ -1831,9 +1837,12 @@ main {
   transition: 0.2s;
   padding: 1.5em;
   z-index: 10;
+  opacity: 0;
   display: none;
+  top: 100vh;
   position: absolute;
   background-color: black;
+  transition: 0.5s;
 }
 
 #searchContainer::-webkit-scrollbar {
