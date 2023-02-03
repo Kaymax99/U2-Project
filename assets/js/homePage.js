@@ -16,12 +16,10 @@ const fetchAlbum = async (index) => {
     if (res.ok) {
       let data = await res.json();
 
-
       return data;
     } else {
       throw "errore nella sezione altro";
     }
-    console.log(data)
   } catch (err) {
     console.log(err);
   }
@@ -39,7 +37,6 @@ const drawAnnuncio = async (album) => {
     <img src="${spotlightAlbum.cover_big}" height="200px" />
   </div>
   <div id="wrapperAnnuncio">
-
     <h5 class="albumAnnuncio">ALBUM</h5>
     <button id="hideAnnuncio">nascondi annunci</button>
     <div class="songAuthor">
@@ -80,17 +77,8 @@ const drawAnnuncio = async (album) => {
       </ul>
     </div>
   </div>
-  </div>
-  `;
-
-
-
-
-
-
-
-
-
+</div>
+`;
 
   // this code make all the buttons generated with the popups function
 
@@ -132,12 +120,13 @@ const getAlbums = async function (id, givenNumber) {
   if (givenNumber === 5) {
     const selectedAlbums = [...albumArray.slice(6)];
     drawAlbum(selectedAlbums);
+    /* console.log("First Albums:", selectedAlbums); */
   }
   if (givenNumber === 6) {
     const buonaseraAlbums = [...albumArray.slice(0, 6)];
     drawAlbumBuonasera(buonaseraAlbums);
+    /* console.log("Second Albums:", buonaseraAlbums); */
   }
-
 };
 
 const drawAlbumBuonasera = (albumArray) => {
@@ -145,23 +134,23 @@ const drawAlbumBuonasera = (albumArray) => {
 
   if (albumArray.length == 6) {
     for (i = 0; i < albumArray.length; i++) {
-      divBuonasera.innerHTML += `<div class="row col-4 p-1">
-      <a href="./albumPage.html?id=${albumArray[i].id}" target="_blank">
-      <div class="p-0 custCardLG">
+      divBuonasera.innerHTML += `
+    <div class="row col-12 col-sm-6 col-md-4" id="teston">
+      <div class="p-0 custCardLG col-12">
+        <a href="./albumPage.html?id=${albumArray[i].id}" target="_blank">
           <img src="${albumArray[i].cover_medium}" class="col-3 p-0" />
-          <div class="col-9 col-md-6">${albumArray[i].title}</div>
-          <div class="col-md-3 d-none d-md-block cardButtonContainer">
-            <button class="hoverCardButton" onclick="addToPlayer(i)">
-              <i class="fa-sharp fa-solid fa-play"></i>
-            </button>
-          </div>
-        </div>
-      </a>
-      </div>`;
+          <div class="col-8">${albumArray[i].title}</div>
+        </a>
+      </div>
+      <div id="test2" class="col-1 cardButtonContainer align-self-center d-flex p-1">
+        <button class="hoverCardButton" onclick="addToPlayer(${i})">
+          <i class="fa-sharp fa-solid fa-play"></i>
+        </button>
+      </div>
+    </div>`;
     }
   }
 };
-
 
 const drawAlbum = (albumArray) => {
   let divAltro = document.getElementById("consigliatiWrapper");
@@ -169,7 +158,7 @@ const drawAlbum = (albumArray) => {
   if (albumArray.length == 5) {
     for (i = 0; i < albumArray.length; i++) {
       divAltro.innerHTML += `
-        <div class="p-2">
+        <div class="p-2 strap">
           <div class="col custCard">
             <img src="${albumArray[i].cover_big}" />
             <a href="#">
@@ -253,40 +242,12 @@ const drawAlbum = (albumArray) => {
     };
     main.addEventListener("scroll", changeNav);
   });
-
 };
 
-
-
-
-
-
-
 const addToPlayer = (index) => {
-  const arrayToStoreAlbums = albumArray
-
-  const playButton = document.querySelector("#playBtnPlayer")
-  const songArray = arrayToStoreAlbums[index].tracks.data[0].preview
-  console.log(songArray)
-  const audio = new Audio(songArray)
-
-  playButton.addEventListener("click", () => {
-    audio.play()
-    playButton.style.color = "#1ED760"
-    playButton.addEventListener("click", () => {
-      audio.pause()
-      playButton.style.color = "white"
-
-    })
-  })
-
-
-  console.log(audio)
-
-
   playerRowLeft = document.getElementById("playerRowLeft");
   playerRowLeft.innerHTML = ``;
-  playerRowLeft.innerHTML = `<div id="playerImgContainer">
+  playerRowLeft.innerHTML += `<div id="playerImgContainer">
   <img
     src="${albumArray[index].cover_medium}"
     alt=""
@@ -296,11 +257,30 @@ const addToPlayer = (index) => {
   <h5>${albumArray[index].artist.name}</h5>
   <p>${albumArray[index].title}</p>
 </div>
-
 <div class="d-flex justify-content-center gap-3">
   <i class="bi bi-heart"></i>
   <i class="bi bi-pip"></i>
 </div>`;
+
+  // Mobile Player
+  const mobilePlayer = document.getElementById("mobilePlayer");
+  mobilePlayer.innerHTML = "";
+  mobilePlayer.innerHTML += `
+  <div class="d-none d-sm-block col-sm-1 d-flex align-items-center"><img
+  src="${albumArray[index].cover_small}"
+  alt=""
+/></div>
+  <div class="col-9 d-flex align-items-center">
+    <p id="mobilePlayerText">${albumArray[index].title}</p>
+  </div>
+  <div
+    class="col-1 d-flex justify-content-end align-items-center gap-3"
+  >
+    <i class="bi bi-pc-display"></i>
+    <i class="bi bi-heart"></i>
+    <i class="bi bi-play-fill"></i>
+  </div>
+  `;
 };
 
 const startDrawingAlbums = (albumArray, givenNumber) => {
