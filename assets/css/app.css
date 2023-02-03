@@ -2117,7 +2117,7 @@ main {
   top: 100vh;
   position: absolute;
   background-color: black;
-  transition: 0.5s;
+  transition: ease-in-out 0.5s;
 }
 
 #searchContainer::-webkit-scrollbar {
