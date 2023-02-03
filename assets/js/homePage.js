@@ -85,25 +85,25 @@ const drawAnnuncio = async (album) => {
 
 
 
-  const song = spotlightAlbum.tracks.data[2].preview
-  console.log(song)
+  // const song = spotlightAlbum.tracks.data[2].preview
+  // console.log(song)
 
 
-  const audio = new Audio(song)
+  // const audio = new Audio(song)
 
 
-  const playButton = document.querySelector("#playBtnPlayer")
+  // const playButton = document.querySelector("#playBtnPlayer")
 
 
-  playButton.addEventListener("click", () => {
-    audio.play()
-    playButton.style.color = "#1ED760"
-    playButton.addEventListener("click", () => {
-      audio.pause()
-      playButton.style.color = "white"
+  // playButton.addEventListener("click", () => {
+  //   audio.play()
+  //   playButton.style.color = "#1ED760"
+  //   playButton.addEventListener("click", () => {
+  //     audio.pause()
+  //     playButton.style.color = "white"
 
-    })
-  })
+  //   })
+  // })
 
 
 
@@ -192,9 +192,8 @@ const drawAlbum = (albumArray) => {
           <div class="col custCard">
             <img src="${albumArray[i].cover_big}" />
             <a href="#">
-              <button class="hoverCardButtonOthers" onclick="addToPlayer(${
-                i + 6
-              })">
+              <button class="hoverCardButtonOthers" onclick="addToPlayer(${i + 6
+        })">
                 <i class="fa-sharp fa-solid fa-play"></i>
               </button>
             </a>
@@ -276,6 +275,31 @@ const drawAlbum = (albumArray) => {
 };
 
 const addToPlayer = (index) => {
+
+  const arrayToStoreAlbums = albumArray
+
+  const playButton = document.querySelector("#playBtnPlayer")
+  const songArray = arrayToStoreAlbums[index].tracks.data[0].preview
+  console.log(songArray)
+  const audio = new Audio(songArray)
+
+  playButton.addEventListener("click", () => {
+    audio.play()
+    playButton.style.color = "#1ED760"
+    playButton.addEventListener("click", () => {
+      audio.pause()
+      playButton.style.color = "white"
+
+    })
+  })
+
+
+  console.log(audio)
+
+
+
+
+
   playerRowLeft = document.getElementById("playerRowLeft");
   playerRowLeft.innerHTML = ``;
   playerRowLeft.innerHTML = `<div id="playerImgContainer">
