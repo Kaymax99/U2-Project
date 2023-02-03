@@ -63,3 +63,14 @@
     }
   }
 }
+
+.songDropdown {
+  z-index: 9999;
+  background-color: $bg-elevated-highlight;
+  li {
+    padding: 8px 12px;
+  }
+  li a {
+    color: $c-text-subdued;
+  }
+}
